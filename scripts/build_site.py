@@ -44,14 +44,16 @@ SECTION_TITLES = {
 
 DATE_PATTERNS = (
     r"^\d{4}\s*[-–]\s*(Present|\d{4})$",
+    r"^\d{4},\s*\d{4}$",
+    r"^\d{4}$",
     r"^\d{1,2}/\d{4}\s*[-–]\s*\d{1,2}/\d{4}$",
+    r"^\d{1,2}/\d{4}\s*[-–]\s*(Present|\d{1,2}/\d{4})$",
     r"^\d{1,2}/\d{1,2}/\d{4}$",
+    r"^\d{1,2}/\d{1,2}/\d{4}\s*[-–]\s*\d{1,2}/\d{1,2}/\d{4}$",
     r"^[A-Za-z]+\s+\d{4}$",
     r"^[A-Za-z]+\s+\d{1,2},\s*\d{4}$",
     r"^[A-Za-z]+\s+\d{1,2}[–-]\d{1,2},\s*\d{4}$",
     r"^[A-Za-z]+\s+\d{1,2}[–-]\d{1,2},\s*\d{4}\.$",
-    r"^\d{4},\s*\d{4}$",
-    r"^\d{4}$",
 )
 
 ORG_HINTS = (
@@ -71,7 +73,22 @@ ORG_HINTS = (
     "Nigeria",
     "Minna",
     "Alabama",
+    "Pepperdine",
 )
+
+PUBLICATION_SUBHEADINGS = {
+    "Peer-reviewed Journal Articles",
+    "Referred Conference Proceedings",
+    "Book Chapters",
+}
+
+SERVICE_SUBHEADINGS = {
+    "Journal Reviews",
+    "Conference Chair and Discussant",
+    "Conference Reviews",
+    "Mentoring",
+    "Community/Outreach/ Conferences Services",
+}
 
 
 def read_docx_paragraphs(path: Path) -> list[str]:
@@ -154,49 +171,29 @@ def parse_education(lines: list[str]) -> list[dict[str, str]]:
     return education
 
 
-def is_subheading(text: str) -> bool:
-    if text in SECTION_TITLES:
-        return False
-    if text.startswith("["):
-        return False
-    if is_date_line(text):
-        return False
-    return text.istitle() or text in {
-        "Peer-reviewed Journal Articles",
-        "Referred Conference Proceedings",
-        "Book Chapters",
-        "Journal Reviews",
-        "Conference Chair and Discussant",
-        "Conference Reviews",
-        "Mentoring",
-        "Community/Outreach/ Conferences Services",
-    }
+def remove_reference_prefix(text: str) -> str:
+    return re.sub(r"^\[\d+\]\s*", "", text).strip()
 
 
-def group_subsections(lines: list[str]) -> dict[str, list[str]]:
-    grouped: dict[str, list[str]] = {}
-    current = "default"
-    grouped[current] = []
+def truncate_text(text: str, limit: int = 210) -> str:
+    cleaned = normalize_whitespace(text)
+    if len(cleaned) <= limit:
+        return cleaned
+    shortened = cleaned[: limit - 3].rsplit(" ", 1)[0]
+    return f"{shortened}..."
 
-    for line in lines:
-        if is_subheading(line):
-            current = line
-            grouped[current] = []
-            continue
-        grouped.setdefault(current, []).append(line)
 
-    return grouped
+def split_on_numbered_items(line: str) -> list[str]:
+    normalized = re.sub(r"\s(?=(?:\[\d+\]|\d+\]))", "\n", line)
+    return [part.strip() for part in normalized.splitlines() if part.strip()]
 
 
 def list_items(lines: list[str]) -> list[str]:
     items: list[str] = []
     buffer = ""
     for line in lines:
-        normalized_line = re.sub(r"\s(?=(?:\[\d+\]|\d+\]))", "\n", line).splitlines()
-        for part in normalized_line:
-            chunk = part.strip()
-            if not chunk:
-                continue
+        for part in split_on_numbered_items(line):
+            chunk = part
             if re.match(r"^\d+\]", chunk):
                 chunk = f"[{chunk}"
             if chunk.startswith("["):
@@ -212,160 +209,292 @@ def list_items(lines: list[str]) -> list[str]:
     return items
 
 
-def looks_like_title(text: str) -> bool:
-    if text.startswith("[") or is_date_line(text):
-        return False
-    if len(text) > 120 or text.endswith(".") or "http" in text.lower():
-        return False
-    if text == text.upper():
-        return False
-    return True
+def group_subsections(lines: list[str], headings: set[str]) -> dict[str, list[str]]:
+    grouped: dict[str, list[str]] = {}
+    current = "default"
+    grouped[current] = []
+
+    for line in lines:
+        if line in headings:
+            current = line
+            grouped[current] = []
+            continue
+        grouped.setdefault(current, []).append(line)
+
+    return grouped
 
 
-def looks_like_org(text: str) -> bool:
-    return any(hint in text for hint in ORG_HINTS) or "," in text
+def parse_named_date_pairs(lines: list[str]) -> list[dict[str, str]]:
+    items: list[dict[str, str]] = []
+    index = 0
+    while index < len(lines):
+        name = lines[index]
+        next_line = lines[index + 1] if index + 1 < len(lines) else ""
+        if is_date_line(next_line):
+            items.append({"name": name, "date": next_line.rstrip(".")})
+            index += 2
+        else:
+            items.append({"name": name, "date": ""})
+            index += 1
+    return items
+
+
+def split_entry_blocks(lines: list[str]) -> list[dict[str, Any]]:
+    blocks: list[dict[str, Any]] = []
+    current_lines: list[str] = []
+
+    for line in lines:
+        if is_date_line(line):
+            if current_lines:
+                blocks.append({"date": line.rstrip("."), "lines": current_lines[:]})
+                current_lines = []
+        else:
+            current_lines.append(line)
+
+    if current_lines:
+        blocks.append({"date": "", "lines": current_lines[:]})
+
+    return blocks
+
+
+def looks_like_org_line(text: str) -> bool:
+    if not text:
+        return False
+    if text.endswith("."):
+        return False
+    return any(hint in text for hint in ORG_HINTS)
+
+
+def split_inline_title_org(text: str) -> tuple[str, str]:
+    if " — " in text:
+        left, right = text.split(" — ", 1)
+        return left.strip(), right.strip()
+    if text.count(",") >= 1:
+        first, remainder = text.split(",", 1)
+        if len(first.strip()) < 55:
+            return first.strip(), remainder.strip()
+    return text.strip(), ""
+
+
+def parse_entry_block(block: dict[str, Any]) -> dict[str, Any] | None:
+    lines = block["lines"]
+    if not lines:
+        return None
+
+    raw_title = lines[0]
+    title, inline_org = split_inline_title_org(raw_title)
+    organization = inline_org
+    details_start = 1
+
+    if len(lines) > 1 and looks_like_org_line(lines[1]):
+        organization = lines[1]
+        details_start = 2
+
+    details = [line for line in lines[details_start:] if line]
+    summary = truncate_text(" ".join(details), 220)
+
+    return {
+        "title": title,
+        "organization": organization,
+        "date": block["date"] or "Selected role",
+        "details": details,
+        "summary": summary,
+    }
 
 
 def parse_entries(lines: list[str]) -> list[dict[str, Any]]:
-    entries: list[dict[str, Any]] = []
-    index = 0
-
-    while index < len(lines):
-        current = lines[index]
-        next_line = lines[index + 1] if index + 1 < len(lines) else ""
-
-        if not (looks_like_title(current) and next_line):
-            index += 1
-            continue
-
-        title = current
-        organization = ""
-        date_text = ""
-        details: list[str] = []
-        index += 1
-
-        if index < len(lines) and looks_like_org(lines[index]) and not is_date_line(lines[index]):
-            organization = lines[index]
-            index += 1
-
-        while index < len(lines):
-            value = lines[index]
-            upcoming = lines[index + 1] if index + 1 < len(lines) else ""
-
-            if is_date_line(value):
-                date_text = value.rstrip(".")
-                index += 1
-                continue
-
-            if looks_like_title(value) and upcoming and not looks_like_org(upcoming):
-                break
-
-            if looks_like_title(value) and upcoming and looks_like_org(upcoming):
-                break
-
-            details.append(value)
-            index += 1
-
-        entries.append(
-            {
-                "title": title,
-                "organization": organization,
-                "date": date_text,
-                "details": details,
-            }
-        )
-
-    return entries
+    entries = [parse_entry_block(block) for block in split_entry_blocks(lines)]
+    return [entry for entry in entries if entry]
 
 
-def pick_sentence(lines: list[str], fallback: str = "") -> str:
-    text = " ".join(line for line in lines if not is_date_line(line)).strip()
-    if not text:
-        return fallback
-    if len(text) <= 280:
-        return text
-    shortened = text[:277].rsplit(" ", 1)[0]
-    return f"{shortened}..."
-
-
-def clean_item_prefix(text: str) -> str:
-    return re.sub(r"^\[\d+\]\s*", "", text).strip()
-
-
-def first_matching_line(lines: list[str], needles: tuple[str, ...], fallback: str) -> str:
-    lowered_needles = tuple(needle.lower() for needle in needles)
-    for line in lines:
-        lowered = line.lower()
-        if any(needle in lowered for needle in lowered_needles):
-            return line
-    return fallback
-
-
-def parse_skills(lines: list[str]) -> list[dict[str, str]]:
-    skills: list[dict[str, str]] = []
+def parse_skills(lines: list[str]) -> list[dict[str, Any]]:
+    skills: list[dict[str, Any]] = []
     index = 0
     while index < len(lines):
         category = lines[index]
         details = lines[index + 1] if index + 1 < len(lines) else ""
-        skills.append({"category": category, "details": details})
+        items = [item.strip() for item in details.split(",") if item.strip()]
+        skills.append(
+            {
+                "category": category,
+                "details": details,
+                "items": items[:5],
+            }
+        )
         index += 2
     return skills
 
 
-def slugify(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+def parse_citation(citation: str, kind_label: str) -> dict[str, str]:
+    cleaned = remove_reference_prefix(citation)
+    status = ""
+    parentheticals = re.findall(r"\(([^)]+)\)", cleaned)
+    for candidate in parentheticals:
+        lowered = candidate.lower()
+        if any(keyword in lowered for keyword in ("under review", "accepted", "submitted", "revision", "in press")):
+            status = candidate
+            break
+    if not status:
+        year_match = re.search(r"\b(20\d{2}|19\d{2})\b", cleaned)
+        status = year_match.group(1) if year_match else kind_label
+
+    title = cleaned
+    context = ""
+    match = re.search(r"\)\.\s*(.+)", cleaned)
+    if match:
+        remainder = match.group(1).strip()
+        parts = [part.strip() for part in remainder.split(". ") if part.strip()]
+        if parts:
+            title = parts[0].rstrip(".")
+            if len(parts) > 1:
+                context = parts[1].split("https://")[0].split("Manuscript")[0].strip().rstrip(".").rstrip("(").strip()
+
+    return {
+        "title": title,
+        "context": context or kind_label,
+        "status": status,
+    }
 
 
-def to_feature_cards(items: list[str], limit: int) -> list[str]:
-    return [clean_item_prefix(item) for item in items[:limit]]
+def is_showcase_role(entry: dict[str, Any]) -> bool:
+    title = entry["title"].strip()
+    if not title:
+        return False
+    if title.endswith("."):
+        return False
+    if len(title) > 70:
+        return False
+    if title.lower().startswith(("research on ", "analysis of ", "collection, ")):
+        return False
+    return True
+
+
+def summarize_grant(text: str) -> dict[str, str]:
+    cleaned = remove_reference_prefix(text)
+    title, remainder = (cleaned.split(". ", 1) + [""])[:2]
+    status = "Grant or fellowship"
+    if "[Awarded]" in cleaned or "FUNDED" in cleaned:
+        status = "Funded"
+    elif "Nominee" in cleaned:
+        status = "Nominee"
+    elif "Applicant" in cleaned:
+        status = "Applicant"
+    elif "Resubmission" in cleaned:
+        status = "Resubmission"
+    return {
+        "title": title.strip(),
+        "context": remainder.strip() or "Grant or fellowship",
+        "status": status,
+    }
+
+
+def summarize_service_items(items: list[dict[str, str]], limit: int = 3) -> str:
+    if not items:
+        return ""
+    names = [item["name"] for item in items[:limit]]
+    summary = ", ".join(names)
+    if len(items) > limit:
+        summary = f"{summary}, and more."
+    return summary
 
 
 def build_site_data() -> dict[str, Any]:
     paragraphs = read_docx_paragraphs(SOURCE_DOCX)
     header, sections = split_sections(paragraphs)
 
-    publications_grouped = group_subsections(sections.get("PUBLICATIONS", []))
-    conference_items = list_items(sections.get("CONFERENCE PRESENTATIONS", []))
-    grants_lines = sections.get("GRANTS", [])
-    awards_lines = sections.get("AWARDS & SCHOLARSHIPS", [])
-    skills = parse_skills(sections.get("TECHNICAL AND PROFESSIONAL SKILLS", []))
+    publications_grouped = group_subsections(sections.get("PUBLICATIONS", []), PUBLICATION_SUBHEADINGS)
+    service_grouped = group_subsections(sections.get("PROFESSIONAL AND COMMUNITY SERVICE", []), SERVICE_SUBHEADINGS)
 
+    journal_articles = list_items(publications_grouped.get("Peer-reviewed Journal Articles", []))
+    conference_presentations = list_items(sections.get("CONFERENCE PRESENTATIONS", []))
+    grants = [remove_reference_prefix(line) for line in sections.get("GRANTS", [])]
     research_entries = parse_entries(sections.get("RESEARCH EXPERIENCE", []))
     teaching_entries = parse_entries(sections.get("TEACHING EXPERIENCE", []))
     design_entries = parse_entries(sections.get("INSTRUCTIONAL DESIGN EXPERIENCE", []))
     leadership_entries = parse_entries(sections.get("LEADERSHIP ROLE AND SERVICES", []))
+    awards = parse_named_date_pairs(sections.get("AWARDS & SCHOLARSHIPS", []))
+    certifications = parse_named_date_pairs(sections.get("CERTIFICATIONS", []))
+    skills = parse_skills(sections.get("TECHNICAL AND PROFESSIONAL SKILLS", []))
+    affiliations = [{"name": item} for item in sections.get("PROFESSIONAL AFFLIATIONS", [])]
 
-    all_experience_entries = research_entries + teaching_entries + design_entries
-    featured_experience = []
-    for entry in all_experience_entries[:5]:
-        featured_experience.append(
-            {
-                "date": entry["date"] or "Selected role",
-                "title": entry["title"],
-                "organization": entry["organization"],
-                "summary": pick_sentence(entry["details"]),
-            }
-        )
-
-    leadership_cards = []
-    for entry in leadership_entries[:4]:
-        leadership_cards.append(
-            {
-                "title": entry["title"],
-                "body": pick_sentence(entry["details"], entry["organization"]),
-            }
-        )
-
-    journal_articles = list_items(publications_grouped.get("Peer-reviewed Journal Articles", []))
+    service_journals = parse_named_date_pairs(service_grouped.get("Journal Reviews", []))
+    service_reviews = parse_named_date_pairs(service_grouped.get("Conference Reviews", []))
+    service_chairs = parse_named_date_pairs(service_grouped.get("Conference Chair and Discussant", []))
+    service_mentoring = parse_named_date_pairs(service_grouped.get("Mentoring", []))
+    service_outreach = parse_named_date_pairs(service_grouped.get("Community/Outreach/ Conferences Services", []))
 
     header_text = " ".join(header)
     email = extract_email(header_text)
     phone = extract_phone(header_text)
 
-    research_lines = sections.get("RESEARCH EXPERIENCE", [])
-    profile_lines = sections.get("PROFILE SUMMARY", [])
-    skill_lines = sections.get("TECHNICAL AND PROFESSIONAL SKILLS", [])
-    publication_lines = journal_articles
+    stable_roles = [
+        entry
+        for entry in (research_entries + teaching_entries + design_entries)
+        if "guest lecture" not in entry["title"].lower()
+        and "workshop facilitator" not in entry["title"].lower()
+        and is_showcase_role(entry)
+    ]
+    featured_roles = stable_roles[:4]
+    invited_talks = [entry for entry in teaching_entries if "guest" in entry["title"].lower()][:3]
+
+    research_themes = [
+        {
+            "title": "Immersive Learning Systems",
+            "body": "Designs immersive virtual reality experiences for engineering and STEM learning, with a focus on safety training, hazard identification, and applied multimedia learning.",
+        },
+        {
+            "title": "Learning Analytics",
+            "body": "Uses behavioral analytics, statistical modeling, and mixed methods to explain how learners engage, shift strategies, and demonstrate growth over time.",
+        },
+        {
+            "title": "AI-Enhanced Education",
+            "body": "Explores generative AI, AI literacy, adaptive systems, and AI-supported instructional design for teacher education, assessment, and digital learning environments.",
+        },
+        {
+            "title": "Equity in STEM Participation",
+            "body": "Advances broadening participation in computing and STEM through teacher development, inclusive learning design, and pathways for underrepresented learners.",
+        },
+    ]
+
+    top_awards = awards[:4]
+    hero_highlights = [award["name"] for award in top_awards[:3]]
+    selected_publications = [parse_citation(item, "Journal article") for item in journal_articles[:6]]
+    recent_presentations = [parse_citation(item, "Conference presentation") for item in conference_presentations[:4]]
+    featured_grants = [summarize_grant(item) for item in grants[:4]]
+    award_cards = [
+        {"title": item["name"], "meta": item["date"] or "Recognition"}
+        for item in top_awards
+    ]
+    certification_cards = [
+        {"title": item["name"], "meta": item["date"] or "Certification"}
+        for item in certifications[:4]
+    ]
+
+    service_cards = [
+        {
+            "eyebrow": "Journal Reviewing",
+            "title": f"{len(service_journals)} review appointments",
+            "body": summarize_service_items(service_journals),
+        },
+        {
+            "eyebrow": "Conference Service",
+            "title": f"{len(service_chairs) + len(service_reviews)} chairing and review roles",
+            "body": summarize_service_items(service_chairs + service_reviews),
+        },
+        {
+            "eyebrow": "Mentoring",
+            "title": f"{len(service_mentoring)} mentoring initiatives",
+            "body": summarize_service_items(service_mentoring),
+        },
+        {
+            "eyebrow": "Community Engagement",
+            "title": f"{len(service_outreach)} outreach and campus contributions",
+            "body": summarize_service_items(service_outreach),
+        },
+    ]
+
+    profile_summary = sections.get("PROFILE SUMMARY", [""])[0]
+    primary_skill_tags = [item for skill in skills[:3] for item in skill["items"][:3]][:9]
 
     data = {
         "generated_on": date.today().isoformat(),
@@ -379,59 +508,32 @@ def build_site_data() -> dict[str, Any]:
             "email": email,
             "expected_phd": "Spring 2027",
         },
-        "profile_summary": profile_lines[0] if profile_lines else "",
+        "profile_summary": profile_summary,
         "education": parse_education(sections.get("EDUCATION", [])),
-        "research_themes": [
-            {
-                "title": "Immersive Learning",
-                "body": first_matching_line(
-                    research_lines,
-                    ("immersive virtual reality", "virtual reality", "ivr"),
-                    "Designing immersive virtual reality learning experiences for engineering and STEM education.",
-                ),
-            },
-            {
-                "title": "Learning Analytics",
-                "body": first_matching_line(
-                    research_lines,
-                    ("learner analytics", "statistical analysis", "qualitative and quantitative"),
-                    "Using learning analytics and mixed methods to understand engagement, behavior, and outcomes.",
-                ),
-            },
-            {
-                "title": "AI in Education",
-                "body": first_matching_line(
-                    skill_lines,
-                    ("generative ai", "adaptive learning", "ai-assisted", "applied ai"),
-                    "Exploring AI-enhanced instructional design, assessment, and digital learning environments.",
-                ),
-            },
-            {
-                "title": "Equity and Participation",
-                "body": first_matching_line(
-                    publication_lines,
-                    ("broadening participation", "teachers of color", "reduced inequality"),
-                    "Building inclusive and equitable pathways into computing and STEM learning.",
-                ),
-            },
-        ],
+        "hero_highlights": hero_highlights,
+        "research_themes": research_themes,
         "metrics": [
-            {"value": str(len(journal_articles)), "label": "peer-reviewed journal articles listed"},
-            {"value": str(len(conference_items)), "label": "conference presentations and accepted sessions"},
-            {"value": str(len(grants_lines)), "label": "grants, fellowships, and funded initiatives"},
-            {"value": "2023-2026", "label": "current span of research, teaching, and service momentum"},
+            {"value": str(len(journal_articles)), "label": "journal articles and review-stage manuscripts"},
+            {"value": str(len(conference_presentations)), "label": "conference presentations and accepted sessions"},
+            {"value": str(len(grants)), "label": "grants, fellowships, and funded initiatives"},
+            {"value": str(len(awards)), "label": "awards and scholarships listed in the CV"},
         ],
-        "featured_experience": featured_experience,
-        "selected_publications": to_feature_cards(journal_articles, 6),
-        "recent_presentations": to_feature_cards(conference_items, 6),
-        "grants_and_recognition": grants_lines[:6],
-        "skills": [skill["category"] for skill in skills],
-        "skill_details": skills,
-        "leadership_cards": leadership_cards,
-        "service_highlights": sections.get("PROFESSIONAL AND COMMUNITY SERVICE", [])[:10],
-        "awards": awards_lines[:8],
+        "featured_roles": featured_roles,
+        "invited_talks": invited_talks,
+        "selected_publications": selected_publications,
+        "recent_presentations": recent_presentations,
+        "featured_grants": featured_grants,
+        "award_cards": award_cards,
+        "certification_cards": certification_cards,
+        "skills": skills,
+        "primary_skill_tags": primary_skill_tags,
+        "leadership_cards": leadership_entries[:4],
+        "service_cards": service_cards,
+        "affiliations": affiliations,
         "publications_breakdown": {
-            key: list_items(value) for key, value in publications_grouped.items() if key != "default"
+            key: [remove_reference_prefix(item) for item in list_items(value)]
+            for key, value in publications_grouped.items()
+            if key != "default"
         },
         "raw_sections": sections,
     }
@@ -440,44 +542,11 @@ def build_site_data() -> dict[str, Any]:
 
 def render_html(data: dict[str, Any]) -> str:
     person = data["person"]
-    education_html = "\n".join(
-        f"""
-              <article>
-                <span>{escape(item['date'])}</span>
-                <strong>{escape(item['degree'])}</strong>
-                <p>{escape(item['institution'])}</p>
-              </article>
-        """.rstrip()
-        for item in data["education"]
-    )
-
-    research_themes_html = "\n".join(
-        f"""
-          <article class="topic-card">
-            <h3>{escape(item['title'])}</h3>
-            <p>{escape(item['body'])}</p>
-          </article>
-        """.rstrip()
-        for item in data["research_themes"]
-    )
-
-    experience_html = "\n".join(
-        f"""
-          <article class="timeline-item">
-            <div class="timeline-date">{escape(item['date'])}</div>
-            <div class="timeline-content">
-              <h3>{escape(item['title'])}</h3>
-              <p class="timeline-org">{escape(item['organization'])}</p>
-              <p>{escape(item['summary'])}</p>
-            </div>
-          </article>
-        """.rstrip()
-        for item in data["featured_experience"]
-    )
+    generated_label = date.fromisoformat(data["generated_on"]).strftime("%B %d, %Y")
 
     metrics_html = "\n".join(
         f"""
-        <article>
+        <article class="metric-card">
           <strong>{escape(item['value'])}</strong>
           <span>{escape(item['label'])}</span>
         </article>
@@ -485,22 +554,145 @@ def render_html(data: dict[str, Any]) -> str:
         for item in data["metrics"]
     )
 
-    publications_html = render_list_items(data["selected_publications"])
-    presentations_html = render_list_items(data["recent_presentations"])
-    grants_html = render_list_items(data["grants_and_recognition"])
-    skill_tags_html = "\n".join(f"<li>{escape(item)}</li>" for item in data["skills"])
+    highlight_html = "\n".join(
+        f"<li>{escape(item)}</li>" for item in data["hero_highlights"]
+    )
+
+    theme_html = "\n".join(
+        f"""
+          <article class="research-card">
+            <p class="card-kicker">Theme</p>
+            <h3>{escape(item['title'])}</h3>
+            <p>{escape(item['body'])}</p>
+          </article>
+        """.rstrip()
+        for item in data["research_themes"]
+    )
+
+    education_html = "\n".join(
+        f"""
+          <article class="education-item">
+            <span>{escape(item['date'])}</span>
+            <strong>{escape(item['degree'])}</strong>
+            <p>{escape(item['institution'])}</p>
+          </article>
+        """.rstrip()
+        for item in data["education"]
+    )
+
+    role_html = "\n".join(
+        f"""
+          <article class="role-card">
+            <div class="role-meta">{escape(item['date'])}</div>
+            <h3>{escape(item['title'])}</h3>
+            <p class="role-org">{escape(item['organization'])}</p>
+            <p>{escape(item['summary'])}</p>
+          </article>
+        """.rstrip()
+        for item in data["featured_roles"]
+    )
+
+    talk_html = "\n".join(
+        f"""
+          <article class="mini-card">
+            <p class="mini-meta">{escape(item['date'])}</p>
+            <h3>{escape(item['title'])}</h3>
+            <p>{escape(item['organization'] or item['summary'])}</p>
+          </article>
+        """.rstrip()
+        for item in data["invited_talks"]
+    )
+
+    publication_html = "\n".join(
+        f"""
+          <article class="output-card">
+            <p class="mini-meta">{escape(item['status'])}</p>
+            <h3>{escape(item['title'])}</h3>
+            <p>{escape(item['context'])}</p>
+          </article>
+        """.rstrip()
+        for item in data["selected_publications"]
+    )
+
+    presentation_html = "\n".join(
+        f"""
+          <article class="output-card">
+            <p class="mini-meta">{escape(item['status'])}</p>
+            <h3>{escape(item['title'])}</h3>
+            <p>{escape(item['context'])}</p>
+          </article>
+        """.rstrip()
+        for item in data["recent_presentations"]
+    )
+
+    grants_html = "\n".join(
+        f"""
+          <article class="output-card">
+            <p class="mini-meta">{escape(item['status'])}</p>
+            <h3>{escape(item['title'])}</h3>
+            <p>{escape(item['context'])}</p>
+          </article>
+        """.rstrip()
+        for item in data["featured_grants"]
+    )
+
+    awards_html = "\n".join(
+        f"""
+          <article class="compact-card">
+            <h3>{escape(item['title'])}</h3>
+            <p>{escape(item['meta'])}</p>
+          </article>
+        """.rstrip()
+        for item in data["award_cards"]
+    )
+
+    certifications_html = "\n".join(
+        f"""
+          <article class="compact-card">
+            <h3>{escape(item['title'])}</h3>
+            <p>{escape(item['meta'])}</p>
+          </article>
+        """.rstrip()
+        for item in data["certification_cards"]
+    )
+
+    skill_panel_html = "\n".join(
+        f"""
+          <article class="skill-panel">
+            <h3>{escape(item['category'])}</h3>
+            <p>{escape(truncate_text(item['details'], 220))}</p>
+          </article>
+        """.rstrip()
+        for item in data["skills"]
+    )
+
+    skill_tags_html = "\n".join(f"<li>{escape(item)}</li>" for item in data["primary_skill_tags"])
 
     leadership_html = "\n".join(
         f"""
-          <article class="service-card">
+          <article class="mini-card">
+            <p class="mini-meta">{escape(item['date'])}</p>
             <h3>{escape(item['title'])}</h3>
-            <p>{escape(item['body'])}</p>
+            <p>{escape(item['organization'] or item['summary'])}</p>
           </article>
         """.rstrip()
         for item in data["leadership_cards"]
     )
 
-    generated_label = date.fromisoformat(data["generated_on"]).strftime("%B %d, %Y")
+    service_html = "\n".join(
+        f"""
+          <article class="service-card">
+            <p class="card-kicker">{escape(item['eyebrow'])}</p>
+            <h3>{escape(item['title'])}</h3>
+            <p>{escape(item['body'])}</p>
+          </article>
+        """.rstrip()
+        for item in data["service_cards"]
+    )
+
+    affiliation_html = "\n".join(
+        f"<li>{escape(item['name'])}</li>" for item in data["affiliations"]
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -510,24 +702,28 @@ def render_html(data: dict[str, Any]) -> str:
   <title>{escape(person['name'])} | Instructional Technology Researcher</title>
   <meta
     name="description"
-    content="Academic portfolio for {escape(person['name'])}, Ph.D. candidate in Instructional Technology at the University of Alabama."
+    content="Academic portfolio for {escape(person['name'])}, doctoral researcher in Instructional Technology at the University of Alabama."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="site-bg"></div>
   <div class="page-shell">
     <header class="site-header">
-      <a class="wordmark" href="#top">IDA</a>
+      <a class="brand" href="#top">
+        <span class="brand-mark">IDA</span>
+        <span class="brand-text">David Awoyemi</span>
+      </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#research">Research</a>
-        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
         <a href="#outputs">Outputs</a>
         <a href="#service">Service</a>
       </nav>
@@ -536,43 +732,46 @@ def render_html(data: dict[str, Any]) -> str:
 
     <main id="top">
       <section class="hero">
-        <div class="hero-copy">
+        <div class="hero-main">
           <p class="eyebrow">Instructional Technology • Immersive Learning • AI in Education</p>
           <h1>{escape(person['name'])}</h1>
-          <p class="hero-summary">{escape(data['profile_summary'])}</p>
+          <p class="hero-lede">{escape(data['profile_summary'])}</p>
+          <p class="hero-affiliation">{escape(person['affiliation'])}</p>
           <div class="hero-actions">
-            <a class="button" href="mailto:{escape(person['email'])}">Email David</a>
-            <a class="button button-outline" href="#outputs">View Research</a>
+            <a class="button" href="mailto:{escape(person['email'])}">Contact David</a>
+            <a class="button button-outline" href="#outputs">Explore Research</a>
           </div>
-          <dl class="contact-grid" aria-label="Contact details">
-            <div>
-              <dt>Location</dt>
-              <dd>{escape(person['location'])}</dd>
-            </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:{escape(person['email'])}">{escape(person['email'])}</a></dd>
-            </div>
-            <div>
-              <dt>Phone</dt>
-              <dd><a href="tel:{escape(person['phone_href'])}">{escape(person['phone'])}</a></dd>
-            </div>
-            <div>
-              <dt>Expected Ph.D.</dt>
-              <dd>{escape(person['expected_phd'])}</dd>
-            </div>
-          </dl>
-        </div>
-        <aside class="hero-card">
-          <p class="card-label">Current focus</p>
-          <ul class="focus-list">
-            <li>{escape(data['research_themes'][0]['title'])}: {escape(data['research_themes'][0]['body'])}</li>
-            <li>{escape(data['research_themes'][2]['title'])}: {escape(data['research_themes'][2]['body'])}</li>
-            <li>{escape(data['research_themes'][3]['title'])}: {escape(data['research_themes'][3]['body'])}</li>
+          <ul class="highlight-list">
+{highlight_html}
           </ul>
-          <div class="accent-stat">
-            <span>Source of truth</span>
-            <strong>{escape(data['source_file'])}</strong>
+        </div>
+        <aside class="hero-side">
+          <div class="hero-panel">
+            <p class="card-kicker">Current Base</p>
+            <h2>University of Alabama</h2>
+            <dl class="contact-grid">
+              <div>
+                <dt>Location</dt>
+                <dd>{escape(person['location'])}</dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:{escape(person['email'])}">{escape(person['email'])}</a></dd>
+              </div>
+              <div>
+                <dt>Phone</dt>
+                <dd><a href="tel:{escape(person['phone_href'])}">{escape(person['phone'])}</a></dd>
+              </div>
+              <div>
+                <dt>Expected Ph.D.</dt>
+                <dd>{escape(person['expected_phd'])}</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="hero-panel source-panel">
+            <p class="card-kicker">Source of Truth</p>
+            <h3>{escape(data['source_file'])}</h3>
+            <p>This website is regenerated directly from the Word CV through the local build script and GitHub deployment workflow.</p>
           </div>
         </aside>
       </section>
@@ -581,22 +780,19 @@ def render_html(data: dict[str, Any]) -> str:
 {metrics_html}
       </section>
 
-      <section class="section" id="about">
+      <section class="section about" id="about">
         <div class="section-heading">
           <p class="eyebrow">About</p>
-          <h2>Researcher, educator, and instructional designer</h2>
+          <h2>Research, teaching, and design work shaped for equitable learning.</h2>
         </div>
-        <div class="two-column">
-          <div class="panel">
+        <div class="about-grid">
+          <div class="panel prose-panel">
             <p>{escape(data['profile_summary'])}</p>
-            <p>
-              This website is regenerated from the Word CV directly, so future updates can begin in the
-              CV and flow back into the web version through the build script.
-            </p>
+            <p>David’s work sits at the intersection of immersive learning systems, AI-enhanced pedagogy, analytics, and inclusive STEM participation. His projects span engineering education, teacher development, digital course design, and student support.</p>
           </div>
           <div class="panel">
             <h3>Education</h3>
-            <div class="mini-timeline">
+            <div class="education-list">
 {education_html}
             </div>
           </div>
@@ -606,66 +802,118 @@ def render_html(data: dict[str, Any]) -> str:
       <section class="section" id="research">
         <div class="section-heading">
           <p class="eyebrow">Research Agenda</p>
-          <h2>Designing immersive and AI-enabled learning for real impact</h2>
+          <h2>Four strands organize the portfolio and the questions behind it.</h2>
         </div>
-        <div class="card-grid">
-{research_themes_html}
+        <div class="research-grid">
+{theme_html}
         </div>
       </section>
 
-      <section class="section" id="experience">
+      <section class="section" id="work">
         <div class="section-heading">
-          <p class="eyebrow">Experience</p>
-          <h2>Selected roles generated from the CV source file</h2>
+          <p class="eyebrow">Core Roles</p>
+          <h2>Selected academic and instructional roles drawn from the CV.</h2>
         </div>
-        <div class="timeline">
-{experience_html}
+        <div class="role-grid">
+{role_html}
+        </div>
+        <div class="subsection">
+          <div class="subsection-heading">
+            <h3>Invited Teaching and Talks</h3>
+            <a class="text-link" href="#outputs">See research outputs</a>
+          </div>
+          <div class="mini-grid">
+{talk_html}
+          </div>
         </div>
       </section>
 
-      <section class="section section-split" id="outputs">
+      <section class="section" id="outputs">
         <div class="section-heading">
           <p class="eyebrow">Selected Outputs</p>
-          <h2>A research record spanning journals, presentations, grants, and design practice</h2>
+          <h2>Recent publications, presentations, grants, and recognitions.</h2>
         </div>
-        <div class="two-column">
-          <div class="panel">
-            <h3>Selected publications</h3>
-            <ul class="feature-list">
-{publications_html}
-            </ul>
-            <a class="text-link" href="{escape(data['source_file'])}">See the full publication list in the CV</a>
+        <div class="subsection">
+          <div class="subsection-heading">
+            <h3>Publications</h3>
+            <a class="text-link" href="{escape(data['source_file'])}">Full list in CV</a>
           </div>
-          <div class="panel">
-            <h3>Recent presentations</h3>
-            <ul class="feature-list">
-{presentations_html}
-            </ul>
+          <div class="output-grid">
+{publication_html}
           </div>
         </div>
-        <div class="two-column">
+        <div class="subsection">
+          <div class="subsection-heading">
+            <h3>Recent Presentations</h3>
+          </div>
+          <div class="output-grid">
+{presentation_html}
+          </div>
+        </div>
+        <div class="subsection split-subsection">
           <div class="panel">
-            <h3>Grants and recognition</h3>
-            <ul class="feature-list">
+            <div class="subsection-heading">
+              <h3>Grants and Fellowships</h3>
+            </div>
+            <div class="stack-grid">
 {grants_html}
-            </ul>
+            </div>
           </div>
           <div class="panel">
-            <h3>Skills and tools</h3>
-            <ul class="tag-list" aria-label="Skills">
-{skill_tags_html}
-            </ul>
+            <div class="subsection-heading">
+              <h3>Awards and Certifications</h3>
+            </div>
+            <div class="compact-grid">
+{awards_html}
+{certifications_html}
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section" id="service">
         <div class="section-heading">
-          <p class="eyebrow">Leadership & Service</p>
-          <h2>Academic citizenship, mentoring, and community impact</h2>
+          <p class="eyebrow">Leadership, Skills, and Service</p>
+          <h2>Academic citizenship alongside digital learning craft.</h2>
         </div>
-        <div class="card-grid">
+        <div class="split-subsection">
+          <div class="panel">
+            <div class="subsection-heading">
+              <h3>Leadership Roles</h3>
+            </div>
+            <div class="mini-grid">
 {leadership_html}
+            </div>
+          </div>
+          <div class="panel">
+            <div class="subsection-heading">
+              <h3>Service Snapshot</h3>
+            </div>
+            <div class="service-grid">
+{service_html}
+            </div>
+          </div>
+        </div>
+        <div class="split-subsection">
+          <div class="panel">
+            <div class="subsection-heading">
+              <h3>Skill Areas</h3>
+            </div>
+            <ul class="tag-list">
+{skill_tags_html}
+            </ul>
+            <div class="skill-grid">
+{skill_panel_html}
+            </div>
+          </div>
+          <div class="panel">
+            <div class="subsection-heading">
+              <h3>Professional Affiliations</h3>
+            </div>
+            <ul class="affiliation-list">
+{affiliation_html}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -673,8 +921,9 @@ def render_html(data: dict[str, Any]) -> str:
         <div>
           <p class="eyebrow">Workflow</p>
           <h2>Generated from {escape(data['source_file'])} on {escape(generated_label)}</h2>
+          <p>Update the Word CV, rebuild locally, and push to GitHub to publish a fresh version automatically.</p>
         </div>
-        <div class="cta-actions">
+        <div class="hero-actions">
           <a class="button" href="mailto:{escape(person['email'])}">Start a conversation</a>
           <a class="button button-outline" href="{escape(data['source_file'])}">Open full CV</a>
         </div>
@@ -684,10 +933,6 @@ def render_html(data: dict[str, Any]) -> str:
 </body>
 </html>
 """
-
-
-def render_list_items(items: list[str]) -> str:
-    return "\n".join(f"              <li>{escape(item)}</li>" for item in items)
 
 
 def escape(value: Any) -> str:
