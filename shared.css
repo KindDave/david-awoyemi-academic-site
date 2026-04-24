@@ -1474,7 +1474,7 @@ img { max-width: 100%; display: block; }
 
 .portfolio-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
 }
 
@@ -1489,11 +1489,12 @@ img { max-width: 100%; display: block; }
 
 .portfolio-gallery-grid .media-card img,
 .portfolio-gallery-grid-wide .media-card img {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 11;
   min-height: 0;
   object-fit: contain;
   object-position: center top;
   background: rgba(255, 255, 255, 0.92);
+  padding: 0.4rem;
 }
 
 [data-theme="dark"] .portfolio-gallery-grid .media-card img,
@@ -1505,14 +1506,14 @@ img { max-width: 100%; display: block; }
 .portfolio-gallery-grid-wide .media-card figcaption {
   position: static;
   inset: auto;
-  padding: 0.95rem 1rem 1rem;
+  padding: 1rem 1rem 1.05rem;
   background: transparent;
   color: var(--text1);
-  font-size: 0.92rem;
+  font-size: 0.98rem;
   font-weight: 700;
-  line-height: 1.45;
+  line-height: 1.5;
   letter-spacing: 0;
-  min-height: 5.2rem;
+  min-height: 6.2rem;
   display: flex;
   align-items: flex-start;
 }
@@ -1801,7 +1802,7 @@ img { max-width: 100%; display: block; }
 }
 
 .portfolio-gallery-grid-wide {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .video-grid,
@@ -2089,4 +2090,10 @@ img { max-width: 100%; display: block; }
 
   .metric-card:last-child { border-bottom: 0; }
   .page-hero { padding-top: 6.1rem; }
+
+  .portfolio-gallery-grid .media-card figcaption,
+  .portfolio-gallery-grid-wide .media-card figcaption {
+    min-height: 0;
+    font-size: 0.94rem;
+  }
 }
