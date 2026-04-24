@@ -462,6 +462,26 @@ PORTFOLIO_COURSES = [
             {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail-608/"},
         ],
     },
+    {
+        "code": "AIL-605",
+        "term": "Interactive Multimedia Processes",
+        "title": "Rise 360 Interactive Tutorial and Reflection",
+        "body": "Built a full interactive multimedia lesson with branching menus, audio narration, embedded videos, and accessibility-aware design choices.",
+        "links": [
+            {"label": "Launch Interactive Module", "url": "https://360.articulate.com/review/content/d5649f65-923e-4144-906c-409b7eb97ddd/review"},
+            {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail605/"},
+        ],
+    },
+    {
+        "code": "AIL-689/690",
+        "term": "Doctoral Seminar and Dissertation",
+        "title": "Dissertation Prospectus and Program Reflection",
+        "body": "Capstone documents showing research readiness, scholarly identity, and synthesis across the doctoral program in instructional technology.",
+        "links": [
+            {"label": "Read Prospectus", "url": "https://portfolios.davidawoyemi.net/prospectus/"},
+            {"label": "Read Program Reflection", "url": "https://portfolios.davidawoyemi.net/ail601/"},
+        ],
+    },
 ]
 
 PORTFOLIO_MORE_LINKS = [
@@ -469,6 +489,122 @@ PORTFOLIO_MORE_LINKS = [
     {"label": "Teaching Dossier", "url": "https://sites.google.com/view/david-teaching-dossier/home"},
     {"label": "Exam Portfolio", "url": "https://portfolios.davidawoyemi.net/"},
     {"label": "Download Full CV", "url": SOURCE_DOCX.name},
+]
+
+PORTFOLIO_CURRICULUM_TABS = [
+    {
+        "id": "overview",
+        "label": "Overview and Characters",
+        "items": [
+            {"src": "assets/images/portfolio-camp-characters.jpg", "alt": "Story characters for the camp curriculum", "caption": "Story characters: Zada, Milo, and Zappy the AI robot."},
+            {"src": "assets/images/portfolio-camp-roadmap.jpg", "alt": "Roadmap of 16 activities", "caption": "Roadmap of 16 curriculum activities across coding, data, and sensing."},
+        ],
+    },
+    {
+        "id": "pd",
+        "label": "Teacher PD",
+        "items": [
+            {"src": "assets/images/portfolio-camp-team.jpg", "alt": "Research team photo", "caption": "Research team and project leads."},
+            {"src": "assets/images/portfolio-camp-agenda.jpg", "alt": "Two-day professional development agenda", "caption": "Two-day professional development agenda for teachers and facilitators."},
+            {"src": "assets/images/portfolio-camp-schedule.jpg", "alt": "Weekly camp schedule", "caption": "Weekly schedule coordinating camp activities and data collection."},
+        ],
+    },
+    {
+        "id": "a1",
+        "label": "Activities 1 to 5",
+        "items": [
+            {"src": "assets/images/portfolio-camp-activity-1.jpg", "alt": "Paper computer activity", "caption": "Paper computer activity introducing hardware and software logic."},
+            {"src": "assets/images/portfolio-camp-activity-4.jpg", "alt": "Physiological data activity", "caption": "Learners using body-based data to connect sensing and computation."},
+            {"src": "assets/images/portfolio-camp-activity-5.jpg", "alt": "Plotting heart rate data", "caption": "Students graphing heart rate data across activities."},
+        ],
+    },
+    {
+        "id": "a2",
+        "label": "Activities 6 to 10",
+        "items": [
+            {"src": "assets/images/portfolio-camp-activity-6.jpg", "alt": "Energy hunt paper block programming", "caption": "Paper block programming for algorithmic thinking."},
+            {"src": "assets/images/portfolio-camp-activity-8.jpg", "alt": "Simon says conditionals activity", "caption": "Conditionals and logic through kinesthetic gameplay."},
+            {"src": "assets/images/portfolio-camp-activity-10.jpg", "alt": "Algorithm design activity", "caption": "Students creating pseudocode algorithms for daily tasks."},
+        ],
+    },
+    {
+        "id": "a3",
+        "label": "Activities 11 to 16",
+        "items": [
+            {"src": "assets/images/portfolio-camp-activity-11.jpg", "alt": "Muscle energy coding activity", "caption": "Coding and sensing challenges in later-stage activities."},
+            {"src": "assets/images/portfolio-camp-activity-14.jpg", "alt": "Banana piano Makey Makey activity", "caption": "Makey Makey circuitry and playful interaction design."},
+            {"src": "assets/images/portfolio-camp-activity-16.jpg", "alt": "Coding lab with VEX AIM robot and EMG sensors", "caption": "Advanced coding lab with robotics and physiological sensors."},
+        ],
+    },
+]
+
+PORTFOLIO_VIDEO_TABS = [
+    {
+        "id": "music",
+        "label": "Music (4 videos)",
+        "items": [
+            {
+                "video_id": "lnE1iTkWluk",
+                "title": "Introduction — Music Lesson One",
+                "desc": "Introductory video for the arts-integrated music PD series, setting learning aims and the music-technology integration approach.",
+                "tags": ["Arts Integration", "Music"],
+            },
+            {
+                "video_id": "vKrdyFokmfM",
+                "title": "Music Lesson Four",
+                "desc": "Later-stage music module focused on classroom application and teacher professional development.",
+                "tags": ["Arts Integration", "Music", "Teacher PD"],
+            },
+            {
+                "video_id": "ZwEb9ss9b9A",
+                "title": "The Symphony of Digital Skills",
+                "desc": "A creative instructional video using musical metaphor to communicate digital competency frameworks for educators.",
+                "tags": ["Digital Skills", "Creative Production"],
+            },
+            {
+                "video_id": "hcGQv8W0gIQ",
+                "title": "SOUNDRAW — AI Music Composition",
+                "desc": "Demonstrates AI-supported music generation as a tool for creative instructional production.",
+                "tags": ["AI Tools", "Music"],
+            },
+        ],
+    },
+    {
+        "id": "theatre",
+        "label": "Theatre (5 videos)",
+        "items": [
+            {
+                "video_id": "nPbOreBLyWg",
+                "title": "Welcome — Theatre Module",
+                "desc": "Opening orientation for the theatre arts integration professional development sequence.",
+                "tags": ["Theatre", "Arts Integration", "Teacher PD"],
+            },
+            {
+                "video_id": "5OCrpv2Q_8I",
+                "title": "Theatre Lesson Two — Digital Drama",
+                "desc": "Builds deeper pedagogical strategy and classroom application into the theatre sequence.",
+                "tags": ["Theatre", "Arts Integration"],
+            },
+            {
+                "video_id": "UBwpV88g1bA",
+                "title": "Theatre Lesson Three — Digital Storytelling",
+                "desc": "Focuses on digital storytelling and formative assessment within arts-based instruction.",
+                "tags": ["Theatre", "Formative Assessment"],
+            },
+            {
+                "video_id": "ipQlIj_1kUY",
+                "title": "Theatre Lesson Four",
+                "desc": "Capstone lesson emphasizing performance-based assessment and reflective practice.",
+                "tags": ["Theatre", "Summative Assessment"],
+            },
+            {
+                "video_id": "9viWDW7cj1Q",
+                "title": "Theatre Module — Full Overview",
+                "desc": "Comprehensive overview of the full theatre module from introduction to evaluation.",
+                "tags": ["Theatre", "Module Overview"],
+            },
+        ],
+    },
 ]
 
 SHARED_CSS = """@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap');
@@ -3300,117 +3436,262 @@ def render_teaching(data: dict[str, Any]) -> str:
     )
 
 
+def render_tag_group(tags: list[str], class_name: str = "tag-list") -> str:
+    return f'<div class="{class_name}">{"".join(f"<span>{escape(tag)}</span>" for tag in tags)}</div>'
+
+
+def render_portfolio_video_card(item: dict[str, Any]) -> str:
+    thumb = f"https://img.youtube.com/vi/{item['video_id']}/hqdefault.jpg"
+    embed = f"https://www.youtube.com/embed/{item['video_id']}?autoplay=1&rel=0&modestbranding=1"
+    return f"""
+    <article class="video-card fade">
+      <button class="video-thumb" type="button" data-play-video="{escape(embed)}" aria-label="Play {escape(item['title'])}">
+        <img src="{escape(thumb)}" alt="{escape(item['title'])}">
+        <span class="video-play">▶</span>
+      </button>
+      <div class="video-card-body">
+        {render_tag_group(item['tags'], 'video-tag-list')}
+        <h4>{escape(item['title'])}</h4>
+        <p>{escape(item['desc'])}</p>
+      </div>
+    </article>
+    """.rstrip()
+
+
 def render_portfolio(data: dict[str, Any]) -> str:
     person = data["person"]
-    portfolio_links = "".join(
+
+    featured_links = "".join(
         f'<a class="button{"-secondary" if index else ""}" href="{escape(link["url"])}"{link_attrs(link["url"])}>{escape(link["label"])}</a>'
         for index, link in enumerate(PORTFOLIO_FEATURED["links"])
     )
-    featured_tags = "".join(f"<span>{escape(tag)}</span>" for tag in PORTFOLIO_FEATURED["tags"])
-    curriculum_media = render_media_cards(PORTFOLIO_CURRICULUM_MEDIA)
-    training_media = render_media_cards(PORTFOLIO_TRAINING_MEDIA)
-    course_cards = "\n".join(
+
+    curriculum_radios = "\n".join(
+        f'<input type="radio" id="curr-{escape(item["id"])}" name="curriculum-tabs" class="tab-radio" {"checked" if index == 0 else ""}>'
+        for index, item in enumerate(PORTFOLIO_CURRICULUM_TABS)
+    )
+    curriculum_labels = "\n".join(
+        f'<label class="tab-label" for="curr-{escape(item["id"])}">{escape(item["label"])}</label>'
+        for item in PORTFOLIO_CURRICULUM_TABS
+    )
+    curriculum_panels = "\n".join(
         f"""
-        <article class="portfolio-card fade">
-          <div class="portfolio-card-head">
-            <span class="card-kicker">{escape(item['code'])}</span>
+        <div class="tab-panel curr-panel-{escape(item['id'])}">
+          <div class="portfolio-gallery-grid portfolio-gallery-grid-wide">
+            {render_media_cards(item['items'])}
+          </div>
+        </div>
+        """.rstrip()
+        for item in PORTFOLIO_CURRICULUM_TABS
+    )
+
+    video_radios = "\n".join(
+        f'<input type="radio" id="video-{escape(item["id"])}" name="video-tabs" class="tab-radio" {"checked" if index == 0 else ""}>'
+        for index, item in enumerate(PORTFOLIO_VIDEO_TABS)
+    )
+    video_labels = "\n".join(
+        f'<label class="tab-label" for="video-{escape(item["id"])}">{escape(item["label"])}</label>'
+        for item in PORTFOLIO_VIDEO_TABS
+    )
+    video_panels = "\n".join(
+        f"""
+        <div class="tab-panel video-panel-{escape(group['id'])}">
+          <div class="video-grid">
+            {"".join(render_portfolio_video_card(item) for item in group['items'])}
+          </div>
+        </div>
+        """.rstrip()
+        for group in PORTFOLIO_VIDEO_TABS
+    )
+
+    project_cards = "\n".join(
+        f"""
+        <article class="project-mini-card fade">
+          <div class="project-mini-head">
+            <span class="project-code">{escape(item['code'])}</span>
             <h3>{escape(item['title'])}</h3>
-            <p>{escape(item['term'])}</p>
           </div>
           <p>{escape(item['body'])}</p>
           <div class="portfolio-links">
-            {''.join(f'<a href="{escape(link["url"])}"{link_attrs(link["url"])}>{escape(link["label"])}</a>' for link in item['links'])}
+            {''.join(f'<a href="{escape(link["url"])}"{link_attrs(link["url"])}>{escape(link["label"])}</a>' for link in item['links'][:1])}
           </div>
         </article>
         """.rstrip()
         for item in PORTFOLIO_COURSES
     )
+
+    course_tabs = "\n".join(
+        f'<button class="course-tab{" is-active" if index == 0 else ""}" type="button" data-course-tab="{escape("all" if index == 0 else item["code"])}">{escape("All Projects" if index == 0 else item["code"])}</button>'
+        for index, item in enumerate([{"code": "all"}] + PORTFOLIO_COURSES)
+    )
+
+    course_all = f"""
+    <div class="course-panel is-active" data-course-panel="all">
+      <div class="project-mini-grid">
+        {project_cards}
+      </div>
+    </div>
+    """.rstrip()
+
+    course_panels = [course_all]
+    for item in PORTFOLIO_COURSES:
+        course_panels.append(
+            f"""
+            <div class="course-panel" data-course-panel="{escape(item['code'])}">
+              <article class="course-detail-card fade">
+                <div class="course-detail-head">
+                  <div class="course-detail-code">{escape(item['code'])}</div>
+                  <div>
+                    <div class="course-detail-term">{escape(item['term'])}</div>
+                    <h3>{escape(item['title'])}</h3>
+                  </div>
+                </div>
+                <p class="course-detail-copy">{escape(item['body'])}</p>
+                <div class="portfolio-links">
+                  {''.join(f'<a href="{escape(link["url"])}"{link_attrs(link["url"])}>{escape(link["label"])}</a>' for link in item['links'])}
+                </div>
+              </article>
+            </div>
+            """.rstrip()
+        )
+
     more_links = "\n".join(
         f'<a class="resource-link fade" href="{escape(item["url"])}"{link_attrs(item["url"])}>{escape(item["label"])}</a>'
         for item in PORTFOLIO_MORE_LINKS
     )
+
     body = f"""
 <main class="main-wrap">
   <section class="page-hero">
-    <span class="eyebrow">ID Portfolio</span>
-    <h1>Design, development, and instructional innovation.</h1>
-    <p>This page brings back the broader portfolio structure from the original site and places the right media under the right sections with a cleaner visual hierarchy.</p>
+    <span class="eyebrow">Instructional Design Portfolio</span>
+    <h1>Design, development, and innovation.</h1>
+    <p>A curated collection of instructional design artifacts, eLearning modules, multimedia projects, and doctoral course reflections demonstrating applied mastery across the instructional design cycle.</p>
   </section>
 
-  <section class="section">
-    <div class="portfolio-feature fade">
-      <div class="portfolio-feature-copy">
+  <section class="section-alt">
+    <div class="section-inner">
+      <div class="section-heading">
         <span class="eyebrow">Featured Project</span>
-        <h2>{escape(PORTFOLIO_FEATURED['title'])}</h2>
-        <p>{escape(PORTFOLIO_FEATURED['subtitle'])}</p>
-        <p>{escape(PORTFOLIO_FEATURED['body'])}</p>
-        <div class="tag-list">{featured_tags}</div>
-        <div class="hero-actions">{portfolio_links}</div>
+        <h2>Articulate Rise 360 interactive tutorial.</h2>
+        <p>Two-Dimensional Geometrical Shapes is a fully interactive, self-paced eLearning module using Rise 360 with branching menus, audio narration, embedded videos, and responsive design aligned with WCAG accessibility guidelines.</p>
       </div>
-      <div class="portfolio-preview-card">
-        <div class="portfolio-preview-inner">
-          <span class="card-kicker">Interactive Multimedia</span>
-          <h3>Rise 360 learning experience</h3>
-          <p>A self-paced lesson with audio, embedded media, branching navigation, and learner-friendly pacing built around accessible instructional structure.</p>
+      <a href="{escape(PORTFOLIO_FEATURED['links'][0]['url'])}" class="featured-preview-card fade"{link_attrs(PORTFOLIO_FEATURED['links'][0]['url'])}>
+        <div class="fpc-header">
+          <span class="feh-badge">Articulate Rise 360</span>
+          <span class="feh-badge feh-badge-alt">Click to Launch</span>
         </div>
-      </div>
+        <div class="fpc-thumb">
+          <img src="https://portfolios.davidawoyemi.net/wp-content/uploads/2025/05/Rise-360-AIL-605-1024x391.png" alt="Rise 360 tutorial preview">
+          <div class="fpc-overlay">
+            <div class="fpc-play">▶</div>
+            <div class="fpc-play-text">Launch Interactive Module</div>
+          </div>
+        </div>
+        <div class="fpc-footer">
+          <div class="fpc-title">Interactive Tutorial: Two-Dimensional Geometrical Shapes</div>
+          <div class="fpc-sub">AIL-605 · Interactive Multimedia Processes · Opens in new tab</div>
+        </div>
+      </a>
+      <div class="hero-actions" style="margin-top: 1.2rem;">{featured_links}</div>
+      {render_tag_group(PORTFOLIO_FEATURED['tags'], 'portfolio-skill-tags')}
     </div>
   </section>
 
   <section class="section-alt">
     <div class="section-inner">
       <div class="section-heading">
-        <span class="eyebrow">AI-Immersive VR Research</span>
-        <h2>Instructional design meeting immersive research.</h2>
-        <p>This strand links design methodology, simulation-based instruction, and AI-enhanced feedback for safety training in civil engineering education.</p>
+        <span class="eyebrow">AI-IVR Research Project</span>
+        <h2>AI-immersive virtual reality intervention for civil engineering education.</h2>
+        <p>Design and Development Research applying systematic instructional design methodology to an immersive VR-based safety training intervention with two learning phases and AI-driven adaptive feedback.</p>
       </div>
-      <div class="case-gallery portfolio-gallery">
-        {render_media_cards(RESEARCH_CASE_STUDIES[0]["images"], extra_class="gallery-card")}
+      <article class="ivr-feature-card fade">
+        <div class="ivr-media-grid">
+          <figure class="ivr-media ivr-media-main">
+            <img src="assets/images/research-case1-1.jpeg" alt="VR construction safety training environment">
+            <figcaption>SOS Construction scene</figcaption>
+          </figure>
+          <figure class="ivr-media">
+            <img src="assets/images/research-case1-2.jpeg" alt="VR night scaffold hazard markers">
+            <figcaption>Unstable scaffold</figcaption>
+          </figure>
+          <figure class="ivr-media">
+            <img src="assets/images/research-case1-3.jpeg" alt="AI avatar inside VR training environment">
+            <figcaption>AI avatar feedback</figcaption>
+          </figure>
+        </div>
+        <div class="ivr-copy">
+          <h3>Designing and developing an immersive virtual reality intervention for civil engineering education.</h3>
+          <p>Phase 1 guides learners through hazard-identification scenarios. Phase 2 introduces an AI avatar that delivers diagnostic and corrective feedback. The work is grounded in experiential and situated learning theory and has already supported research dissemination across major venues.</p>
+          <div class="ivr-metrics">
+            <div><strong>Phase 1</strong><span>Hazard navigation across multiple scenarios</span></div>
+            <div><strong>Phase 2</strong><span>AI avatar feedback and mastery-gated support</span></div>
+          </div>
+          {render_tag_group(["IVR and XR Design", "AI Avatar", "OSHA Training", "AERA 2026"], 'portfolio-skill-tags')}
+          <div class="hero-actions">
+            <a class="button" href="research.html">View Full Research</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section-inner">
+      <div class="section-heading">
+        <span class="eyebrow">Curriculum Design and STEM Education</span>
+        <h2>Code, Sensors, and Me — summer camp curriculum.</h2>
+        <p>A 16-activity STEM curriculum for upper-elementary learners integrating physiological computing, visual coding, and culturally responsive STEM pedagogy, alongside a two-day teacher professional development sequence.</p>
+      </div>
+      {curriculum_radios}
+      <div class="tab-bar">{curriculum_labels}</div>
+      <div class="tab-panels">
+        {curriculum_panels}
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="section-heading">
-      <span class="eyebrow">Curriculum Design and STEM Education</span>
-      <h2>Code, Sensors, and Me summer camp curriculum.</h2>
-      <p>A curriculum and facilitation effort developed for the NSF ITEST Code-N-Sensor context, integrating physiological computing, visual coding, and responsive STEM pedagogy.</p>
+      <span class="eyebrow">Professional Development and Training Documentation</span>
+      <h2>Workshop design, onboarding, and facilitation artifacts.</h2>
+      <p>Training materials developed through SME collaboration, faculty development work, and eLearning design practice.</p>
     </div>
     <div class="portfolio-gallery-grid">
-      {curriculum_media}
+      {render_media_cards(PORTFOLIO_TRAINING_MEDIA)}
     </div>
   </section>
 
   <section class="section-alt">
     <div class="section-inner">
       <div class="section-heading">
-        <span class="eyebrow">Professional Development and Training Documentation</span>
-        <h2>Workshop design, onboarding, and faculty support materials.</h2>
-        <p>These artifacts show how I translate instructional design methods into professional learning, SME collaboration, and implementation-ready training assets.</p>
+        <span class="eyebrow">Arts and Technology PD Video Series</span>
+        <h2>Music and theatre branches.</h2>
+        <p>This section restores the original branching structure by separating the arts-integrated professional development videos into music and theatre tracks.</p>
       </div>
-      <div class="portfolio-gallery-grid">
-        {training_media}
+      {video_radios}
+      <div class="tab-bar">{video_labels}</div>
+      <div class="tab-panels">
+        {video_panels}
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="section-heading">
-      <span class="eyebrow">Course Artifacts and Reflections</span>
-      <h2>Selected doctoral coursework portfolio entries.</h2>
-      <p>Rather than reproducing every tab from the original site, this version surfaces the strongest artifacts and links them out cleanly for committees and collaborators.</p>
+      <span class="eyebrow">Doctoral Coursework Portfolio</span>
+      <h2>Course artifacts and reflections.</h2>
+      <p>Select a course to explore artifacts, reflections, and key learnings from the doctoral program in instructional technology.</p>
     </div>
-    <div class="portfolio-card-grid">
-      {course_cards}
-    </div>
+    <div class="course-tabs">{course_tabs}</div>
+    {"".join(course_panels)}
   </section>
 
   <section class="section-alt">
     <div class="section-inner">
       <div class="section-heading">
-        <span class="eyebrow">More of My Work</span>
-        <h2>Additional portfolio and dossier resources.</h2>
-        <p>These external collections remain useful for deeper review of design work, teaching materials, and doctoral artifacts.</p>
+        <span class="eyebrow">Additional Resources</span>
+        <h2>More of my work.</h2>
+        <p>These links connect to the broader teaching, design, and doctoral portfolio ecosystem around this site.</p>
       </div>
       <div class="resource-link-grid">
         {more_links}

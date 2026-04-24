@@ -121,6 +121,36 @@ document.querySelectorAll('[data-mailto-form]').forEach((form) => {
   });
 });
 
+document.querySelectorAll('[data-play-video]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const src = button.getAttribute('data-play-video');
+    if (!src) {
+      return;
+    }
+
+    button.innerHTML = `<iframe src="${src}" frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    button.removeAttribute('data-play-video');
+    button.disabled = true;
+  });
+});
+
+document.querySelectorAll('[data-course-tab]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const target = button.getAttribute('data-course-tab');
+    if (!target) {
+      return;
+    }
+
+    document.querySelectorAll('[data-course-tab]').forEach((tab) => {
+      tab.classList.toggle('is-active', tab === button);
+    });
+
+    document.querySelectorAll('[data-course-panel]').forEach((panel) => {
+      panel.classList.toggle('is-active', panel.getAttribute('data-course-panel') === target);
+    });
+  });
+});
+
 let particles = [];
 let context = null;
 let width = 0;
