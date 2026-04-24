@@ -2797,8 +2797,6 @@ def render_home(data: dict[str, Any]) -> str:
   <section class="section">
     <div class="section-heading">
       <span class="eyebrow">Navigate the Portfolio</span>
-      <h2>Start with the sections most useful for academic search, collaboration, and review.</h2>
-      <p>This first automated multi-page version keeps the structure of the earlier handcrafted site while regenerating the core academic content from the Word CV.</p>
     </div>
     <div class="feature-grid">
       {features_html}
