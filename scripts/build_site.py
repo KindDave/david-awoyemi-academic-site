@@ -2998,7 +2998,7 @@ def render_academic(data: dict[str, Any]) -> str:
   <section class="section">
     <div class="section-heading">
       <span class="eyebrow">Publications and Presentations</span>
-      <h2>Structured directly from the Word CV.</h2>
+      <h2>Publications and presentations.</h2>
       <p>Journal articles, book chapters, proceedings, and conference presentations are rebuilt each time the source CV is updated.</p>
     </div>
     <div class="publication-sections">
