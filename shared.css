@@ -1340,9 +1340,17 @@ img { max-width: 100%; display: block; }
 
 .framework-card {
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .framework-illustration {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  padding: 0.45rem;
   border-radius: 1.1rem;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(245, 248, 255, 0.9));
@@ -1354,15 +1362,17 @@ img { max-width: 100%; display: block; }
 .framework-illustration img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .framework-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 3rem;
+  min-width: 4.8rem;
   height: 3rem;
   padding: 0 0.85rem;
   border-radius: 1rem;
@@ -1372,6 +1382,17 @@ img { max-width: 100%; display: block; }
   font-weight: 800;
   letter-spacing: 0.06em;
   margin-bottom: 1rem;
+}
+
+.framework-card h3 {
+  width: 100%;
+  min-height: 3.25rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.framework-card p {
+  width: 100%;
 }
 
 .quote-banner {
