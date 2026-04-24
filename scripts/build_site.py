@@ -2827,29 +2827,14 @@ def render_home(data: dict[str, Any]) -> str:
 
   <section class="section-alt">
     <div class="section-inner">
-      <div class="two-column">
-        <div>
-          <div class="section-heading">
-            <span class="eyebrow">Education</span>
-            <h2>Graduate training and academic formation.</h2>
-            <p>Doctoral and prior degree work provide the foundation for current research and design practice.</p>
-          </div>
-          <div class="mini-grid">
-            {education_html}
-          </div>
+      <div>
+        <div class="section-heading">
+          <span class="eyebrow">Education</span>
+          <h2>Graduate training and academic formation.</h2>
+          <p>Doctoral and prior degree work provide the foundation for current research and design practice.</p>
         </div>
-        <div>
-          <div class="cta-card">
-            <div>
-              <span class="eyebrow">Workflow</span>
-              <h3 class="feature-title">This site is regenerated from {escape(data["source_file"])}.</h3>
-              <p>The Word CV is the source of truth. Updating the CV and running the local build refreshes these pages and the GitHub Pages deployment.</p>
-            </div>
-            <div class="hero-actions">
-              <a class="button" href="research.html">View case studies</a>
-              <a class="button-secondary" href="{escape(data["source_file"])}">Download CV</a>
-            </div>
-          </div>
+        <div class="mini-grid">
+          {education_html}
         </div>
       </div>
     </div>
