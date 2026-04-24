@@ -917,7 +917,6 @@ img { max-width: 100%; display: block; }
 .grid-4,
 .profile-links-grid,
 .interests-grid,
-.service-grid,
 .awards-grid,
 .feature-grid {
   display: grid;
@@ -929,10 +928,14 @@ img { max-width: 100%; display: block; }
 .grid-4,
 .profile-links-grid,
 .interests-grid,
-.service-grid,
 .awards-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .media-strip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .research-practice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
 
 .card {
   background: var(--card);
@@ -1005,6 +1008,10 @@ img { max-width: 100%; display: block; }
 .grant-card,
 .affiliation-card {
   padding: 1.45rem;
+}
+
+.service-card {
+  min-width: 0;
 }
 
 .feature-card,
@@ -1279,6 +1286,11 @@ img { max-width: 100%; display: block; }
   margin-top: 0.7rem;
 }
 
+.service-body {
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
 .profile-link-card {
   display: flex;
   flex-direction: column;
@@ -1523,7 +1535,6 @@ img { max-width: 100%; display: block; }
   .grid-4,
   .profile-links-grid,
   .interests-grid,
-  .service-grid,
   .awards-grid,
   .affiliation-grid,
   .media-strip-grid,
@@ -1568,7 +1579,6 @@ img { max-width: 100%; display: block; }
   .grid-4,
   .profile-links-grid,
   .interests-grid,
-  .service-grid,
   .awards-grid,
   .affiliation-grid,
   .metrics-grid,
@@ -2034,14 +2044,14 @@ def summarize_grant(text: str) -> dict[str, str]:
     }
 
 
-def summarize_service_items(items: list[dict[str, str]], limit: int = 3) -> str:
+def summarize_service_items(items: list[dict[str, str]], limit: int = 2) -> str:
     if not items:
         return ""
     names = [item["name"] for item in items[:limit]]
     summary = ", ".join(names)
     if len(items) > limit:
         summary = f"{summary}, and more."
-    return summary
+    return truncate_text(summary, 130)
 
 
 def is_showcase_role(entry: dict[str, Any]) -> bool:
