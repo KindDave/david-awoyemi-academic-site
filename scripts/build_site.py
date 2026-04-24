@@ -118,44 +118,13 @@ HERO_HEADSHOT = {
     "alt": "Professional headshot of David Awoyemi",
 }
 
-HOME_RESEARCH_PRACTICE = [
-    {
-        "src": "assets/images/home-vr-safety.jpg",
-        "alt": "Immersive VR construction safety simulation",
-        "caption": "XR safety training research",
-    },
-    {
-        "src": "assets/images/home-ai-literacy.jpg",
-        "alt": "AI literacy story characters graphic",
-        "caption": "AI literacy curriculum design",
-    },
-    {
-        "src": "assets/images/home-research-team.jpg",
-        "alt": "Research team slide showing project members",
-        "caption": "Collaborative research teams",
-    },
-]
+HOME_RESEARCH_PRACTICE: list[dict[str, str]] = []
 
 ACADEMIC_MEDIA = [
     {
         "src": "assets/images/headshot-stage.jpg",
         "alt": "David Awoyemi presenting at a conference podium",
         "caption": "Conference and scholarly presentation",
-    },
-    {
-        "src": "assets/images/academic-schedule.jpg",
-        "alt": "Code-N-Sensor camp schedule",
-        "caption": "Program and curriculum planning",
-    },
-    {
-        "src": "assets/images/academic-boris.jpg",
-        "alt": "BORIS software overview slide",
-        "caption": "Behavioral observation and analytics",
-    },
-    {
-        "src": "assets/images/academic-workshop.jpg",
-        "alt": "Behavioral and microgenetic analysis workshop cover",
-        "caption": "Workshop and scholarly dissemination",
     },
 ]
 
@@ -254,20 +223,7 @@ RESEARCH_CASE_STUDIES = [
             "Supported conference dissemination around practical and equitable AI education design.",
         ],
         "reflection": "The strongest lesson here is that AI literacy is not only about tools. It is about helping learners interpret, question, and apply AI systems responsibly in disciplinary and civic contexts.",
-        "images": [
-            {
-                "src": "assets/images/research-case2-1.jpg",
-                "alt": "Illustrated AI literacy story characters and robot",
-            },
-            {
-                "src": "assets/images/research-case2-2.jpg",
-                "alt": "Code-N-Sensor camp weekly schedule",
-            },
-            {
-                "src": "assets/images/research-case2-3.jpg",
-                "alt": "Research team image for project collaboration",
-            },
-        ],
+        "images": [],
     },
     {
         "number": "03",
@@ -304,20 +260,7 @@ RESEARCH_CASE_STUDIES = [
             "Extended evaluation practice beyond self-report toward more responsive evidence models.",
         ],
         "reflection": "The project reinforced an important design belief: evaluation should not be an afterthought. It should be built into how we understand learning as it unfolds, especially in novel technology environments.",
-        "images": [
-            {
-                "src": "assets/images/research-case3-1.jpg",
-                "alt": "BORIS software overview slide",
-            },
-            {
-                "src": "assets/images/research-case3-2.jpg",
-                "alt": "Instructional technology documentation and training workshop cover",
-            },
-            {
-                "src": "assets/images/research-case3-3.jpg",
-                "alt": "Behavioral and microgenetic analysis workshop slide cover",
-            },
-        ],
+        "images": [],
     },
 ]
 
@@ -2483,17 +2426,6 @@ def render_home(data: dict[str, Any]) -> str:
       {features_html}
     </div>
   </section>
-
-  <section class="section" style="padding-top: 0;">
-    <div class="section-heading">
-      <span class="eyebrow">Research in Practice</span>
-      <h2>Project visuals moved under the work they represent.</h2>
-      <p>These visuals now sit below the homepage introduction instead of competing with the headshot at the top of the page.</p>
-    </div>
-    <div class="media-strip-grid research-practice-grid">
-      {research_practice_media}
-    </div>
-  </section>
 </main>
 
 <section class="strip">
@@ -2596,6 +2528,13 @@ def render_publication_sections(sections: list[dict[str, Any]]) -> str:
 def render_academic(data: dict[str, Any]) -> str:
     person = data["person"]
     academic_media = render_media_cards(ACADEMIC_MEDIA)
+    academic_media_section = f"""
+  <section class="section" style="padding-top: 0;">
+    <div class="media-strip-grid">
+      {academic_media}
+    </div>
+  </section>
+""" if academic_media else ""
     profile_links = "\n".join(
         f"""
         <a class="profile-link-card fade" href="{escape(item['url'])}"{link_attrs(item["url"])}>
@@ -2670,11 +2609,7 @@ def render_academic(data: dict[str, Any]) -> str:
     <p>This page formalizes the CV-backed academic record inside the stronger multi-page design system from the earlier website.</p>
   </section>
 
-  <section class="section" style="padding-top: 0;">
-    <div class="media-strip-grid">
-      {academic_media}
-    </div>
-  </section>
+  {academic_media_section}
 
   <section class="section">
     <div class="section-heading">
@@ -2778,6 +2713,11 @@ def render_case_studies(cases: list[dict[str, Any]]) -> str:
             [{"src": item["src"], "alt": item["alt"], "caption": ""} for item in case.get("images", [])],
             extra_class="gallery-card",
         )
+        gallery_section = f"""
+              <div class="case-gallery">
+                {gallery}
+              </div>
+""" if gallery else ""
         html_blocks.append(
             f"""
             <article class="case-card fade">
@@ -2790,9 +2730,7 @@ def render_case_studies(cases: list[dict[str, Any]]) -> str:
                   <div class="tag-list">{tags}</div>
                 </div>
               </div>
-              <div class="case-gallery">
-                {gallery}
-              </div>
+              {gallery_section}
               <div class="case-body">
                 <div class="case-panel">
                   <h4>Problem Context</h4>
