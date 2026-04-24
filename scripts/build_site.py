@@ -20,6 +20,8 @@ NOJEKYLL = DIST_DIR / ".nojekyll"
 ROOT_SHARED_CSS = ROOT / "shared.css"
 ROOT_SHARED_JS = ROOT / "shared.js"
 ROOT_STYLES = ROOT / "styles.css"
+ASSET_DIR = ROOT / "assets"
+DIST_ASSET_DIR = DIST_DIR / "assets"
 
 DOCX_NS = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
 SECTION_TITLES = {
@@ -111,6 +113,42 @@ PROFILE_LINKS = [
     },
 ]
 
+HOME_MEDIA = [
+    {
+        "src": "assets/images/home-vr-safety.jpg",
+        "alt": "Immersive VR construction safety simulation",
+        "caption": "XR safety training research",
+    },
+    {
+        "src": "assets/images/home-ai-literacy.jpg",
+        "alt": "AI literacy story characters graphic",
+        "caption": "AI literacy curriculum design",
+    },
+    {
+        "src": "assets/images/home-research-team.jpg",
+        "alt": "Research team slide showing project members",
+        "caption": "Collaborative research teams",
+    },
+]
+
+ACADEMIC_MEDIA = [
+    {
+        "src": "assets/images/academic-schedule.jpg",
+        "alt": "Code-N-Sensor camp schedule",
+        "caption": "Program and curriculum planning",
+    },
+    {
+        "src": "assets/images/academic-boris.jpg",
+        "alt": "BORIS software overview slide",
+        "caption": "Behavioral observation and analytics",
+    },
+    {
+        "src": "assets/images/academic-workshop.jpg",
+        "alt": "Behavioral and microgenetic analysis workshop cover",
+        "caption": "Workshop and scholarly dissemination",
+    },
+]
+
 AFFILIATION_DETAILS = {
     "AERA": "American Educational Research Association",
     "AECT": "Association for Educational Communications and Technology",
@@ -156,6 +194,20 @@ RESEARCH_CASE_STUDIES = [
             "Strengthened a research program connecting XR design with measurable performance evidence.",
         ],
         "reflection": "This case anchors a broader research direction: immersive environments become more valuable when they are not only engaging, but also analytically transparent enough to reveal how expertise develops over time.",
+        "images": [
+            {
+                "src": "assets/images/research-case1-1.jpeg",
+                "alt": "VR hazard identification scenario with construction site",
+            },
+            {
+                "src": "assets/images/research-case1-2.jpeg",
+                "alt": "Night scaffold hazard markers in VR environment",
+            },
+            {
+                "src": "assets/images/research-case1-3.jpeg",
+                "alt": "AI avatar in immersive safety training environment",
+            },
+        ],
     },
     {
         "number": "02",
@@ -192,6 +244,20 @@ RESEARCH_CASE_STUDIES = [
             "Supported conference dissemination around practical and equitable AI education design.",
         ],
         "reflection": "The strongest lesson here is that AI literacy is not only about tools. It is about helping learners interpret, question, and apply AI systems responsibly in disciplinary and civic contexts.",
+        "images": [
+            {
+                "src": "assets/images/research-case2-1.jpg",
+                "alt": "Illustrated AI literacy story characters and robot",
+            },
+            {
+                "src": "assets/images/research-case2-2.jpg",
+                "alt": "Code-N-Sensor camp weekly schedule",
+            },
+            {
+                "src": "assets/images/research-case2-3.jpg",
+                "alt": "Research team image for project collaboration",
+            },
+        ],
     },
     {
         "number": "03",
@@ -228,6 +294,20 @@ RESEARCH_CASE_STUDIES = [
             "Extended evaluation practice beyond self-report toward more responsive evidence models.",
         ],
         "reflection": "The project reinforced an important design belief: evaluation should not be an afterthought. It should be built into how we understand learning as it unfolds, especially in novel technology environments.",
+        "images": [
+            {
+                "src": "assets/images/research-case3-1.jpg",
+                "alt": "BORIS software overview slide",
+            },
+            {
+                "src": "assets/images/research-case3-2.jpg",
+                "alt": "Instructional technology documentation and training workshop cover",
+            },
+            {
+                "src": "assets/images/research-case3-3.jpg",
+                "alt": "Behavioral and microgenetic analysis workshop slide cover",
+            },
+        ],
     },
 ]
 
@@ -568,6 +648,51 @@ img { max-width: 100%; display: block; }
   gap: 0.75rem;
 }
 
+.hero-visual-grid,
+.media-strip-grid,
+.case-gallery {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.hero-visual-grid {
+  width: min(24rem, 100%);
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.hero-visual-grid .media-card:first-child {
+  grid-row: span 2;
+  min-height: 22rem;
+}
+
+.media-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--card-strong);
+}
+
+.media-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 10rem;
+  object-fit: cover;
+  display: block;
+}
+
+.media-card figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1rem 1rem 0.9rem;
+  background: linear-gradient(180deg, transparent, rgba(5, 12, 26, 0.82));
+  color: white;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
 .pill-link {
   display: inline-flex;
   align-items: center;
@@ -779,6 +904,7 @@ img { max-width: 100%; display: block; }
 .interests-grid,
 .service-grid,
 .awards-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.media-strip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .card {
   background: var(--card);
@@ -1135,6 +1261,16 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
+.case-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 1rem 1rem 0;
+}
+
+.case-gallery .media-card img {
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
 .case-header {
   background: linear-gradient(135deg, #0f2d6b, #1c4ba3);
   color: white;
@@ -1361,7 +1497,9 @@ img { max-width: 100%; display: block; }
   .interests-grid,
   .service-grid,
   .awards-grid,
-  .affiliation-grid {
+  .affiliation-grid,
+  .media-strip-grid,
+  .case-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1404,7 +1542,10 @@ img { max-width: 100%; display: block; }
   .service-grid,
   .awards-grid,
   .affiliation-grid,
-  .metrics-grid {
+  .metrics-grid,
+  .media-strip-grid,
+  .case-gallery,
+  .hero-visual-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2058,6 +2199,19 @@ def link_attrs(url: str) -> str:
     return ' target="_blank" rel="noreferrer"' if url.startswith("http") else ""
 
 
+def render_media_cards(items: list[dict[str, str]], extra_class: str = "") -> str:
+    class_attr = f' class="media-card {extra_class}"' if extra_class else ' class="media-card"'
+    return "\n".join(
+        f"""
+        <figure{class_attr}>
+          <img src="{escape(item['src'])}" alt="{escape(item['alt'])}">
+          {'<figcaption>' + escape(item['caption']) + '</figcaption>' if item.get('caption') else ''}
+        </figure>
+        """.rstrip()
+        for item in items
+    )
+
+
 def render_nav(data: dict[str, Any], active: str) -> str:
     person = data["person"]
     links = [
@@ -2180,6 +2334,7 @@ def render_page(title: str, description: str, active: str, body: str, data: dict
 def render_home(data: dict[str, Any]) -> str:
     person = data["person"]
     hero_highlights = "\n".join(f"<li>{escape(item['name'])}</li>" for item in data["awards"][:3])
+    hero_media = render_media_cards(HOME_MEDIA)
     metrics = "\n".join(
         f"""
         <article class="metric-card">
@@ -2248,6 +2403,9 @@ def render_home(data: dict[str, Any]) -> str:
     <div class="hero-photo fade">
       <div class="profile-monogram">
         <strong>{escape(person["initials"])}</strong>
+      </div>
+      <div class="hero-visual-grid">
+        {hero_media}
       </div>
       <div class="profile-links-inline">
         {profile_links}
@@ -2389,6 +2547,7 @@ def render_publication_sections(sections: list[dict[str, Any]]) -> str:
 
 def render_academic(data: dict[str, Any]) -> str:
     person = data["person"]
+    academic_media = render_media_cards(ACADEMIC_MEDIA)
     profile_links = "\n".join(
         f"""
         <a class="profile-link-card fade" href="{escape(item['url'])}"{link_attrs(item["url"])}>
@@ -2461,6 +2620,12 @@ def render_academic(data: dict[str, Any]) -> str:
     <span class="eyebrow">Academic Profile</span>
     <h1>Research, publications, grants, and scholarly service.</h1>
     <p>This page formalizes the CV-backed academic record inside the stronger multi-page design system from the earlier website.</p>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="media-strip-grid">
+      {academic_media}
+    </div>
   </section>
 
   <section class="section">
@@ -2561,6 +2726,10 @@ def render_case_studies(cases: list[dict[str, Any]]) -> str:
         methods = "".join(f"<li>{escape(item)}</li>" for item in case["methods"])
         outcomes = "".join(f"<li>{escape(item)}</li>" for item in case["outcomes"])
         tags = "".join(f"<span>{escape(item)}</span>" for item in case["tags"])
+        gallery = render_media_cards(
+            [{"src": item["src"], "alt": item["alt"], "caption": ""} for item in case.get("images", [])],
+            extra_class="gallery-card",
+        )
         html_blocks.append(
             f"""
             <article class="case-card fade">
@@ -2572,6 +2741,9 @@ def render_case_studies(cases: list[dict[str, Any]]) -> str:
                   <p class="case-subtitle">{escape(case['subtitle'])}</p>
                   <div class="tag-list">{tags}</div>
                 </div>
+              </div>
+              <div class="case-gallery">
+                {gallery}
               </div>
               <div class="case-body">
                 <div class="case-panel">
@@ -2713,6 +2885,8 @@ def write_outputs(data: dict[str, Any]) -> None:
     (DIST_DIR / ROOT_SHARED_CSS.name).write_text(SHARED_CSS, encoding="utf-8")
     (DIST_DIR / ROOT_SHARED_JS.name).write_text(SHARED_JS, encoding="utf-8")
     (DIST_DIR / ROOT_STYLES.name).write_text(ROOT_STYLES.read_text(encoding="utf-8"), encoding="utf-8")
+    if ASSET_DIR.exists():
+        shutil.copytree(ASSET_DIR, DIST_ASSET_DIR, dirs_exist_ok=True)
     shutil.copy2(SOURCE_DOCX, DIST_DIR / SOURCE_DOCX.name)
     NOJEKYLL.write_text("", encoding="utf-8")
 

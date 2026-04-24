@@ -642,7 +642,21 @@
         "Produced publishable work on immersive technology-enhanced learning and safety training.",
         "Strengthened a research program connecting XR design with measurable performance evidence."
       ],
-      "reflection": "This case anchors a broader research direction: immersive environments become more valuable when they are not only engaging, but also analytically transparent enough to reveal how expertise develops over time."
+      "reflection": "This case anchors a broader research direction: immersive environments become more valuable when they are not only engaging, but also analytically transparent enough to reveal how expertise develops over time.",
+      "images": [
+        {
+          "src": "assets/images/research-case1-1.jpeg",
+          "alt": "VR hazard identification scenario with construction site"
+        },
+        {
+          "src": "assets/images/research-case1-2.jpeg",
+          "alt": "Night scaffold hazard markers in VR environment"
+        },
+        {
+          "src": "assets/images/research-case1-3.jpeg",
+          "alt": "AI avatar in immersive safety training environment"
+        }
+      ]
     },
     {
       "number": "02",
@@ -678,7 +692,21 @@
         "Created a reusable curriculum model for broader AI literacy integration.",
         "Supported conference dissemination around practical and equitable AI education design."
       ],
-      "reflection": "The strongest lesson here is that AI literacy is not only about tools. It is about helping learners interpret, question, and apply AI systems responsibly in disciplinary and civic contexts."
+      "reflection": "The strongest lesson here is that AI literacy is not only about tools. It is about helping learners interpret, question, and apply AI systems responsibly in disciplinary and civic contexts.",
+      "images": [
+        {
+          "src": "assets/images/research-case2-1.jpg",
+          "alt": "Illustrated AI literacy story characters and robot"
+        },
+        {
+          "src": "assets/images/research-case2-2.jpg",
+          "alt": "Code-N-Sensor camp weekly schedule"
+        },
+        {
+          "src": "assets/images/research-case2-3.jpg",
+          "alt": "Research team image for project collaboration"
+        }
+      ]
     },
     {
       "number": "03",
@@ -714,7 +742,21 @@
         "Contributed to NSF-supported research on computing participation and learner experience.",
         "Extended evaluation practice beyond self-report toward more responsive evidence models."
       ],
-      "reflection": "The project reinforced an important design belief: evaluation should not be an afterthought. It should be built into how we understand learning as it unfolds, especially in novel technology environments."
+      "reflection": "The project reinforced an important design belief: evaluation should not be an afterthought. It should be built into how we understand learning as it unfolds, especially in novel technology environments.",
+      "images": [
+        {
+          "src": "assets/images/research-case3-1.jpg",
+          "alt": "BORIS software overview slide"
+        },
+        {
+          "src": "assets/images/research-case3-2.jpg",
+          "alt": "Instructional technology documentation and training workshop cover"
+        },
+        {
+          "src": "assets/images/research-case3-3.jpg",
+          "alt": "Behavioral and microgenetic analysis workshop slide cover"
+        }
+      ]
     }
   ]
 }
