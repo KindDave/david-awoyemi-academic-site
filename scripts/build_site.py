@@ -126,6 +126,21 @@ ACADEMIC_MEDIA = [
         "alt": "David Awoyemi presenting at a conference podium",
         "caption": "Conference and scholarly presentation",
     },
+    {
+        "src": "assets/images/conference-1.jpeg",
+        "alt": "David Awoyemi at a research conference presentation",
+        "caption": "Conference participation and presentation",
+    },
+    {
+        "src": "assets/images/conference-2.jpeg",
+        "alt": "David Awoyemi during an academic conference event",
+        "caption": "Academic conference engagement",
+    },
+    {
+        "src": "assets/images/conference-3.jpeg",
+        "alt": "David Awoyemi at a conference venue",
+        "caption": "Scholarly networking and dissemination",
+    },
 ]
 
 AFFILIATION_DETAILS = {
@@ -2963,7 +2978,6 @@ def render_academic(data: dict[str, Any]) -> str:
   <section class="page-hero">
     <span class="eyebrow">Academic Profile</span>
     <h1>Research, publications, grants, and scholarly service.</h1>
-    <p>This page formalizes the CV-backed academic record inside the stronger multi-page design system from the earlier website.</p>
   </section>
 
   {academic_media_section}

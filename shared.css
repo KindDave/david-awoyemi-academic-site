@@ -612,7 +612,7 @@ img { max-width: 100%; display: block; }
 .profile-links-grid,
 .interests-grid,
 .awards-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.media-strip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.media-strip-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .research-practice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .service-grid {
   display: grid;
