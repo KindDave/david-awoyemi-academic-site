@@ -1478,10 +1478,51 @@ img { max-width: 100%; display: block; }
   gap: 1rem;
 }
 
+.portfolio-gallery-grid .media-card,
+.portfolio-gallery-grid-wide .media-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: var(--card-strong);
+}
+
 .portfolio-gallery-grid .media-card img,
-.portfolio-gallery .media-card img {
-  aspect-ratio: 4 / 3;
+.portfolio-gallery-grid-wide .media-card img {
+  aspect-ratio: 16 / 10;
   min-height: 0;
+  object-fit: contain;
+  object-position: center top;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+[data-theme="dark"] .portfolio-gallery-grid .media-card img,
+[data-theme="dark"] .portfolio-gallery-grid-wide .media-card img {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.portfolio-gallery-grid .media-card figcaption,
+.portfolio-gallery-grid-wide .media-card figcaption {
+  position: static;
+  inset: auto;
+  padding: 0.95rem 1rem 1rem;
+  background: transparent;
+  color: var(--text1);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0;
+  min-height: 5.2rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.portfolio-gallery-grid .media-card,
+.portfolio-gallery-grid-wide .media-card,
+.video-card,
+.project-mini-card,
+.course-detail-card {
+  align-self: start;
 }
 
 .portfolio-card {
