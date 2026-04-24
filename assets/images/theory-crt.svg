@@ -14,7 +14,7 @@
     <circle cx="214" cy="292" r="36" fill="#c7a5ff"/>
   </g>
   <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif">
-    <text x="58" y="62" font-size="26" font-weight="700">CRT</text>
-    <text x="58" y="88" font-size="18" opacity=".72">Identity, relevance, belonging</text>
+    <text x="58" y="70" font-size="34" font-weight="800">CRT</text>
+    <text x="58" y="104" font-size="22" font-weight="600" opacity=".82">Identity, relevance, belonging</text>
   </g>
 </svg>

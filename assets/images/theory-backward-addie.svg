@@ -16,7 +16,7 @@
   <polygon points="522,232 514,198 548,207" fill="#2856c5"/>
   <polygon points="336,150 346,181 314,176" fill="#f0c76a"/>
   <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif">
-    <text x="56" y="62" font-size="26" font-weight="700">LXD</text>
-    <text x="56" y="88" font-size="18" opacity=".72">Outcomes first, iterate clearly</text>
+    <text x="56" y="70" font-size="34" font-weight="800">LXD</text>
+    <text x="56" y="104" font-size="24" font-weight="600" opacity=".82">Outcomes first, iterate clearly</text>
   </g>
 </svg>

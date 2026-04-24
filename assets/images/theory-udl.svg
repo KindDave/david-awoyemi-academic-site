@@ -22,7 +22,7 @@
     <circle r="24" fill="#2856c5"/>
   </g>
   <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif">
-    <text x="58" y="66" font-size="28" font-weight="700">UDL</text>
-    <text x="58" y="94" font-size="18" opacity=".7">Multiple pathways to access</text>
+    <text x="58" y="70" font-size="34" font-weight="800">UDL</text>
+    <text x="58" y="104" font-size="24" font-weight="600" opacity=".82">Multiple pathways to access</text>
   </g>
 </svg>

@@ -6,15 +6,15 @@
   <circle cx="382" cy="220" r="116" fill="#f6ca76" fill-opacity=".62"/>
   <circle cx="321" cy="138" r="116" fill="#8dd8cb" fill-opacity=".62"/>
   <circle cx="321" cy="215" r="58" fill="#ffffff" stroke="#d4def8" stroke-width="7"/>
-  <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif" font-weight="700">
-    <text x="214" y="228" font-size="28">P</text>
-    <text x="420" y="228" font-size="28">C</text>
-    <text x="312" y="88" font-size="28">T</text>
-    <text x="282" y="224" font-size="22">TPACK</text>
+  <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif" font-weight="800">
+    <text x="208" y="230" font-size="34">P</text>
+    <text x="416" y="230" font-size="34">C</text>
+    <text x="314" y="86" font-size="34">T</text>
+    <text x="273" y="223" font-size="24">TPACK</text>
   </g>
-  <g fill="#2d3a59" font-family="Inter, Arial, sans-serif" font-size="18">
-    <text x="82" y="78">Pedagogy</text>
-    <text x="474" y="78">Content</text>
-    <text x="266" y="360">Technology</text>
+  <g fill="#2d3a59" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">
+    <text x="72" y="78">Pedagogy</text>
+    <text x="468" y="78">Content</text>
+    <text x="236" y="364">Technology</text>
   </g>
 </svg>

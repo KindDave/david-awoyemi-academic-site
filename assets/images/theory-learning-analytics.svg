@@ -15,7 +15,7 @@
   <path d="M492 102c38 18 62 58 62 100 0 58-42 108-98 118" fill="none" stroke="#2856c5" stroke-width="12" stroke-linecap="round"/>
   <polygon points="448,306 484,296 474,332" fill="#2856c5"/>
   <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif">
-    <text x="58" y="62" font-size="26" font-weight="700">L.A.</text>
-    <text x="58" y="88" font-size="18" opacity=".72">Evidence to feedback</text>
+    <text x="58" y="70" font-size="34" font-weight="800">L.A.</text>
+    <text x="58" y="104" font-size="24" font-weight="600" opacity=".82">Evidence to feedback</text>
   </g>
 </svg>

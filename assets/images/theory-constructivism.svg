@@ -10,7 +10,7 @@
   <circle cx="110" cy="124" r="12" fill="#2856c5"/>
   <circle cx="498" cy="78" r="12" fill="#2856c5"/>
   <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif">
-    <text x="54" y="62" font-size="26" font-weight="700">CLT</text>
-    <text x="54" y="88" font-size="18" opacity=".72">Build, model, scaffold</text>
+    <text x="54" y="70" font-size="34" font-weight="800">CLT</text>
+    <text x="54" y="104" font-size="24" font-weight="600" opacity=".82">Build, model, scaffold</text>
   </g>
 </svg>
