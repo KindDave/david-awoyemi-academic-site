@@ -148,9 +148,9 @@ img { max-width: 100%; display: block; }
 .nav-links a {
   text-decoration: none;
   color: var(--text2);
-  font-size: 0.9rem;
+  font-size: 0.83rem;
   font-weight: 600;
-  padding: 0.6rem 0.85rem;
+  padding: 0.56rem 0.72rem;
   border-radius: 999px;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
@@ -1190,6 +1190,377 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
 }
 
+.about-hero-grid,
+.portfolio-feature,
+.contact-grid-pro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-photo-stack {
+  display: flex;
+  justify-content: center;
+}
+
+.about-copy p,
+.contact-form-card p,
+.portfolio-feature-copy p {
+  margin: 0 0 1rem;
+  color: var(--text2);
+}
+
+.compact-highlight-list li {
+  padding: 0.8rem 0.95rem;
+}
+
+.timeline-grid,
+.skill-cluster-grid,
+.framework-grid,
+.portfolio-card-grid,
+.resource-link-grid,
+.contact-detail-list,
+.cert-grid-pro {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-grid,
+.skill-cluster-grid,
+.framework-grid,
+.portfolio-card-grid,
+.resource-link-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.timeline-card,
+.skill-cluster,
+.framework-card,
+.portfolio-card,
+.contact-detail-card,
+.cert-card,
+.resource-link {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.timeline-card,
+.skill-cluster,
+.framework-card,
+.portfolio-card,
+.contact-detail-card,
+.cert-card {
+  padding: 1.35rem;
+}
+
+.timeline-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.timeline-date {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6.5rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: var(--navy-soft);
+  color: var(--navy);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline-title,
+.skill-cluster h3,
+.framework-card h3,
+.portfolio-card h3,
+.contact-detail-card h3,
+.cert-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.timeline-org,
+.timeline-copy,
+.framework-card p,
+.portfolio-card p,
+.contact-detail-card p,
+.cert-card p {
+  margin: 0;
+  color: var(--text2);
+}
+
+.timeline-copy {
+  margin-top: 0.5rem;
+}
+
+.tag-cloud,
+.portfolio-links,
+.position-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.tag-cloud span,
+.position-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.78rem;
+  border-radius: 999px;
+  background: var(--navy-soft);
+  border: 1px solid var(--border);
+  color: var(--navy);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.framework-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.framework-card {
+  min-height: 100%;
+}
+
+.framework-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  height: 3rem;
+  padding: 0 0.85rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(31, 75, 163, 0.14), rgba(195, 144, 47, 0.18));
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+.quote-banner {
+  margin-top: 1.5rem;
+  padding: 1.6rem 1.8rem;
+  border-radius: 1.4rem;
+  background: linear-gradient(135deg, #0a1e52, #173574 68%, #0f2d6b);
+  box-shadow: var(--shadow-strong);
+}
+
+[data-theme="dark"] .quote-banner {
+  background: linear-gradient(135deg, #06152d, #0b2450 68%, #14356d);
+}
+
+.quote-banner p {
+  margin: 0;
+  color: white;
+  font: 500 1.1rem 'Lora', serif;
+  line-height: 1.7;
+}
+
+.accordion-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.accordion-trigger {
+  width: 100%;
+  padding: 1.15rem 1.2rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accordion-trigger strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.accordion-trigger small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--text3);
+  font-size: 0.82rem;
+}
+
+.accordion-plus {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--navy);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.accordion-item.is-open .accordion-plus {
+  transform: rotate(45deg);
+}
+
+.accordion-panel {
+  padding: 0 1.2rem 1.2rem;
+}
+
+.accordion-panel p {
+  margin: 0 0 0.95rem;
+  color: var(--text2);
+}
+
+.accordion-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-preview-card {
+  min-height: 100%;
+  border-radius: 1.6rem;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(195, 144, 47, 0.2), transparent 22%),
+    linear-gradient(145deg, rgba(31, 75, 163, 0.16), transparent 42%),
+    linear-gradient(180deg, var(--card-strong), var(--card));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-strong);
+  display: grid;
+  place-items: center;
+  padding: 1.6rem;
+}
+
+.portfolio-preview-inner {
+  border: 1px dashed var(--border-strong);
+  border-radius: 1.3rem;
+  padding: 1.7rem;
+}
+
+.portfolio-preview-inner h3 {
+  margin: 0.55rem 0;
+  font-size: 1.3rem;
+}
+
+.portfolio-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.portfolio-gallery-grid .media-card img,
+.portfolio-gallery .media-card img {
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.portfolio-card-head p {
+  margin-top: 0.1rem;
+  color: var(--text3);
+  font-size: 0.88rem;
+}
+
+.portfolio-links a,
+.resource-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.resource-link {
+  padding: 1.05rem 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.2rem;
+  text-align: center;
+}
+
+.contact-grid-pro {
+  grid-template-columns: 0.95fr 1.05fr;
+}
+
+.contact-detail-list,
+.cert-grid-pro {
+  grid-template-columns: 1fr;
+}
+
+.contact-form-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1.4rem;
+  background: linear-gradient(180deg, var(--card-strong), var(--card));
+  box-shadow: var(--shadow);
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text2);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.95rem;
+  background: var(--card-strong);
+  color: var(--text1);
+  padding: 0.85rem 0.95rem;
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(31, 75, 163, 0.18);
+  border-color: var(--navy);
+}
+
 .fade {
   opacity: 0;
   transform: translateY(18px);
@@ -1205,7 +1576,10 @@ img { max-width: 100%; display: block; }
   .hero,
   .two-column,
   .cta-card,
-  .footer-grid {
+  .footer-grid,
+  .about-hero-grid,
+  .portfolio-feature,
+  .contact-grid-pro {
     grid-template-columns: 1fr;
   }
 
@@ -1216,7 +1590,13 @@ img { max-width: 100%; display: block; }
   .affiliation-grid,
   .media-strip-grid,
   .case-gallery,
-  .research-practice-grid {
+  .research-practice-grid,
+  .portfolio-gallery-grid,
+  .framework-grid,
+  .timeline-grid,
+  .skill-cluster-grid,
+  .portfolio-card-grid,
+  .resource-link-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1236,7 +1616,9 @@ img { max-width: 100%; display: block; }
   .case-body,
   .mini-grid,
   .grant-card,
-  .publication-card {
+  .publication-card,
+  .timeline-card,
+  .form-row {
     grid-template-columns: 1fr;
   }
 
@@ -1262,7 +1644,13 @@ img { max-width: 100%; display: block; }
   .media-strip-grid,
   .case-gallery,
   .hero-visual-grid,
-  .research-practice-grid {
+  .research-practice-grid,
+  .portfolio-gallery-grid,
+  .framework-grid,
+  .timeline-grid,
+  .skill-cluster-grid,
+  .portfolio-card-grid,
+  .resource-link-grid {
     grid-template-columns: 1fr;
   }
 

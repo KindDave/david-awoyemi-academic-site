@@ -264,6 +264,213 @@ RESEARCH_CASE_STUDIES = [
     },
 ]
 
+ABOUT_BIO = [
+    "I am Idowu David Awoyemi, a Ph.D. candidate in Instructional Technology at the University of Alabama whose work bridges learning sciences, instructional design, and emerging technologies for more equitable educational experiences.",
+    "Across research, teaching, and design practice, I build learning environments that are analytically rigorous, human-centered, and responsive to the realities of learners, instructors, and institutions.",
+    "My scholarly identity sits at the intersection of AI-supported learning, immersive environments, multimodal analytics, and the design of technology-mediated instruction that improves both access and performance.",
+]
+
+ABOUT_HIGHLIGHTS = [
+    "Most Outstanding Graduate Student in Research (2025)",
+    "Alabama Power Innovation and Technology Award (2025)",
+    "Instructional technology researcher with practice across higher education, K-12, and faculty development",
+    "Designs learning systems that connect research evidence with real implementation contexts",
+]
+
+TEACHING_FOUNDATION = [
+    "I approach teaching as an act of intentional design. Every course, lesson, and interaction becomes an opportunity to create the conditions under which diverse learners can build understanding, develop agency, and apply knowledge in authentic settings.",
+    "Doctoral training and instructional practice helped me move from technology integration as a tool choice toward a fuller view of teaching as evidence-based orchestration of cognition, motivation, and participation.",
+    "That philosophy now shapes how I scaffold learning, interpret data, offer feedback, and select technology only when it genuinely improves access, clarity, engagement, or transfer.",
+]
+
+TEACHING_FRAMEWORKS = [
+    {
+        "icon": "UDL",
+        "title": "Universal Design for Learning",
+        "body": "Builds multiple means of engagement, representation, and expression into instruction so learner variability is expected rather than treated as an exception.",
+    },
+    {
+        "icon": "TPACK",
+        "title": "TPACK Framework",
+        "body": "Positions technology decisions inside the relationship among pedagogy, disciplinary content, and the realities of a teaching context.",
+    },
+    {
+        "icon": "CLT",
+        "title": "Constructivism and Cognitive Apprenticeship",
+        "body": "Supports active sensemaking, modeling, guided practice, and collaborative knowledge building around meaningful problems.",
+    },
+    {
+        "icon": "LXD",
+        "title": "Backward Design and ADDIE",
+        "body": "Starts with learning outcomes and assessment evidence, then structures instruction systematically to make those outcomes achievable.",
+    },
+    {
+        "icon": "CRT",
+        "title": "Culturally Responsive Teaching",
+        "body": "Centers identity, relevance, and belonging so learners can connect disciplinary work to their own experiences and futures.",
+    },
+    {
+        "icon": "L.A.",
+        "title": "Learning Analytics and Feedback",
+        "body": "Uses formative evidence, interaction data, and reflective assessment to improve instruction while learning is still happening.",
+    },
+]
+
+TEACHING_ACCORDION = [
+    {
+        "title": "Introduction: My Journey as an Educator",
+        "subtitle": "From mathematics instruction in Nigeria to doctoral teaching and design work in the United States.",
+        "paragraphs": [
+            "My teaching philosophy emerged through practice across multiple institutional and cultural settings. I began by teaching mathematics in Nigeria, where I learned quickly that engagement rises when instruction feels meaningful, active, and connected to learners' realities.",
+            "Doctoral study in instructional technology gave me conceptual language for instincts I had already developed: learning is designed, participation is structured, and good teaching is iterative, reflective, and evidence-informed.",
+        ],
+    },
+    {
+        "title": "Designing for Learner Variability",
+        "subtitle": "Why access, flexibility, and support are core design decisions rather than accommodations added later.",
+        "paragraphs": [
+            "I teach with the assumption that learners differ in prior knowledge, confidence, pace, digital access, and preferred ways of demonstrating understanding.",
+            "That belief leads me to design with choice, multimodal materials, scaffolded tasks, and feedback loops so students can enter learning productively and keep moving forward.",
+        ],
+    },
+    {
+        "title": "The Role of the Teacher",
+        "subtitle": "Teacher as facilitator, designer, and reflective researcher of learning in context.",
+        "paragraphs": [
+            "I see the teacher as more than a presenter of content. The teacher is a designer of environments, a facilitator of inquiry, and a professional who studies how learners respond to the conditions that have been created.",
+            "That stance matters especially in technology-rich contexts, where novelty can distract from learning unless design choices stay anchored to outcomes, evidence, and care for the learner experience.",
+        ],
+    },
+    {
+        "title": "Technology, Equity, and Reflection",
+        "subtitle": "How I decide when technology belongs in a course and how I evaluate whether it helped.",
+        "paragraphs": [
+            "I do not treat technology as an end in itself. I use it when it makes learning more accessible, more authentic, more collaborative, or more analyzable in ways that improve teaching and learning.",
+            "Reflection is essential to that process. After every teaching cycle, I look for evidence about where students struggled, where engagement dropped, and where design revisions can better support equity and transfer.",
+        ],
+    },
+]
+
+CONTACT_POSITIONS = [
+    "Assistant Professor — Instructional Technology",
+    "Assistant Professor — Educational Technology",
+    "Senior Instructional Designer — Higher Education",
+    "Learning Experience Designer — University or College",
+    "Post-Doctoral Research Fellow",
+    "Research Scientist — EdTech",
+]
+
+CONTACT_PROFILES = [
+    {"label": "Google Scholar", "url": "https://scholar.google.com/citations?user=NIWz8s4AAAAJ&hl=en", "desc": "Publications and citations"},
+    {"label": "ResearchGate", "url": "https://www.researchgate.net/profile/Idowu-Awoyemi-2", "desc": "Research network"},
+    {"label": "ADIE Lab", "url": "https://sites.ua.edu/adielab/people/", "desc": "Lab profile"},
+    {"label": "Teaching Dossier", "url": "https://sites.google.com/view/david-teaching-dossier/home", "desc": "Teaching record"},
+    {"label": "Adobe Portfolio", "url": "https://idawoyemi.myportfolio.com/work", "desc": "Design work"},
+    {"label": "Exam Portfolio", "url": "https://portfolios.davidawoyemi.net/", "desc": "Doctoral portfolio"},
+]
+
+PORTFOLIO_FEATURED = {
+    "title": "Articulate Rise 360 Interactive Tutorial",
+    "subtitle": "A polished, self-paced multimedia lesson on two-dimensional geometric shapes built for learner autonomy, clarity, and accessibility.",
+    "body": "This project demonstrates how I design interactive instruction with narrative pacing, embedded media, learner choice, and accessibility-aware structure. It remains one of the clearest examples of my instructional development process from storyboard to polished experience.",
+    "tags": ["Articulate Rise 360", "Interactive Multimedia", "Accessibility", "Elementary Mathematics"],
+    "links": [
+        {"label": "Launch Interactive Module", "url": "https://360.articulate.com/review/content/d5649f65-923e-4144-906c-409b7eb97ddd/review"},
+        {"label": "Read Portfolio Reflection", "url": "https://portfolios.davidawoyemi.net/ail605/"},
+    ],
+}
+
+PORTFOLIO_CURRICULUM_MEDIA = [
+    {
+        "src": "assets/images/portfolio-camp-characters.jpg",
+        "alt": "Story characters for the Code, Sensors, and Me summer camp curriculum",
+        "caption": "Narrative characters used to anchor learner engagement in the camp curriculum.",
+    },
+    {
+        "src": "assets/images/portfolio-camp-roadmap.jpg",
+        "alt": "Roadmap of 16 activities in the Code, Sensors, and Me curriculum",
+        "caption": "A sequenced roadmap linking physiological computing, coding, and design challenges.",
+    },
+    {
+        "src": "assets/images/portfolio-camp-team.jpg",
+        "alt": "Research team photo for the NSF ITEST summer camp project",
+        "caption": "The interdisciplinary research and implementation team behind the project.",
+    },
+    {
+        "src": "assets/images/portfolio-camp-schedule.jpg",
+        "alt": "Weekly camp schedule for the Code, Sensors, and Me project",
+        "caption": "Daily planning that coordinated coding, sensing, reflection, and facilitation.",
+    },
+]
+
+PORTFOLIO_TRAINING_MEDIA = [
+    {
+        "src": "assets/images/portfolio-training-cit.jpg",
+        "alt": "Workshop cover for a faculty development session",
+        "caption": "Faculty development documentation for Hypothesis annotation in Blackboard.",
+    },
+    {
+        "src": "assets/images/portfolio-training-boris.jpg",
+        "alt": "BORIS workshop slide overview",
+        "caption": "Behavioral observation and microgenetic analysis training for researchers.",
+    },
+    {
+        "src": "assets/images/portfolio-training-onboarding.jpg",
+        "alt": "Onboarding module slide for OTIDE training",
+        "caption": "A learner-facing onboarding module designed through SME collaboration.",
+    },
+]
+
+PORTFOLIO_COURSES = [
+    {
+        "code": "AIL-601",
+        "term": "Foundations of Instructional Technology",
+        "title": "Adobe Express Portfolio and UDL Reflection",
+        "body": "Developed a portfolio demonstrating UDL, motivational theory, and core instructional technology concepts while clarifying my scholarly stance.",
+        "links": [
+            {"label": "View Adobe Express Portfolio", "url": "https://new.express.adobe.com/webpage/tHKB8XD6Vcq3I"},
+            {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail-601/"},
+        ],
+    },
+    {
+        "code": "AIL-602",
+        "term": "Instructional Design",
+        "title": "Gagne Planning Sheet and Design Mapping",
+        "body": "Applied systematic design models, including Gagne and TEC-VARIETY, to the sequencing and support structures that later informed immersive learning work.",
+        "links": [
+            {"label": "View Planning Artifact", "url": "https://drive.google.com/file/d/141afmW3n3ODqbwg9Nch7N5TNIG6BcY5y/view?usp=sharing"},
+            {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail-602/"},
+        ],
+    },
+    {
+        "code": "AIL-604",
+        "term": "Distance Learning Technologies",
+        "title": "Canvas Course Prototype and Distance Learning Design",
+        "body": "Designed online learning experiences with backward design, UDL, multimedia learning principles, and stronger attention to learner decision points.",
+        "links": [
+            {"label": "View Artifact", "url": "https://drive.google.com/file/d/1ONmk6bU7Pws5tdXsuwHx244y9V1aQLId/view?usp=sharing"},
+            {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail-604/"},
+        ],
+    },
+    {
+        "code": "AIL-608",
+        "term": "Emerging Technologies in Education",
+        "title": "VR Hazard Identification Research Reflection",
+        "body": "Connected XR design, AI-supported feedback, and research dissemination through a doctoral course that directly fed into the immersive safety training project.",
+        "links": [
+            {"label": "Vanguard Feature", "url": "https://www.vanguardngr.com/2023/08/expert-idowu-awoyemi-leads-team-in-revolutionizing-civil-engineering-education-with-vrt/"},
+            {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail-608/"},
+        ],
+    },
+]
+
+PORTFOLIO_MORE_LINKS = [
+    {"label": "Adobe Portfolio", "url": "https://idawoyemi.myportfolio.com/work"},
+    {"label": "Teaching Dossier", "url": "https://sites.google.com/view/david-teaching-dossier/home"},
+    {"label": "Exam Portfolio", "url": "https://portfolios.davidawoyemi.net/"},
+    {"label": "Download Full CV", "url": SOURCE_DOCX.name},
+]
+
 SHARED_CSS = """@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -2157,6 +2364,9 @@ def build_site_data() -> dict[str, Any]:
             {"value": len(funded_grants), "label": "Funded Projects"},
         ],
         "featured_roles": featured_roles,
+        "research_entries": research_entries,
+        "teaching_entries": teaching_entries,
+        "design_entries": design_entries,
         "selected_publications": selected_publications,
         "publication_sections": publication_sections,
         "grants": grants,
@@ -2199,8 +2409,12 @@ def render_nav(data: dict[str, Any], active: str) -> str:
     person = data["person"]
     links = [
         ("home", "Home", "index.html"),
+        ("about", "About", "about.html"),
         ("academic", "Academic Profile", "academic.html"),
         ("research", "Research Projects", "research.html"),
+        ("teaching", "Teaching Philosophy", "teaching.html"),
+        ("portfolio", "ID Portfolio", "portfolio.html"),
+        ("contact", "Contact", "contact.html"),
     ]
     links_html = "\n".join(
         f'<li><a href="{href}" class="{"is-active" if key == active else ""}">{label}</a></li>'
@@ -2227,7 +2441,7 @@ def render_nav(data: dict[str, Any], active: str) -> str:
       <button class="theme-toggle" type="button" data-theme-toggle>
         <span data-theme-label>Dark</span>
       </button>
-      <a class="nav-cta" href="{escape(data["source_file"])}">Download CV</a>
+      <a class="nav-cta" href="contact.html">Contact Me</a>
       <button class="hamburger" type="button" data-mobile-toggle aria-expanded="false" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -2241,7 +2455,8 @@ def render_nav(data: dict[str, Any], active: str) -> str:
       <button class="mobile-theme-toggle" type="button" data-theme-toggle>
         <span data-theme-label>Dark</span>
       </button>
-      <a class="button" href="{escape(data["source_file"])}">Download CV</a>
+      <a class="button" href="contact.html">Contact Me</a>
+      <a class="button-secondary" href="{escape(data["source_file"])}">Download CV</a>
     </div>
   </div>
 </header>
@@ -2267,9 +2482,12 @@ def render_footer(data: dict[str, Any]) -> str:
       <div class="footer-col">
         <h4>Pages</h4>
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="academic.html">Academic Profile</a>
         <a href="research.html">Research Projects</a>
-        <a href="{escape(data["source_file"])}">Download CV</a>
+        <a href="teaching.html">Teaching Philosophy</a>
+        <a href="portfolio.html">ID Portfolio</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div class="footer-col">
         <h4>Profiles</h4>
@@ -2332,9 +2550,12 @@ def render_home(data: dict[str, Any]) -> str:
         for item in data["profile_links"][:3]
     )
     features = [
+        ("About", "Professional biography, training background, and a clearer view of the scholarly and design profile.", "about.html"),
         ("Academic Profile", "CV-driven publications, presentations, grants, service, and affiliations.", "academic.html"),
         ("Research Projects", "Selected case studies showing how David designs, studies, and evaluates learning innovation.", "research.html"),
-        ("Full CV and Contact", "Download the source-of-truth CV or start a conversation about roles, collaborations, and speaking.", data["source_file"]),
+        ("Teaching Philosophy", "Research-informed teaching commitments, frameworks, and experience across instructional contexts.", "teaching.html"),
+        ("ID Portfolio", "Instructional design artifacts, curriculum work, multimedia development, and doctoral coursework.", "portfolio.html"),
+        ("Contact and CV", "Open positions, professional contact details, and the source-of-truth academic CV.", "contact.html"),
     ]
     features_html = "\n".join(
         f"""
@@ -2847,16 +3068,510 @@ def render_research(data: dict[str, Any]) -> str:
     )
 
 
+def render_about(data: dict[str, Any]) -> str:
+    person = data["person"]
+    highlights = "\n".join(f"<li>{escape(item)}</li>" for item in ABOUT_HIGHLIGHTS)
+    bio = "\n".join(f"<p>{escape(item)}</p>" for item in ABOUT_BIO)
+    education_html = "\n".join(
+        f"""
+        <article class="timeline-card fade">
+          <div class="timeline-date">{escape(item['date'])}</div>
+          <div>
+            <h3 class="timeline-title">{escape(item['degree'])}</h3>
+            <p class="timeline-org">{escape(item['institution'])}</p>
+          </div>
+        </article>
+        """.rstrip()
+        for item in data["education"]
+    )
+    skill_groups = "\n".join(
+        f"""
+        <article class="skill-cluster fade">
+          <h3>{escape(skill['category'])}</h3>
+          <div class="tag-cloud">
+            {''.join(f'<span>{escape(item)}</span>' for item in skill['items'][:8])}
+          </div>
+        </article>
+        """.rstrip()
+        for skill in data["skills"][:6]
+    )
+    body = f"""
+<main class="main-wrap">
+  <section class="page-hero">
+    <span class="eyebrow">About Me</span>
+    <h1>Educator, researcher, and design-minded scholar.</h1>
+    <p>This page restores the fuller personal and professional framing from the original site while keeping the broader website inside the new shared system.</p>
+  </section>
+
+  <section class="section">
+    <div class="about-hero-grid">
+      <div class="about-photo-stack fade">
+        <div class="profile-photo-card">
+          <img src="assets/images/headshot-linkedin.png" alt="Portrait of {escape(person['name'])}">
+        </div>
+      </div>
+      <div class="about-copy fade">
+        <span class="eyebrow">Who I Am</span>
+        <h2>Scholarship grounded in design, evidence, and educational impact.</h2>
+        {bio}
+        <ul class="highlight-list compact-highlight-list">
+          {highlights}
+        </ul>
+        <div class="hero-actions">
+          <a class="button" href="academic.html">View academic profile</a>
+          <a class="button-secondary" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section-inner">
+      <div class="section-heading">
+        <span class="eyebrow">Education and Training</span>
+        <h2>Graduate preparation and scholarly formation.</h2>
+        <p>The educational timeline below draws directly from the CV and keeps degree history in sync with the broader academic profile.</p>
+      </div>
+      <div class="timeline-grid">
+        {education_html}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Skills and Tools</span>
+      <h2>Research, design, and instructional technology capabilities.</h2>
+      <p>These groupings are built from the technical and professional skills section of the source CV, then organized into cleaner clusters for easier scanning.</p>
+    </div>
+    <div class="skill-cluster-grid">
+      {skill_groups}
+    </div>
+  </section>
+</main>
+"""
+    return render_page(
+        f"About | {person['name']}",
+        f"About {person['name']}, including background, education, and skills.",
+        "about",
+        body,
+        data,
+    )
+
+
+def render_teaching(data: dict[str, Any]) -> str:
+    person = data["person"]
+    foundations = "\n".join(f"<p>{escape(item)}</p>" for item in TEACHING_FOUNDATION)
+    frameworks = "\n".join(
+        f"""
+        <article class="framework-card fade">
+          <div class="framework-icon">{escape(item['icon'])}</div>
+          <h3>{escape(item['title'])}</h3>
+          <p>{escape(item['body'])}</p>
+        </article>
+        """.rstrip()
+        for item in TEACHING_FRAMEWORKS
+    )
+    teaching_experience = "\n".join(
+        f"""
+        <article class="timeline-card fade">
+          <div class="timeline-date">{escape(item['date'])}</div>
+          <div>
+            <h3 class="timeline-title">{escape(item['title'])}</h3>
+            <p class="timeline-org">{escape(item['organization'] or item['summary'])}</p>
+            <p class="timeline-copy">{escape(truncate_text(item['summary'], 180))}</p>
+          </div>
+        </article>
+        """.rstrip()
+        for item in data["teaching_entries"][:6]
+    )
+    certifications = "\n".join(
+        f"""
+        <article class="cert-card fade">
+          <h3>{escape(item['name'])}</h3>
+          <p>{escape(item['date'])}</p>
+        </article>
+        """.rstrip()
+        for item in data["certifications"][:8]
+    )
+    accordion = "\n".join(
+        f"""
+        <article class="accordion-item fade">
+          <button class="accordion-trigger" type="button" data-accordion-button aria-expanded="false">
+            <span>
+              <strong>{escape(item['title'])}</strong>
+              <small>{escape(item['subtitle'])}</small>
+            </span>
+            <span class="accordion-plus">+</span>
+          </button>
+          <div class="accordion-panel" data-accordion-panel hidden>
+            {''.join(f'<p>{escape(paragraph)}</p>' for paragraph in item['paragraphs'])}
+          </div>
+        </article>
+        """.rstrip()
+        for item in TEACHING_ACCORDION
+    )
+    body = f"""
+<main class="main-wrap">
+  <section class="page-hero">
+    <span class="eyebrow">Teaching Philosophy</span>
+    <h1>Learning-sciences-grounded teaching practice.</h1>
+    <p>This page restores the fuller teaching narrative from the original website with a cleaner, more aligned presentation and mobile-friendly structure.</p>
+  </section>
+
+  <section class="section">
+    <div class="about-hero-grid">
+      <div class="about-photo-stack fade">
+        <div class="profile-photo-card">
+          <img src="assets/images/headshot-secondary.png" alt="{escape(person['name'])} in a professional portrait">
+        </div>
+      </div>
+      <div class="about-copy fade">
+        <span class="eyebrow">Teaching as Design</span>
+        <h2>Intentional, evidence-informed, and learner-centered.</h2>
+        {foundations}
+        <div class="hero-actions">
+          <a class="button" href="contact.html">Discuss teaching collaborations</a>
+          <a class="button-secondary" href="portfolio.html">See design artifacts</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section-inner">
+      <div class="section-heading">
+        <span class="eyebrow">Frameworks That Guide My Practice</span>
+        <h2>Theoretical commitments translated into teaching decisions.</h2>
+        <p>These pillars shape how I design activities, structure support, evaluate learning, and decide when technology meaningfully belongs in the instructional environment.</p>
+      </div>
+      <div class="framework-grid">
+        {frameworks}
+      </div>
+      <div class="quote-banner fade">
+        <p>"I see teaching not as content transmission but as the design of conditions in which every learner can engage authentically, develop competence, and grow in agency."</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Teaching Philosophy In Depth</span>
+      <h2>A fuller narrative for committees and collaborators.</h2>
+      <p>The sections below preserve the intent of the original long-form teaching statement while making it easier to navigate.</p>
+    </div>
+    <div class="accordion-stack">
+      {accordion}
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section-inner two-column">
+      <div>
+        <div class="section-heading">
+          <span class="eyebrow">Teaching Experience</span>
+          <h2>Roles that shaped my instructional perspective.</h2>
+          <p>These entries come directly from the CV and show how teaching practice developed across different responsibilities and contexts.</p>
+        </div>
+        <div class="timeline-grid">
+          {teaching_experience}
+        </div>
+      </div>
+      <div>
+        <div class="section-heading">
+          <span class="eyebrow">Certifications and Training</span>
+          <h2>Continuing professional development.</h2>
+          <p>Recent training supports my work in instructional design, AI, multimedia development, and course quality improvement.</p>
+        </div>
+        <div class="cert-grid-pro">
+          {certifications}
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+"""
+    return render_page(
+        f"Teaching Philosophy | {person['name']}",
+        f"Teaching philosophy, frameworks, and experience for {person['name']}.",
+        "teaching",
+        body,
+        data,
+    )
+
+
+def render_portfolio(data: dict[str, Any]) -> str:
+    person = data["person"]
+    portfolio_links = "".join(
+        f'<a class="button{"-secondary" if index else ""}" href="{escape(link["url"])}"{link_attrs(link["url"])}>{escape(link["label"])}</a>'
+        for index, link in enumerate(PORTFOLIO_FEATURED["links"])
+    )
+    featured_tags = "".join(f"<span>{escape(tag)}</span>" for tag in PORTFOLIO_FEATURED["tags"])
+    curriculum_media = render_media_cards(PORTFOLIO_CURRICULUM_MEDIA)
+    training_media = render_media_cards(PORTFOLIO_TRAINING_MEDIA)
+    course_cards = "\n".join(
+        f"""
+        <article class="portfolio-card fade">
+          <div class="portfolio-card-head">
+            <span class="card-kicker">{escape(item['code'])}</span>
+            <h3>{escape(item['title'])}</h3>
+            <p>{escape(item['term'])}</p>
+          </div>
+          <p>{escape(item['body'])}</p>
+          <div class="portfolio-links">
+            {''.join(f'<a href="{escape(link["url"])}"{link_attrs(link["url"])}>{escape(link["label"])}</a>' for link in item['links'])}
+          </div>
+        </article>
+        """.rstrip()
+        for item in PORTFOLIO_COURSES
+    )
+    more_links = "\n".join(
+        f'<a class="resource-link fade" href="{escape(item["url"])}"{link_attrs(item["url"])}>{escape(item["label"])}</a>'
+        for item in PORTFOLIO_MORE_LINKS
+    )
+    body = f"""
+<main class="main-wrap">
+  <section class="page-hero">
+    <span class="eyebrow">ID Portfolio</span>
+    <h1>Design, development, and instructional innovation.</h1>
+    <p>This page brings back the broader portfolio structure from the original site and places the right media under the right sections with a cleaner visual hierarchy.</p>
+  </section>
+
+  <section class="section">
+    <div class="portfolio-feature fade">
+      <div class="portfolio-feature-copy">
+        <span class="eyebrow">Featured Project</span>
+        <h2>{escape(PORTFOLIO_FEATURED['title'])}</h2>
+        <p>{escape(PORTFOLIO_FEATURED['subtitle'])}</p>
+        <p>{escape(PORTFOLIO_FEATURED['body'])}</p>
+        <div class="tag-list">{featured_tags}</div>
+        <div class="hero-actions">{portfolio_links}</div>
+      </div>
+      <div class="portfolio-preview-card">
+        <div class="portfolio-preview-inner">
+          <span class="card-kicker">Interactive Multimedia</span>
+          <h3>Rise 360 learning experience</h3>
+          <p>A self-paced lesson with audio, embedded media, branching navigation, and learner-friendly pacing built around accessible instructional structure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section-inner">
+      <div class="section-heading">
+        <span class="eyebrow">AI-Immersive VR Research</span>
+        <h2>Instructional design meeting immersive research.</h2>
+        <p>This strand links design methodology, simulation-based instruction, and AI-enhanced feedback for safety training in civil engineering education.</p>
+      </div>
+      <div class="case-gallery portfolio-gallery">
+        {render_media_cards(RESEARCH_CASE_STUDIES[0]["images"], extra_class="gallery-card")}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Curriculum Design and STEM Education</span>
+      <h2>Code, Sensors, and Me summer camp curriculum.</h2>
+      <p>A curriculum and facilitation effort developed for the NSF ITEST Code-N-Sensor context, integrating physiological computing, visual coding, and responsive STEM pedagogy.</p>
+    </div>
+    <div class="portfolio-gallery-grid">
+      {curriculum_media}
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section-inner">
+      <div class="section-heading">
+        <span class="eyebrow">Professional Development and Training Documentation</span>
+        <h2>Workshop design, onboarding, and faculty support materials.</h2>
+        <p>These artifacts show how I translate instructional design methods into professional learning, SME collaboration, and implementation-ready training assets.</p>
+      </div>
+      <div class="portfolio-gallery-grid">
+        {training_media}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Course Artifacts and Reflections</span>
+      <h2>Selected doctoral coursework portfolio entries.</h2>
+      <p>Rather than reproducing every tab from the original site, this version surfaces the strongest artifacts and links them out cleanly for committees and collaborators.</p>
+    </div>
+    <div class="portfolio-card-grid">
+      {course_cards}
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section-inner">
+      <div class="section-heading">
+        <span class="eyebrow">More of My Work</span>
+        <h2>Additional portfolio and dossier resources.</h2>
+        <p>These external collections remain useful for deeper review of design work, teaching materials, and doctoral artifacts.</p>
+      </div>
+      <div class="resource-link-grid">
+        {more_links}
+      </div>
+    </div>
+  </section>
+</main>
+"""
+    return render_page(
+        f"ID Portfolio | {person['name']}",
+        f"Instructional design portfolio and learning artifacts for {person['name']}.",
+        "portfolio",
+        body,
+        data,
+    )
+
+
+def render_contact(data: dict[str, Any]) -> str:
+    person = data["person"]
+    positions = "".join(f'<span class="position-pill">{escape(item)}</span>' for item in CONTACT_POSITIONS)
+    contact_profiles = "\n".join(
+        f"""
+        <a class="profile-link-card fade" href="{escape(item['url'])}"{link_attrs(item["url"])}>
+          <span class="card-kicker">Online Profile</span>
+          <h3>{escape(item['label'])}</h3>
+          <p>{escape(item['desc'])}</p>
+          <span class="profile-link-arrow">Open resource</span>
+        </a>
+        """.rstrip()
+        for item in CONTACT_PROFILES
+    )
+    body = f"""
+<main class="main-wrap">
+  <section class="page-hero">
+    <span class="eyebrow">Contact and CV</span>
+    <h1>Let's connect.</h1>
+    <p>I am actively open to faculty, postdoctoral, research, and senior instructional design opportunities, as well as collaborations around AI, XR, and learning design.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Open to These Positions</span>
+      <h2>Current opportunities and collaboration interests.</h2>
+      <p>This keeps the practical contact framing from the original site while aligning the layout with the rest of the automated portfolio.</p>
+    </div>
+    <div class="position-pills">
+      {positions}
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section-inner contact-grid-pro">
+      <div>
+        <div class="section-heading">
+          <span class="eyebrow">Get In Touch</span>
+          <h2>Professional contact details and quick links.</h2>
+          <p>I usually respond to professional inquiries within two business days. For academic roles, including the institution or search name in the subject line helps me respond faster.</p>
+        </div>
+        <div class="contact-detail-list">
+          <article class="contact-detail-card fade">
+            <h3>Email</h3>
+            <p><a href="mailto:{escape(person['email'])}">{escape(person['email'])}</a></p>
+          </article>
+          <article class="contact-detail-card fade">
+            <h3>Phone</h3>
+            <p><a href="tel:{escape(person['phone_href'])}">{escape(person['phone'])}</a></p>
+          </article>
+          <article class="contact-detail-card fade">
+            <h3>Office and Department</h3>
+            <p>324 Autherine Lucy Hall · Box 870302<br>Tuscaloosa, AL 35487<br>ELPTS Department · University of Alabama</p>
+          </article>
+          <article class="contact-detail-card fade">
+            <h3>Research Lab</h3>
+            <p><a href="https://sites.ua.edu/adielab/people/" target="_blank" rel="noreferrer">ADIE Lab — University of Alabama</a></p>
+          </article>
+        </div>
+      </div>
+      <div>
+        <div class="contact-form-card fade">
+          <span class="eyebrow">Contact Form</span>
+          <h2>Draft an email in one step.</h2>
+          <p>This static form builds a ready-to-send email message so the site works cleanly on GitHub Pages without requiring a separate backend.</p>
+          <form class="contact-form" data-mailto-form data-mailto-target="{escape(person['email'])}">
+            <div class="form-row">
+              <label>
+                First name
+                <input type="text" name="first_name" required>
+              </label>
+              <label>
+                Last name
+                <input type="text" name="last_name" required>
+              </label>
+            </div>
+            <label>
+              Email address
+              <input type="email" name="reply_email" required>
+            </label>
+            <label>
+              Institution or organization
+              <input type="text" name="organization">
+            </label>
+            <label>
+              Inquiry type
+              <select name="inquiry_type">
+                <option value="">Select inquiry type</option>
+                <option>Faculty Position</option>
+                <option>Instructional Design Position</option>
+                <option>Research Collaboration</option>
+                <option>Speaking or Guest Lecture</option>
+                <option>Mentorship</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              Subject
+              <input type="text" name="subject" placeholder="Assistant Professor Position — Department of Educational Technology">
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="6" required placeholder="Please share details about your opportunity, institution, or inquiry."></textarea>
+            </label>
+            <button class="button" type="submit">Open email draft</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Online Profiles</span>
+      <h2>Scholarly and professional web presence.</h2>
+      <p>These links connect the CV-backed website to publication records, lab affiliation, teaching materials, and design portfolios.</p>
+    </div>
+    <div class="profile-links-grid">
+      {contact_profiles}
+    </div>
+  </section>
+</main>
+"""
+    return render_page(
+        f"Contact | {person['name']}",
+        f"Contact page for {person['name']} with professional details and opportunity interests.",
+        "contact",
+        body,
+        data,
+    )
+
+
 def write_outputs(data: dict[str, Any]) -> None:
     pages = {
         "index.html": render_home(data),
+        "about.html": render_about(data),
         "academic.html": render_academic(data),
         "research.html": render_research(data),
+        "teaching.html": render_teaching(data),
+        "portfolio.html": render_portfolio(data),
+        "contact.html": render_contact(data),
     }
 
     OUTPUT_JSON.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
-    ROOT_SHARED_CSS.write_text(SHARED_CSS, encoding="utf-8")
-    ROOT_SHARED_JS.write_text(SHARED_JS, encoding="utf-8")
     ROOT_STYLES.write_text("/* Compatibility wrapper: shared styles now live in shared.css. */\n@import url('./shared.css');\n", encoding="utf-8")
 
     for filename, content in pages.items():
@@ -2868,8 +3583,8 @@ def write_outputs(data: dict[str, Any]) -> None:
         (DIST_DIR / filename).write_text(content, encoding="utf-8")
 
     (DIST_DIR / OUTPUT_JSON.name).write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
-    (DIST_DIR / ROOT_SHARED_CSS.name).write_text(SHARED_CSS, encoding="utf-8")
-    (DIST_DIR / ROOT_SHARED_JS.name).write_text(SHARED_JS, encoding="utf-8")
+    shutil.copy2(ROOT_SHARED_CSS, DIST_DIR / ROOT_SHARED_CSS.name)
+    shutil.copy2(ROOT_SHARED_JS, DIST_DIR / ROOT_SHARED_JS.name)
     (DIST_DIR / ROOT_STYLES.name).write_text(ROOT_STYLES.read_text(encoding="utf-8"), encoding="utf-8")
     if ASSET_DIR.exists():
         shutil.copytree(ASSET_DIR, DIST_ASSET_DIR, dirs_exist_ok=True)

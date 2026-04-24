@@ -77,6 +77,50 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-counter-group]').forEach((node) => counterObserver.observe(node));
 
+document.querySelectorAll('[data-accordion-button]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const item = button.closest('.accordion-item');
+    const panel = item?.querySelector('[data-accordion-panel]');
+    if (!item || !panel) {
+      return;
+    }
+
+    const isOpen = item.classList.contains('is-open');
+    item.classList.toggle('is-open', !isOpen);
+    button.setAttribute('aria-expanded', String(!isOpen));
+    panel.hidden = isOpen;
+  });
+});
+
+document.querySelectorAll('[data-mailto-form]').forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const target = form.getAttribute('data-mailto-target');
+    if (!target) {
+      return;
+    }
+
+    const data = new FormData(form);
+    const fullName = [data.get('first_name'), data.get('last_name')].filter(Boolean).join(' ').trim();
+    const replyEmail = String(data.get('reply_email') || '').trim();
+    const organization = String(data.get('organization') || '').trim();
+    const inquiryType = String(data.get('inquiry_type') || '').trim();
+    const subject = String(data.get('subject') || inquiryType || 'Website inquiry').trim();
+    const message = String(data.get('message') || '').trim();
+
+    const body = [
+      fullName ? `Name: ${fullName}` : '',
+      replyEmail ? `Reply email: ${replyEmail}` : '',
+      organization ? `Organization: ${organization}` : '',
+      inquiryType ? `Inquiry type: ${inquiryType}` : '',
+      '',
+      message,
+    ].filter(Boolean).join('\n');
+
+    window.location.href = `mailto:${encodeURIComponent(target)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+});
+
 let particles = [];
 let context = null;
 let width = 0;
