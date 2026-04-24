@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Universal Design for Learning illustration</title>
+  <desc id="desc">Abstract illustration showing multiple pathways converging toward learner access and flexibility.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3f7ff"/>
+      <stop offset="100%" stop-color="#eef3ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2856c5"/>
+      <stop offset="100%" stop-color="#7a9ff2"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="36" fill="url(#bg)"/>
+  <circle cx="480" cy="118" r="72" fill="#dde8ff"/>
+  <circle cx="165" cy="312" r="94" fill="#e7efff"/>
+  <path d="M104 121c74 0 74 178 148 178s74-178 148-178 74 178 148 178" fill="none" stroke="url(#accent)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M124 96c54 0 54 140 108 140S286 96 340 96s54 140 108 140 54-140 108-140" fill="none" stroke="#9bb6f4" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+  <g transform="translate(318 210)">
+    <circle r="78" fill="#ffffff" stroke="#c7d7ff" stroke-width="8"/>
+    <circle r="52" fill="#f6f9ff" stroke="#d7e2ff" stroke-width="5"/>
+    <circle r="24" fill="#2856c5"/>
+  </g>
+  <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif">
+    <text x="58" y="66" font-size="28" font-weight="700">UDL</text>
+    <text x="58" y="94" font-size="18" opacity=".7">Multiple pathways to access</text>
+  </g>
+</svg>

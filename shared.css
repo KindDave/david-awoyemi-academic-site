@@ -1342,6 +1342,22 @@ img { max-width: 100%; display: block; }
   min-height: 100%;
 }
 
+.framework-illustration {
+  border-radius: 1.1rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(245, 248, 255, 0.9));
+  border: 1px solid var(--border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  margin-bottom: 1rem;
+}
+
+.framework-illustration img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
 .framework-icon {
   display: inline-flex;
   align-items: center;

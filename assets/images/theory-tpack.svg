@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">TPACK illustration</title>
+  <desc id="desc">Three overlapping circles represent technology, pedagogy, and content knowledge.</desc>
+  <rect width="640" height="420" rx="36" fill="#f5f7ff"/>
+  <circle cx="260" cy="220" r="116" fill="#9cc0ff" fill-opacity=".58"/>
+  <circle cx="382" cy="220" r="116" fill="#f6ca76" fill-opacity=".62"/>
+  <circle cx="321" cy="138" r="116" fill="#8dd8cb" fill-opacity=".62"/>
+  <circle cx="321" cy="215" r="58" fill="#ffffff" stroke="#d4def8" stroke-width="7"/>
+  <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif" font-weight="700">
+    <text x="214" y="228" font-size="28">P</text>
+    <text x="420" y="228" font-size="28">C</text>
+    <text x="312" y="88" font-size="28">T</text>
+    <text x="282" y="224" font-size="22">TPACK</text>
+  </g>
+  <g fill="#2d3a59" font-family="Inter, Arial, sans-serif" font-size="18">
+    <text x="82" y="78">Pedagogy</text>
+    <text x="474" y="78">Content</text>
+    <text x="266" y="360">Technology</text>
+  </g>
+</svg>

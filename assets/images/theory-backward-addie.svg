@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Backward design and ADDIE illustration</title>
+  <desc id="desc">Target and iterative cycle represent outcome-first planning and systematic design.</desc>
+  <rect width="640" height="420" rx="36" fill="#f4f7ff"/>
+  <g transform="translate(204 204)">
+    <circle r="108" fill="#eef3ff" stroke="#d8e3ff" stroke-width="8"/>
+    <circle r="72" fill="#ffffff" stroke="#c5d6ff" stroke-width="7"/>
+    <circle r="36" fill="#2856c5"/>
+    <circle r="12" fill="#f59d3d"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M404 134c28-22 66-20 92 4 28 26 32 68 10 100" stroke="#2856c5" stroke-width="14"/>
+    <path d="M500 238c-22 32-62 46-98 34-44-14-70-58-62-102" stroke="#87a8ee" stroke-width="14"/>
+    <path d="M340 170c12-34 42-58 78-64" stroke="#f0c76a" stroke-width="14"/>
+  </g>
+  <polygon points="522,232 514,198 548,207" fill="#2856c5"/>
+  <polygon points="336,150 346,181 314,176" fill="#f0c76a"/>
+  <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif">
+    <text x="56" y="62" font-size="26" font-weight="700">LXD</text>
+    <text x="56" y="88" font-size="18" opacity=".72">Outcomes first, iterate clearly</text>
+  </g>
+</svg>

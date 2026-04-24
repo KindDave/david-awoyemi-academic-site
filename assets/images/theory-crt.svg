@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Culturally responsive teaching illustration</title>
+  <desc id="desc">Connected circles of different colors represent identity, belonging, and responsive teaching communities.</desc>
+  <rect width="640" height="420" rx="36" fill="#f7f8ff"/>
+  <g fill="none" stroke="#cdd8f6" stroke-width="8">
+    <path d="M180 150c42-34 92-46 148-38 52 8 92 34 128 76"/>
+    <path d="M168 252c46 30 96 42 160 34 54-8 100-32 138-74"/>
+  </g>
+  <g>
+    <circle cx="162" cy="202" r="48" fill="#f0c76a"/>
+    <circle cx="290" cy="128" r="42" fill="#84d0c2"/>
+    <circle cx="448" cy="176" r="54" fill="#8db0ff"/>
+    <circle cx="344" cy="278" r="44" fill="#f19a8d"/>
+    <circle cx="214" cy="292" r="36" fill="#c7a5ff"/>
+  </g>
+  <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif">
+    <text x="58" y="62" font-size="26" font-weight="700">CRT</text>
+    <text x="58" y="88" font-size="18" opacity=".72">Identity, relevance, belonging</text>
+  </g>
+</svg>

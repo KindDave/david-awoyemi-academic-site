@@ -302,31 +302,37 @@ TEACHING_FRAMEWORKS = [
     {
         "icon": "UDL",
         "title": "Universal Design for Learning",
+        "src": "assets/images/theory-udl.svg",
         "body": "Builds multiple means of engagement, representation, and expression into instruction so learner variability is expected rather than treated as an exception.",
     },
     {
         "icon": "TPACK",
         "title": "TPACK Framework",
+        "src": "assets/images/theory-tpack.svg",
         "body": "Positions technology decisions inside the relationship among pedagogy, disciplinary content, and the realities of a teaching context.",
     },
     {
         "icon": "CLT",
         "title": "Constructivism and Cognitive Apprenticeship",
+        "src": "assets/images/theory-constructivism.svg",
         "body": "Supports active sensemaking, modeling, guided practice, and collaborative knowledge building around meaningful problems.",
     },
     {
         "icon": "LXD",
         "title": "Backward Design and ADDIE",
+        "src": "assets/images/theory-backward-addie.svg",
         "body": "Starts with learning outcomes and assessment evidence, then structures instruction systematically to make those outcomes achievable.",
     },
     {
         "icon": "CRT",
         "title": "Culturally Responsive Teaching",
+        "src": "assets/images/theory-crt.svg",
         "body": "Centers identity, relevance, and belonging so learners can connect disciplinary work to their own experiences and futures.",
     },
     {
         "icon": "L.A.",
         "title": "Learning Analytics and Feedback",
+        "src": "assets/images/theory-learning-analytics.svg",
         "body": "Uses formative evidence, interaction data, and reflective assessment to improve instruction while learning is still happening.",
     },
 ]
@@ -3300,6 +3306,9 @@ def render_teaching(data: dict[str, Any]) -> str:
     frameworks = "\n".join(
         f"""
         <article class="framework-card fade">
+          <div class="framework-illustration">
+            <img src="{escape(item['src'])}" alt="{escape(item['title'])} illustration">
+          </div>
           <div class="framework-icon">{escape(item['icon'])}</div>
           <h3>{escape(item['title'])}</h3>
           <p>{escape(item['body'])}</p>

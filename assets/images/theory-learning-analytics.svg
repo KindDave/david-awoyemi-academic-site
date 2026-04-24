@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Learning analytics and feedback illustration</title>
+  <desc id="desc">Dashboard cards, bars, and a feedback arrow represent evidence, interpretation, and action.</desc>
+  <rect width="640" height="420" rx="36" fill="#f4f8ff"/>
+  <rect x="90" y="104" width="460" height="218" rx="26" fill="#ffffff" stroke="#d5e0fb" stroke-width="8"/>
+  <rect x="126" y="140" width="138" height="146" rx="18" fill="#eef3ff"/>
+  <rect x="290" y="140" width="224" height="56" rx="16" fill="#f8fbff" stroke="#dde6fb" stroke-width="4"/>
+  <rect x="290" y="214" width="224" height="72" rx="16" fill="#f8fbff" stroke="#dde6fb" stroke-width="4"/>
+  <rect x="152" y="218" width="24" height="42" rx="12" fill="#87a8ee"/>
+  <rect x="188" y="188" width="24" height="72" rx="12" fill="#2856c5"/>
+  <rect x="224" y="164" width="24" height="96" rx="12" fill="#f0c76a"/>
+  <path d="M326 176h148" stroke="#d0daf5" stroke-width="10" stroke-linecap="round"/>
+  <path d="M326 232h110" stroke="#d0daf5" stroke-width="10" stroke-linecap="round"/>
+  <path d="M326 258h76" stroke="#d0daf5" stroke-width="10" stroke-linecap="round"/>
+  <path d="M492 102c38 18 62 58 62 100 0 58-42 108-98 118" fill="none" stroke="#2856c5" stroke-width="12" stroke-linecap="round"/>
+  <polygon points="448,306 484,296 474,332" fill="#2856c5"/>
+  <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif">
+    <text x="58" y="62" font-size="26" font-weight="700">L.A.</text>
+    <text x="58" y="88" font-size="18" opacity=".72">Evidence to feedback</text>
+  </g>
+</svg>
