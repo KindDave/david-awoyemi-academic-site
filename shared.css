@@ -298,6 +298,23 @@ img { max-width: 100%; display: block; }
   align-items: center;
 }
 
+.profile-photo-card {
+  width: min(24rem, 100%);
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card-strong);
+  box-shadow: var(--shadow-strong);
+}
+
+.profile-photo-card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+ }
+
 .profile-monogram {
   width: min(24rem, 100%);
   aspect-ratio: 4 / 5;
@@ -592,6 +609,7 @@ img { max-width: 100%; display: block; }
 .service-grid,
 .awards-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .media-strip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.research-practice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .card {
   background: var(--card);
@@ -1186,7 +1204,8 @@ img { max-width: 100%; display: block; }
   .awards-grid,
   .affiliation-grid,
   .media-strip-grid,
-  .case-gallery {
+  .case-gallery,
+  .research-practice-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1232,7 +1251,8 @@ img { max-width: 100%; display: block; }
   .metrics-grid,
   .media-strip-grid,
   .case-gallery,
-  .hero-visual-grid {
+  .hero-visual-grid,
+  .research-practice-grid {
     grid-template-columns: 1fr;
   }
 

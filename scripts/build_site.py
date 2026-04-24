@@ -113,7 +113,12 @@ PROFILE_LINKS = [
     },
 ]
 
-HOME_MEDIA = [
+HERO_HEADSHOT = {
+    "src": "assets/images/headshot-main.png",
+    "alt": "Professional headshot of David Awoyemi",
+}
+
+HOME_RESEARCH_PRACTICE = [
     {
         "src": "assets/images/home-vr-safety.jpg",
         "alt": "Immersive VR construction safety simulation",
@@ -132,6 +137,11 @@ HOME_MEDIA = [
 ]
 
 ACADEMIC_MEDIA = [
+    {
+        "src": "assets/images/headshot-stage.jpg",
+        "alt": "David Awoyemi presenting at a conference podium",
+        "caption": "Conference and scholarly presentation",
+    },
     {
         "src": "assets/images/academic-schedule.jpg",
         "alt": "Code-N-Sensor camp schedule",
@@ -611,6 +621,23 @@ img { max-width: 100%; display: block; }
   align-items: center;
 }
 
+.profile-photo-card {
+  width: min(24rem, 100%);
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card-strong);
+  box-shadow: var(--shadow-strong);
+}
+
+.profile-photo-card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+ }
+
 .profile-monogram {
   width: min(24rem, 100%);
   aspect-ratio: 4 / 5;
@@ -905,6 +932,7 @@ img { max-width: 100%; display: block; }
 .service-grid,
 .awards-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .media-strip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.research-practice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .card {
   background: var(--card);
@@ -1499,7 +1527,8 @@ img { max-width: 100%; display: block; }
   .awards-grid,
   .affiliation-grid,
   .media-strip-grid,
-  .case-gallery {
+  .case-gallery,
+  .research-practice-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1545,7 +1574,8 @@ img { max-width: 100%; display: block; }
   .metrics-grid,
   .media-strip-grid,
   .case-gallery,
-  .hero-visual-grid {
+  .hero-visual-grid,
+  .research-practice-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2334,7 +2364,7 @@ def render_page(title: str, description: str, active: str, body: str, data: dict
 def render_home(data: dict[str, Any]) -> str:
     person = data["person"]
     hero_highlights = "\n".join(f"<li>{escape(item['name'])}</li>" for item in data["awards"][:3])
-    hero_media = render_media_cards(HOME_MEDIA)
+    research_practice_media = render_media_cards(HOME_RESEARCH_PRACTICE)
     metrics = "\n".join(
         f"""
         <article class="metric-card">
@@ -2401,11 +2431,8 @@ def render_home(data: dict[str, Any]) -> str:
 <main class="main-wrap">
   <section class="hero">
     <div class="hero-photo fade">
-      <div class="profile-monogram">
-        <strong>{escape(person["initials"])}</strong>
-      </div>
-      <div class="hero-visual-grid">
-        {hero_media}
+      <div class="profile-photo-card">
+        <img src="{escape(HERO_HEADSHOT['src'])}" alt="{escape(HERO_HEADSHOT['alt'])}">
       </div>
       <div class="profile-links-inline">
         {profile_links}
@@ -2444,6 +2471,17 @@ def render_home(data: dict[str, Any]) -> str:
     </div>
     <div class="feature-grid">
       {features_html}
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="section-heading">
+      <span class="eyebrow">Research in Practice</span>
+      <h2>Project visuals moved under the work they represent.</h2>
+      <p>These visuals now sit below the homepage introduction instead of competing with the headshot at the top of the page.</p>
+    </div>
+    <div class="media-strip-grid research-practice-grid">
+      {research_practice_media}
     </div>
   </section>
 </main>
