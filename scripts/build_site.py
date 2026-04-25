@@ -3144,7 +3144,7 @@ def render_research(data: dict[str, Any]) -> str:
   <section class="page-hero">
     <span class="eyebrow">Research Projects</span>
     <h1>Evidence-based learning innovation across XR, AI, and analytics.</h1>
-    <p>This page keeps the stronger case-study structure from the earlier website while connecting it to the same shared automated workflow.</p>
+    <p>Case studies showing how research design, instructional design, and evaluation work together.</p>
   </section>
 
   <section class="section">
