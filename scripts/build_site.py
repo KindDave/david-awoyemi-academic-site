@@ -3161,7 +3161,7 @@ def render_research(data: dict[str, Any]) -> str:
         <div class="section-heading">
           <span class="eyebrow">Core Roles</span>
           <h2>Appointments that shaped the project portfolio.</h2>
-          <p>These roles come directly from the CV and provide context for the design and research work described below.</p>
+          <p>These roles provide context for the design and research work described below.</p>
         </div>
         <div class="mini-grid">
           {role_cards}
