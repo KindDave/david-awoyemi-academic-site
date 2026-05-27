@@ -3357,7 +3357,6 @@ def render_teaching(data: dict[str, Any]) -> str:
   <section class="page-hero">
     <span class="eyebrow">Teaching Philosophy</span>
     <h1>Learning-sciences-grounded teaching practice.</h1>
-    <p>This page restores the fuller teaching narrative from the original website with a cleaner, more aligned presentation and mobile-friendly structure.</p>
   </section>
 
   <section class="section">
