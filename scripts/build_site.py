@@ -3239,7 +3239,6 @@ def render_about(data: dict[str, Any]) -> str:
   <section class="page-hero">
     <span class="eyebrow">About Me</span>
     <h1>Educator, researcher, and design-minded scholar.</h1>
-    <p>This page restores the fuller personal and professional framing from the original site while keeping the broader website inside the new shared system.</p>
   </section>
 
   <section class="section">

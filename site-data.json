@@ -1,5 +1,5 @@
 {
-  "generated_on": "2026-04-25",
+  "generated_on": "2026-05-27",
   "source_file": "CV_David.docx",
   "person": {
     "name": "Idowu David Awoyemi",
@@ -73,7 +73,7 @@
   ],
   "metrics": [
     {
-      "value": 17,
+      "value": 19,
       "label": "Journal Articles"
     },
     {
@@ -120,19 +120,6 @@
       "summary": "Research on the awareness and utilization of Mathematics software applications for developing Mathematics tertiary Instruction."
     },
     {
-      "title": "Teaching Assistant",
-      "organization": "The University of Alabama, Tuscaloosa, AL, United States",
-      "date": "01/2025 – 05/2025",
-      "details": [
-        "Led discussion sections and facilitated active learning in instructional design courses, supporting over 15 students in mastering core concepts and applying theory to practice.",
-        "Designed and evaluated assessments, delivering timely and constructive feedback that enhanced student performance and engagement.",
-        "Held regular office hours and provided individualized academic support, contributing to positive student evaluations and improved learning outcomes.",
-        "Collaborated with faculty on curriculum development, incorporating inclusive teaching practices and innovative instructional materials.",
-        "Managed the Blackboard learning platform, monitored student progress, and communicated key updates to enrich the learning experience"
-      ],
-      "summary": "Led discussion sections and facilitated active learning in instructional design courses, supporting over 15 students in mastering core concepts and applying theory to practice. Designed and evaluated assessments,..."
-    },
-    {
       "title": "Educator and Classroom Instructor",
       "organization": "Model Secondary School, Federal University of Technology, Minna",
       "date": "10/2016-12/2022",
@@ -148,6 +135,19 @@
         "Served as an internal and external examiner to local, national, and international examination bodies."
       ],
       "summary": "Tutored local high school students in Further Mathematics and Mathematics. Implemented different learning strategies to enhance the academic performance of students. Organized “Best Brains” tutorials for intelligent..."
+    },
+    {
+      "title": "Mathematics Educator",
+      "organization": "",
+      "date": "1/2015 - 1/2016",
+      "details": [
+        "Abarikpo Community Secondary school, Ahoada, Rivers",
+        "Solved administrative problems for the school which resulted in over 100% improvement in the results of the students.",
+        "Engaged and sustained students in an effective learning process.",
+        "Organized quizzes and exams for the students.",
+        "Tutored local high school students in Further Mathematics and Mathematics."
+      ],
+      "summary": "Abarikpo Community Secondary school, Ahoada, Rivers Solved administrative problems for the school which resulted in over 100% improvement in the results of the students. Engaged and sustained students in an effective..."
     }
   ],
   "research_entries": [
@@ -199,17 +199,20 @@
   ],
   "teaching_entries": [
     {
-      "title": "Teaching Assistant",
-      "organization": "The University of Alabama, Tuscaloosa, AL, United States",
-      "date": "01/2025 – 05/2025",
+      "title": "Instructor / Course Co-DesignerThe University of Alabama, Tuscaloosa, AL, United States",
+      "organization": "",
+      "date": "05/2026 – 07/2026",
       "details": [
+        "• Co-designed and developed AI Fluency for the Workforce (CIE 499), an undergraduate course integrating applied AI, ethics, and workforce readiness competencies.• Delivered instruction and facilitated active learning for ~30 students, supporting mastery of AI concepts and real-world applications.• Designed and evaluated scaffolded assignments (e.g., AI toolkit, portfolio artifacts, chatbot development), providing timely and constructive feedback to enhance student performance.• Implemented project-based and experiential learning strategies to strengthen critical thinking, responsible AI use, and professional skills.• Collaborated with faculty on curriculum development, aligning course content with emerging industry needs and institutional AI initiatives.• Managed the Blackboard learning environment, monitored student progress, and communicated course updates to enrich the learning experience.",
+        "Teaching Assistant",
+        "The University of Alabama, Tuscaloosa, AL, United States",
         "Led discussion sections and facilitated active learning in instructional design courses, supporting over 15 students in mastering core concepts and applying theory to practice.",
         "Designed and evaluated assessments, delivering timely and constructive feedback that enhanced student performance and engagement.",
         "Held regular office hours and provided individualized academic support, contributing to positive student evaluations and improved learning outcomes.",
         "Collaborated with faculty on curriculum development, incorporating inclusive teaching practices and innovative instructional materials.",
         "Managed the Blackboard learning platform, monitored student progress, and communicated key updates to enrich the learning experience"
       ],
-      "summary": "Led discussion sections and facilitated active learning in instructional design courses, supporting over 15 students in mastering core concepts and applying theory to practice. Designed and evaluated assessments,..."
+      "summary": "• Co-designed and developed AI Fluency for the Workforce (CIE 499), an undergraduate course integrating applied AI, ethics, and workforce readiness competencies.• Delivered instruction and facilitated active learning..."
     },
     {
       "title": "Guest Lecture and Workshop Facilitator",
@@ -303,40 +306,42 @@
   ],
   "selected_publications": [
     {
+      "title": "A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)",
+      "context": "Journal Article",
+      "status": "Under Review",
+      "year": "2020",
+      "raw": "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)"
+    },
+    {
       "title": "From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)",
       "context": "Journal Article",
       "status": "Under Review",
       "year": "Recent",
-      "raw": "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Under review). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)"
+      "raw": "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Revision). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)"
     },
     {
-      "title": "Promoting elementary students’ computer science conceptual knowledge and coding performance: A mixed methods case study (Manuscript Number: UJRT-2025-1006.R2)",
-      "context": "Journal Article",
+      "title": "Identifying the AI Literacy Gap: A Mixed-Methods Analysis of Industry Needs and Graduate Preparedness",
+      "context": "Frontiers in Education",
       "status": "Accepted",
       "year": "2025",
-      "raw": "F Luo, J Amayou, F Nasrin, P Abedini, V Mousavi, ID Awoyemi, A Hutchison, C Cao, C Crawford. (Accepted). Promoting elementary students’ computer science conceptual knowledge and coding performance: A mixed methods case study (Manuscript Number: UJRT-2025-1006.R2)"
+      "raw": "McNeill, L., Uddin, M. M., Abu, S., Pei, M., Awoyemi, I. D., & Regalado, L. (2025). Identifying the AI Literacy Gap: A Mixed-Methods Analysis of Industry Needs and Graduate Preparedness. Frontiers in Education. [Accepted]"
     },
     {
-      "title": "A Bayesian Meta-Analysis of Virtual Reality-based Safety Training in the Construction Sector (Manuscript Number: SAFETY-D-26-01418)",
+      "title": "F Luo, J Amayou, F Nasrin, P Abedini, V Mousavi, ID Awoyemi, A Hutchison, C Cao, C Crawford. Promoting elementary students’ computer science conceptual knowledge and coding performance: A mixed methods case study (Manuscript Number: UJRT-2025-1006.R2)",
       "context": "Journal Article",
-      "status": "Under Review",
-      "year": "Recent",
-      "raw": "Moon, J., Awoyemi, I. D., Abu, S., Kim, E., & Marchiori, R. (Submitted). A Bayesian Meta-Analysis of Virtual Reality-based Safety Training in the Construction Sector (Manuscript Number: SAFETY-D-26-01418)"
-    },
-    {
-      "title": "Design and development research of immersive virtual reality-supported safety training for construction engineering education",
-      "context": "Educational Technology Research and Development",
-      "status": "Under Review",
-      "year": "Recent",
-      "raw": "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Under review). Design and development research of immersive virtual reality-supported safety training for construction engineering education. Educational Technology Research and Development (Manuscript Number: ETRD-D-26-00469)"
+      "status": "Published",
+      "year": "2025",
+      "raw": "F Luo, J Amayou, F Nasrin, P Abedini, V Mousavi, ID Awoyemi, A Hutchison, C Cao, C Crawford. Promoting elementary students’ computer science conceptual knowledge and coding performance: A mixed methods case study (Manuscript Number: UJRT-2025-1006.R2)"
     }
   ],
   "publication_sections": [
     {
       "title": "Peer-Reviewed Journal Articles",
       "items": [
-        "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Under review). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)",
-        "F Luo, J Amayou, F Nasrin, P Abedini, V Mousavi, ID Awoyemi, A Hutchison, C Cao, C Crawford. (Accepted). Promoting elementary students’ computer science conceptual knowledge and coding performance: A mixed methods case study (Manuscript Number: UJRT-2025-1006.R2)",
+        "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)",
+        "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Revision). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)",
+        "McNeill, L., Uddin, M. M., Abu, S., Pei, M., Awoyemi, I. D., & Regalado, L. (2025). Identifying the AI Literacy Gap: A Mixed-Methods Analysis of Industry Needs and Graduate Preparedness. Frontiers in Education. [Accepted]",
+        "F Luo, J Amayou, F Nasrin, P Abedini, V Mousavi, ID Awoyemi, A Hutchison, C Cao, C Crawford. Promoting elementary students’ computer science conceptual knowledge and coding performance: A mixed methods case study (Manuscript Number: UJRT-2025-1006.R2)",
         "Moon, J., Awoyemi, I. D., Abu, S., Kim, E., & Marchiori, R. (Submitted). A Bayesian Meta-Analysis of Virtual Reality-based Safety Training in the Construction Sector (Manuscript Number: SAFETY-D-26-01418)",
         "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Under review). Design and development research of immersive virtual reality-supported safety training for construction engineering education. Educational Technology Research and Development (Manuscript Number: ETRD-D-26-00469)",
         "Awoyemi, I. D., Abu S., Yuvaraja H. K., Patiballa S. K., & Moon, J. (Under review). Exploring fidelity dimensions in extended reality technologies for mechanical engineering education: A Systematic Review. TechTrends (Manuscript Number: TECH-D-25-00383)",
@@ -382,7 +387,7 @@
         "Hossain, S., Huang, W., Li, J., Hadis, S., Li, L., Haniya, S., Khanam, S., Awoyemi, I. D., & Ahmadi, S. (April 8–12, 2026). Designing a responsible AI literacy framework for education: Integrating ethics, equity, and empowerment [Accepted roundtable session]. American Educational Research Association (AERA) Annual Meeting, Los Angeles, CA.",
         "Luo, F., Nasrin, F., & Awoyemi, I. D. (AERA, April 2025). Broadening participation in computing through cultivating professional growth in teachers of color. (Round Table Presentation)",
         "Awoyemi, I. D., Nasrin, F., Luo, F., & Chris Crawford (AERA, April 2025). Elementary students’ conceptions and engagement in physiological computing: A case study of lesson implementation. (Round Table Presentation)",
-        "Lesley Regalado, Mohi Uddin, & Awoyemi I. D. (ITLC-Lilly Accepted, May 2026). Teaching Responsible AI Skills for Professional Success. AI and the Future of Evidence-Based Teaching in Higher Education in Austin,",
+        "Regalado, L., Uddin, M. M., & Awoyemi, I. D. (2026, May 18–20). Teaching Responsible AI Skills for Professional Success. ITLC Lilly Conference, Austin, TX.",
         "Abu, S., Awoyemi, I. D, & Moon, J. (AECT, 2025 October). Preliminary Design and Development of Al-Enhanced VR Spring Dynamics Simulations to Foster Metacognitive Regulation in Engineering Education. Poster Presentation.",
         "Awoyemi, I. D, Abu, S., Yuvaraja, H., Moon, J., Patiballa, S. (AECT, 2025 October). Exploring fidelity dimensions in extended reality technologies for mechanical engineering education: A systematic review, Concurrent Session, (Paper Presentation).",
         "McNeill, L., Abu, S., Pei, M., Awoyemi, I. D., & Uddin, M. (May 2025). AI-WISE: Developing an industry-informed AI literacy course for undergraduates. Teaching and Learning with AI: A Sharing Conference Between Educational Practitioners. University of Central Florida, Orlando, FL. (Paper Presentation)",
