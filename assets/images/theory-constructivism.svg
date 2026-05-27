@@ -9,8 +9,4 @@
   <path d="M112 124c58 0 74-34 120-34 40 0 58 22 84 22 34 0 44-34 84-34 36 0 62 24 98 24" fill="none" stroke="#2856c5" stroke-width="10" stroke-linecap="round"/>
   <circle cx="110" cy="124" r="12" fill="#2856c5"/>
   <circle cx="498" cy="78" r="12" fill="#2856c5"/>
-  <g fill="#0f2d6b" font-family="Inter, Arial, sans-serif">
-    <text x="54" y="70" font-size="34" font-weight="800">CLT</text>
-    <text x="54" y="104" font-size="24" font-weight="600" opacity=".82">Build, model, scaffold</text>
-  </g>
 </svg>
