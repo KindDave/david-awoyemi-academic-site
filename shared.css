@@ -29,8 +29,10 @@ html { scroll-behavior: smooth; }
   --bg: #04101f;
   --bg2: #09192e;
   --bg3: #0d2441;
-  --card: rgba(10, 22, 43, 0.88);
-  --card-strong: #08162d;
+  /* Cards are distinctly lighter than the page background so they read as
+     elevated surfaces rather than blending with the void. */
+  --card: #0f2244;
+  --card-strong: #16305c;
   --navy: #8bb4ff;
   --navy2: #b4ccff;
   --navy-soft: rgba(139, 180, 255, 0.12);
@@ -38,11 +40,13 @@ html { scroll-behavior: smooth; }
   --text1: #f1f5ff;
   --text2: #d2dbf0;
   --text3: #93a4c8;
-  --border: rgba(139, 180, 255, 0.14);
-  --border-strong: rgba(139, 180, 255, 0.24);
+  --border: rgba(139, 180, 255, 0.28);
+  --border-strong: rgba(139, 180, 255, 0.5);
   --nav-bg: rgba(4, 16, 31, 0.88);
-  --shadow: 0 18px 50px rgba(0, 0, 0, 0.34);
-  --shadow-strong: 0 24px 70px rgba(0, 0, 0, 0.44);
+  /* Shadow includes an inset top hairline highlight for a frosted-glass
+     edge effect, giving cards a crisp top edge on the dark background. */
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --shadow-strong: 0 24px 70px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.09);
 }
 
 body {
