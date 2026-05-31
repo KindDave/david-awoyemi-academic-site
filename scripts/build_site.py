@@ -3845,18 +3845,30 @@ def render_contact(data: dict[str, Any]) -> str:
     )
 
 
+def _strip_em_dashes(text: str) -> str:
+    """Replace em dashes with commas for consistent punctuation across the site.
+
+    Applied as the final pass on rendered HTML and JSON output so any em dash
+    coming from the CV docx or hardcoded source strings is normalized in one
+    place. The parser at split_inline_title_org() still sees raw em dashes in
+    docx content because it runs before this normalization step.
+    """
+    return text.replace(" — ", ", ").replace("—", ",")
+
+
 def write_outputs(data: dict[str, Any]) -> None:
     pages = {
-        "index.html": render_home(data),
-        "about.html": render_about(data),
-        "academic.html": render_academic(data),
-        "research.html": render_research(data),
-        "teaching.html": render_teaching(data),
-        "portfolio.html": render_portfolio(data),
-        "contact.html": render_contact(data),
+        "index.html": _strip_em_dashes(render_home(data)),
+        "about.html": _strip_em_dashes(render_about(data)),
+        "academic.html": _strip_em_dashes(render_academic(data)),
+        "research.html": _strip_em_dashes(render_research(data)),
+        "teaching.html": _strip_em_dashes(render_teaching(data)),
+        "portfolio.html": _strip_em_dashes(render_portfolio(data)),
+        "contact.html": _strip_em_dashes(render_contact(data)),
     }
 
-    OUTPUT_JSON.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    json_payload = _strip_em_dashes(json.dumps(data, indent=2, ensure_ascii=False))
+    OUTPUT_JSON.write_text(json_payload, encoding="utf-8")
     ROOT_STYLES.write_text("/* Compatibility wrapper: shared styles now live in shared.css. */\n@import url('./shared.css');\n", encoding="utf-8")
 
     for filename, content in pages.items():
@@ -3867,7 +3879,7 @@ def write_outputs(data: dict[str, Any]) -> None:
     for filename, content in pages.items():
         (DIST_DIR / filename).write_text(content, encoding="utf-8")
 
-    (DIST_DIR / OUTPUT_JSON.name).write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    (DIST_DIR / OUTPUT_JSON.name).write_text(json_payload, encoding="utf-8")
     shutil.copy2(ROOT_SHARED_CSS, DIST_DIR / ROOT_SHARED_CSS.name)
     shutil.copy2(ROOT_SHARED_JS, DIST_DIR / ROOT_SHARED_JS.name)
     (DIST_DIR / ROOT_STYLES.name).write_text(ROOT_STYLES.read_text(encoding="utf-8"), encoding="utf-8")
