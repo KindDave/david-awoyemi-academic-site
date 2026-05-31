@@ -1058,14 +1058,6 @@ img { max-width: 100%; display: block; }
   color: var(--navy);
 }
 
-.eyebrow::before {
-  content: "";
-  width: 1.8rem;
-  height: 2px;
-  border-radius: 999px;
-  background: currentColor;
-}
-
 .hero h1,
 .page-hero h1,
 .section-heading h2,
@@ -1340,17 +1332,6 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--navy);
-}
-
-.feature-kicker::before,
-.card-kicker::before,
-.publication-kicker::before,
-.service-kicker::before,
-.case-kicker::before {
-  content: "";
-  width: 1rem;
-  height: 2px;
-  background: currentColor;
 }
 
 .feature-title,
