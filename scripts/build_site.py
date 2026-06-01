@@ -3591,6 +3591,25 @@ def render_portfolio(data: dict[str, Any]) -> str:
         for idx, item in enumerate(PORTFOLIO_COURSES)
     )
 
+    # Build a single-line list of course tiles, duplicated so the marquee
+    # animation can loop seamlessly when translated by -50%.
+    course_marquee_tiles_once = "\n".join(
+        f"""
+        <li class="course-tile">
+          <img src="assets/images/courses/{item['image']}" alt="{escape(item['image_alt'])}" loading="lazy" decoding="async">
+        </li>
+        """.rstrip()
+        for item in PORTFOLIO_COURSES
+    )
+    course_marquee_tiles_repeat = "\n".join(
+        f"""
+        <li class="course-tile" aria-hidden="true">
+          <img src="assets/images/courses/{item['image']}" alt="" loading="lazy" decoding="async">
+        </li>
+        """.rstrip()
+        for item in PORTFOLIO_COURSES
+    )
+
     course_tabs = "\n".join(
         f'<button class="course-tab{" is-active" if index == 0 else ""}" type="button" data-course-tab="{escape("all" if index == 0 else item["code"])}">{escape("All Projects" if index == 0 else item["code"])}</button>'
         for index, item in enumerate([{"code": "all"}] + PORTFOLIO_COURSES)
@@ -3637,6 +3656,19 @@ def render_portfolio(data: dict[str, Any]) -> str:
     <span class="eyebrow">Instructional Design Portfolio</span>
     <h1>Design, development, and innovation.</h1>
     <p>A curated collection of instructional design artifacts, eLearning modules, multimedia projects, and doctoral course reflections demonstrating applied mastery across the instructional design cycle.</p>
+  </section>
+
+  <section class="course-marquee fade" aria-label="Doctoral coursework">
+    <div class="course-marquee-header">
+      <span class="eyebrow">Doctoral Coursework</span>
+      <h2>Seven courses that shaped my scholarly identity.</h2>
+    </div>
+    <div class="course-marquee-viewport">
+      <ul class="course-marquee-track">
+        {course_marquee_tiles_once}
+        {course_marquee_tiles_repeat}
+      </ul>
+    </div>
   </section>
 
   <section class="section-alt">
