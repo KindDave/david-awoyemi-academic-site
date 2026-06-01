@@ -448,7 +448,7 @@ PORTFOLIO_COURSES = [
         "term": "Foundations of Instructional Technology",
         "title": "Adobe Express Portfolio and UDL Reflection",
         "body": "Developed a portfolio demonstrating UDL, motivational theory, and core instructional technology concepts while clarifying my scholarly stance.",
-        "image": "AIL-601-1.png",
+        "image": "AIL-601-1-clean.png",
         "image_alt": "AIL 601 — Principles of Instructional Technology course tile",
         "links": [
             {"label": "View Adobe Express Portfolio", "url": "https://new.express.adobe.com/webpage/tHKB8XD6Vcq3I"},
@@ -460,7 +460,7 @@ PORTFOLIO_COURSES = [
         "term": "Instructional Design",
         "title": "Gagne Planning Sheet and Design Mapping",
         "body": "Applied systematic design models, including Gagne and TEC-VARIETY, to the sequencing and support structures that later informed immersive learning work.",
-        "image": "AIL-602-1.png",
+        "image": "AIL-602-1-clean.png",
         "image_alt": "AIL 602 — Electronic Instructional Design course tile",
         "links": [
             {"label": "View Planning Artifact", "url": "https://drive.google.com/file/d/141afmW3n3ODqbwg9Nch7N5TNIG6BcY5y/view?usp=sharing"},
@@ -472,7 +472,7 @@ PORTFOLIO_COURSES = [
         "term": "Distance Learning Technologies",
         "title": "Canvas Course Prototype and Distance Learning Design",
         "body": "Designed online learning experiences with backward design, UDL, multimedia learning principles, and stronger attention to learner decision points.",
-        "image": "AIL-604-1.png",
+        "image": "AIL-604-1-clean.png",
         "image_alt": "AIL 604 — Distance Technologies course tile",
         "links": [
             {"label": "View Artifact", "url": "https://drive.google.com/file/d/1ONmk6bU7Pws5tdXsuwHx244y9V1aQLId/view?usp=sharing"},
@@ -484,7 +484,7 @@ PORTFOLIO_COURSES = [
         "term": "Emerging Technologies in Education",
         "title": "VR Hazard Identification Research Reflection",
         "body": "Connected XR design, AI-supported feedback, and research dissemination through a doctoral course that directly fed into the immersive safety training project.",
-        "image": "AIL-608-1.png",
+        "image": "AIL-608-1-clean.png",
         "image_alt": "AIL 608 — Diversity, Inclusion, Equity, and Accessibility course tile",
         "links": [
             {"label": "Vanguard Feature", "url": "https://www.vanguardngr.com/2023/08/expert-idowu-awoyemi-leads-team-in-revolutionizing-civil-engineering-education-with-vrt/"},
@@ -508,7 +508,7 @@ PORTFOLIO_COURSES = [
         "term": "Doctoral Seminar and Dissertation",
         "title": "Dissertation Prospectus and Program Reflection",
         "body": "Capstone documents showing research readiness, scholarly identity, and synthesis across the doctoral program in instructional technology.",
-        "image": "AIL-690-2.png",
+        "image": "AIL-690-2-clean.png",
         "image_alt": "AIL 690 — Seminar in Instructional Technology course tile",
         "links": [
             {"label": "Read Prospectus", "url": "https://portfolios.davidawoyemi.net/prospectus/"},
@@ -3610,24 +3610,20 @@ def render_portfolio(data: dict[str, Any]) -> str:
         for item in PORTFOLIO_COURSES
     )
 
+    # The marquee above already surfaces every course visually, so we drop
+    # the legacy "All Projects" tab + mini-card grid that duplicated it.
+    # Course tabs now jump straight to per-course detail panels.
     course_tabs = "\n".join(
-        f'<button class="course-tab{" is-active" if index == 0 else ""}" type="button" data-course-tab="{escape("all" if index == 0 else item["code"])}">{escape("All Projects" if index == 0 else item["code"])}</button>'
-        for index, item in enumerate([{"code": "all"}] + PORTFOLIO_COURSES)
+        f'<button class="course-tab{" is-active" if index == 0 else ""}" type="button" data-course-tab="{escape(item["code"])}">{escape(item["code"])}</button>'
+        for index, item in enumerate(PORTFOLIO_COURSES)
     )
 
-    course_all = f"""
-    <div class="course-panel is-active" data-course-panel="all">
-      <div class="project-mini-grid">
-        {project_cards}
-      </div>
-    </div>
-    """.rstrip()
-
-    course_panels = [course_all]
-    for item in PORTFOLIO_COURSES:
+    course_panels = []
+    for index, item in enumerate(PORTFOLIO_COURSES):
+        active_class = " is-active" if index == 0 else ""
         course_panels.append(
             f"""
-            <div class="course-panel" data-course-panel="{escape(item['code'])}">
+            <div class="course-panel{active_class}" data-course-panel="{escape(item['code'])}">
               <article class="course-detail-card fade">
                 <div class="course-detail-head">
                   <div class="course-detail-code">{escape(item['code'])}</div>

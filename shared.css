@@ -1249,9 +1249,9 @@ img { max-width: 100%; display: block; }
   padding: 0.5rem 0;
   margin: 0;
   width: max-content;
-  animation: course-marquee-scroll 48s linear infinite;
-  /* Hint to the compositor that this layer is going to animate
-     transform — keeps the marquee buttery on lower-end devices. */
+  /* 24s/cycle is fast enough to read as clearly auto-scrolling without
+     racing past the eye. Original 48s read as nearly static. */
+  animation: course-marquee-scroll 24s linear infinite;
   will-change: transform;
 }
 
@@ -1317,7 +1317,7 @@ img { max-width: 100%; display: block; }
   }
   .course-marquee-track {
     gap: 1rem;
-    animation-duration: 36s;
+    animation-duration: 18s;
   }
   .course-tile {
     width: 180px;
