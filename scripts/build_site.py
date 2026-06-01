@@ -2441,18 +2441,26 @@ def build_site_data() -> dict[str, Any]:
         {
             "title": "Immersive Learning Systems",
             "body": "Designs and studies virtual and mixed reality environments for authentic STEM learning, safety training, and performance transfer.",
+            "image": "research-hero.png",
+            "image_alt": "Learner in an AI-driven virtual reality interface",
         },
         {
             "title": "AI-Enhanced Education",
             "body": "Explores generative AI, AI literacy, instructional decision-making, and responsible integration of emerging tools in learning environments.",
+            "image": "feature-research.jpg",
+            "image_alt": "Humanoid robot reading on a bench",
         },
         {
             "title": "Learning Analytics",
             "body": "Uses multimodal evidence, behavioral traces, and statistical reasoning to understand how learners engage and improve over time.",
+            "image": "portfolio-accent.png",
+            "image_alt": "Designer working on a laptop with a colorful data palette",
         },
         {
             "title": "Equity and Participation",
             "body": "Advances broadening participation in STEM and computing through inclusive design, teacher development, and responsive learning pathways.",
+            "image": "feature-about.png",
+            "image_alt": "Scholar at a desk with laptop and reference books",
         },
     ]
 
@@ -2900,10 +2908,15 @@ def render_academic(data: dict[str, Any]) -> str:
     )
     interests = "\n".join(
         f"""
-        <article class="interest-card fade">
-          <span class="card-kicker">Research Interest</span>
-          <h3>{escape(item['title'])}</h3>
-          <p>{escape(item['body'])}</p>
+        <article class="interest-card interest-card--with-image fade">
+          <figure class="interest-image">
+            <img src="assets/images/{item.get('image', 'feature-academic.png')}" alt="{escape(item.get('image_alt', item['title']))}" loading="lazy" decoding="async">
+          </figure>
+          <div class="interest-card-body">
+            <span class="card-kicker">Research Interest</span>
+            <h3>{escape(item['title'])}</h3>
+            <p>{escape(item['body'])}</p>
+          </div>
         </article>
         """.rstrip()
         for item in data["research_themes"]
