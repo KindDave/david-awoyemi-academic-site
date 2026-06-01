@@ -3643,17 +3643,22 @@ def render_portfolio(data: dict[str, Any]) -> str:
         course_panels.append(
             f"""
             <div class="course-panel{active_class}" data-course-panel="{escape(item['code'])}">
-              <article class="course-detail-card fade">
-                <div class="course-detail-head">
-                  <div class="course-detail-code">{escape(item['code'])}</div>
-                  <div>
-                    <div class="course-detail-term">{escape(item['term'])}</div>
-                    <h3>{escape(item['title'])}</h3>
+              <article class="course-detail-card course-detail-card--with-image fade">
+                <figure class="course-detail-thumb">
+                  <img src="assets/images/courses/{item['image']}" alt="{escape(item['image_alt'])}" loading="lazy" decoding="async">
+                </figure>
+                <div class="course-detail-body">
+                  <div class="course-detail-head">
+                    <div class="course-detail-code">{escape(item['code'])}</div>
+                    <div>
+                      <div class="course-detail-term">{escape(item['term'])}</div>
+                      <h3>{escape(item['title'])}</h3>
+                    </div>
                   </div>
-                </div>
-                <p class="course-detail-copy">{escape(item['body'])}</p>
-                <div class="portfolio-links">
-                  {''.join(f'<a href="{escape(link["url"])}"{link_attrs(link["url"])}>{escape(link["label"])}</a>' for link in item['links'])}
+                  <p class="course-detail-copy">{escape(item['body'])}</p>
+                  <div class="portfolio-links">
+                    {''.join(f'<a href="{escape(link["url"])}"{link_attrs(link["url"])}>{escape(link["label"])}</a>' for link in item['links'])}
+                  </div>
                 </div>
               </article>
             </div>

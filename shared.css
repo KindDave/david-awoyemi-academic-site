@@ -2647,6 +2647,60 @@ img { max-width: 100%; display: block; }
   color: var(--text2);
 }
 
+/* ============================================================
+   Course detail card with a small thumb on the left (course
+   tile image). Stacks on phones.
+   ============================================================ */
+.course-detail-card--with-image {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.course-detail-thumb {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 0.95rem;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow);
+  background: var(--card-strong);
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.32s ease;
+}
+
+.course-detail-card--with-image:hover .course-detail-thumb {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
+
+.course-detail-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.course-detail-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+@media (max-width: 600px) {
+  .course-detail-card--with-image {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+  .course-detail-thumb {
+    width: 60%;
+    max-width: 200px;
+  }
+}
+
 .project-mini-head {
   margin-bottom: 0.65rem;
 }
