@@ -2930,7 +2930,6 @@ def render_academic(data: dict[str, Any]) -> str:
         f"""
         <a class="profile-link-card profile-link-card--with-icon fade" href="{escape(item['url'])}"{link_attrs(item["url"])}>
           {icon_badge(profile_link_icon_map.get(item['label'], 'book-open'))}
-          <span class="card-kicker">Profile Link</span>
           <h3>{escape(item['label'])}</h3>
           <p>{escape(item['description'])}</p>
           <span class="profile-link-arrow">Open resource</span>
