@@ -2316,6 +2316,13 @@ def citation_status(text: str) -> tuple[str, str]:
 
 
 def extract_year(text: str) -> str:
+    # Papers still in the review pipeline don't have a finalized
+    # publication year — any 4-digit year in their text is likely
+    # part of a date range in the title (e.g. "(2020-2025)") rather
+    # than a publication year. Always show "Recent" for those.
+    lowered = text.lower()
+    if any(token in lowered for token in ("under review", "submitted", "revision")):
+        return "Recent"
     match = re.search(r"\b(20\d{2}|19\d{2})\b", text)
     return match.group(1) if match else "Recent"
 
