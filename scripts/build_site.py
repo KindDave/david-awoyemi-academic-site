@@ -3460,7 +3460,7 @@ def render_teaching(data: dict[str, Any]) -> str:
 <main id="main-content" class="main-wrap">
   <section class="page-hero">
     <span class="eyebrow">Teaching Philosophy</span>
-    <h1>Learning-sciences-grounded teaching practice.</h1>
+    <h1>Teaching grounded in instructional technology and the learning sciences.</h1>
   </section>
 
   <section class="section">
