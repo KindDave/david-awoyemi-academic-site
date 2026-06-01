@@ -2563,6 +2563,7 @@ def render_nav(data: dict[str, Any], active: str) -> str:
         for key, label, href in links
     )
     return f"""
+<a href="#main-content" class="skip-link">Skip to content</a>
 <header class="site-nav">
   <div class="nav-inner">
     <a class="brand" href="index.html">
@@ -2740,7 +2741,7 @@ def render_home(data: dict[str, Any]) -> str:
         for item in data["education"]
     )
     body = f"""
-<main class="main-wrap">
+<main id="main-content" class="main-wrap">
   <section class="hero">
     <div class="hero-photo fade">
       <div class="profile-photo-card">
@@ -2774,7 +2775,7 @@ def render_home(data: dict[str, Any]) -> str:
   </div>
 </section>
 
-<main class="main-wrap">
+<main id="main-content" class="main-wrap">
   <section class="section">
     <div class="section-heading">
       <span class="eyebrow">Navigate the Portfolio</span>
@@ -2798,7 +2799,7 @@ def render_home(data: dict[str, Any]) -> str:
   </div>
 </section>
 
-<main class="main-wrap">
+<main id="main-content" class="main-wrap">
   <section class="section">
     <div class="section-heading">
       <span class="eyebrow">Recent Scholarship</span>
@@ -2944,7 +2945,7 @@ def render_academic(data: dict[str, Any]) -> str:
         for item in data["service_snapshot"]
     )
     body = f"""
-<main class="main-wrap">
+<main id="main-content" class="main-wrap">
   <section class="page-hero">
     <span class="eyebrow">Academic Profile</span>
     <h1>Research, publications, grants, and scholarly service.</h1>
@@ -3121,7 +3122,7 @@ def render_research(data: dict[str, Any]) -> str:
     )
     theme_tags = "".join(f"<span>{escape(item['title'])}</span>" for item in data["research_themes"])
     body = f"""
-<main class="main-wrap">
+<main id="main-content" class="main-wrap">
   <section class="page-hero">
     <span class="eyebrow">Research Projects</span>
     <h1>Evidence-based learning innovation across XR, AI, and analytics.</h1>
@@ -3216,7 +3217,7 @@ def render_about(data: dict[str, Any]) -> str:
         for skill in data["skills"][:6]
     )
     body = f"""
-<main class="main-wrap">
+<main id="main-content" class="main-wrap">
   <section class="page-hero">
     <span class="eyebrow">About Me</span>
     <h1>Educator, researcher, and design-minded scholar.</h1>
@@ -3334,7 +3335,7 @@ def render_teaching(data: dict[str, Any]) -> str:
         for item in TEACHING_ACCORDION
     )
     body = f"""
-<main class="main-wrap">
+<main id="main-content" class="main-wrap">
   <section class="page-hero">
     <span class="eyebrow">Teaching Philosophy</span>
     <h1>Learning-sciences-grounded teaching practice.</h1>
@@ -3546,7 +3547,7 @@ def render_portfolio(data: dict[str, Any]) -> str:
     )
 
     body = f"""
-<main class="main-wrap">
+<main id="main-content" class="main-wrap">
   <section class="page-hero">
     <span class="eyebrow">Instructional Design Portfolio</span>
     <h1>Design, development, and innovation.</h1>
@@ -3709,7 +3710,7 @@ def render_contact(data: dict[str, Any]) -> str:
         for item in CONTACT_PROFILES
     )
     body = f"""
-<main class="main-wrap">
+<main id="main-content" class="main-wrap">
   <section class="page-hero">
     <span class="eyebrow">Contact and CV</span>
     <h1>Let's connect.</h1>
