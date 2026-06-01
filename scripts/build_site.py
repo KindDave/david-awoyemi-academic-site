@@ -2964,6 +2964,31 @@ def render_academic(data: dict[str, Any]) -> str:
         """.rstrip()
         for item in data["research_themes"]
     )
+
+    # Course marquee tiles — duplicated so the CSS animation can loop
+    # seamlessly when translated by -50%. Each tile links to that course's
+    # reflection page (last URL in the course's links list).
+    course_marquee_tiles_once = "\n".join(
+        f"""
+        <li class="course-tile">
+          <a class="course-tile-link" href="{escape(item['links'][-1]['url'])}"{link_attrs(item['links'][-1]['url'])} aria-label="Open {escape(item['code'])} {escape(item['title'])}">
+            <img src="assets/images/courses/{item['image']}" alt="{escape(item['image_alt'])}" loading="lazy" decoding="async">
+          </a>
+        </li>
+        """.rstrip()
+        for item in PORTFOLIO_COURSES
+    )
+    course_marquee_tiles_repeat = "\n".join(
+        f"""
+        <li class="course-tile" aria-hidden="true">
+          <a class="course-tile-link" href="{escape(item['links'][-1]['url'])}"{link_attrs(item['links'][-1]['url'])} tabindex="-1">
+            <img src="assets/images/courses/{item['image']}" alt="" loading="lazy" decoding="async">
+          </a>
+        </li>
+        """.rstrip()
+        for item in PORTFOLIO_COURSES
+    )
+
     grants = "\n".join(
         f"""
         <article class="grant-card fade">
@@ -3039,6 +3064,20 @@ def render_academic(data: dict[str, Any]) -> str:
       <div class="interests-grid">
         {interests}
       </div>
+    </div>
+  </section>
+
+  <section class="course-marquee fade" aria-label="Selected doctoral coursework">
+    <div class="course-marquee-header">
+      <span class="eyebrow">Doctoral Coursework</span>
+      <h2>Selected courses that shaped my scholarly identity.</h2>
+      <p>Each tile links to the reflection and artifacts for that course.</p>
+    </div>
+    <div class="course-marquee-viewport">
+      <ul class="course-marquee-track">
+        {course_marquee_tiles_once}
+        {course_marquee_tiles_repeat}
+      </ul>
     </div>
   </section>
 
@@ -3591,34 +3630,8 @@ def render_portfolio(data: dict[str, Any]) -> str:
         for idx, item in enumerate(PORTFOLIO_COURSES)
     )
 
-    # Build a single-line list of course tiles, duplicated so the marquee
-    # animation can loop seamlessly when translated by -50%.
-    # Each tile links to that course's reflection page (last URL in the
-    # course's links list).
-    course_marquee_tiles_once = "\n".join(
-        f"""
-        <li class="course-tile">
-          <a class="course-tile-link" href="{escape(item['links'][-1]['url'])}"{link_attrs(item['links'][-1]['url'])} aria-label="Open {escape(item['code'])} {escape(item['title'])}">
-            <img src="assets/images/courses/{item['image']}" alt="{escape(item['image_alt'])}" loading="lazy" decoding="async">
-          </a>
-        </li>
-        """.rstrip()
-        for item in PORTFOLIO_COURSES
-    )
-    course_marquee_tiles_repeat = "\n".join(
-        f"""
-        <li class="course-tile" aria-hidden="true">
-          <a class="course-tile-link" href="{escape(item['links'][-1]['url'])}"{link_attrs(item['links'][-1]['url'])} tabindex="-1">
-            <img src="assets/images/courses/{item['image']}" alt="" loading="lazy" decoding="async">
-          </a>
-        </li>
-        """.rstrip()
-        for item in PORTFOLIO_COURSES
-    )
-
-    # The marquee above already surfaces every course visually, so we drop
-    # the legacy "All Projects" tab + mini-card grid that duplicated it.
-    # Course tabs now jump straight to per-course detail panels.
+    # The course marquee now lives on the academic profile page; the
+    # portfolio page jumps straight to per-course detail tabs.
     course_tabs = "\n".join(
         f'<button class="course-tab{" is-active" if index == 0 else ""}" type="button" data-course-tab="{escape(item["code"])}">{escape(item["code"])}</button>'
         for index, item in enumerate(PORTFOLIO_COURSES)
@@ -3658,19 +3671,6 @@ def render_portfolio(data: dict[str, Any]) -> str:
     <span class="eyebrow">Instructional Design Portfolio</span>
     <h1>Design, development, and innovation.</h1>
     <p>A curated collection of instructional design artifacts, eLearning modules, multimedia projects, and doctoral course reflections demonstrating applied mastery across the instructional design cycle.</p>
-  </section>
-
-  <section class="course-marquee fade" aria-label="Doctoral coursework">
-    <div class="course-marquee-header">
-      <span class="eyebrow">Doctoral Coursework</span>
-      <h2>Seven courses that shaped my scholarly identity.</h2>
-    </div>
-    <div class="course-marquee-viewport">
-      <ul class="course-marquee-track">
-        {course_marquee_tiles_once}
-        {course_marquee_tiles_repeat}
-      </ul>
-    </div>
   </section>
 
   <section class="section-alt">

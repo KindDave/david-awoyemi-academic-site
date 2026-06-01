@@ -1225,6 +1225,12 @@ img { max-width: 100%; display: block; }
   text-wrap: balance;
 }
 
+.course-marquee-header p {
+  margin: 0.7rem 0 0;
+  color: var(--text2);
+  max-width: 48rem;
+}
+
 .course-marquee-viewport {
   position: relative;
   width: 100%;
