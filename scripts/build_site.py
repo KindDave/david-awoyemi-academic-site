@@ -2564,10 +2564,16 @@ def render_nav(data: dict[str, Any], active: str) -> str:
     )
     return f"""
 <a href="#main-content" class="skip-link">Skip to content</a>
+<button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5"/><path d="m5 12 7-7 7 7"/>
+  </svg>
+  <span class="back-to-top-label">Top</span>
+</button>
 <header class="site-nav">
   <div class="nav-inner">
     <a class="brand" href="index.html">
-      <span class="brand-mark">{escape(person["initials"])}</span>
+      <span class="brand-mark"><img src="assets/images/brand-logo.png" alt="David — Instructional Design Scholar" loading="eager"></span>
       <span class="brand-text">
         <span class="brand-name">{escape(person["display_name"])}</span>
         <span class="brand-subtitle">Instructional Technology</span>
@@ -2652,6 +2658,8 @@ def render_page(title: str, description: str, active: str, body: str, data: dict
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{escape(title)}</title>
   <meta name="description" content="{escape(description)}">
+  <link rel="icon" type="image/png" sizes="any" href="assets/images/brand-logo.png">
+  <link rel="apple-touch-icon" href="assets/images/brand-logo.png">
   <link rel="stylesheet" href="shared.css">
 </head>
 <body>
@@ -2685,23 +2693,28 @@ def render_home(data: dict[str, Any]) -> str:
         for item in data["profile_links"][:3]
     )
     features = [
-        ("About", "Professional biography, training background, and a clearer view of the scholarly and design profile.", "about.html"),
-        ("Academic Profile", "CV-driven publications, presentations, grants, service, and affiliations.", "academic.html"),
-        ("Research Projects", "Selected case studies showing how David designs, studies, and evaluates learning innovation.", "research.html"),
-        ("Teaching Philosophy", "Research-informed teaching commitments, frameworks, and experience across instructional contexts.", "teaching.html"),
-        ("ID Portfolio", "Instructional design artifacts, curriculum work, multimedia development, and doctoral coursework.", "portfolio.html"),
-        ("Contact and CV", "Open positions, professional contact details, and the source-of-truth academic CV.", "contact.html"),
+        ("About", "Professional biography, training background, and a clearer view of the scholarly and design profile.", "about.html", "feature-about.png", "Professional scholar at a desk"),
+        ("Academic Profile", "CV-driven publications, presentations, grants, service, and affiliations.", "academic.html", "feature-academic.png", "Researcher at a dual-monitor workstation"),
+        ("Research Projects", "Selected case studies showing how David designs, studies, and evaluates learning innovation.", "research.html", "feature-research.jpg", "Humanoid robot reading on a bench"),
+        ("Teaching Philosophy", "Research-informed teaching commitments, frameworks, and experience across instructional contexts.", "teaching.html", "feature-teaching.jpg", "Wooden blocks showing learning-design concepts"),
+        ("ID Portfolio", "Instructional design artifacts, curriculum work, multimedia development, and doctoral coursework.", "portfolio.html", "feature-portfolio.jpg", "Design workspace with laptop and tools"),
+        ("Contact and CV", "Open positions, professional contact details, and the source-of-truth academic CV.", "contact.html", "feature-contact.jpg", "Hands connecting through communication devices"),
     ]
     features_html = "\n".join(
         f"""
-        <a class="feature-card fade" href="{escape(href)}">
-          <span class="feature-kicker">Portfolio Section</span>
-          <h3 class="feature-title">{escape(title)}</h3>
-          <p class="feature-desc">{escape(description)}</p>
-          <span class="feature-link">Open section</span>
+        <a class="feature-card feature-card--with-image fade" href="{escape(href)}">
+          <figure class="feature-image">
+            <img src="assets/images/{image}" alt="{escape(image_alt)}" loading="lazy" decoding="async">
+          </figure>
+          <div class="feature-card-body">
+            <span class="feature-kicker">Portfolio Section</span>
+            <h3 class="feature-title">{escape(title)}</h3>
+            <p class="feature-desc">{escape(description)}</p>
+            <span class="feature-link">Open section</span>
+          </div>
         </a>
         """.rstrip()
-        for title, description, href in features
+        for title, description, href, image, image_alt in features
     )
     awards_html = "\n".join(
         f"""
@@ -3123,6 +3136,16 @@ def render_research(data: dict[str, Any]) -> str:
     <span class="eyebrow">Research Projects</span>
     <h1>Evidence-based learning innovation across XR, AI, and analytics.</h1>
     <p>Case studies showing how research design, instructional design, and evaluation work together.</p>
+  </section>
+
+  <section class="research-hero-image fade" aria-label="AI and immersive learning research">
+    <figure class="research-hero-figure">
+      <img src="assets/images/research-hero.png" alt="A learner exploring an immersive AI-powered virtual reality interface" loading="eager" decoding="async">
+      <figcaption>
+        <span class="eyebrow">Immersive Learning · AI · XR</span>
+        <p>Studying how immersive technologies and AI-supported instruction reshape how learners experience knowledge.</p>
+      </figcaption>
+    </figure>
   </section>
 
   <section class="section">

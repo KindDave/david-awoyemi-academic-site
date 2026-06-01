@@ -138,6 +138,83 @@ img { max-width: 100%; display: block; }
   color: var(--bg);
 }
 
+/* ============================================================
+   Back-to-top button — fixed bottom-right, fades in after the
+   user has scrolled past ~400px. Premium pill style with a
+   gradient background that flips per theme.
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  right: clamp(1rem, 2.5vw, 1.85rem);
+  bottom: clamp(1rem, 2.5vw, 1.85rem);
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1.05rem 0.7rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--navy), var(--navy2));
+  color: #fff;
+  font: 700 0.84rem 'Atkinson Hyperlegible', 'Inter', system-ui, sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 14px 36px rgba(15, 45, 107, 0.32);
+  opacity: 0;
+  transform: translateY(0.6rem);
+  pointer-events: none;
+  transition: opacity 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.28s ease,
+              background 0.32s ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 44px rgba(15, 45, 107, 0.42);
+}
+
+.back-to-top:active {
+  transform: translateY(0) scale(0.97);
+  transition-duration: 0.1s;
+}
+
+.back-to-top svg {
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .back-to-top {
+  background: linear-gradient(135deg, var(--gold), #e0a83a);
+  color: var(--bg);
+  border-color: rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark"] .back-to-top:hover {
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.65);
+}
+
+@media (max-width: 540px) {
+  /* On phones the label is dropped for a compact circular button. */
+  .back-to-top {
+    padding: 0.75rem;
+    border-radius: 999px;
+    width: 2.85rem;
+    height: 2.85rem;
+    justify-content: center;
+  }
+  .back-to-top-label {
+    display: none;
+  }
+}
+
 #particles {
   position: fixed;
   inset: 0;
@@ -181,17 +258,24 @@ img { max-width: 100%; display: block; }
 }
 
 .brand-mark {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3.05rem;
+  height: 3.05rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--navy), var(--gold));
-  color: white;
-  font: 700 0.92rem 'Atkinson Hyperlegible', 'Inter', system-ui, sans-serif;
-  letter-spacing: 0.08em;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  background: var(--card-strong);
   box-shadow: var(--shadow);
+  flex-shrink: 0;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .brand-text {
@@ -808,6 +892,167 @@ img { max-width: 100%; display: block; }
 .feature-card,
 .profile-link-card {
   text-decoration: none;
+}
+
+/* ============================================================
+   Image-backed feature card variant — used on the homepage
+   "Portfolio Sections" grid. The image fills the top of the
+   card edge-to-edge with a subtle theme-aware overlay; body
+   content sits below in regular card padding.
+   ============================================================ */
+.feature-card--with-image {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-image {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--navy);
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.6s ease;
+  /* Tint each image into the navy palette so the grid reads as one
+     unified system, the way premium editorial sites do. */
+  filter: saturate(0.85) brightness(0.95);
+}
+
+.feature-image::after {
+  /* Soft duotone wash from bottom — pulls the image into the navy
+     family and improves readability of any overlaid text. */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+              rgba(15, 45, 107, 0.15) 0%,
+              rgba(15, 45, 107, 0.05) 45%,
+              rgba(15, 45, 107, 0.45) 100%);
+  pointer-events: none;
+}
+
+[data-theme="dark"] .feature-image::after {
+  background: linear-gradient(180deg,
+              rgba(4, 16, 31, 0.35) 0%,
+              rgba(4, 16, 31, 0.15) 45%,
+              rgba(4, 16, 31, 0.7) 100%);
+}
+
+[data-theme="dark"] .feature-image img {
+  filter: saturate(0.9) brightness(0.82);
+}
+
+.feature-card--with-image:hover .feature-image img {
+  transform: scale(1.06);
+  filter: saturate(1) brightness(1);
+}
+
+.feature-card-body {
+  padding: 1.45rem 1.5rem 1.55rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.feature-card-body .feature-kicker {
+  margin-bottom: 0.15rem;
+}
+
+.feature-card-body .feature-link {
+  margin-top: auto;
+  padding-top: 0.6rem;
+}
+
+/* ============================================================
+   Research-page hero image — large AI/VR banner with overlaid
+   eyebrow + caption. Layered shadow + duotone overlay give the
+   AdDIE Lab-style sense of depth and atmosphere.
+   ============================================================ */
+.research-hero-image {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0 2rem;
+}
+
+.research-hero-figure {
+  position: relative;
+  margin: 0;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-strong);
+  border: 1px solid var(--border);
+  isolation: isolate;
+}
+
+.research-hero-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.05);
+}
+
+.research-hero-figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 50%, transparent 0%, rgba(4, 16, 31, 0.45) 80%),
+    linear-gradient(180deg, rgba(4, 16, 31, 0.1) 0%, rgba(4, 16, 31, 0.55) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.research-hero-figure figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: clamp(1.4rem, 4vw, 2.8rem);
+  color: #fff;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 38rem;
+}
+
+.research-hero-figure figcaption .eyebrow {
+  color: #fff;
+}
+
+.research-hero-figure figcaption .eyebrow::after {
+  background: linear-gradient(90deg, #fde047 0%, #f0c76a 100%);
+  opacity: 1;
+}
+
+.research-hero-figure figcaption p {
+  margin: 0;
+  font-family: 'Crimson Pro', 'Lora', Georgia, serif;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  font-weight: 500;
+  line-height: 1.32;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+
+@media (max-width: 640px) {
+  .research-hero-figure img {
+    aspect-ratio: 4 / 5;
+  }
 }
 
 .feature-kicker,

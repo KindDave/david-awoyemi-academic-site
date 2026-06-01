@@ -221,3 +221,37 @@ if (particleCanvas) {
   animateParticles();
   window.addEventListener('resize', initParticles, { passive: true });
 }
+
+/* ============================================================
+   Back-to-top button: appears after the user scrolls past 400px,
+   smooth-scrolls back to the top on click. Respects reduced-motion.
+   ============================================================ */
+const backToTopButton = document.querySelector('[data-back-to-top]');
+if (backToTopButton) {
+  const showThreshold = 400;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let ticking = false;
+  const updateVisibility = () => {
+    const shouldShow = window.scrollY > showThreshold;
+    backToTopButton.classList.toggle('is-visible', shouldShow);
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateVisibility);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: reducedMotion ? 'auto' : 'smooth',
+    });
+  });
+
+  updateVisibility();
+}
