@@ -3593,10 +3593,14 @@ def render_portfolio(data: dict[str, Any]) -> str:
 
     # Build a single-line list of course tiles, duplicated so the marquee
     # animation can loop seamlessly when translated by -50%.
+    # Each tile links to that course's reflection page (last URL in the
+    # course's links list).
     course_marquee_tiles_once = "\n".join(
         f"""
         <li class="course-tile">
-          <img src="assets/images/courses/{item['image']}" alt="{escape(item['image_alt'])}" loading="lazy" decoding="async">
+          <a class="course-tile-link" href="{escape(item['links'][-1]['url'])}"{link_attrs(item['links'][-1]['url'])} aria-label="Open {escape(item['code'])} {escape(item['title'])}">
+            <img src="assets/images/courses/{item['image']}" alt="{escape(item['image_alt'])}" loading="lazy" decoding="async">
+          </a>
         </li>
         """.rstrip()
         for item in PORTFOLIO_COURSES
@@ -3604,7 +3608,9 @@ def render_portfolio(data: dict[str, Any]) -> str:
     course_marquee_tiles_repeat = "\n".join(
         f"""
         <li class="course-tile" aria-hidden="true">
-          <img src="assets/images/courses/{item['image']}" alt="" loading="lazy" decoding="async">
+          <a class="course-tile-link" href="{escape(item['links'][-1]['url'])}"{link_attrs(item['links'][-1]['url'])} tabindex="-1">
+            <img src="assets/images/courses/{item['image']}" alt="" loading="lazy" decoding="async">
+          </a>
         </li>
         """.rstrip()
         for item in PORTFOLIO_COURSES

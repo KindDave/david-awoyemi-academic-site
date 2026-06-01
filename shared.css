@@ -1278,9 +1278,37 @@ img { max-width: 100%; display: block; }
               box-shadow 0.4s ease;
 }
 
+.course-tile-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Subtle gradient overlay on hover signals interactivity */
+.course-tile-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+              transparent 55%,
+              rgba(15, 45, 107, 0.65) 100%);
+  opacity: 0;
+  transition: opacity 0.32s ease;
+  pointer-events: none;
+}
+
 .course-tile:hover {
   transform: translateY(-4px) scale(1.02);
   box-shadow: var(--shadow-strong);
+}
+
+.course-tile:hover .course-tile-link::after,
+.course-tile:focus-within .course-tile-link::after {
+  opacity: 1;
 }
 
 .course-tile img {
