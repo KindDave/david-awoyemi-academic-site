@@ -1040,6 +1040,118 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   Icon-badge system — used by smaller cards (profile-link,
+   timeline, certification, project-mini) to add a small
+   themed glyph without committing a full image. Themed via
+   currentColor so it adapts per card variant.
+   ============================================================ */
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.85rem;
+  background: linear-gradient(135deg,
+              color-mix(in srgb, var(--navy) 12%, transparent),
+              color-mix(in srgb, var(--gold) 16%, transparent));
+  border: 1px solid var(--border-strong);
+  color: var(--navy);
+  flex-shrink: 0;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.3s ease,
+              border-color 0.25s ease,
+              color 0.25s ease;
+}
+
+.icon-badge svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+[data-theme="dark"] .icon-badge {
+  background: linear-gradient(135deg,
+              color-mix(in srgb, var(--navy) 22%, transparent),
+              color-mix(in srgb, var(--gold) 18%, transparent));
+  color: var(--navy2);
+}
+
+/* Hover lift on parent — icon brightens to gold-tinted */
+.profile-link-card--with-icon:hover .icon-badge,
+.timeline-card--with-icon:hover .icon-badge,
+.cert-card--with-icon:hover .icon-badge,
+.project-mini-card--with-icon:hover .icon-badge {
+  transform: scale(1.06) rotate(-2deg);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Profile link cards: icon top-left, generous spacing */
+.profile-link-card--with-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.profile-link-card--with-icon .icon-badge {
+  margin-bottom: 0.35rem;
+}
+
+/* Education + teaching timeline cards: icon to the left, content right */
+.timeline-card--with-icon {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.95rem;
+  align-items: flex-start;
+}
+
+.timeline-card--with-icon .timeline-date {
+  grid-column: 2;
+}
+
+.timeline-card--with-icon > .icon-badge {
+  grid-row: 1 / span 3;
+  align-self: center;
+  margin-top: 0;
+}
+
+/* Certifications: small icon on left, content right */
+.cert-card--with-icon {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+}
+
+.cert-card--with-icon .icon-badge {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.cert-card--with-icon .icon-badge svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.cert-card-body h3 {
+  margin: 0 0 0.2rem;
+  font-size: 0.98rem;
+  line-height: 1.25;
+}
+
+.cert-card-body p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text3);
+}
+
+/* Portfolio project mini-cards: icon at top */
+.project-mini-card--with-icon .icon-badge {
+  margin-bottom: 0.85rem;
+}
+
+/* ============================================================
    Research-page hero image — large AI/VR banner with overlaid
    eyebrow + caption. Layered shadow + duotone overlay give the
    AdDIE Lab-style sense of depth and atmosphere.

@@ -2538,6 +2538,31 @@ def link_attrs(url: str) -> str:
     return ' target="_blank" rel="noreferrer"' if url.startswith("http") else ""
 
 
+# ---------------------------------------------------------------------------
+# Inline SVG icon library (Lucide-style stroke icons). Each value is a full
+# SVG element ready to drop into card templates via icon_svg(name). Stroke
+# inherits currentColor so the icon themes automatically.
+# ---------------------------------------------------------------------------
+ICON_LIBRARY: dict[str, str] = {
+    "graduation": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
+    "users": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    "award": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 12.5 17 22l-5-3-5 3 1.5-9.5"/></svg>',
+    "file-text": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>',
+    "flask": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2v6.5L3.5 18a2 2 0 0 0 1.7 3h13.6a2 2 0 0 0 1.7-3L15 8.5V2"/><path d="M7 2h10"/><path d="M6 14h12"/></svg>',
+    "network": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2.4"/><circle cx="19" cy="6" r="2.4"/><circle cx="5" cy="18" r="2.4"/><circle cx="19" cy="18" r="2.4"/><line x1="7" y1="7.5" x2="10" y2="10.5"/><line x1="17" y1="7.5" x2="14" y2="10.5"/><line x1="7" y1="16.5" x2="10" y2="13.5"/><line x1="17" y1="16.5" x2="14" y2="13.5"/></svg>',
+    "book-open": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>',
+    "presentation": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18"/><path d="M5 4v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4"/><path d="M12 15v6"/><path d="M9 21h6"/><path d="M8 9l3-2 2 2 3-4"/></svg>',
+    "compass": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>',
+    "layers": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>',
+}
+
+
+def icon_badge(name: str, *, classes: str = "icon-badge") -> str:
+    """Render an icon name from ICON_LIBRARY wrapped in a styled badge span."""
+    svg = ICON_LIBRARY.get(name, "")
+    return f'<span class="{classes}" aria-hidden="true">{svg}</span>'
+
+
 def render_media_cards(items: list[dict[str, str]], extra_class: str = "") -> str:
     class_attr = f' class="media-card {extra_class}"' if extra_class else ' class="media-card"'
     return "\n".join(
@@ -2895,9 +2920,16 @@ def render_academic(data: dict[str, Any]) -> str:
     </div>
   </section>
 """ if academic_media else ""
+    profile_link_icon_map = {
+        "Google Scholar": "graduation",
+        "ResearchGate": "network",
+        "ADIE Lab": "flask",
+        "Full CV": "file-text",
+    }
     profile_links = "\n".join(
         f"""
-        <a class="profile-link-card fade" href="{escape(item['url'])}"{link_attrs(item["url"])}>
+        <a class="profile-link-card profile-link-card--with-icon fade" href="{escape(item['url'])}"{link_attrs(item["url"])}>
+          {icon_badge(profile_link_icon_map.get(item['label'], 'book-open'))}
           <span class="card-kicker">Profile Link</span>
           <h3>{escape(item['label'])}</h3>
           <p>{escape(item['description'])}</p>
@@ -3227,7 +3259,8 @@ def render_about(data: dict[str, Any]) -> str:
     bio = "\n".join(f"<p>{escape(item)}</p>" for item in ABOUT_BIO)
     education_html = "\n".join(
         f"""
-        <article class="timeline-card fade">
+        <article class="timeline-card timeline-card--with-icon fade">
+          {icon_badge('graduation')}
           <div class="timeline-date">{escape(item['date'])}</div>
           <div>
             <h3 class="timeline-title">{escape(item['degree'])}</h3>
@@ -3329,7 +3362,8 @@ def render_teaching(data: dict[str, Any]) -> str:
     )
     teaching_experience = "\n".join(
         f"""
-        <article class="timeline-card fade">
+        <article class="timeline-card timeline-card--with-icon fade">
+          {icon_badge('presentation')}
           <div class="timeline-date">{escape(item['date'])}</div>
           <div>
             <h3 class="timeline-title">{escape(item['title'])}</h3>
@@ -3342,9 +3376,12 @@ def render_teaching(data: dict[str, Any]) -> str:
     )
     certifications = "\n".join(
         f"""
-        <article class="cert-card fade">
-          <h3>{escape(item['name'])}</h3>
-          <p>{escape(item['date'])}</p>
+        <article class="cert-card cert-card--with-icon fade">
+          {icon_badge('award')}
+          <div class="cert-card-body">
+            <h3>{escape(item['name'])}</h3>
+            <p>{escape(item['date'])}</p>
+          </div>
         </article>
         """.rstrip()
         for item in data["certifications"][:8]
@@ -3522,9 +3559,11 @@ def render_portfolio(data: dict[str, Any]) -> str:
         for group in PORTFOLIO_VIDEO_TABS
     )
 
+    project_icon_map = ["layers", "compass", "book-open", "presentation", "flask", "network"]
     project_cards = "\n".join(
         f"""
-        <article class="project-mini-card fade">
+        <article class="project-mini-card project-mini-card--with-icon fade">
+          {icon_badge(project_icon_map[idx % len(project_icon_map)])}
           <div class="project-mini-head">
             <span class="project-code">{escape(item['code'])}</span>
             <h3>{escape(item['title'])}</h3>
@@ -3535,7 +3574,7 @@ def render_portfolio(data: dict[str, Any]) -> str:
           </div>
         </article>
         """.rstrip()
-        for item in PORTFOLIO_COURSES
+        for idx, item in enumerate(PORTFOLIO_COURSES)
     )
 
     course_tabs = "\n".join(
