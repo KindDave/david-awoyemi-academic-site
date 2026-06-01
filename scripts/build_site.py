@@ -3289,19 +3289,6 @@ def render_research(data: dict[str, Any]) -> str:
     </div>
   </section>
 
-  <section class="section">
-    <div class="cta-card">
-      <div>
-        <span class="eyebrow">Next Layer</span>
-        <h3 class="feature-title">Research case studies now live inside the automated site.</h3>
-        <p>The case narratives remain curated, while the linked academic record on the profile page continues to regenerate from the Word CV.</p>
-      </div>
-      <div class="hero-actions">
-        <a class="button" href="academic.html">View academic profile</a>
-        <a class="button-secondary" href="{escape(data["source_file"])}">Download CV</a>
-      </div>
-    </div>
-  </section>
 </main>
 """
     return render_page(
