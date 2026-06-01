@@ -448,6 +448,8 @@ PORTFOLIO_COURSES = [
         "term": "Foundations of Instructional Technology",
         "title": "Adobe Express Portfolio and UDL Reflection",
         "body": "Developed a portfolio demonstrating UDL, motivational theory, and core instructional technology concepts while clarifying my scholarly stance.",
+        "image": "AIL-601-1.png",
+        "image_alt": "AIL 601 — Principles of Instructional Technology course tile",
         "links": [
             {"label": "View Adobe Express Portfolio", "url": "https://new.express.adobe.com/webpage/tHKB8XD6Vcq3I"},
             {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail-601/"},
@@ -458,6 +460,8 @@ PORTFOLIO_COURSES = [
         "term": "Instructional Design",
         "title": "Gagne Planning Sheet and Design Mapping",
         "body": "Applied systematic design models, including Gagne and TEC-VARIETY, to the sequencing and support structures that later informed immersive learning work.",
+        "image": "AIL-602-1.png",
+        "image_alt": "AIL 602 — Electronic Instructional Design course tile",
         "links": [
             {"label": "View Planning Artifact", "url": "https://drive.google.com/file/d/141afmW3n3ODqbwg9Nch7N5TNIG6BcY5y/view?usp=sharing"},
             {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail-602/"},
@@ -468,6 +472,8 @@ PORTFOLIO_COURSES = [
         "term": "Distance Learning Technologies",
         "title": "Canvas Course Prototype and Distance Learning Design",
         "body": "Designed online learning experiences with backward design, UDL, multimedia learning principles, and stronger attention to learner decision points.",
+        "image": "AIL-604-1.png",
+        "image_alt": "AIL 604 — Distance Technologies course tile",
         "links": [
             {"label": "View Artifact", "url": "https://drive.google.com/file/d/1ONmk6bU7Pws5tdXsuwHx244y9V1aQLId/view?usp=sharing"},
             {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail-604/"},
@@ -478,6 +484,8 @@ PORTFOLIO_COURSES = [
         "term": "Emerging Technologies in Education",
         "title": "VR Hazard Identification Research Reflection",
         "body": "Connected XR design, AI-supported feedback, and research dissemination through a doctoral course that directly fed into the immersive safety training project.",
+        "image": "AIL-608-1.png",
+        "image_alt": "AIL 608 — Diversity, Inclusion, Equity, and Accessibility course tile",
         "links": [
             {"label": "Vanguard Feature", "url": "https://www.vanguardngr.com/2023/08/expert-idowu-awoyemi-leads-team-in-revolutionizing-civil-engineering-education-with-vrt/"},
             {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail-608/"},
@@ -488,6 +496,8 @@ PORTFOLIO_COURSES = [
         "term": "Interactive Multimedia Processes",
         "title": "Rise 360 Interactive Tutorial and Reflection",
         "body": "Built a full interactive multimedia lesson with branching menus, audio narration, embedded videos, and accessibility-aware design choices.",
+        "image": "AIL-605-1.png",
+        "image_alt": "AIL 605 — Interactive Multimedia Processes course tile",
         "links": [
             {"label": "Launch Interactive Module", "url": "https://360.articulate.com/review/content/d5649f65-923e-4144-906c-409b7eb97ddd/review"},
             {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail605/"},
@@ -498,6 +508,8 @@ PORTFOLIO_COURSES = [
         "term": "Doctoral Seminar and Dissertation",
         "title": "Dissertation Prospectus and Program Reflection",
         "body": "Capstone documents showing research readiness, scholarly identity, and synthesis across the doctoral program in instructional technology.",
+        "image": "AIL-690-2.png",
+        "image_alt": "AIL 690 — Seminar in Instructional Technology course tile",
         "links": [
             {"label": "Read Prospectus", "url": "https://portfolios.davidawoyemi.net/prospectus/"},
             {"label": "Read Program Reflection", "url": "https://portfolios.davidawoyemi.net/ail601/"},
@@ -3558,18 +3570,21 @@ def render_portfolio(data: dict[str, Any]) -> str:
         for group in PORTFOLIO_VIDEO_TABS
     )
 
-    project_icon_map = ["layers", "compass", "book-open", "presentation", "flask", "network"]
     project_cards = "\n".join(
         f"""
-        <article class="project-mini-card project-mini-card--with-icon fade">
-          {icon_badge(project_icon_map[idx % len(project_icon_map)])}
-          <div class="project-mini-head">
-            <span class="project-code">{escape(item['code'])}</span>
-            <h3>{escape(item['title'])}</h3>
-          </div>
-          <p>{escape(item['body'])}</p>
-          <div class="portfolio-links">
-            {''.join(f'<a href="{escape(link["url"])}"{link_attrs(link["url"])}>{escape(link["label"])}</a>' for link in item['links'][:1])}
+        <article class="project-mini-card project-mini-card--with-image fade">
+          <figure class="project-mini-image">
+            <img src="assets/images/courses/{item['image']}" alt="{escape(item['image_alt'])}" loading="lazy" decoding="async">
+          </figure>
+          <div class="project-mini-body">
+            <div class="project-mini-head">
+              <span class="project-code">{escape(item['code'])}</span>
+              <h3>{escape(item['title'])}</h3>
+            </div>
+            <p>{escape(item['body'])}</p>
+            <div class="portfolio-links">
+              {''.join(f'<a href="{escape(link["url"])}"{link_attrs(link["url"])}>{escape(link["label"])}</a>' for link in item['links'][:1])}
+            </div>
           </div>
         </article>
         """.rstrip()
