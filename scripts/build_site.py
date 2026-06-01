@@ -2639,10 +2639,6 @@ def render_footer(data: dict[str, Any]) -> str:
         <a href="mailto:{escape(person["email"])}?subject=Website%20Inquiry">Start a conversation</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>Generated from {escape(data["source_file"])} on {escape(generated_label)}</p>
-      <p><a href="https://kinddave.github.io/david-awoyemi-academic-site/">GitHub Pages site</a></p>
-    </div>
   </div>
 </footer>
 """.strip()
