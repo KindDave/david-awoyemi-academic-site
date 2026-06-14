@@ -1069,6 +1069,33 @@ img { max-width: 100%; display: block; }
   height: 1.4rem;
 }
 
+/* Larger badge for section-heading accents */
+.icon-badge--lg {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 1.05rem;
+}
+
+.icon-badge--lg svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* Section heading with a leading icon badge */
+.section-heading--with-icon {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.1rem;
+  align-items: center;
+}
+
+@media (max-width: 540px) {
+  .section-heading--with-icon {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+}
+
 [data-theme="dark"] .icon-badge {
   background: linear-gradient(135deg,
               color-mix(in srgb, var(--navy) 22%, transparent),

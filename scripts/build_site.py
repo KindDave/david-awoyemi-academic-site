@@ -3144,26 +3144,32 @@ def render_academic(data: dict[str, Any]) -> str:
   </section>
 
   <section class="section-alt">
-    <div class="section-inner two-column">
-      <div>
-        <div class="section-heading">
+    <div class="section-inner">
+      <div class="section-heading section-heading--with-icon">
+        {icon_badge('award', classes='icon-badge icon-badge--lg')}
+        <div>
           <span class="eyebrow">Grants and Fellowships</span>
           <h2>Funded initiatives and competitive applications.</h2>
-          <p>These entries are surfaced from the grants section of the CV and presented as a quick reviewable list.</p>
-        </div>
-        <div class="grant-grid">
-          {grants}
         </div>
       </div>
-      <div>
-        <div class="section-heading">
+      <div class="grant-grid">
+        {grants}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-heading section-heading--with-icon">
+        {icon_badge('users', classes='icon-badge icon-badge--lg')}
+        <div>
           <span class="eyebrow">Service Snapshot</span>
           <h2>Reviewing, mentoring, and community contribution.</h2>
           <p>Scholarly service work complements the publication record and reflects ongoing participation in the field.</p>
         </div>
-        <div class="service-grid">
-          {service_snapshot}
-        </div>
+      </div>
+      <div class="service-grid">
+        {service_snapshot}
       </div>
     </div>
   </section>
