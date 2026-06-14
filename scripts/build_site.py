@@ -3787,10 +3787,6 @@ def render_portfolio(data: dict[str, Any]) -> str:
         </div>
         <div class="fpc-thumb fpc-thumb-canvas">
           <img src="assets/images/courses/AIL-604-canvas.png" alt="Canvas course page for ID 553: Introduction to the Principles of Instructional Design">
-          <div class="fpc-overlay">
-            <div class="fpc-play">▶</div>
-            <div class="fpc-play-text">Open AIL-604 Reflection</div>
-          </div>
         </div>
         <div class="fpc-footer">
           <div class="fpc-title">ID 553: Introduction to the Principles of Instructional Design</div>
