@@ -601,6 +601,27 @@ PORTFOLIO_COURSE_DELIVERABLES = [
         "body": "Applies Bonk's TEC-VARIETY framework to design two technology-enhanced activities — Just-in-Time Teaching and Technology Tool Demonstrator — for mathematics teacher training.",
         "url": "https://drive.google.com/file/d/141afmW3n3ODqbwg9Nch7N5TNIG6BcY5y/view?usp=sharing",
     },
+    {
+        "course": "AIL-605",
+        "title": "Storyboard for Two-Dimensional Geometrical Shapes",
+        "format": "Published slide deck",
+        "body": "The visual blueprint that bridged conceptual ideas with the structure and sequence of the Articulate Rise 360 tutorial — planning narrative pacing, branching paths, and media placement before development.",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vTvgyhw3ZKKNNufbMAV0YkZhtTyWA2eRHiupZ-oPezen0UAt1PvMad8_zG5D9IUIhm9tng_yMwmr3e7/pub",
+    },
+    {
+        "course": "AIL-605",
+        "title": "Interactive Multimedia Proposal",
+        "format": "Proposal and topic-selection document",
+        "body": "The proposal that scoped the interactive tutorial — selecting topic, audience, multimedia treatment, and accessibility commitments before the full Rise 360 build began.",
+        "url": "https://portfolios.davidawoyemi.net/ail605/",
+    },
+    {
+        "course": "AIL-689",
+        "title": "Infographic Self-Presentation",
+        "format": "Scholarly identity infographic",
+        "body": "An infographic introducing my academic journey, professional experiences, and areas of interest in instructional technology — created as the practicum's opening self-presentation artifact.",
+        "url": "https://sites.google.com/view/davidawoyemiportfolio/about-me",
+    },
 ]
 
 PORTFOLIO_CURRICULUM_TABS = [

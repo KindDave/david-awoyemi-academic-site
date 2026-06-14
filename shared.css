@@ -2905,9 +2905,9 @@ img { max-width: 100%; display: block; }
    ============================================================ */
 .course-deliverable-grid {
   display: grid;
-  /* Two columns on desktop give the four artifact cards a clean
-     2x2 layout instead of stranding one card on its own row. */
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* Auto-fit so the grid adapts to however many artifact cards
+     are present — 3 columns on desktop, 2 on tablet, 1 on phone. */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.15rem;
 }
 
