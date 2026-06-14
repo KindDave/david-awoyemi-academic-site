@@ -2832,6 +2832,72 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   CIT Faculty Training showcase grid — one hero tile spanning
+   the row at the top, with three smaller tiles below. Each tile
+   is a card with image + caption.
+   ============================================================ */
+.cit-training-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.cit-training-tile {
+  margin: 0;
+  border-radius: 1.05rem;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.32s ease;
+}
+
+.cit-training-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-strong);
+}
+
+.cit-training-tile img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: #B85042;
+}
+
+.cit-training-tile figcaption {
+  padding: 0.75rem 0.95rem 0.9rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text2);
+  border-top: 1px solid var(--border);
+}
+
+/* Hero tile spans the full row */
+.cit-training-tile--hero {
+  grid-column: 1 / -1;
+}
+
+.cit-training-tile--hero img {
+  aspect-ratio: 16 / 8;
+}
+
+.cit-training-tile--hero figcaption {
+  padding: 0.95rem 1.25rem 1.05rem;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 760px) {
+  .cit-training-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
    Research page portrait — fills the open space in the left
    column (below the research-themes tag list) created by the
    shorter content on that side of the two-column layout.

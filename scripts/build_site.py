@@ -3808,6 +3808,35 @@ def render_portfolio(data: dict[str, Any]) -> str:
   <section class="section-alt">
     <div class="section-inner">
       <div class="section-heading">
+        <span class="eyebrow">Faculty Training Prototype</span>
+        <h2>Activating Annotation in Blackboard — CIT Faculty PD.</h2>
+        <p>A documentation and training prototype I designed and delivered for the University of Alabama Center for Instructional Technology (July 2024). The deck walks faculty from set-up through pedagogy: enabling the Hypothesis tool inside Blackboard, configuring grading and group readings, and applying social-annotation strategies to course readings, syllabi, and lecture slides. The methodology behind the documentation follows ADDIE.</p>
+      </div>
+      <div class="cit-training-grid fade">
+        <figure class="cit-training-tile cit-training-tile--hero">
+          <img src="assets/images/cit-training/cit-slide-01.png" alt="Title slide: Creating Effective Instructional Technology Documentation and Training, July 2024, David Awoyemi" loading="lazy" decoding="async">
+          <figcaption>Title slide — UA Center for Instructional Technology / Blackboard / hypothes.is</figcaption>
+        </figure>
+        <figure class="cit-training-tile">
+          <img src="assets/images/cit-training/cit-slide-05.png" alt="ADDIE diagram: Analysis, Design, Develop, Implement, Evaluation cycle annotated with documentation tasks" loading="lazy" decoding="async">
+          <figcaption>ADDIE methodology guiding the documentation cycle.</figcaption>
+        </figure>
+        <figure class="cit-training-tile">
+          <img src="assets/images/cit-training/cit-slide-07.png" alt="Section divider: Getting Started with Hypothesis — Hypothesis in Teaching and Learning" loading="lazy" decoding="async">
+          <figcaption>Section divider: getting started with Hypothesis in teaching and learning.</figcaption>
+        </figure>
+        <figure class="cit-training-tile">
+          <img src="assets/images/cit-training/cit-slide-15.png" alt="Demo screenshot: Blackboard Groups with Hypothesis showing annotation sidebar on a New York Times Magazine reading" loading="lazy" decoding="async">
+          <figcaption>Demo — Blackboard Groups with Hypothesis on a shared course reading.</figcaption>
+        </figure>
+      </div>
+      <div class="portfolio-skill-tags" style="margin-top: 1.4rem;"><span>Faculty Development</span><span>Blackboard Learn</span><span>Hypothesis Annotation</span><span>ADDIE</span><span>Instructional Documentation</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-heading">
         <span class="eyebrow">AI-IVR Design and Development Project</span>
         <h2>AI-immersive virtual reality intervention for civil engineering education.</h2>
         <p>Design and Development Research applying systematic instructional design methodology to an immersive VR-based safety training intervention with two learning phases and AI-driven adaptive feedback.</p>
