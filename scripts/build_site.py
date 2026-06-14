@@ -3801,7 +3801,7 @@ def render_portfolio(data: dict[str, Any]) -> str:
   <section class="section-alt">
     <div class="section-inner">
       <div class="section-heading">
-        <span class="eyebrow">AI-IVR Research Project</span>
+        <span class="eyebrow">AI-IVR Design and Development Project</span>
         <h2>AI-immersive virtual reality intervention for civil engineering education.</h2>
         <p>Design and Development Research applying systematic instructional design methodology to an immersive VR-based safety training intervention with two learning phases and AI-driven adaptive feedback.</p>
       </div>
