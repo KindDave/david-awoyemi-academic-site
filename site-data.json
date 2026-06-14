@@ -1,5 +1,5 @@
 {
-  "generated_on": "2026-05-30",
+  "generated_on": "2026-06-14",
   "source_file": "CV_David.docx",
   "person": {
     "name": "Idowu David Awoyemi",
@@ -56,19 +56,27 @@
   "research_themes": [
     {
       "title": "Immersive Learning Systems",
-      "body": "Designs and studies virtual and mixed reality environments for authentic STEM learning, safety training, and performance transfer."
+      "body": "Designs and studies virtual and mixed reality environments for authentic STEM learning, safety training, and performance transfer.",
+      "image": "research-hero.png",
+      "image_alt": "Learner in an AI-driven virtual reality interface"
     },
     {
       "title": "AI-Enhanced Education",
-      "body": "Explores generative AI, AI literacy, instructional decision-making, and responsible integration of emerging tools in learning environments."
+      "body": "Explores generative AI, AI literacy, instructional decision-making, and responsible integration of emerging tools in learning environments.",
+      "image": "feature-research.jpg",
+      "image_alt": "Humanoid robot reading on a bench"
     },
     {
       "title": "Learning Analytics",
-      "body": "Uses multimodal evidence, behavioral traces, and statistical reasoning to understand how learners engage and improve over time."
+      "body": "Uses multimodal evidence, behavioral traces, and statistical reasoning to understand how learners engage and improve over time.",
+      "image": "portfolio-accent.png",
+      "image_alt": "Designer working on a laptop with a colorful data palette"
     },
     {
       "title": "Equity and Participation",
-      "body": "Advances broadening participation in STEM and computing through inclusive design, teacher development, and responsive learning pathways."
+      "body": "Advances broadening participation in STEM and computing through inclusive design, teacher development, and responsive learning pathways.",
+      "image": "feature-about.png",
+      "image_alt": "Scholar at a desk with laptop and reference books"
     }
   ],
   "metrics": [
@@ -89,8 +97,8 @@
       "label": "Awards and Scholarships"
     },
     {
-      "value": 3,
-      "label": "Funded Projects"
+      "value": 4,
+      "label": "Awarded Projects"
     }
   ],
   "featured_roles": [
@@ -314,7 +322,7 @@
       "title": "A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)",
       "context": "Journal Article",
       "status": "Under Review",
-      "year": "2020",
+      "year": "Recent",
       "raw": "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)"
     },
     {
@@ -416,25 +424,25 @@
     {
       "title": "Graduate Assistant, Enhancing Teacher Problem-Solving and Classroom Management Skills through an Open-Access AI-Powered 3D Simulation Platform",
       "context": "Office for Research and Economic Development CREATE Program, The University of Alabama. Lead PI: Moon, J. (Total award $4,000, FUNDED)",
-      "status": "Funded",
+      "status": "Awarded",
       "amount": "$4,000,"
     },
     {
       "title": "Graduate Assistant, Examining Preservice Teachers’ Digital Literacy Development and Learning Engagement via Art Integrated Technology-Enhanced Learning",
       "context": "The Collaborative Arts Research Initiative. Lead PI: Moon, J. (Total award $15,000, FUNDED).",
-      "status": "Funded",
+      "status": "Awarded",
       "amount": "$15,000,"
     },
     {
       "title": "Graduate Assistant, AI-WISE: AI Workforce Integration and Skill Enhancement",
       "context": "College of Education Rising Tide Grant Program, AY 2024–2025. Teaching/Research Project. Lead PI: Laura McNeill. University of Alabama.",
-      "status": "Grant or Fellowship",
+      "status": "Awarded",
       "amount": ""
     },
     {
       "title": "Graduate Assistant, Fostering elementary students’ computing career aspirations through a physiological computing curriculum",
       "context": "National Science Foundation. Innovative Technology Experiences for Students and Teachers (ITEST). Lead PI: Dr. Feiya Luo (Resubmission; $ 1,125,666) [Awarded].",
-      "status": "Funded",
+      "status": "Awarded",
       "amount": ""
     },
     {
@@ -446,7 +454,7 @@
     {
       "title": "Spencer Dissertation Fellowship – Applicant, Spencer Foundation, 2025",
       "context": "Proposal submitted for dissertation research on development.",
-      "status": "Applicant",
+      "status": "Not Awarded",
       "amount": ""
     }
   ],
@@ -891,6 +899,44 @@
         "Extended evaluation practice beyond self-report toward more responsive evidence models."
       ],
       "reflection": "The project reinforced an important design belief: evaluation should not be an afterthought. It should be built into how we understand learning as it unfolds, especially in novel technology environments.",
+      "images": []
+    },
+    {
+      "number": "04",
+      "label": "Arts-Integrated GenAI Literacy",
+      "title": "Arts-Integrated GenAI Literacy Development Program for Pre-Service Teachers",
+      "subtitle": "University of Alabama · Music and theater modules on Blackboard LMS · Mixed-methods online study",
+      "tags": [
+        "Generative AI",
+        "Teacher Education",
+        "Arts Integration",
+        "AI Literacy",
+        "Online Learning Design"
+      ],
+      "problem": "Pre-service teachers are entering classrooms where generative AI is reshaping how learners create, evaluate, and share knowledge, yet few have a structured opportunity to develop GenAI literacy through their own creative practice before they teach.",
+      "stakeholders": [
+        "Pre-service teachers across content areas",
+        "Teacher educators preparing future classroom innovators",
+        "Arts and STEM faculty designing integrated learning experiences"
+      ],
+      "frameworks": [
+        "Arts-integration pedagogy for transferable creative competencies",
+        "GenAI literacy framework spanning prompting, evaluation, and ethics",
+        "Backward design for outcome-aligned online professional development"
+      ],
+      "methods": [
+        "Two-module Blackboard course (four lessons each in Music and Theater)",
+        "Mixed-methods evaluation: pre-/post-lesson assessments, usability and engagement surveys",
+        "Reflective discussion-board submissions of learner-produced digital art",
+        "Optional follow-up interviews and consent-based participation"
+      ],
+      "solution": "The program engages pre-service teachers in hands-on creative work with GenAI tools, SUNO AI, Boomy, Animake, Invideo AI, Synthesis AI, Soundtrap, across four music and four theater lessons. Each lesson scaffolds prompt engineering, AI feedback evaluation, and AI ethics reasoning alongside the artistic output: songs, soundtracks, animated performances, digital choreography, and dramatic storytelling.",
+      "outcomes": [
+        "Designed and deployed a complete online professional-development module set with structured pre/post measures, reflective tasks, and discussion-board sharing.",
+        "Built evidence connecting arts-integrated GenAI engagement with growth in computational thinking, prompt engineering, problem-solving, AI feedback evaluation, AI ethics literacy, creativity, and collaboration.",
+        "Ran a participant cohort April 22, June 20, 2025 with completion incentives and a multi-instrument data set ready for thematic and statistical analysis."
+      ],
+      "reflection": "Arts integration turns GenAI literacy into something pre-service teachers DO rather than something they read about, and that change of stance is what makes the competencies transferable to their own future classrooms.",
       "images": []
     }
   ]

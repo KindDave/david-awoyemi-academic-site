@@ -2375,12 +2375,16 @@ def summarize_grant(text: str) -> dict[str, str]:
     cleaned = remove_reference_prefix(text)
     title, remainder = (cleaned.split(". ", 1) + [""])[:2]
     lowered = cleaned.lower()
-    if "[awarded]" in lowered or "funded" in lowered or "awarded" in lowered:
-        status = "Funded"
+    # Anything explicitly funded/awarded or coming from a named awarded
+    # program (e.g. Rising Tide Grant Program) is treated as Awarded so
+    # the badge reads consistently across the grants grid.
+    awarded_markers = ("[awarded]", "funded", "awarded", "rising tide", "grant program")
+    if any(marker in lowered for marker in awarded_markers):
+        status = "Awarded"
     elif "nominee" in lowered:
         status = "Nominee"
     elif "applicant" in lowered or "applied" in lowered:
-        status = "Applicant"
+        status = "Not Awarded"
     elif "resubmission" in lowered:
         status = "Resubmission"
     else:
@@ -2484,7 +2488,7 @@ def build_site_data() -> dict[str, Any]:
     featured_roles = stable_roles[:4]
     selected_publications = [parse_citation(item, "Journal Article") for item in journal_articles[:4]]
     top_awards = awards[:6]
-    funded_grants = [grant for grant in grants if grant["status"] == "Funded"]
+    funded_grants = [grant for grant in grants if grant["status"] == "Awarded"]
 
     person_name = header[0] if header else "Idowu David Awoyemi"
     person = {
@@ -2570,7 +2574,7 @@ def build_site_data() -> dict[str, Any]:
             {"value": len(conference_presentations), "label": "Conference Presentations"},
             {"value": years_of_experience(sections), "label": "Years Experience"},
             {"value": len(awards), "label": "Awards and Scholarships"},
-            {"value": len(funded_grants), "label": "Funded Projects"},
+            {"value": len(funded_grants), "label": "Awarded Projects"},
         ],
         "featured_roles": featured_roles,
         "research_entries": research_entries,
