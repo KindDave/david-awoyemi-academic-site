@@ -2723,6 +2723,35 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   Teaching page — featured course-evidence figure showing the
+   Blackboard course page for AI Fluency for the Workforce.
+   ============================================================ */
+.course-evidence {
+  margin: 0;
+  max-width: 1080px;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-strong);
+  background: var(--card-strong);
+}
+
+.course-evidence img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.course-evidence figcaption {
+  padding: 0.95rem 1.25rem;
+  font-size: 0.88rem;
+  color: var(--text2);
+  border-top: 1px solid var(--border);
+  background: var(--card);
+}
+
+/* ============================================================
    Research page portrait — fills the open space in the left
    column (below the research-themes tag list) created by the
    shorter content on that side of the two-column layout.

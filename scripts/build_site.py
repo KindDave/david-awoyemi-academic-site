@@ -479,6 +479,11 @@ PORTFOLIO_TRAINING_MEDIA = [
         "alt": "Onboarding module slide for OTIDE training",
         "caption": "A learner-facing onboarding module designed through SME collaboration.",
     },
+    {
+        "src": "assets/images/ai-fluency-instructor.png",
+        "alt": "Blackboard course faculty panel showing David Awoyemi as Instructor for AI Fluency for the Workforce (CIE 499)",
+        "caption": "Instructor of record for the undergraduate course AI Fluency for the Workforce (CIE 499-910), as listed on the official Blackboard course page.",
+    },
 ]
 
 PORTFOLIO_COURSES = [
@@ -3544,6 +3549,18 @@ def render_teaching(data: dict[str, Any]) -> str:
     <div class="accordion-stack">
       {accordion}
     </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Course Evidence</span>
+      <h2>Instructor of record, AI Fluency for the Workforce.</h2>
+      <p>Co-designed and delivered as an undergraduate course at the University of Alabama (CIE 499-910), integrating applied AI, ethics, and workforce-readiness competencies.</p>
+    </div>
+    <figure class="course-evidence fade">
+      <img src="assets/images/ai-fluency-instructor.png" alt="Blackboard course page for AI Fluency for the Workforce (CIE 499-910), with David Awoyemi listed as Instructor in the Course Faculty panel" loading="lazy" decoding="async">
+      <figcaption>From the official Blackboard course page — David Awoyemi listed as Instructor in the Course Faculty panel.</figcaption>
+    </figure>
   </section>
 
   <section class="section-alt">
