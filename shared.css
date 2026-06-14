@@ -2395,6 +2395,17 @@ img { max-width: 100%; display: block; }
   object-fit: cover;
 }
 
+/* Canvas screenshot variant — slightly taller aspect with top-aligned
+   cropping so the course title and Watch Instructor video block stay
+   in view rather than the lower navigation chrome. */
+.fpc-thumb-canvas {
+  aspect-ratio: 16 / 9;
+}
+
+.fpc-thumb-canvas img {
+  object-position: center top;
+}
+
 .fpc-overlay {
   position: absolute;
   inset: 0;
