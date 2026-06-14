@@ -568,6 +568,41 @@ PORTFOLIO_MORE_LINKS = [
     {"label": "Download Full CV", "url": SOURCE_DOCX.name},
 ]
 
+# Selected course deliverables not surfaced elsewhere on the page. Each entry
+# has a live URL, brief description, and the course it came out of, so visitors
+# can jump straight to the artifact rather than only seeing it via the course
+# reflection tab.
+PORTFOLIO_COURSE_DELIVERABLES = [
+    {
+        "course": "AIL-608",
+        "title": "Accessibility Resources Portfolio",
+        "format": "Google Sites resource hub",
+        "body": "A curated training site of accessibility resources, standards, and evaluation tools — built for educators integrating accessibility into instructional technology design.",
+        "url": "https://sites.google.com/view/davidaccessibilityportfolio/home",
+    },
+    {
+        "course": "AIL-608",
+        "title": "Accessibility Audit of Adobe Express",
+        "format": "Google Slides audit deck",
+        "body": "WCAG-aligned audit of Adobe Express evaluating interface accessibility, navigation, template inclusiveness, and screen-reader behaviour for educators using the platform with diverse learners.",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vSDiziTA74dXEONH1ygNuDwppBCXQdch_VnoEleMWRml_PgZZczqqUIEFoNRh7JRxkoEvowHyArMYrk/pub",
+    },
+    {
+        "course": "AIL-690",
+        "title": "Graphic Design Analysis of an Instructional Visual",
+        "format": "Google Slides presentation",
+        "body": "Evaluates how color, structure, and clarity in the 'Classifying Quadrilaterals' instructional design guide learner attention and comprehension, mapped to multimedia learning principles.",
+        "url": "https://docs.google.com/presentation/d/1ATTkX3lk5IH1v8KL5DFKA0q69yZ8_16soUG_gJyBYfQ/edit",
+    },
+    {
+        "course": "AIL-602",
+        "title": "Strategies–Materials Mapping (TEC-VARIETY)",
+        "format": "Interactive mapping artifact",
+        "body": "Applies Bonk's TEC-VARIETY framework to design two technology-enhanced activities — Just-in-Time Teaching and Technology Tool Demonstrator — for mathematics teacher training.",
+        "url": "https://drive.google.com/file/d/141afmW3n3ODqbwg9Nch7N5TNIG6BcY5y/view?usp=sharing",
+    },
+]
+
 PORTFOLIO_CURRICULUM_TABS = [
     {
         "id": "overview",
@@ -3731,6 +3766,19 @@ def render_portfolio(data: dict[str, Any]) -> str:
             """.rstrip()
         )
 
+    course_deliverables = "\n".join(
+        f"""
+        <a class="course-deliverable-card fade" href="{escape(item['url'])}"{link_attrs(item['url'])}>
+          <span class="course-deliverable-chip">{escape(item['course'])}</span>
+          <h3>{escape(item['title'])}</h3>
+          <p class="course-deliverable-format">{escape(item['format'])}</p>
+          <p class="course-deliverable-body">{escape(item['body'])}</p>
+          <span class="course-deliverable-link">Open artifact</span>
+        </a>
+        """.rstrip()
+        for item in PORTFOLIO_COURSE_DELIVERABLES
+    )
+
     more_links = "\n".join(
         f'<a class="resource-link fade" href="{escape(item["url"])}"{link_attrs(item["url"])}>{escape(item["label"])}</a>'
         for item in PORTFOLIO_MORE_LINKS
@@ -3917,6 +3965,19 @@ def render_portfolio(data: dict[str, Any]) -> str:
     </div>
     <div class="course-tabs">{course_tabs}</div>
     {"".join(course_panels)}
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-heading">
+        <span class="eyebrow">Selected Course Deliverables</span>
+        <h2>Artifacts from the doctoral program with their own live destinations.</h2>
+        <p>These are stand-alone outputs from individual courses — each opens to its own site, document, or slide deck so you can examine the artifact directly.</p>
+      </div>
+      <div class="course-deliverable-grid">
+        {course_deliverables}
+      </div>
+    </div>
   </section>
 
   <section class="section-alt">

@@ -2897,6 +2897,110 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   Selected Course Deliverables — link-cards that open to a
+   standalone artifact (Google Sites portfolio, Drive document,
+   Slides deck, etc.). Each card carries a course chip in the
+   top-left, the artifact title, the format line, a short
+   description, then an "Open artifact" affordance at the bottom.
+   ============================================================ */
+.course-deliverable-grid {
+  display: grid;
+  /* Two columns on desktop give the four artifact cards a clean
+     2x2 layout instead of stranding one card on its own row. */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.course-deliverable-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.35rem 1.35rem 1.45rem;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.35rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.32s ease,
+              border-color 0.22s ease;
+}
+
+.course-deliverable-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-strong);
+}
+
+.course-deliverable-card:active {
+  transform: translateY(-1px) scale(0.997);
+  transition-duration: 0.12s;
+}
+
+.course-deliverable-chip {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.7rem;
+  background: var(--navy-soft);
+  color: var(--navy);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+
+.course-deliverable-card h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.28;
+}
+
+.course-deliverable-format {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text3);
+  font-weight: 700;
+}
+
+.course-deliverable-body {
+  margin: 0;
+  color: var(--text2);
+  font-size: 0.94rem;
+}
+
+.course-deliverable-link {
+  margin-top: auto;
+  padding-top: 0.6rem;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.course-deliverable-link::after {
+  content: " \2192";
+  transition: transform 0.22s ease;
+  display: inline-block;
+}
+
+.course-deliverable-card:hover .course-deliverable-link::after {
+  transform: translateX(3px);
+}
+
+@media (max-width: 720px) {
+  .course-deliverable-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
    Research page portrait — fills the open space in the left
    column (below the research-themes tag list) created by the
    shorter content on that side of the two-column layout.
