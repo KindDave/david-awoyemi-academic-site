@@ -509,8 +509,8 @@ PORTFOLIO_COURSES = [
     {
         "code": "AIL-604",
         "term": "Distance Learning Technologies",
-        "title": "Canvas Course Prototype and Distance Learning Design",
-        "body": "Designed online learning experiences with backward design, UDL, multimedia learning principles, and stronger attention to learner decision points.",
+        "title": "Canvas Course Prototype: The Principles of Instructional Design",
+        "body": "Designed a full prototype online course in the Canvas LMS with clear learning outcomes, modular content, varied assessments, and multimedia — paired with a narrated walkthrough explaining the design rationale. Applied ADDIE, UDL, backward design, and multimedia learning principles, with deliberate attention to learner decision points.",
         "image": "AIL-604-1-clean.png",
         "image_alt": "AIL 604 — Distance Technologies course tile",
         "links": [
