@@ -2457,6 +2457,11 @@ def build_site_data() -> dict[str, Any]:
     proceedings = [remove_reference_prefix(item) for item in list_items(publications_grouped.get("Referred Conference Proceedings", []))]
     conference_presentations = [remove_reference_prefix(item) for item in list_items(sections.get("CONFERENCE PRESENTATIONS", []))]
     grants = [summarize_grant(line) for line in sections.get("GRANTS", [])]
+    # Inject the AI-WISE Rising Tide award amount inline (the source CV
+    # context doesn't include a dollar figure so the regex misses it).
+    for grant in grants:
+        if "AI-WISE" in grant["title"] and "$" not in grant["context"]:
+            grant["context"] = grant["context"].rstrip(".") + ". Total award $30,000."
     research_entries = parse_entries(sections.get("RESEARCH EXPERIENCE", []))
     teaching_entries = parse_entries(sections.get("TEACHING EXPERIENCE", []))
     design_entries = parse_entries(sections.get("INSTRUCTIONAL DESIGN EXPERIENCE", []))
@@ -3048,13 +3053,11 @@ def render_academic(data: dict[str, Any]) -> str:
         f"""
         <article class="grant-card fade">
           <div>
-            <div class="grant-status">{escape(item['status'])}</div>
             <h3 class="grant-title">{escape(item['title'])}</h3>
             <p class="grant-meta">{escape(item['context'])}</p>
           </div>
           <div class="grant-side">
-            <div class="grant-amount">{escape(item['amount'] or 'Selected')}</div>
-            <div class="grant-meta">{escape(item['status'])}</div>
+            <div class="grant-status-pill" data-status="{escape(item['status'])}">{escape(item['status'])}</div>
           </div>
         </article>
         """.rstrip()
