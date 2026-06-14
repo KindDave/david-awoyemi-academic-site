@@ -577,49 +577,70 @@ PORTFOLIO_COURSE_DELIVERABLES = [
         "course": "AIL-608",
         "title": "Accessibility Resources Portfolio",
         "format": "Google Sites resource hub",
-        "body": "A curated training site of accessibility resources, standards, and evaluation tools — built for educators integrating accessibility into instructional technology design.",
+        "icon": "layers",
+        "body": "A curated resource site built for educators integrating accessibility into instructional technology design. Pairs WCAG 2.1 success criteria with concrete evaluation tools, screen-reader checklists, and Universal Design for Learning prompts so a faculty member can move from awareness to action in a single sitting.",
+        "evidence": "Demonstrates the ability to translate accessibility standards into a usable practitioner workflow.",
+        "skills": ["WCAG 2.1", "Universal Design for Learning", "Faculty Enablement", "Google Sites"],
         "url": "https://sites.google.com/view/davidaccessibilityportfolio/home",
     },
     {
         "course": "AIL-608",
         "title": "Accessibility Audit of Adobe Express",
         "format": "Google Slides audit deck",
-        "body": "WCAG-aligned audit of Adobe Express evaluating interface accessibility, navigation, template inclusiveness, and screen-reader behaviour for educators using the platform with diverse learners.",
+        "icon": "compass",
+        "body": "Heuristic audit of Adobe Express evaluating interface accessibility, keyboard and screen-reader behaviour, template inclusiveness, and remediation paths against WCAG 2.1 AA. Frames each finding as an actionable design recommendation rather than a binary pass/fail.",
+        "evidence": "Shows applied evaluation skill — moving from standards knowledge to a defensible, recommendation-driven product audit.",
+        "skills": ["WCAG 2.1 AA", "Heuristic Evaluation", "Screen-Reader Testing", "Remediation Planning"],
         "url": "https://docs.google.com/presentation/d/e/2PACX-1vSDiziTA74dXEONH1ygNuDwppBCXQdch_VnoEleMWRml_PgZZczqqUIEFoNRh7JRxkoEvowHyArMYrk/pub",
     },
     {
         "course": "AIL-690",
         "title": "Graphic Design Analysis of an Instructional Visual",
         "format": "Google Slides presentation",
-        "body": "Evaluates how color, structure, and clarity in the 'Classifying Quadrilaterals' instructional design guide learner attention and comprehension, mapped to multimedia learning principles.",
+        "icon": "presentation",
+        "body": "Decomposes the 'Classifying Quadrilaterals' instructional design through Mayer's multimedia learning principles and Gestalt visual hierarchy: how color, structure, and clarity guide learner attention, reduce cognitive load, and surface or hide the underlying conceptual schema.",
+        "evidence": "Evidence of design literacy — connecting visual choices to learning outcomes rather than aesthetic preference.",
+        "skills": ["Multimedia Learning Principles", "Visual Hierarchy", "Cognitive Load Analysis", "Design Critique"],
         "url": "https://docs.google.com/presentation/d/1ATTkX3lk5IH1v8KL5DFKA0q69yZ8_16soUG_gJyBYfQ/edit",
     },
     {
         "course": "AIL-602",
         "title": "Strategies–Materials Mapping (TEC-VARIETY)",
         "format": "Interactive mapping artifact",
-        "body": "Applies Bonk's TEC-VARIETY framework to design two technology-enhanced activities — Just-in-Time Teaching and Technology Tool Demonstrator — for mathematics teacher training.",
+        "icon": "network",
+        "body": "Applies Bonk's TEC-VARIETY framework to design two technology-enhanced activities — Just-in-Time Teaching and Technology Tool Demonstrator — for mathematics teacher training. Each activity is mapped end-to-end across motivation, materials, assessment, and feedback loops, then scaffolded for transfer.",
+        "evidence": "Demonstrates fluency with applied instructional-strategy frameworks and the ability to translate them into ready-to-use lesson architecture.",
+        "skills": ["TEC-VARIETY", "Strategy Design", "Mathematics PD", "Backward Mapping"],
         "url": "https://drive.google.com/file/d/141afmW3n3ODqbwg9Nch7N5TNIG6BcY5y/view?usp=sharing",
     },
     {
         "course": "AIL-605",
         "title": "Storyboard for Two-Dimensional Geometrical Shapes",
         "format": "Published slide deck",
-        "body": "The visual blueprint that bridged conceptual ideas with the structure and sequence of the Articulate Rise 360 tutorial — planning narrative pacing, branching paths, and media placement before development.",
+        "icon": "layers",
+        "body": "The visual blueprint that bridged conceptual scope and the final Articulate Rise 360 tutorial. Sequences narrative pacing, branching decision points, accessibility-aware media placement, and learner-choice moments before a single component is built in the LMS authoring tool.",
+        "evidence": "Evidence of plan-before-build discipline — the artifact a hiring team uses to judge upstream design rigor, not just shipped polish.",
+        "skills": ["Storyboarding", "Narrative Sequencing", "Branching Scenarios", "Pre-development Planning"],
         "url": "https://docs.google.com/presentation/d/e/2PACX-1vTvgyhw3ZKKNNufbMAV0YkZhtTyWA2eRHiupZ-oPezen0UAt1PvMad8_zG5D9IUIhm9tng_yMwmr3e7/pub",
     },
     {
         "course": "AIL-605",
         "title": "Interactive Multimedia Proposal",
         "format": "Proposal and topic-selection document",
-        "body": "The proposal that scoped the interactive tutorial — selecting topic, audience, multimedia treatment, and accessibility commitments before the full Rise 360 build began.",
+        "icon": "file-text",
+        "body": "The proposal that scoped the interactive tutorial: topic justification, target audience and prior-knowledge analysis, multimedia treatment, success metrics, and the accessibility commitments that later carried through to the Rise 360 module.",
+        "evidence": "Shows project framing skill — defining the problem, audience, and constraints clearly before design work begins.",
+        "skills": ["Project Scoping", "Audience Analysis", "Multimedia Treatment", "Accessibility-by-Design"],
         "url": "https://portfolios.davidawoyemi.net/ail605/",
     },
     {
         "course": "AIL-689",
         "title": "Infographic Self-Presentation",
         "format": "Scholarly identity infographic",
-        "body": "An infographic introducing my academic journey, professional experiences, and areas of interest in instructional technology — created as the practicum's opening self-presentation artifact.",
+        "icon": "award",
+        "body": "An infographic introducing my academic trajectory, professional experiences, and instructional-technology interests — designed as the practicum's opening artifact so reviewers can read a scholar's identity in a single glance before diving into deeper portfolio work.",
+        "evidence": "Demonstrates information-design ability and the discipline to communicate complex identity through structured visual hierarchy.",
+        "skills": ["Information Design", "Scholarly Identity", "Visual Storytelling", "Practicum Reflection"],
         "url": "https://sites.google.com/view/davidawoyemiportfolio/about-me",
     },
 ]
@@ -3790,10 +3811,17 @@ def render_portfolio(data: dict[str, Any]) -> str:
     course_deliverables = "\n".join(
         f"""
         <a class="course-deliverable-card fade" href="{escape(item['url'])}"{link_attrs(item['url'])}>
-          <span class="course-deliverable-chip">{escape(item['course'])}</span>
+          <div class="course-deliverable-head">
+            {icon_badge(item.get('icon', 'book-open'), classes='icon-badge')}
+            <span class="course-deliverable-chip">{escape(item['course'])}</span>
+          </div>
           <h3>{escape(item['title'])}</h3>
           <p class="course-deliverable-format">{escape(item['format'])}</p>
           <p class="course-deliverable-body">{escape(item['body'])}</p>
+          <p class="course-deliverable-evidence"><strong>Evidence:</strong> {escape(item.get('evidence', ''))}</p>
+          <div class="course-deliverable-skills">
+            {''.join(f'<span>{escape(skill)}</span>' for skill in item.get('skills', []))}
+          </div>
           <span class="course-deliverable-link">Open artifact</span>
         </a>
         """.rstrip()

@@ -2906,17 +2906,19 @@ img { max-width: 100%; display: block; }
 .course-deliverable-grid {
   display: grid;
   /* Auto-fit so the grid adapts to however many artifact cards
-     are present — 3 columns on desktop, 2 on tablet, 1 on phone. */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.15rem;
+     are present. Min track 320px gives the icon + evidence + skill
+     chips room to breathe before the layout collapses to fewer
+     columns: 3 on wide desktops, 2 on laptops/tablets, 1 on phones. */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.4rem;
 }
 
 .course-deliverable-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-  padding: 1.35rem 1.35rem 1.45rem;
+  gap: 0.65rem;
+  padding: 1.45rem 1.45rem 1.55rem;
   text-decoration: none;
   color: inherit;
   background: var(--card);
@@ -2926,6 +2928,31 @@ img { max-width: 100%; display: block; }
   transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.32s ease,
               border-color 0.22s ease;
+}
+
+/* Icon + course chip live on the same row at the top of the card */
+.course-deliverable-head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+
+.course-deliverable-head .icon-badge {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.7rem;
+}
+
+.course-deliverable-head .icon-badge svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.course-deliverable-card:hover .icon-badge {
+  transform: scale(1.06) rotate(-2deg);
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 .course-deliverable-card:hover {
@@ -2940,18 +2967,16 @@ img { max-width: 100%; display: block; }
 }
 
 .course-deliverable-chip {
-  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   padding: 0.32rem 0.7rem;
   background: var(--navy-soft);
   color: var(--navy);
   border-radius: 999px;
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 0.15rem;
 }
 
 .course-deliverable-card h3 {
@@ -2973,6 +2998,63 @@ img { max-width: 100%; display: block; }
   margin: 0;
   color: var(--text2);
   font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+/* Evidence callout — short italic line that names the skill the
+   artifact demonstrates, framed for hiring-manager scanning. */
+.course-deliverable-evidence {
+  margin: 0.3rem 0 0;
+  padding: 0.65rem 0.85rem;
+  background: linear-gradient(135deg,
+              color-mix(in srgb, var(--gold) 10%, transparent),
+              color-mix(in srgb, var(--navy) 6%, transparent));
+  border-left: 3px solid var(--gold);
+  border-radius: 0.55rem;
+  font-size: 0.86rem;
+  font-style: italic;
+  color: var(--text1);
+  line-height: 1.5;
+}
+
+.course-deliverable-evidence strong {
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: var(--navy);
+  margin-right: 0.35rem;
+}
+
+[data-theme="dark"] .course-deliverable-evidence strong {
+  color: var(--gold);
+}
+
+/* Skill chips — small uppercase tags at the bottom of the card so
+   hiring managers can scan keywords without reading the body. */
+.course-deliverable-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.course-deliverable-skills span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.65rem;
+  background: var(--navy-soft);
+  color: var(--navy);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.course-deliverable-card:hover .course-deliverable-skills span {
+  border-color: var(--border-strong);
 }
 
 .course-deliverable-link {
