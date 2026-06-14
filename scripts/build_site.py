@@ -277,6 +277,44 @@ RESEARCH_CASE_STUDIES = [
         "reflection": "The project reinforced an important design belief: evaluation should not be an afterthought. It should be built into how we understand learning as it unfolds, especially in novel technology environments.",
         "images": [],
     },
+    {
+        "number": "04",
+        "label": "Arts-Integrated GenAI Literacy",
+        "title": "Arts-Integrated GenAI Literacy Development Program for Pre-Service Teachers",
+        "subtitle": "University of Alabama · Music and theater modules on Blackboard LMS · Mixed-methods online study",
+        "tags": [
+            "Generative AI",
+            "Teacher Education",
+            "Arts Integration",
+            "AI Literacy",
+            "Online Learning Design",
+        ],
+        "problem": "Pre-service teachers are entering classrooms where generative AI is reshaping how learners create, evaluate, and share knowledge, yet few have a structured opportunity to develop GenAI literacy through their own creative practice before they teach.",
+        "stakeholders": [
+            "Pre-service teachers across content areas",
+            "Teacher educators preparing future classroom innovators",
+            "Arts and STEM faculty designing integrated learning experiences",
+        ],
+        "frameworks": [
+            "Arts-integration pedagogy for transferable creative competencies",
+            "GenAI literacy framework spanning prompting, evaluation, and ethics",
+            "Backward design for outcome-aligned online professional development",
+        ],
+        "methods": [
+            "Two-module Blackboard course (four lessons each in Music and Theater)",
+            "Mixed-methods evaluation: pre-/post-lesson assessments, usability and engagement surveys",
+            "Reflective discussion-board submissions of learner-produced digital art",
+            "Optional follow-up interviews and consent-based participation",
+        ],
+        "solution": "The program engages pre-service teachers in hands-on creative work with GenAI tools — SUNO AI, Boomy, Animake, Invideo AI, Synthesis AI, Soundtrap — across four music and four theater lessons. Each lesson scaffolds prompt engineering, AI feedback evaluation, and AI ethics reasoning alongside the artistic output: songs, soundtracks, animated performances, digital choreography, and dramatic storytelling.",
+        "outcomes": [
+            "Designed and deployed a complete online professional-development module set with structured pre/post measures, reflective tasks, and discussion-board sharing.",
+            "Built evidence connecting arts-integrated GenAI engagement with growth in computational thinking, prompt engineering, problem-solving, AI feedback evaluation, AI ethics literacy, creativity, and collaboration.",
+            "Ran a participant cohort April 22 — June 20, 2025 with completion incentives and a multi-instrument data set ready for thematic and statistical analysis.",
+        ],
+        "reflection": "Arts integration turns GenAI literacy into something pre-service teachers DO rather than something they read about — and that change of stance is what makes the competencies transferable to their own future classrooms.",
+        "images": [],
+    },
 ]
 
 ABOUT_BIO = [
@@ -296,6 +334,7 @@ TEACHING_FOUNDATION = [
     "I approach teaching as an act of intentional design. Every course, lesson, and interaction becomes an opportunity to create the conditions under which diverse learners can build understanding, develop agency, and apply knowledge in authentic settings.",
     "Doctoral training and instructional practice helped me move from technology integration as a tool choice toward a fuller view of teaching as evidence-based orchestration of cognition, motivation, and participation.",
     "That philosophy now shapes how I scaffold learning, interpret data, offer feedback, and select technology only when it genuinely improves access, clarity, engagement, or transfer.",
+    "My ongoing Arts-Integrated GenAI Literacy Development Program with pre-service teachers extends this orientation. Across music and theater modules, participants build prompt engineering, AI feedback evaluation, and AI ethics literacy by creating real artistic work — modeling the evidence-informed, learner-centered design I want to see in their future classrooms.",
 ]
 
 TEACHING_FRAMEWORKS = [
@@ -3771,9 +3810,9 @@ def render_portfolio(data: dict[str, Any]) -> str:
   <section class="section-alt">
     <div class="section-inner">
       <div class="section-heading">
-        <span class="eyebrow">Arts and Technology PD Video Series</span>
-        <h2>Music and theatre branches.</h2>
-        <p>This section restores the original branching structure by separating the arts-integrated professional development videos into music and theatre tracks.</p>
+        <span class="eyebrow">Arts-Integrated GenAI Literacy PD Series</span>
+        <h2>Music and theatre branches of the professional development program.</h2>
+        <p>These videos sit inside the Arts-Integrated GenAI Literacy Development Program — a Blackboard-delivered course for pre-service teachers. Each branch (Music or Theater) carries four hands-on lessons in which participants build prompt-engineering, AI-feedback evaluation, and AI-ethics literacy by creating songs, soundtracks, animated performances, and dramatic storytelling with tools like SUNO AI, Boomy, Animake, Invideo AI, and Soundtrap.</p>
       </div>
       {video_radios}
       <div class="tab-bar">{video_labels}</div>
