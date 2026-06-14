@@ -2863,10 +2863,13 @@ img { max-width: 100%; display: block; }
 .cit-training-tile img {
   width: 100%;
   height: auto;
+  /* PowerPoint slides export at 16:9 (1600x900). Match the
+     container exactly and use 'contain' so nothing is cropped
+     even if the container has slight rounding. */
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
-  background: #B85042;
+  background: #1a2c52;
 }
 
 .cit-training-tile figcaption {
@@ -2880,10 +2883,6 @@ img { max-width: 100%; display: block; }
 /* Hero tile spans the full row */
 .cit-training-tile--hero {
   grid-column: 1 / -1;
-}
-
-.cit-training-tile--hero img {
-  aspect-ratio: 16 / 8;
 }
 
 .cit-training-tile--hero figcaption {
