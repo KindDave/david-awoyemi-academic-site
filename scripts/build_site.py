@@ -513,6 +513,10 @@ PORTFOLIO_COURSES = [
         "body": "Designed a full prototype online course in the Canvas LMS with clear learning outcomes, modular content, varied assessments, and multimedia — paired with a narrated walkthrough explaining the design rationale. Applied ADDIE, UDL, backward design, and multimedia learning principles, with deliberate attention to learner decision points.",
         "image": "AIL-604-1-clean.png",
         "image_alt": "AIL 604 — Distance Technologies course tile",
+        # Larger, real Canvas LMS screenshot used on the portfolio detail card
+        # only (the marquee keeps the square AI tile so the strip stays uniform).
+        "detail_image": "AIL-604-canvas.png",
+        "detail_image_alt": "Screenshot of the Canvas course page for 'Introduction to the Principles of Instructional Design'",
         "links": [
             {"label": "View Artifact", "url": "https://drive.google.com/file/d/1ONmk6bU7Pws5tdXsuwHx244y9V1aQLId/view?usp=sharing"},
             {"label": "Read Reflection", "url": "https://portfolios.davidawoyemi.net/ail-604/"},
@@ -3679,9 +3683,9 @@ def render_portfolio(data: dict[str, Any]) -> str:
         course_panels.append(
             f"""
             <div class="course-panel{active_class}" data-course-panel="{escape(item['code'])}">
-              <article class="course-detail-card course-detail-card--with-image fade">
+              <article class="course-detail-card course-detail-card--with-image{' course-detail-card--with-image-wide' if item.get('detail_image') else ''} fade">
                 <figure class="course-detail-thumb">
-                  <img src="assets/images/courses/{item['image']}" alt="{escape(item['image_alt'])}" loading="lazy" decoding="async">
+                  <img src="assets/images/courses/{item.get('detail_image', item['image'])}" alt="{escape(item.get('detail_image_alt', item['image_alt']))}" loading="lazy" decoding="async">
                 </figure>
                 <div class="course-detail-body">
                   <div class="course-detail-head">

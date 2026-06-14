@@ -2701,6 +2701,27 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* Wide variant: landscape screenshot fills the top edge-to-edge with
+   its native aspect ratio. Used for cards whose detail_image is a real
+   product screenshot (e.g. the Canvas LMS page for AIL-604). */
+.course-detail-card--with-image-wide {
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+}
+
+.course-detail-card--with-image-wide .course-detail-thumb {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+  border-radius: 0.95rem;
+}
+
+.course-detail-card--with-image-wide .course-detail-thumb img {
+  height: auto;
+  object-fit: contain;
+  background: var(--card-strong);
+}
+
 /* ============================================================
    Research page portrait — fills the open space in the left
    column (below the research-themes tag list) created by the
