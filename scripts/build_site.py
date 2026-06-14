@@ -578,6 +578,7 @@ PORTFOLIO_COURSE_DELIVERABLES = [
         "title": "Accessibility Resources Portfolio",
         "format": "Google Sites resource hub",
         "icon": "layers",
+        "image": "deliverable-accessibility-resources.png",
         "body": "A curated resource site built for educators integrating accessibility into instructional technology design. Pairs WCAG 2.1 success criteria with concrete evaluation tools, screen-reader checklists, and Universal Design for Learning prompts so a faculty member can move from awareness to action in a single sitting.",
         "evidence": "Demonstrates the ability to translate accessibility standards into a usable practitioner workflow.",
         "skills": ["WCAG 2.1", "Universal Design for Learning", "Faculty Enablement", "Google Sites"],
@@ -588,6 +589,7 @@ PORTFOLIO_COURSE_DELIVERABLES = [
         "title": "Accessibility Audit of Adobe Express",
         "format": "Google Slides audit deck",
         "icon": "compass",
+        "image": "deliverable-accessibility-audit.png",
         "body": "Heuristic audit of Adobe Express evaluating interface accessibility, keyboard and screen-reader behaviour, template inclusiveness, and remediation paths against WCAG 2.1 AA. Frames each finding as an actionable design recommendation rather than a binary pass/fail.",
         "evidence": "Shows applied evaluation skill — moving from standards knowledge to a defensible, recommendation-driven product audit.",
         "skills": ["WCAG 2.1 AA", "Heuristic Evaluation", "Screen-Reader Testing", "Remediation Planning"],
@@ -598,6 +600,7 @@ PORTFOLIO_COURSE_DELIVERABLES = [
         "title": "Graphic Design Analysis of an Instructional Visual",
         "format": "Google Slides presentation",
         "icon": "presentation",
+        "image": "deliverable-graphic-design-analysis.png",
         "body": "Decomposes the 'Classifying Quadrilaterals' instructional design through Mayer's multimedia learning principles and Gestalt visual hierarchy: how color, structure, and clarity guide learner attention, reduce cognitive load, and surface or hide the underlying conceptual schema.",
         "evidence": "Evidence of design literacy — connecting visual choices to learning outcomes rather than aesthetic preference.",
         "skills": ["Multimedia Learning Principles", "Visual Hierarchy", "Cognitive Load Analysis", "Design Critique"],
@@ -608,6 +611,7 @@ PORTFOLIO_COURSE_DELIVERABLES = [
         "title": "Strategies–Materials Mapping (TEC-VARIETY)",
         "format": "Interactive mapping artifact",
         "icon": "network",
+        "image": "deliverable-tec-variety.png",
         "body": "Applies Bonk's TEC-VARIETY framework to design two technology-enhanced activities — Just-in-Time Teaching and Technology Tool Demonstrator — for mathematics teacher training. Each activity is mapped end-to-end across motivation, materials, assessment, and feedback loops, then scaffolded for transfer.",
         "evidence": "Demonstrates fluency with applied instructional-strategy frameworks and the ability to translate them into ready-to-use lesson architecture.",
         "skills": ["TEC-VARIETY", "Strategy Design", "Mathematics PD", "Backward Mapping"],
@@ -618,6 +622,7 @@ PORTFOLIO_COURSE_DELIVERABLES = [
         "title": "Storyboard for Two-Dimensional Geometrical Shapes",
         "format": "Published slide deck",
         "icon": "layers",
+        "image": "deliverable-storyboard.png",
         "body": "The visual blueprint that bridged conceptual scope and the final Articulate Rise 360 tutorial. Sequences narrative pacing, branching decision points, accessibility-aware media placement, and learner-choice moments before a single component is built in the LMS authoring tool.",
         "evidence": "Evidence of plan-before-build discipline — the artifact a hiring team uses to judge upstream design rigor, not just shipped polish.",
         "skills": ["Storyboarding", "Narrative Sequencing", "Branching Scenarios", "Pre-development Planning"],
@@ -628,6 +633,7 @@ PORTFOLIO_COURSE_DELIVERABLES = [
         "title": "Interactive Multimedia Proposal",
         "format": "Proposal and topic-selection document",
         "icon": "file-text",
+        "image": "deliverable-multimedia-proposal.png",
         "body": "The proposal that scoped the interactive tutorial: topic justification, target audience and prior-knowledge analysis, multimedia treatment, success metrics, and the accessibility commitments that later carried through to the Rise 360 module.",
         "evidence": "Shows project framing skill — defining the problem, audience, and constraints clearly before design work begins.",
         "skills": ["Project Scoping", "Audience Analysis", "Multimedia Treatment", "Accessibility-by-Design"],
@@ -638,6 +644,7 @@ PORTFOLIO_COURSE_DELIVERABLES = [
         "title": "Infographic Self-Presentation",
         "format": "Scholarly identity infographic",
         "icon": "award",
+        "image": "deliverable-infographic-self.png",
         "body": "An infographic introducing my academic trajectory, professional experiences, and instructional-technology interests — designed as the practicum's opening artifact so reviewers can read a scholar's identity in a single glance before diving into deeper portfolio work.",
         "evidence": "Demonstrates information-design ability and the discipline to communicate complex identity through structured visual hierarchy.",
         "skills": ["Information Design", "Scholarly Identity", "Visual Storytelling", "Practicum Reflection"],
@@ -3808,9 +3815,27 @@ def render_portfolio(data: dict[str, Any]) -> str:
             """.rstrip()
         )
 
+    deliverable_image_dir = ROOT / "assets" / "images" / "deliverables"
+
+    def _deliverable_thumb(item: dict[str, Any]) -> str:
+        image = item.get("image")
+        if not image:
+            return ""
+        # Only render the thumbnail tile if the file actually exists on disk
+        # — lets us pre-declare filenames in the data and have the build
+        # gracefully skip cards whose screenshots haven't been provided yet.
+        if not (deliverable_image_dir / image).exists():
+            return ""
+        return f"""
+          <figure class="course-deliverable-thumb">
+            <img src="assets/images/deliverables/{image}" alt="Screenshot of {escape(item['title'])}" loading="lazy" decoding="async">
+          </figure>
+        """.rstrip()
+
     course_deliverables = "\n".join(
         f"""
         <a class="course-deliverable-card fade" href="{escape(item['url'])}"{link_attrs(item['url'])}>
+          {_deliverable_thumb(item)}
           <div class="course-deliverable-head">
             {icon_badge(item.get('icon', 'book-open'), classes='icon-badge')}
             <span class="course-deliverable-chip">{escape(item['course'])}</span>
