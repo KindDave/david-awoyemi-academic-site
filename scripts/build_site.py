@@ -2459,14 +2459,18 @@ def summarize_grant(text: str) -> dict[str, str]:
     cleaned = remove_reference_prefix(text)
     title, remainder = (cleaned.split(". ", 1) + [""])[:2]
     lowered = cleaned.lower()
-    # Anything explicitly funded/awarded or coming from a named awarded
-    # program (e.g. Rising Tide Grant Program) is treated as Awarded so
-    # the badge reads consistently across the grants grid.
+    # Check explicit "not awarded" / applicant markers FIRST — note that the
+    # substring "awarded" lives inside "not awarded", so the awarded check
+    # below must never run before this one.
     awarded_markers = ("[awarded]", "funded", "awarded", "rising tide", "grant program")
-    if any(marker in lowered for marker in awarded_markers):
-        status = "Awarded"
+    if "not awarded" in lowered or "[not awarded]" in lowered:
+        status = "Not Awarded"
     elif "nominee" in lowered:
         status = "Nominee"
+    elif any(marker in lowered for marker in awarded_markers):
+        # Anything explicitly funded/awarded or coming from a named awarded
+        # program (e.g. Rising Tide Grant Program) reads as Awarded.
+        status = "Awarded"
     elif "applicant" in lowered or "applied" in lowered:
         status = "Not Awarded"
     elif "resubmission" in lowered:
@@ -2546,14 +2550,11 @@ def build_site_data() -> dict[str, Any]:
     for grant in grants:
         if "AI-WISE" in grant["title"] and "$" not in grant["context"]:
             grant["context"] = grant["context"].rstrip(".") + ". Total award $30,000."
-    # The Spencer Dissertation Fellowship was awarded after the CV draft
-    # (which still reads "Applicant"). Promote it to Awarded and clean the
-    # title/context so it no longer reads as a pending application.
+    # Strip the trailing "[Not Awarded]" status marker from the displayed
+    # title/context once summarize_grant has read it into the status field.
     for grant in grants:
-        if "Spencer Dissertation Fellowship" in grant["title"]:
-            grant["status"] = "Awarded"
-            grant["title"] = "Spencer Dissertation Fellowship"
-            grant["context"] = "Spencer Foundation, 2025. Awarded for doctoral dissertation research."
+        for field in ("title", "context"):
+            grant[field] = re.sub(r"\s*\[not awarded\]\s*", "", grant[field], flags=re.IGNORECASE).strip()
     research_entries = parse_entries(sections.get("RESEARCH EXPERIENCE", []))
     teaching_entries = parse_entries(sections.get("TEACHING EXPERIENCE", []))
     design_entries = parse_entries(sections.get("INSTRUCTIONAL DESIGN EXPERIENCE", []))

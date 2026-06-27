@@ -102,7 +102,7 @@
       "label": "Awards and Scholarships"
     },
     {
-      "value": 5,
+      "value": 4,
       "label": "Awarded Projects"
     }
   ],
@@ -459,9 +459,9 @@
       "amount": ""
     },
     {
-      "title": "Spencer Dissertation Fellowship",
-      "context": "Spencer Foundation, 2025. Awarded for doctoral dissertation research.",
-      "status": "Awarded",
+      "title": "Spencer Dissertation Fellowship, Spencer Foundation, 2025",
+      "context": "Proposal submitted for dissertation research on development",
+      "status": "Not Awarded",
       "amount": ""
     }
   ],
