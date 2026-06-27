@@ -2546,6 +2546,14 @@ def build_site_data() -> dict[str, Any]:
     for grant in grants:
         if "AI-WISE" in grant["title"] and "$" not in grant["context"]:
             grant["context"] = grant["context"].rstrip(".") + ". Total award $30,000."
+    # The Spencer Dissertation Fellowship was awarded after the CV draft
+    # (which still reads "Applicant"). Promote it to Awarded and clean the
+    # title/context so it no longer reads as a pending application.
+    for grant in grants:
+        if "Spencer Dissertation Fellowship" in grant["title"]:
+            grant["status"] = "Awarded"
+            grant["title"] = "Spencer Dissertation Fellowship"
+            grant["context"] = "Spencer Foundation, 2025. Awarded for doctoral dissertation research."
     research_entries = parse_entries(sections.get("RESEARCH EXPERIENCE", []))
     teaching_entries = parse_entries(sections.get("TEACHING EXPERIENCE", []))
     design_entries = parse_entries(sections.get("INSTRUCTIONAL DESIGN EXPERIENCE", []))
@@ -3427,6 +3435,30 @@ def render_research(data: dict[str, Any]) -> str:
       <div class="case-list">
         {render_case_studies(data["research_case_studies"])}
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-heading">
+        <span class="eyebrow">Current Exploration</span>
+        <h2>What I am building next.</h2>
+        <p>An early-stage line of inquiry — shared here while it is still taking shape.</p>
+      </div>
+      <article class="current-project fade">
+        <figure class="current-project-media">
+          <img src="assets/images/research-reachy.png" alt="David Awoyemi working at a desk beside a Reachy Mini desktop robot connected to a laptop" loading="lazy" decoding="async">
+          <span class="current-project-badge">Under Exploration</span>
+        </figure>
+        <div class="current-project-body">
+          <h3>Social robotics for K-12 cybersecurity instruction</h3>
+          <p>I am prototyping how the <strong>Reachy Mini</strong> desktop robot can make cybersecurity concepts tangible and engaging for both in-service and pre-service teachers. The aim is an embodied, hands-on learning experience that lowers the barrier to teaching security fundamentals — pairing a friendly physical agent with scaffolded, classroom-ready activities.</p>
+          <p>This work connects my interests in immersive and emerging technologies, teacher professional development, and broadening participation in computing, extending them toward human–robot interaction as an instructional medium.</p>
+          <div class="tag-list">
+            <span>Social Robotics</span><span>Cybersecurity Education</span><span>Teacher PD</span><span>Human–Robot Interaction</span><span>Emerging Technologies</span>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 

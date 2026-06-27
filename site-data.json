@@ -1,5 +1,5 @@
 {
-  "generated_on": "2026-06-14",
+  "generated_on": "2026-06-27",
   "source_file": "CV_David.docx",
   "person": {
     "name": "Idowu David Awoyemi",
@@ -19,6 +19,11 @@
       "degree": "Ph.D. Instructional Technology",
       "institution": "University of Alabama, Tuscaloosa, AL",
       "date": "Spring 2027"
+    },
+    {
+      "degree": "Graduate Certificate in College Teaching",
+      "institution": "University of Alabama, Tuscaloosa, AL (12-credit, four-course sequence)",
+      "date": "2025"
     },
     {
       "degree": "M. Tech Educational Technology",
@@ -81,7 +86,7 @@
   ],
   "metrics": [
     {
-      "value": 19,
+      "value": 21,
       "label": "Journal Articles"
     },
     {
@@ -93,11 +98,11 @@
       "label": "Years Experience"
     },
     {
-      "value": 16,
+      "value": 17,
       "label": "Awards and Scholarships"
     },
     {
-      "value": 4,
+      "value": 5,
       "label": "Awarded Projects"
     }
   ],
@@ -323,7 +328,7 @@
       "context": "Journal Article",
       "status": "Under Review",
       "year": "Recent",
-      "raw": "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)"
+      "raw": "[21b] Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)"
     },
     {
       "title": "From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)",
@@ -333,26 +338,28 @@
       "raw": "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Revision). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)"
     },
     {
-      "title": "Identifying the AI Literacy Gap: A Mixed-Methods Analysis of Industry Needs and Graduate Preparedness",
-      "context": "Frontiers in Education",
-      "status": "Accepted",
-      "year": "2025",
-      "raw": "McNeill, L., Uddin, M. M., Abu, S., Pei, M., Awoyemi, I. D., & Regalado, L. (2025). Identifying the AI Literacy Gap: A Mixed-Methods Analysis of Industry Needs and Graduate Preparedness. Frontiers in Education. [Accepted]"
+      "title": "Embodied Arts-Integrated Al Literacy: A Nested Mixed-Methods Study with K-12 Educators (Manuscript Number: TECH-D-26-00361 )",
+      "context": "Journal Article",
+      "status": "Under Review",
+      "year": "Recent",
+      "raw": "Abu, S., Moon, J., Awoyemi, I. D., Moon, J., & Ghooreian, A. (Under review). Embodied Arts-Integrated Al Literacy: A Nested Mixed-Methods Study with K-12 Educators (Manuscript Number: TECH-D-26-00361 )"
     },
     {
-      "title": "F Luo, J Amayou, F Nasrin, P Abedini, V Mousavi, ID Awoyemi, A Hutchison, C Cao, C Crawford. Promoting elementary students’ computer science conceptual knowledge and coding performance: A mixed methods case study (Manuscript Number: UJRT-2025-1006.R2)",
-      "context": "Journal Article",
+      "title": "Human-centered generative AI in education: ethical challenges and equity-driven solutions",
+      "context": "Ethics & Behavior, 1–27",
       "status": "Published",
-      "year": "2025",
-      "raw": "F Luo, J Amayou, F Nasrin, P Abedini, V Mousavi, ID Awoyemi, A Hutchison, C Cao, C Crawford. Promoting elementary students’ computer science conceptual knowledge and coding performance: A mixed methods case study (Manuscript Number: UJRT-2025-1006.R2)"
+      "year": "2026",
+      "raw": "Abu, S., Uddin, M. M., Moon, J., Awoyemi, I. D., Baah-Mintah, R., & Ghooreian, A. (2026). Human-centered generative AI in education: ethical challenges and equity-driven solutions. Ethics & Behavior, 1–27. https://doi.org/10.1080/10508422.2026.2685014"
     }
   ],
   "publication_sections": [
     {
       "title": "Peer-Reviewed Journal Articles",
       "items": [
-        "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)",
+        "[21b] Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)",
         "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Revision). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)",
+        "Abu, S., Moon, J., Awoyemi, I. D., Moon, J., & Ghooreian, A. (Under review). Embodied Arts-Integrated Al Literacy: A Nested Mixed-Methods Study with K-12 Educators (Manuscript Number: TECH-D-26-00361 )",
+        "Abu, S., Uddin, M. M., Moon, J., Awoyemi, I. D., Baah-Mintah, R., & Ghooreian, A. (2026). Human-centered generative AI in education: ethical challenges and equity-driven solutions. Ethics & Behavior, 1–27. https://doi.org/10.1080/10508422.2026.2685014",
         "McNeill, L., Uddin, M. M., Abu, S., Pei, M., Awoyemi, I. D., & Regalado, L. (2025). Identifying the AI Literacy Gap: A Mixed-Methods Analysis of Industry Needs and Graduate Preparedness. Frontiers in Education. [Accepted]",
         "F Luo, J Amayou, F Nasrin, P Abedini, V Mousavi, ID Awoyemi, A Hutchison, C Cao, C Crawford. Promoting elementary students’ computer science conceptual knowledge and coding performance: A mixed methods case study (Manuscript Number: UJRT-2025-1006.R2)",
         "Moon, J., Awoyemi, I. D., Abu, S., Kim, E., & Marchiori, R. (Submitted). A Bayesian Meta-Analysis of Virtual Reality-based Safety Training in the Construction Sector (Manuscript Number: SAFETY-D-26-01418)",
@@ -434,7 +441,7 @@
       "amount": "$15,000,"
     },
     {
-      "title": "Graduate Assistant, AI-WISE: AI Workforce Integration and Skill Enhancement",
+      "title": "Co-Investigator, AI-WISE: AI Workforce Integration and Skill Enhancement",
       "context": "College of Education Rising Tide Grant Program, AY 2024–2025. Teaching/Research Project. Lead PI: Laura McNeill. University of Alabama. Total award $30,000.",
       "status": "Awarded",
       "amount": ""
@@ -452,13 +459,17 @@
       "amount": ""
     },
     {
-      "title": "Spencer Dissertation Fellowship – Applicant, Spencer Foundation, 2025",
-      "context": "Proposal submitted for dissertation research on development.",
-      "status": "Not Awarded",
+      "title": "Spencer Dissertation Fellowship",
+      "context": "Spencer Foundation, 2025. Awarded for doctoral dissertation research.",
+      "status": "Awarded",
       "amount": ""
     }
   ],
   "awards": [
+    {
+      "name": "Dissertation Fellowship ($20160)",
+      "date": "2026"
+    },
     {
       "name": "College of Education Research Assistant Award ($4500)",
       "date": "2026"
@@ -525,6 +536,10 @@
     }
   ],
   "certifications": [
+    {
+      "name": "AI and Me: Navigating Generative AI for Higher Education Faculty, University of Tennessee, Knoxville (Teaching & Learning Innovation, College of Education, Health & Human Sciences)",
+      "date": "Mar 2026"
+    },
     {
       "name": "Creating Accessible Electronic Materials with AI Tools, AECT Division of Distance Learning",
       "date": "Apr 2025"
@@ -701,8 +716,8 @@
   "service_snapshot": [
     {
       "eyebrow": "Journal Reviewing",
-      "title": "8 review appointments",
-      "body": "The Journal of Computer-Assisted Learning, The Journal of Computer-Assisted Learning, and more."
+      "title": "7 review appointments",
+      "body": "The Journal of Computers in Human Behavior Reports, The Journal of Computer-Assisted Learning, and more."
     },
     {
       "eyebrow": "Conference Service",
@@ -722,7 +737,7 @@
   ],
   "journal_service": [
     {
-      "name": "The Journal of Computer-Assisted Learning",
+      "name": "The Journal of Computers in Human Behavior Reports",
       "date": "2026 - Present"
     },
     {
@@ -748,10 +763,6 @@
     {
       "name": "Asian Journal of Education and Social Studies",
       "date": "2025 - Present"
-    },
-    {
-      "name": "The Journal of Computers in Human Behavior Reports",
-      "date": "2026"
     }
   ],
   "conference_service": [
