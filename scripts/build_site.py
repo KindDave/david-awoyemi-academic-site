@@ -2223,7 +2223,9 @@ def is_date_line(text: str) -> bool:
 
 
 def remove_reference_prefix(text: str) -> str:
-    return re.sub(r"^\[\d+\]\s*", "", text).strip()
+    # Strip a leading citation index like "[1]" or "[21b]" (an optional
+    # letter suffix is used in the CV for closely-related entries).
+    return re.sub(r"^\[\d+[a-z]?\]\s*", "", text, flags=re.IGNORECASE).strip()
 
 
 def split_on_numbered_items(line: str) -> list[str]:
