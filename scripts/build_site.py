@@ -2893,7 +2893,7 @@ def render_home(data: dict[str, Any]) -> str:
         for item in data["profile_links"][:3]
     )
     features = [
-        ("About", "Professional biography, training background, and a clearer view of the scholarly and design profile.", "about.html", "feature-about-david.png", "David Awoyemi at his desk with a laptop and instructional-technology books"),
+        ("About", "Professional biography, training background, and a clearer view of the scholarly and design profile.", "about.html", "feature-about-portrait.png", "David Awoyemi in his office with an instructional-design bookshelf and an ADDIE whiteboard"),
         ("Academic Profile", "CV-driven publications, presentations, grants, service, and affiliations.", "academic.html", "feature-academic-david.png", "David Awoyemi working at a dual-monitor workstation"),
         ("Research Projects", "Selected case studies showing how David designs, studies, and evaluates learning innovation.", "research.html", "feature-research.jpg", "Humanoid robot reading on a bench"),
         ("Teaching Philosophy", "Research-informed teaching commitments, frameworks, and experience across instructional contexts.", "teaching.html", "feature-teaching.jpg", "Wooden blocks showing learning-design concepts"),
