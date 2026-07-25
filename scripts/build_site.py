@@ -3412,7 +3412,7 @@ def render_research(data: dict[str, Any]) -> str:
         </div>
         <div class="tag-list">{theme_tags}</div>
         <figure class="research-portrait fade">
-          <img src="assets/images/research-portrait.png" alt="David Awoyemi at his desk, with screens showing a Learning Analytics Dashboard and AI in Education research" loading="lazy" decoding="async">
+          <img src="assets/images/research-portrait-office.png" alt="David Awoyemi at his desk, with screens showing a Learning Analytics Dashboard and AI in Education research" loading="lazy" decoding="async">
         </figure>
       </div>
       <div>
