@@ -2624,8 +2624,8 @@ def build_site_data() -> dict[str, Any]:
         {
             "title": "Equity and Participation",
             "body": "Advances broadening participation in STEM and computing through inclusive design, teacher development, and responsive learning pathways.",
-            "image": "feature-about.png",
-            "image_alt": "Scholar at a desk with laptop and reference books",
+            "image": "feature-academic-david.png",
+            "image_alt": "David Awoyemi working at a dual-monitor workstation",
         },
     ]
 
