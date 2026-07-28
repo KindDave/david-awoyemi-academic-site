@@ -1,5 +1,5 @@
 {
-  "generated_on": "2026-06-27",
+  "generated_on": "2026-07-27",
   "source_file": "CV_David.docx",
   "person": {
     "name": "Idowu David Awoyemi",
@@ -80,13 +80,13 @@
     {
       "title": "Equity and Participation",
       "body": "Advances broadening participation in STEM and computing through inclusive design, teacher development, and responsive learning pathways.",
-      "image": "feature-about.png",
-      "image_alt": "Scholar at a desk with laptop and reference books"
+      "image": "feature-academic-david.png",
+      "image_alt": "David Awoyemi working at a dual-monitor workstation"
     }
   ],
   "metrics": [
     {
-      "value": 21,
+      "value": 20,
       "label": "Journal Articles"
     },
     {
@@ -328,14 +328,14 @@
       "context": "Journal Article",
       "status": "Under Review",
       "year": "Recent",
-      "raw": "[21b] Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)"
+      "raw": "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)"
     },
     {
       "title": "From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)",
       "context": "Journal Article",
-      "status": "Under Review",
+      "status": "Accepted",
       "year": "Recent",
-      "raw": "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Revision). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)"
+      "raw": "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Accepted). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)"
     },
     {
       "title": "Embodied Arts-Integrated Al Literacy: A Nested Mixed-Methods Study with K-12 Educators (Manuscript Number: TECH-D-26-00361 )",
@@ -356,12 +356,12 @@
     {
       "title": "Peer-Reviewed Journal Articles",
       "items": [
-        "[21b] Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)",
-        "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Revision). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)",
+        "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)",
+        "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Accepted). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training (Manuscript Number: 264134817)",
         "Abu, S., Moon, J., Awoyemi, I. D., Moon, J., & Ghooreian, A. (Under review). Embodied Arts-Integrated Al Literacy: A Nested Mixed-Methods Study with K-12 Educators (Manuscript Number: TECH-D-26-00361 )",
         "Abu, S., Uddin, M. M., Moon, J., Awoyemi, I. D., Baah-Mintah, R., & Ghooreian, A. (2026). Human-centered generative AI in education: ethical challenges and equity-driven solutions. Ethics & Behavior, 1–27. https://doi.org/10.1080/10508422.2026.2685014",
         "McNeill, L., Uddin, M. M., Abu, S., Pei, M., Awoyemi, I. D., & Regalado, L. (2025). Identifying the AI Literacy Gap: A Mixed-Methods Analysis of Industry Needs and Graduate Preparedness. Frontiers in Education. [Accepted]",
-        "F Luo, J Amayou, F Nasrin, P Abedini, V Mousavi, ID Awoyemi, A Hutchison, C Cao, C Crawford. Promoting elementary students’ computer science conceptual knowledge and coding performance: A mixed methods case study (Manuscript Number: UJRT-2025-1006.R2)",
+        "Luo, F., Amayou, J., Nasrin, F., Abedini, P., Mousavi, V., Awoyemi, I. D., ... & Crawford, C. (2026). Promoting elementary students’ computer science conceptual knowledge and coding performance: a mixed methods case study. Journal of Research on Technology in Education, 1-21. https://doi.org/10.1080/15391523.2026.2661645",
         "Moon, J., Awoyemi, I. D., Abu, S., Kim, E., & Marchiori, R. (Submitted). A Bayesian Meta-Analysis of Virtual Reality-based Safety Training in the Construction Sector (Manuscript Number: SAFETY-D-26-01418)",
         "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Under review). Design and development research of immersive virtual reality-supported safety training for construction engineering education. Educational Technology Research and Development (Manuscript Number: ETRD-D-26-00469)",
         "Awoyemi, I. D., Abu S., Yuvaraja H. K., Patiballa S. K., & Moon, J. (Under review). Exploring fidelity dimensions in extended reality technologies for mechanical engineering education: A Systematic Review. TechTrends (Manuscript Number: TECH-D-25-00383)",
@@ -371,7 +371,6 @@
         "Marchiori, R., Song, S., Moon, J., Awoyemi, D., Ghooreian, A., & Ramenzapour, E. (2025). A Systematic Review of Technology‐Enhanced Learning Approaches to Foster Construction Engineering and Management Competencies. Computer Applications in Engineering Education, 33(5), e70074. https://doi.org/10.1002/cae.70074",
         "Luo, F., Nasrin, F., & Awoyemi, I. D. (2025). Broadening Participation in Computing Through Cultivating Teacher Professional Growth: Stories from Teachers of Color. Education Sciences, 15(7), 848. https://doi.org/10.3390/educsci15070848",
         "Apata, O. E., Ajose, S. T., Apata, B. O., Olaitan, G. I., Oyewole, P. O., Awoyemi, I. D., .... & Feyijimi, T. (2025). Artificial intelligence in higher education: a systematic review of contributions to SDG 4 (quality education) and SDG 10 (reduced inequality). International Journal of Educational Management, 1-18. https://doi.org/10.1108/IJEM-12-2024-0856",
-        "Luo, F., Amayou, J., Nasrin, F., Abedini, P., Awoyemi, I. D. (Revision). Promoting elementary students’ computer science conceptual knowledge and coding performance: A mixed methods case study (Manuscript ID is UJRT-2025-1006.R1).",
         "Samaila, D., Awoyemi, I. D., Gwandu, Z. L., Isah, S., & Murtala, A. (2024). Effect of parental socio-economic background on secondary school students career choice in kebbi state, nigeria. International Journal of Research and Innovation in Social Science, 8(3), 370-385.",
         "Falode, O.C.; Ilufoye, T. O.; Awoyemi, I. D. & Usman, Z.N. (2018). lecturers’ awareness and readiness towards the adoption of open educational resources for teaching in tertiary institutions in Niger State, Nigeria. International Journal of Education and Educational Research, 1(2), 01-15",
         "Falode, O.C.; Awoyemi, I. D.; Ilufoye, T. O. & Usman, Z.N. (2018). Mathematics lecturers’ awareness and utilization of mathematics software applications for developing Mathematics instruction in tertiary institutions in Niger State, Nigeria. Al-Himah Journal of Education, 2(2), 125-140",
