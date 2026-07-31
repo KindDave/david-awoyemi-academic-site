@@ -2877,7 +2877,6 @@ def render_page(title: str, description: str, active: str, body: str, data: dict
 
 def render_home(data: dict[str, Any]) -> str:
     person = data["person"]
-    hero_highlights = "\n".join(f"<li>{escape(item['name'])}</li>" for item in data["awards"][:3])
     research_practice_media = render_media_cards(HOME_RESEARCH_PRACTICE)
     metrics = "\n".join(
         f"""
@@ -2949,6 +2948,61 @@ def render_home(data: dict[str, Any]) -> str:
         """.rstrip()
         for item in data["education"]
     )
+
+    # "Research in One Minute" — scannable statement of what the research does,
+    # written for reviewers who will not read long paragraphs.
+    research_focus = [
+        ("flask", "Improve STEM learning", "Immersive and AI-supported environments that make abstract STEM concepts tangible and practisable."),
+        ("compass", "Personalize instruction", "Adaptive, learner-centered designs that respond to prior knowledge, pace, and access needs."),
+        ("layers", "Enhance workforce training", "VR safety and skills training built for authentic performance and measurable transfer."),
+        ("presentation", "Advance learning analytics", "Multimodal evidence — behavioral traces, eye tracking, physiological data — modeled to explain how learning unfolds."),
+        ("users", "Broaden participation", "Inclusive design and teacher development that widen access to STEM and computing."),
+    ]
+    research_focus_html = "\n".join(
+        f"""
+        <article class="focus-card fade">
+          {icon_badge(icon)}
+          <div>
+            <h3>{escape(title)}</h3>
+            <p>{escape(desc)}</p>
+          </div>
+        </article>
+        """.rstrip()
+        for icon, title, desc in research_focus
+    )
+
+    # Scannable credential highlights. Counts are derived from the CV so they
+    # stay accurate on every rebuild.
+    journal_count = next((m["value"] for m in data["metrics"] if m["label"] == "Journal Articles"), 0)
+    presentation_count = next((m["value"] for m in data["metrics"] if m["label"] == "Conference Presentations"), 0)
+    awarded_count = next((m["value"] for m in data["metrics"] if m["label"] == "Awarded Projects"), 0)
+    review_count = next(
+        (item["title"] for item in data["service_snapshot"] if "Review" in item["eyebrow"]),
+        "Journal reviewer",
+    )
+    highlights = [
+        ("award", "Dissertation Fellowship", "Awarded 2026"),
+        ("award", "AECT Addie Kinsinger Leadership Development Internship Award", "2024"),
+        ("award", "Most Outstanding Graduate Student in Research", "Instructional Technology, 2025"),
+        ("award", "Alabama Power Innovation and Technology Award", "2025"),
+        ("file-text", f"{journal_count} peer-reviewed journal articles", "Published, accepted, and under review"),
+        ("presentation", f"{presentation_count} conference presentations", "AERA, AECT, iLRN, and more"),
+        ("network", review_count, "Peer review across instructional technology and AI journals"),
+        ("flask", f"{awarded_count} funded research projects", "Including NSF ITEST and university-funded work"),
+    ]
+    highlights_html = "\n".join(
+        f"""
+        <article class="highlight-card fade">
+          {icon_badge(icon)}
+          <div>
+            <h3>{escape(title)}</h3>
+            <p>{escape(meta)}</p>
+          </div>
+        </article>
+        """.rstrip()
+        for icon, title, meta in highlights
+    )
+
     body = f"""
 <main id="main-content" class="main-wrap">
   <section class="hero">
@@ -2961,19 +3015,16 @@ def render_home(data: dict[str, Any]) -> str:
       </div>
     </div>
     <div class="hero-copy fade">
-      <span class="eyebrow">Ph.D. Candidate · University of Alabama</span>
+      <span class="eyebrow">AI in Education · Extended Reality · Learning Analytics</span>
       <h1>{escape(person["name"])}</h1>
-      <div class="hero-role">{escape(person["role"])}</div>
-      <p>{escape(data["profile_summary"])}</p>
-      <p>David studies immersive learning, AI-supported instruction, analytics, and equitable participation in STEM with a design orientation grounded in practical educational impact.</p>
+      <div class="hero-role">Instructional Technology Researcher specializing in artificial intelligence, extended reality, and learning analytics</div>
+      <p class="hero-value">I design intelligent learning environments that combine artificial intelligence, extended reality, and learning analytics to improve STEM education, workforce training, and learner performance.</p>
+      <p class="hero-affiliation">Ph.D. Candidate in Instructional Technology, University of Alabama · Research Assistant, ADIE Lab</p>
       <div class="hero-actions">
-        <a class="button" href="academic.html">Explore my work</a>
+        <a class="button" href="research.html">See my research</a>
         <a class="button-secondary" href="{escape(data["source_file"])}">View full CV</a>
         <a class="button-secondary" href="mailto:{escape(person["email"])}">Contact David</a>
       </div>
-      <ul class="highlight-list">
-        {hero_highlights}
-      </ul>
     </div>
   </section>
 </main>
@@ -2984,7 +3035,32 @@ def render_home(data: dict[str, Any]) -> str:
   </div>
 </section>
 
-<main id="main-content" class="main-wrap">
+<main class="main-wrap">
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Research in One Minute</span>
+      <h2>What my research does.</h2>
+      <p>I investigate how artificial intelligence and immersive technologies can reshape learning — from the design of the environment through to the evidence of what learners actually did.</p>
+    </div>
+    <div class="focus-grid">
+      {research_focus_html}
+    </div>
+  </section>
+</main>
+
+<section class="section-alt highlights-band">
+  <div class="section-inner">
+    <div class="section-heading">
+      <span class="eyebrow">Highlights</span>
+      <h2>Recognition, scholarship, and service at a glance.</h2>
+    </div>
+    <div class="highlight-grid">
+      {highlights_html}
+    </div>
+  </div>
+</section>
+
+<main class="main-wrap">
   <section class="section">
     <div class="section-heading">
       <span class="eyebrow">Navigate the Portfolio</span>
@@ -3008,7 +3084,7 @@ def render_home(data: dict[str, Any]) -> str:
   </div>
 </section>
 
-<main id="main-content" class="main-wrap">
+<main class="main-wrap">
   <section class="section">
     <div class="section-heading">
       <span class="eyebrow">Recent Scholarship</span>
