@@ -645,7 +645,7 @@ PORTFOLIO_COURSE_DELIVERABLES = [
         "format": "Scholarly identity infographic",
         "icon": "award",
         "image": "deliverable-infographic-self.png",
-        "body": "An infographic introducing my academic trajectory, professional experiences, and instructional-technology interests — designed as the practicum's opening artifact so reviewers can read a scholar's identity in a single glance before diving into deeper portfolio work.",
+        "body": "An infographic introducing my academic trajectory, professional experiences, and instructional-technology interests. Created as the practicum's opening artifact, it distills a scholarly identity into a single visual summary.",
         "evidence": "Demonstrates information-design ability and the discipline to communicate complex identity through structured visual hierarchy.",
         "skills": ["Information Design", "Scholarly Identity", "Visual Storytelling", "Practicum Reflection"],
         "url": "https://drive.google.com/file/d/1r56yhwRUWL-krZH8tadCgcAgOO9ZQHQq/view?usp=sharing",
