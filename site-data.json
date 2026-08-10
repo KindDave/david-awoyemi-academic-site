@@ -1,5 +1,5 @@
 {
-  "generated_on": "2026-08-09",
+  "generated_on": "2026-08-10",
   "source_file": "CV_David.docx",
   "person": {
     "name": "Idowu David Awoyemi",
@@ -577,7 +577,7 @@
   "skills": [
     {
       "category": "Artificial Intelligence (AI)",
-      "details": "Applied AI in Education, Generative AI (LLMs) for Instructional Design and Content Development, AI-Assisted Assessment and Feedback Systems, Prompt Engineering, AI Integration in Learning Environments, Adaptive Learning Systems Design, Multimodal Learning Analytics, AI-Supported Research and Data Interpretation",
+      "details": "Applied AI in Education, Generative AI (LLMs) for Instructional Design and Content Development, AI-Assisted Assessment and Feedback Systems, Prompt Engineering, AI Integration in Learning Environments, Adaptive Learning Systems Design, Multimodal Learning Analytics, AI-Supported Research and Data Interpretation, AI-Assisted Development (Vibe Coding)",
       "items": [
         "Applied AI in Education",
         "Generative AI (LLMs) for Instructional Design and Content Development",
@@ -586,7 +586,8 @@
         "AI Integration in Learning Environments",
         "Adaptive Learning Systems Design",
         "Multimodal Learning Analytics",
-        "AI-Supported Research and Data Interpretation"
+        "AI-Supported Research and Data Interpretation",
+        "AI-Assisted Development (Vibe Coding)"
       ]
     },
     {
@@ -596,7 +597,7 @@
         "Learning Analytics",
         "SPSS",
         "R (basic to intermediate proficiency)",
-        "Data Visualization for Instructional Evaluation."
+        "Data Visualization for Instructional Evaluation"
       ]
     },
     {
@@ -604,10 +605,8 @@
       "details": "Digital Graphic Design, Microsoft Office Suite (Word, Excel, PowerPoint), Multimedia Content Development.",
       "items": [
         "Digital Graphic Design",
-        "Microsoft Office Suite (Word",
-        "Excel",
-        "PowerPoint)",
-        "Multimedia Content Development."
+        "Microsoft Office Suite (Word, Excel, PowerPoint)",
+        "Multimedia Content Development"
       ]
     },
     {
@@ -618,11 +617,10 @@
         "Rise 360",
         "eLearning Design",
         "Storyboard Development",
-        "Instructional Design Models (ADDIE",
-        "SAM)",
+        "Instructional Design Models (ADDIE, SAM)",
         "Needs Analysis",
         "Learning Package Development",
-        "Content Conversion to Digital Formats."
+        "Content Conversion to Digital Formats"
       ]
     }
   ],
@@ -634,8 +632,8 @@
     "SPSS",
     "R (basic to intermediate proficiency)",
     "Digital Graphic Design",
-    "Microsoft Office Suite (Word",
-    "Excel"
+    "Microsoft Office Suite (Word, Excel, PowerPoint)",
+    "Multimedia Content Development"
   ],
   "leadership_cards": [
     {

@@ -2401,7 +2401,25 @@ def parse_skills(lines: list[str]) -> list[dict[str, Any]]:
     while index < len(lines):
         category = lines[index]
         details = lines[index + 1] if index + 1 < len(lines) else ""
-        items = [item.strip() for item in details.split(",") if item.strip()]
+        # Split on commas, but not on commas inside parentheses — otherwise
+        # entries like "Microsoft Office Suite (Word, Excel, PowerPoint)" and
+        # "Instructional Design Models (ADDIE, SAM)" get torn into fragments.
+        items = []
+        depth = 0
+        current = ""
+        for ch in details:
+            if ch == "(":
+                depth += 1
+            elif ch == ")":
+                depth = max(0, depth - 1)
+            if ch == "," and depth == 0:
+                items.append(current)
+                current = ""
+            else:
+                current += ch
+        items.append(current)
+        items = [item.strip().rstrip(".").strip() for item in items]
+        items = [item for item in items if item]
         skills.append(
             {
                 "category": category,
@@ -3574,7 +3592,7 @@ def render_about(data: dict[str, Any]) -> str:
         <article class="skill-cluster fade">
           <h3>{escape(skill['category'])}</h3>
           <div class="tag-cloud">
-            {''.join(f'<span>{escape(item)}</span>' for item in skill['items'][:8])}
+            {''.join(f'<span>{escape(item)}</span>' for item in skill['items'])}
           </div>
         </article>
         """.rstrip()
