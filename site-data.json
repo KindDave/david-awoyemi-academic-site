@@ -86,7 +86,7 @@
   ],
   "metrics": [
     {
-      "value": 21,
+      "value": 22,
       "label": "Journal Articles"
     },
     {
@@ -324,6 +324,13 @@
   ],
   "selected_publications": [
     {
+      "title": "Measuring How Students Rely on Generative AI in Academic Writing: Development and Multi-Source Validation of the Generative AI Reliance Types Scale (GenAI-RTS)",
+      "context": "AI and Ethics",
+      "status": "Under Review",
+      "year": "Recent",
+      "raw": "Hossain, S., Nawmi, T. A., Ahmadi, S., Beck, B., Awoyemi, I. D., & Li, L. (Under review). Measuring How Students Rely on Generative AI in Academic Writing: Development and Multi-Source Validation of the Generative AI Reliance Types Scale (GenAI-RTS). AI and Ethics."
+    },
+    {
       "title": "A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)",
       "context": "Journal Article",
       "status": "Under Review",
@@ -343,19 +350,13 @@
       "status": "Under Review",
       "year": "Recent",
       "raw": "Abu, S., Moon, J., Awoyemi, I. D., Moon, J., & Ghooreian, A. (Under review). Embodied Arts-Integrated AI Literacy: A Nested Mixed-Methods Study with K-12 Educators (Manuscript Number: TECH-D-26-00361)"
-    },
-    {
-      "title": "Rethinking Generative AI Literacy: An Integrative, Developmental, and Dialectical Framework for K-12 Teacher Education",
-      "context": "AI and Ethics",
-      "status": "Under Review",
-      "year": "Recent",
-      "raw": "Hossain, S., Ahmadi S., Li L., Awoyemi ID, Huang W., Zhou C., Li J., Haniya S., Khanam S., Subaha, T. M. (Under review). Rethinking Generative AI Literacy: An Integrative, Developmental, and Dialectical Framework for K-12 Teacher Education. AI and Ethics."
     }
   ],
   "publication_sections": [
     {
       "title": "Peer-Reviewed Journal Articles",
       "items": [
+        "Hossain, S., Nawmi, T. A., Ahmadi, S., Beck, B., Awoyemi, I. D., & Li, L. (Under review). Measuring How Students Rely on Generative AI in Academic Writing: Development and Multi-Source Validation of the Generative AI Reliance Types Scale (GenAI-RTS). AI and Ethics.",
         "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)",
         "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (2026). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training. Interactive Learning Environments, 1–20. https://doi.org/10.1080/10494820.2026.2709674",
         "Abu, S., Moon, J., Awoyemi, I. D., Moon, J., & Ghooreian, A. (Under review). Embodied Arts-Integrated AI Literacy: A Nested Mixed-Methods Study with K-12 Educators (Manuscript Number: TECH-D-26-00361)",
