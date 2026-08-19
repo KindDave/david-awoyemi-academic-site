@@ -2616,8 +2616,8 @@ def build_site_data() -> dict[str, Any]:
         "affiliation": header[1] if len(header) > 1 else "The University of Alabama",
         "location": infer_location(header),
         "email": email,
-        "phone": phone,
-        "phone_href": phone_href(phone),
+        # Phone deliberately omitted: site-data.json is published alongside
+        # the site, so anything included here is publicly readable.
         "expected_phd": "Spring 2027",
         "role": "Instructional Technology Researcher | AI and XR in Education | Learning Designer",
     }
@@ -2859,7 +2859,6 @@ def render_footer(data: dict[str, Any]) -> str:
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="mailto:{escape(person["email"])}">{escape(person["email"])}</a>
-        <a href="tel:{escape(person["phone_href"])}">{escape(person["phone"])}</a>
         <a href="mailto:{escape(person["email"])}?subject=Website%20Inquiry">Start a conversation</a>
       </div>
     </div>
@@ -4251,10 +4250,6 @@ def render_contact(data: dict[str, Any]) -> str:
           <article class="contact-detail-card fade">
             <h3>Email</h3>
             <p><a href="mailto:{escape(person['email'])}">{escape(person['email'])}</a></p>
-          </article>
-          <article class="contact-detail-card fade">
-            <h3>Phone</h3>
-            <p><a href="tel:{escape(person['phone_href'])}">{escape(person['phone'])}</a></p>
           </article>
           <article class="contact-detail-card fade">
             <h3>Office and Department</h3>
