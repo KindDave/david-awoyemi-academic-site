@@ -135,7 +135,7 @@ PROFILE_LINKS = [
     {
         "label": "Full CV",
         "url": SOURCE_DOCX.name,
-        "description": "Download the current Word CV that drives this site.",
+        "description": "Download the full curriculum vitae (Word document).",
     },
 ]
 
@@ -3106,11 +3106,11 @@ def render_home(data: dict[str, Any]) -> str:
     )
     features = [
         ("About", "Professional biography, training background, and a clearer view of the scholarly and design profile.", "about.html", "feature-about-portrait.png", "David Awoyemi in his office with an instructional-design bookshelf and an ADDIE whiteboard"),
-        ("Academic Profile", "CV-driven publications, presentations, grants, service, and affiliations.", "academic.html", "feature-academic-david.png", "David Awoyemi working at a dual-monitor workstation"),
+        ("Academic Profile", "Publications, presentations, grants, service, and affiliations.", "academic.html", "feature-academic-david.png", "David Awoyemi working at a dual-monitor workstation"),
         ("Research Projects", "Selected case studies showing how David designs, studies, and evaluates learning innovation.", "research.html", "feature-research.jpg", "Humanoid robot reading on a bench"),
         ("Teaching Philosophy", "Research-informed teaching commitments, frameworks, and experience across instructional contexts.", "teaching.html", "feature-teaching.jpg", "Wooden blocks showing learning-design concepts"),
         ("ID Portfolio", "Instructional design artifacts, curriculum work, multimedia development, and doctoral coursework.", "portfolio.html", "feature-portfolio.jpg", "Design workspace with laptop and tools"),
-        ("Contact and CV", "Open positions, professional contact details, and the source-of-truth academic CV.", "contact.html", "feature-contact.jpg", "Hands connecting through communication devices"),
+        ("Contact and CV", "Professional contact details, opportunity interests, and the full academic CV.", "contact.html", "feature-contact.jpg", "Hands connecting through communication devices"),
     ]
     features_html = "\n".join(
         f"""
@@ -3290,7 +3290,6 @@ def render_home(data: dict[str, Any]) -> str:
     <div class="strip-heading">
       <span class="eyebrow" style="color: white;">Recent Recognition</span>
       <h2 class="strip-title">Awards, fellowships, and major acknowledgements.</h2>
-      <p>These highlights are pulled from the current CV so the public-facing site and scholarly record stay aligned.</p>
     </div>
     <div class="awards-grid">
       {awards_html}
@@ -3303,7 +3302,7 @@ def render_home(data: dict[str, Any]) -> str:
     <div class="section-heading">
       <span class="eyebrow">Recent Scholarship</span>
       <h2>Selected outputs from the current publication record.</h2>
-      <p>For the full list, including conference presentations and proceedings, use the academic profile page or download the source CV.</p>
+      <p>For the full list, including conference presentations and proceedings, see the academic profile page or download the full CV.</p>
     </div>
     <div class="publications-list">
       {publications_html}
@@ -3328,7 +3327,7 @@ def render_home(data: dict[str, Any]) -> str:
 """
     return render_page(
         f"{person['name']} | Instructional Technology Scholar",
-        f"Academic portfolio for {person['name']}, generated from the current CV.",
+        f"Academic portfolio for {person['name']}: research, publications, teaching, and instructional design.",
         "home",
         body,
         data,
@@ -3494,8 +3493,8 @@ def render_academic(data: dict[str, Any]) -> str:
   <section class="section">
     <div class="section-heading">
       <span class="eyebrow">Find Me Online</span>
-      <h2>Key profiles and source documents.</h2>
-      <p>Use these links for publications, lab affiliation, and the full downloadable CV.</p>
+      <h2>Key profiles and documents.</h2>
+      <p>Publication records, lab affiliation, and the full CV.</p>
     </div>
     <div class="profile-links-grid">
       {profile_links}
@@ -3533,7 +3532,7 @@ def render_academic(data: dict[str, Any]) -> str:
     <div class="section-heading">
       <span class="eyebrow">Publications and Presentations</span>
       <h2>Publications and presentations.</h2>
-      <p>Journal articles, book chapters, proceedings, and conference presentations are rebuilt each time the source CV is updated.</p>
+      <p>Peer-reviewed journal articles, manuscripts under review, book chapters, refereed proceedings, and conference presentations.</p>
     </div>
     <div class="publication-sections">
       {render_publication_sections(data["publication_sections"])}
@@ -3835,7 +3834,7 @@ def render_about(data: dict[str, Any]) -> str:
       <div class="section-heading">
         <span class="eyebrow">Education and Training</span>
         <h2>Graduate preparation and scholarly formation.</h2>
-        <p>The educational timeline below draws directly from the CV and keeps degree history in sync with the broader academic profile.</p>
+        <p>Doctoral, graduate, and undergraduate training in instructional technology, educational technology, and mathematics education.</p>
       </div>
       <div class="timeline-grid">
         {education_html}
@@ -3847,7 +3846,7 @@ def render_about(data: dict[str, Any]) -> str:
     <div class="section-heading">
       <span class="eyebrow">Skills and Tools</span>
       <h2>Research, design, and instructional technology capabilities.</h2>
-      <p>These groupings are built from the technical and professional skills section of the source CV, then organized into cleaner clusters for easier scanning.</p>
+      <p>Research methods, learning analytics, immersive and AI systems, and instructional design tools.</p>
     </div>
     <div class="skill-cluster-grid">
       {skill_groups}
@@ -4014,7 +4013,7 @@ def render_teaching(data: dict[str, Any]) -> str:
         <div class="section-heading">
           <span class="eyebrow">Teaching Experience</span>
           <h2>Roles that shaped my instructional perspective.</h2>
-          <p>These entries come directly from the CV and show how teaching practice developed across different responsibilities and contexts.</p>
+          <p>How teaching practice developed across courses, contexts, and responsibilities.</p>
         </div>
         <div class="timeline-grid">
           {teaching_experience}
@@ -4412,7 +4411,7 @@ def render_portfolio(data: dict[str, Any]) -> str:
       <div class="section-heading">
         <span class="eyebrow">Additional Resources</span>
         <h2>More of my work.</h2>
-        <p>These links connect to the broader teaching, design, and doctoral portfolio ecosystem around this site.</p>
+        <p>Teaching, design, and doctoral portfolios that extend the work shown here.</p>
       </div>
       <div class="resource-link-grid">
         {more_links}
@@ -4541,7 +4540,7 @@ def render_contact(data: dict[str, Any]) -> str:
     <div class="section-heading">
       <span class="eyebrow">Online Profiles</span>
       <h2>Scholarly and professional web presence.</h2>
-      <p>These links connect the CV-backed website to publication records, lab affiliation, teaching materials, and design portfolios.</p>
+      <p>Publication records, lab affiliation, teaching materials, and design portfolios.</p>
     </div>
     <div class="profile-links-grid">
       {contact_profiles}
