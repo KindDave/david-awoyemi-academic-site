@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 dist/
 My existing website design files/
+scripts/sync_cv.config.json

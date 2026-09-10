@@ -28,6 +28,21 @@ Then open `index.html` locally to review the regenerated site.
 4. GitHub Actions will run `.github/workflows/deploy.yml`.
 5. GitHub Pages will publish the contents of `dist/`.
 
+## Publishing an updated CV (one click)
+
+Double-click `Publish CV to website.bat` in the project folder. It finds the
+newest `David_CV.docx` under your job-materials folder, shows which sections
+and homepage metrics would change, asks for confirmation, then copies the CV
+into the repository, rebuilds the pages, commits, and pushes. GitHub Actions
+deploys the site about a minute later.
+
+- To publish a specific file instead, drop the `.docx` onto the `.bat` file.
+- The job-materials folder is set in `scripts/sync_cv.config.json` (kept out
+  of git). Set `"strip_phone": true` there to remove the phone number from the
+  published copy only.
+- From a terminal: `python scripts/sync_cv.py --dry-run` previews without
+  changing anything; `--yes` skips the prompt; `--no-push` commits locally.
+
 ## Suggested update loop
 
 1. Edit `David_CV.docx`.
