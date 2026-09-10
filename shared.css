@@ -2014,6 +2014,18 @@ img { max-width: 100%; display: block; }
   gap: 1rem;
 }
 
+.teaching-guest {
+  margin-top: 2.25rem;
+}
+
+.teaching-guest-title {
+  margin: 0 0 1rem;
+  font-family: var(--font-heading, inherit);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-strong, var(--text));
+}
+
 .mini-block {
   padding: 1.2rem;
   border: 1px solid var(--border);

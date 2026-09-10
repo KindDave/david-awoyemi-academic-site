@@ -1,37 +1,41 @@
 {
-  "generated_on": "2026-08-10",
-  "source_file": "CV_David.docx",
+  "generated_on": "2026-09-10",
+  "source_file": "David_CV.docx",
   "person": {
     "name": "Idowu David Awoyemi",
     "display_name": "David Awoyemi",
     "initials": "ID",
-    "affiliation": "Department of Educational Leadership, Policy, and Technology Studies,",
+    "affiliation": "Department of Educational Leadership, Policy, and Technology Studies",
     "location": "Tuscaloosa, Alabama",
     "email": "idawoyemi@crimson.ua.edu",
     "expected_phd": "Spring 2027",
     "role": "Instructional Technology Researcher | AI and XR in Education | Learning Designer"
   },
-  "profile_summary": "Doctoral candidate in Instructional Technology with a distinguished record of integrating teaching excellence, impactful research, and transformative service to advance educational innovation and equity. Recognized as the Most Outstanding Graduate Student in Research (2025) and recipient of the Alabama Power Innovation and Technology Award (2025), with expertise in immersive learning technologies, AI-enhanced education, and broadening participation in STEM fields.",
+  "profile_summary": "Doctoral candidate in Instructional Technology. My research designs and studies immersive virtual reality and embodied AI systems for high-stakes learning, and uses multimodal learning analytics to examine how learners build perceptual, cognitive, and behavioral expertise. This work spans construction safety training, K-12 STEM, and pre-service teacher preparation.",
   "education": [
     {
-      "degree": "Ph.D. Instructional Technology",
-      "institution": "University of Alabama, Tuscaloosa, AL",
-      "date": "Spring 2027"
+      "degree": "Ph.D., Instructional Technology",
+      "institution": "The University of Alabama, Tuscaloosa, AL",
+      "date": "Expected Spring 2027",
+      "note": "Dissertation: Development of Evidence-Based Immersive Virtual Reality-Supported Construction Safety Engineering Training"
     },
     {
       "degree": "Graduate Certificate in College Teaching",
-      "institution": "University of Alabama, Tuscaloosa, AL (12-credit, four-course sequence)",
-      "date": "2025"
+      "institution": "The University of Alabama, Tuscaloosa, AL (12-credit, four-course sequence)",
+      "date": "2025",
+      "note": ""
     },
     {
-      "degree": "M. Tech Educational Technology",
+      "degree": "M.Tech., Educational Technology",
       "institution": "Federal University of Technology, Minna, Nigeria",
-      "date": "2019"
+      "date": "2019",
+      "note": ""
     },
     {
-      "degree": "B. Tech Mathematics Education",
+      "degree": "B.Tech., Mathematics Education",
       "institution": "Federal University of Technology, Minna, Nigeria",
-      "date": "2015"
+      "date": "2015",
+      "note": ""
     }
   ],
   "profile_links": [
@@ -52,7 +56,7 @@
     },
     {
       "label": "Full CV",
-      "url": "CV_David.docx",
+      "url": "David_CV.docx",
       "description": "Download the current Word CV that drives this site."
     }
   ],
@@ -84,11 +88,11 @@
   ],
   "metrics": [
     {
-      "value": 22,
+      "value": 15,
       "label": "Journal Articles"
     },
     {
-      "value": 26,
+      "value": 25,
       "label": "Conference Presentations"
     },
     {
@@ -96,385 +100,401 @@
       "label": "Years Experience"
     },
     {
-      "value": 17,
+      "value": 18,
       "label": "Awards and Scholarships"
     },
     {
-      "value": 4,
+      "value": 6,
       "label": "Awarded Projects"
     }
   ],
   "featured_roles": [
     {
-      "title": "Research Assistant",
-      "organization": "The University of Alabama, Tuscaloosa, AL, United States",
-      "date": "2023 - Present",
+      "title": "Graduate Research Assistant, Cyber Sentinel Co-Pilot (Reachy Mini Social Robot Learning Environment)",
+      "organization": "Adaptive Design of Immersive e-Learning (ADIE) Lab, The University of Alabama, Tuscaloosa, AL",
+      "date": "2026-2027",
       "details": [
-        "Developed an immersive virtual reality intervention for undergraduate engineering students, aiming to increase student engagement by 30% within one semester. Achieved a target of at least 80% of participating students reporting improved understanding of engineering concepts through surveys.",
-        "Conducted statistical analysis using advanced tools to derive meaningful insights from research data.",
-        "Orchestrated the systematic management of research data, ensuring accuracy and completeness.",
-        "Played a pivotal role in the development of manuscripts and research proposals.",
-        "Applied learner analytics techniques to assess and interpret data related to educational outcomes.",
-        "Demonstrated expertise in analyzing both qualitative and quantitative research data.",
-        "Co-designing, developing, and delivering professional development training for district teachers.",
-        "Co-designing, developing, and delivering computer-based physiological instruction to upper elementary students."
+        "Developed browser-based middleware for a social robot supporting voice, text, and visual interaction, delivering five guided cybersecurity lessons, and maintaining participant-specific conversation histories with participant and robot selection.",
+        "Engineered on-robot deployment with automated startup and fault recovery so the system runs in classrooms without technical support.",
+        "Designed a data collection architecture that preserves participant-level attribution across a five-robot fleet for a planned mixed-methods study."
       ],
-      "summary": "Developed an immersive virtual reality intervention for undergraduate engineering students, aiming to increase student engagement by 30% within one semester. Achieved a target of at least 80% of participating..."
+      "summary": "Developed browser-based middleware for a social robot supporting voice, text, and visual interaction, delivering five guided cybersecurity lessons, and maintaining participant-specific conversation histories with...",
+      "group": ""
+    },
+    {
+      "title": "Graduate Research Assistant",
+      "organization": "Adaptive Design of Immersive e-Learning (ADIE) Lab, The University of Alabama, Tuscaloosa, AL",
+      "date": "2023-present",
+      "details": [
+        "Designed, developed, and validated an immersive virtual reality hazard-recognition intervention for undergraduate civil engineering students and evaluated its effect on hazard-recognition performance.",
+        "Conducted microgenetic analysis of learning within an immersive virtual reality environment and applied sequential data analytics to uncover students' learning trajectories, yielding a behavioral scheme of 10 categories and 31 codes that is now the analytic backbone of an AI feedback agent.",
+        "Conducted quantitative and qualitative analysis, including Bayesian cognitive diagnostic modeling, sequential behavioral analysis, and eye-tracking and physiological data analysis.",
+        "Co-designed and delivered professional development for district teachers and physiological computing instruction for upper-elementary students under the NSF ITEST project.",
+        "Managed data collection, entry, and quality assurance across concurrent studies; contributed to manuscripts and grant proposals.",
+        "Mentored four early-career researchers through a methodological apprenticeship, bringing each into an active project as a co-author."
+      ],
+      "summary": "Designed, developed, and validated an immersive virtual reality hazard-recognition intervention for undergraduate civil engineering students and evaluated its effect on hazard-recognition performance. Conducted...",
+      "group": ""
     },
     {
       "title": "Research and Instructional Design Assistant",
-      "organization": "Federal University of Technology Minna, Nigeria",
-      "date": "01/2016 - 01/2022",
+      "organization": "Federal University of Technology, Minna, Nigeria",
+      "date": "2016-2022",
       "details": [
-        "Research on the awareness and utilization of Mathematics software applications for developing Mathematics tertiary Instruction."
+        "Conducted studies on lecturers' awareness and utilization of mathematics software applications and on virtual classroom use in tertiary instruction.",
+        "Taught research methods to undergraduate and graduate research students and prepared them for oral research defenses.",
+        "Developed instructional materials and digital learning content; analyzed quantitative and qualitative research data; contributed to manuscript and proposal preparation."
       ],
-      "summary": "Research on the awareness and utilization of Mathematics software applications for developing Mathematics tertiary Instruction."
+      "summary": "Conducted studies on lecturers' awareness and utilization of mathematics software applications and on virtual classroom use in tertiary instruction. Taught research methods to undergraduate and graduate research...",
+      "group": ""
     },
     {
-      "title": "Educator and Classroom Instructor",
-      "organization": "Model Secondary School, Federal University of Technology, Minna",
-      "date": "10/2016-12/2022",
+      "title": "Instructor and Course Co-Designer, AI Fluency for the Workforce (CIE 499)",
+      "organization": "Undergraduate, The University of Alabama",
+      "date": "May-July 2026",
       "details": [
-        "Tutored local high school students in Further Mathematics and Mathematics.",
-        "Implemented different learning strategies to enhance the academic performance of students.",
-        "Organized “Best Brains” tutorials for intelligent young high school students.",
-        "Developed and utilized technology-driven solutions for learning",
-        "Involved in role modeling and advising of students",
-        "Assisted students in meeting academic objectives.",
-        "Conducted technology projects and taught basic technology and creative ideas.",
-        "Increased the success rate of the students by 100%",
-        "Served as an internal and external examiner to local, national, and international examination bodies."
+        "Co-designed and taught an undergraduate course on applied AI, ethics, and workforce readiness for approximately 30 students.",
+        "Designed and evaluated scaffolded, project-based assessments, including an AI toolkit, portfolio artifacts, and a chatbot development project.",
+        "Aligned course outcomes with institutional AI initiatives and emerging industry needs; managed the Blackboard course environment and monitored student progress."
       ],
-      "summary": "Tutored local high school students in Further Mathematics and Mathematics. Implemented different learning strategies to enhance the academic performance of students. Organized “Best Brains” tutorials for intelligent..."
-    },
-    {
-      "title": "Mathematics Educator",
-      "organization": "",
-      "date": "1/2015 - 1/2016",
-      "details": [
-        "Abarikpo Community Secondary school, Ahoada, Rivers",
-        "Solved administrative problems for the school which resulted in over 100% improvement in the results of the students.",
-        "Engaged and sustained students in an effective learning process.",
-        "Organized quizzes and exams for the students.",
-        "Tutored local high school students in Further Mathematics and Mathematics."
-      ],
-      "summary": "Abarikpo Community Secondary school, Ahoada, Rivers Solved administrative problems for the school which resulted in over 100% improvement in the results of the students. Engaged and sustained students in an effective..."
+      "summary": "Co-designed and taught an undergraduate course on applied AI, ethics, and workforce readiness for approximately 30 students. Designed and evaluated scaffolded, project-based assessments, including an AI toolkit,...",
+      "group": "Courses Taught and Co-Designed"
     }
   ],
   "research_entries": [
     {
-      "title": "Research Assistant",
-      "organization": "The University of Alabama, Tuscaloosa, AL, United States",
-      "date": "2023 - Present",
+      "title": "Graduate Research Assistant, Cyber Sentinel Co-Pilot (Reachy Mini Social Robot Learning Environment)",
+      "organization": "Adaptive Design of Immersive e-Learning (ADIE) Lab, The University of Alabama, Tuscaloosa, AL",
+      "date": "2026-2027",
       "details": [
-        "Developed an immersive virtual reality intervention for undergraduate engineering students, aiming to increase student engagement by 30% within one semester. Achieved a target of at least 80% of participating students reporting improved understanding of engineering concepts through surveys.",
-        "Conducted statistical analysis using advanced tools to derive meaningful insights from research data.",
-        "Orchestrated the systematic management of research data, ensuring accuracy and completeness.",
-        "Played a pivotal role in the development of manuscripts and research proposals.",
-        "Applied learner analytics techniques to assess and interpret data related to educational outcomes.",
-        "Demonstrated expertise in analyzing both qualitative and quantitative research data.",
-        "Co-designing, developing, and delivering professional development training for district teachers.",
-        "Co-designing, developing, and delivering computer-based physiological instruction to upper elementary students."
+        "Developed browser-based middleware for a social robot supporting voice, text, and visual interaction, delivering five guided cybersecurity lessons, and maintaining participant-specific conversation histories with participant and robot selection.",
+        "Engineered on-robot deployment with automated startup and fault recovery so the system runs in classrooms without technical support.",
+        "Designed a data collection architecture that preserves participant-level attribution across a five-robot fleet for a planned mixed-methods study."
       ],
-      "summary": "Developed an immersive virtual reality intervention for undergraduate engineering students, aiming to increase student engagement by 30% within one semester. Achieved a target of at least 80% of participating..."
+      "summary": "Developed browser-based middleware for a social robot supporting voice, text, and visual interaction, delivering five guided cybersecurity lessons, and maintaining participant-specific conversation histories with...",
+      "group": ""
+    },
+    {
+      "title": "Graduate Research Assistant",
+      "organization": "Adaptive Design of Immersive e-Learning (ADIE) Lab, The University of Alabama, Tuscaloosa, AL",
+      "date": "2023-present",
+      "details": [
+        "Designed, developed, and validated an immersive virtual reality hazard-recognition intervention for undergraduate civil engineering students and evaluated its effect on hazard-recognition performance.",
+        "Conducted microgenetic analysis of learning within an immersive virtual reality environment and applied sequential data analytics to uncover students' learning trajectories, yielding a behavioral scheme of 10 categories and 31 codes that is now the analytic backbone of an AI feedback agent.",
+        "Conducted quantitative and qualitative analysis, including Bayesian cognitive diagnostic modeling, sequential behavioral analysis, and eye-tracking and physiological data analysis.",
+        "Co-designed and delivered professional development for district teachers and physiological computing instruction for upper-elementary students under the NSF ITEST project.",
+        "Managed data collection, entry, and quality assurance across concurrent studies; contributed to manuscripts and grant proposals.",
+        "Mentored four early-career researchers through a methodological apprenticeship, bringing each into an active project as a co-author."
+      ],
+      "summary": "Designed, developed, and validated an immersive virtual reality hazard-recognition intervention for undergraduate civil engineering students and evaluated its effect on hazard-recognition performance. Conducted...",
+      "group": ""
     },
     {
       "title": "Research and Instructional Design Assistant",
-      "organization": "Federal University of Technology Minna, Nigeria",
-      "date": "01/2016 - 01/2022",
+      "organization": "Federal University of Technology, Minna, Nigeria",
+      "date": "2016-2022",
       "details": [
-        "Research on the awareness and utilization of Mathematics software applications for developing Mathematics tertiary Instruction."
+        "Conducted studies on lecturers' awareness and utilization of mathematics software applications and on virtual classroom use in tertiary instruction.",
+        "Taught research methods to undergraduate and graduate research students and prepared them for oral research defenses.",
+        "Developed instructional materials and digital learning content; analyzed quantitative and qualitative research data; contributed to manuscript and proposal preparation."
       ],
-      "summary": "Research on the awareness and utilization of Mathematics software applications for developing Mathematics tertiary Instruction."
-    },
-    {
-      "title": "Research on the need to maximize virtual Classrooms for effective teaching.",
-      "organization": "",
-      "date": "Selected role",
-      "details": [
-        "Teaching research students and undergraduate students.",
-        "Assisted my supervisor in the preparation of instructional materials for teaching.",
-        "Prepared undergraduate students for oral research presentations.",
-        "Assisted in the marking of examination scripts and vetting of undergraduate research work.",
-        "Collaborating with a team to analyze, design, develop, implement, and evaluate learning solutions based on students' needs.",
-        "Facilitating learning strategies and training for the schools and teachers.",
-        "Collaborating with Subject Matter Experts to design training to educate instructors and thus improve their performance.",
-        "Developing learning content using different authoring tools and LMS.",
-        "Analysis of statistical research data using Statistical Tools.",
-        "Collection, entry, and interpretation of research data.",
-        "Manuscript and proposal writing.",
-        "Analyzing research data."
-      ],
-      "summary": "Teaching research students and undergraduate students. Assisted my supervisor in the preparation of instructional materials for teaching. Prepared undergraduate students for oral research presentations. Assisted in..."
+      "summary": "Conducted studies on lecturers' awareness and utilization of mathematics software applications and on virtual classroom use in tertiary instruction. Taught research methods to undergraduate and graduate research...",
+      "group": ""
     }
   ],
   "teaching_entries": [
     {
-      "title": "Instructor / Course Co-Designer The University of Alabama, Tuscaloosa, AL, United States",
+      "title": "Instructor and Course Co-Designer, AI Fluency for the Workforce (CIE 499)",
+      "organization": "Undergraduate, The University of Alabama",
+      "date": "May-July 2026",
+      "details": [
+        "Co-designed and taught an undergraduate course on applied AI, ethics, and workforce readiness for approximately 30 students.",
+        "Designed and evaluated scaffolded, project-based assessments, including an AI toolkit, portfolio artifacts, and a chatbot development project.",
+        "Aligned course outcomes with institutional AI initiatives and emerging industry needs; managed the Blackboard course environment and monitored student progress."
+      ],
+      "summary": "Co-designed and taught an undergraduate course on applied AI, ethics, and workforce readiness for approximately 30 students. Designed and evaluated scaffolded, project-based assessments, including an AI toolkit,...",
+      "group": "Courses Taught and Co-Designed"
+    },
+    {
+      "title": "Co-Designer and Instructor, Art-Integrated GenAI Literacy",
+      "organization": "Online (UA Blackboard), pre-service music and theater teachers",
+      "date": "April-June 2025",
+      "details": [
+        "Co-designed and delivered a fully online course of two modules and eight hands-on lessons building computational thinking, prompt engineering, problem solving with AI, creativity across traditional and digital art forms, AI feedback evaluation, and AI ethics.",
+        "Every participant who completed a module produced a shareable digital artifact and a written rationale."
+      ],
+      "summary": "Co-designed and delivered a fully online course of two modules and eight hands-on lessons building computational thinking, prompt engineering, problem solving with AI, creativity across traditional and digital art...",
+      "group": "Courses Taught and Co-Designed"
+    },
+    {
+      "title": "Graduate Teaching Assistant, Electronic Instructional Design (AIL 602)",
+      "organization": "Graduate, The University of Alabama. Mentored graduate teaching; Dr. Feiya Luo, instructor of record",
+      "date": "Jan-May 2025",
+      "details": [
+        "Supported a fully online graduate design studio, observing and assisting with course components and co-evaluating five assignment sets, including both instructional-design case analyses.",
+        "Reviewed course activities and rubrics for accuracy, applied outcome-aligned rubrics to student submissions, and wrote individual criterion-based feedback for every team.",
+        "Evaluated through the University of Alabama Mentor/Preceptor Evaluation Report; the instructor of record recommended a final grade of A and rated professional and ethical interaction with students and colleagues, initiative and response to feedback, and critical thinking at the highest level."
+      ],
+      "summary": "Supported a fully online graduate design studio, observing and assisting with course components and co-evaluating five assignment sets, including both instructional-design case analyses. Reviewed course activities...",
+      "group": "Courses Taught and Co-Designed"
+    },
+    {
+      "title": "Guest Lecture, Introduction to Immersive Virtual Reality in Facilitating Multimedia Learning, AIL 605, The University of Alabama",
       "organization": "",
-      "date": "05/2026 – 07/2026",
-      "details": [
-        "Co-designed and developed AI Fluency for the Workforce (CIE 499), an undergraduate course integrating applied AI, ethics, and workforce readiness competencies.",
-        "Delivered instruction and facilitated active learning for ~30 students, supporting mastery of AI concepts and real-world applications.",
-        "Designed and evaluated scaffolded assignments (e.g., AI toolkit, portfolio artifacts, chatbot development), providing timely and constructive feedback to enhance student performance.",
-        "Implemented project-based and experiential learning strategies to strengthen critical thinking, responsible AI use, and professional skills.",
-        "Collaborated with faculty on curriculum development, aligning course content with emerging industry needs and institutional AI initiatives.",
-        "Managed the Blackboard learning environment, monitored student progress, and communicated course updates to enrich the learning experience.",
-        "Teaching Assistant",
-        "The University of Alabama, Tuscaloosa, AL, United States",
-        "Led discussion sections and facilitated active learning in instructional design courses, supporting over 15 students in mastering core concepts and applying theory to practice.",
-        "Designed and evaluated assessments, delivering timely and constructive feedback that enhanced student performance and engagement.",
-        "Held regular office hours and provided individualized academic support, contributing to positive student evaluations and improved learning outcomes.",
-        "Collaborated with faculty on curriculum development, incorporating inclusive teaching practices and innovative instructional materials.",
-        "Managed the Blackboard learning platform, monitored student progress, and communicated key updates to enrich the learning experience."
-      ],
-      "summary": "Co-designed and developed AI Fluency for the Workforce (CIE 499), an undergraduate course integrating applied AI, ethics, and workforce readiness competencies. Delivered instruction and facilitated active learning..."
+      "date": "Mar. 2025",
+      "details": [],
+      "summary": "",
+      "group": "Guest Lectures and Workshops"
     },
     {
-      "title": "Guest Lecture and Workshop Facilitator",
-      "organization": "Guest Lecture, University of Alabama",
-      "date": "3/25/2025",
-      "details": [
-        "Introduction to Immersive Virtual Reality (IVR) in Facilitating Multimedia Learning. Invited to present an overview of IVR applications in educational contexts, emphasizing cognitive and experiential learning principles. Behavioral and Microgenetic Analysis. Designed and led an interactive workshop exploring methods for analyzing learning processes over time, with a focus on applied research."
-      ],
-      "summary": "Introduction to Immersive Virtual Reality (IVR) in Facilitating Multimedia Learning. Invited to present an overview of IVR applications in educational contexts, emphasizing cognitive and experiential learning..."
+      "title": "Workshop, Behavioral and Microgenetic Analysis (designed and led for faculty and graduate researchers), The University of Alabama",
+      "organization": "",
+      "date": "Mar. 2025",
+      "details": [],
+      "summary": "",
+      "group": "Guest Lectures and Workshops"
     },
     {
-      "title": "Guest Lecture and Interview",
-      "organization": "Pepperdine University",
-      "date": "11/10/2024",
-      "details": [
-        "Invited to discuss Instructional design strategies. Interview recorded and embedded in the course curriculum as instructional media."
-      ],
-      "summary": "Invited to discuss Instructional design strategies. Interview recorded and embedded in the course curriculum as instructional media."
+      "title": "Workshop Facilitator, Balancing Teaching Responsibilities with Academic and Research Commitments, Graduate Teaching Assistant breakout series, The University of Alabama",
+      "organization": "",
+      "date": "Aug. 2025",
+      "details": [],
+      "summary": "",
+      "group": "Guest Lectures and Workshops"
     },
     {
-      "title": "Workshop Facilitator",
-      "organization": "University of Alabama",
-      "date": "3/25/2025",
-      "details": [
-        "Led a breakout session of Graduate Teaching Assistant (GTA) on “Balancing Teaching Responsibilities with Academic and Research Commitments.”",
-        "8/13/ 2025",
-        "Guest Lecture, University of Alabama Introduction to Immersive Virtual Reality (IVR) in Facilitating Multimedia Learning. Invited to present an overview of IVR applications in educational contexts, emphasizing cognitive and experiential learning principles. Behavioral and Microgenetic Analysis. Designed and led an interactive workshop exploring methods for analyzing learning processes over time, with a focus on applied research techniques."
-      ],
-      "summary": "Led a breakout session of Graduate Teaching Assistant (GTA) on “Balancing Teaching Responsibilities with Academic and Research Commitments.” 8/13/ 2025 Guest Lecture, University of Alabama Introduction to Immersive..."
+      "title": "Guest Lecture and Recorded Interview, Instructional Design Strategies, Pepperdine University (recorded and embedded as a permanent course asset)",
+      "organization": "",
+      "date": "Nov. 2024",
+      "details": [],
+      "summary": "",
+      "group": "Guest Lectures and Workshops"
     },
     {
-      "title": "Educator and Classroom Instructor",
-      "organization": "Model Secondary School, Federal University of Technology, Minna",
-      "date": "10/2016-12/2022",
+      "title": "Mathematics Educator and Classroom Instructor",
+      "organization": "Model Secondary School, Federal University of Technology, Minna, Nigeria",
+      "date": "2016-2022",
       "details": [
-        "Tutored local high school students in Further Mathematics and Mathematics.",
-        "Implemented different learning strategies to enhance the academic performance of students.",
-        "Organized “Best Brains” tutorials for intelligent young high school students.",
-        "Developed and utilized technology-driven solutions for learning",
-        "Involved in role modeling and advising of students",
-        "Assisted students in meeting academic objectives.",
-        "Conducted technology projects and taught basic technology and creative ideas.",
-        "Increased the success rate of the students by 100%",
-        "Served as an internal and external examiner to local, national, and international examination bodies."
+        "Taught mathematics and further mathematics; redesigned instruction around student reasoning, and a tutored senior-secondary cohort reached a 90% pass rate.",
+        "Developed technology-supported instructional materials and led enrichment tutorials for high-achieving students.",
+        "Served as an internal and external examiner for local, national, and international examination bodies."
       ],
-      "summary": "Tutored local high school students in Further Mathematics and Mathematics. Implemented different learning strategies to enhance the academic performance of students. Organized “Best Brains” tutorials for intelligent..."
+      "summary": "Taught mathematics and further mathematics; redesigned instruction around student reasoning, and a tutored senior-secondary cohort reached a 90% pass rate. Developed technology-supported instructional materials and...",
+      "group": "Prior Teaching"
     },
     {
       "title": "Mathematics Educator",
-      "organization": "",
-      "date": "1/2015 - 1/2016",
+      "organization": "Abarikpo Community Secondary School, Ahoada, Rivers State, Nigeria",
+      "date": "2015-2016",
       "details": [
-        "Abarikpo Community Secondary school, Ahoada, Rivers",
-        "Solved administrative problems for the school which resulted in over 100% improvement in the results of the students.",
-        "Engaged and sustained students in an effective learning process.",
-        "Organized quizzes and exams for the students.",
-        "Tutored local high school students in Further Mathematics and Mathematics."
+        "Taught secondary mathematics, designed quizzes and examinations, and provided targeted tutoring in mathematics and further mathematics."
       ],
-      "summary": "Abarikpo Community Secondary school, Ahoada, Rivers Solved administrative problems for the school which resulted in over 100% improvement in the results of the students. Engaged and sustained students in an effective..."
+      "summary": "Taught secondary mathematics, designed quizzes and examinations, and provided targeted tutoring in mathematics and further mathematics.",
+      "group": "Prior Teaching"
     }
   ],
   "design_entries": [
     {
-      "title": "Instructional Design",
-      "organization": "The Office of Teaching Innovation and Digital Education, AL, United States",
-      "date": "8/2023-12/2023",
+      "title": "Instructional Designer",
+      "organization": "Office of Teaching Innovation and Digital Education, The University of Alabama",
+      "date": "Aug.-Dec. 2023",
       "details": [
-        "Proficiently utilized cutting-edge e-learning design tools to create engaging and interactive content. This involved hands-on experience with industry-standard tools such as Articulate Storyline 360, ensuring a seamless learning experience for users.",
-        "Effectively collaborated with Subject Matter Experts (SMEs) to extract relevant content and translate complex information into accessible and learner-friendly formats.",
-        "Developed a keen understanding of the importance of quality assurance matters in instructional design.",
-        "Demonstrated proficiency in navigating and utilizing Learning Management Systems, with a focus on creating a user-friendly interface and optimizing the learning experience for end-users.",
-        "Successfully integrated third-party tools to enhance the functionality and interactivity of e-learning content.",
-        "During my onboarding, I engaged in a well-designed course focused on optimizing new employee orientation.",
-        "Developed expertise in creating courses using Blackboard Learn, contributing to a seamless learning environment for students and educators."
+        "Developed interactive e-learning modules in Articulate Storyline 360 and built courses in Blackboard Learn.",
+        "Collaborated with subject-matter experts to translate technical content into learner-facing instruction, and applied quality-assurance review to completed modules."
       ],
-      "summary": "Proficiently utilized cutting-edge e-learning design tools to create engaging and interactive content. This involved hands-on experience with industry-standard tools such as Articulate Storyline 360, ensuring a..."
+      "summary": "Developed interactive e-learning modules in Articulate Storyline 360 and built courses in Blackboard Learn. Collaborated with subject-matter experts to translate technical content into learner-facing instruction, and...",
+      "group": ""
     },
     {
       "title": "Instructional Design and Camp Staff Team Member",
-      "organization": "Code-N-Sensor Summer Camp, University of Alabama, Tuscaloosa",
-      "date": "1/2016 - 1/2025",
+      "organization": "Code-N-Sensor Summer Camp, The University of Alabama",
+      "date": "Summer 2025",
       "details": [
-        "Collaborated with faculty and staff to organize, design, and implement a week-long STEM camp for upper-grade elementary students.",
-        "Developed instructional materials and interactive lesson plans integrating coding, data science, and physiological computing concepts.",
-        "Designed and facilitated hands-on physiological activities (e.g., heart rate monitoring, data collection, and physical computing exercises) to promote experiential learning.",
-        "Assisted in coordinating daily instructional sessions, demonstrations, and research showcases, ensuring smooth program delivery.",
-        "Supported student engagement and learning outcomes through mentorship, guidance, and classroom facilitation."
+        "Co-designed and implemented a week-long STEM camp for upper-elementary students, including a 16-activity coding, data science, and physiological computing curriculum.",
+        "Designed and facilitated hands-on physiological computing activities (heart-rate monitoring, data collection, physical computing) and supported daily instructional sessions and research showcases."
       ],
-      "summary": "Collaborated with faculty and staff to organize, design, and implement a week-long STEM camp for upper-grade elementary students. Developed instructional materials and interactive lesson plans integrating coding,..."
+      "summary": "Co-designed and implemented a week-long STEM camp for upper-elementary students, including a 16-activity coding, data science, and physiological computing curriculum. Designed and facilitated hands-on physiological...",
+      "group": ""
     }
   ],
   "selected_publications": [
     {
-      "title": "Measuring How Students Rely on Generative AI in Academic Writing: Development and Multi-Source Validation of the Generative AI Reliance Types Scale (GenAI-RTS)",
-      "context": "AI and Ethics",
-      "status": "Under Review",
-      "year": "Recent",
-      "raw": "Hossain, S., Nawmi, T. A., Ahmadi, S., Beck, B., Awoyemi, I. D., & Li, L. (Under review). Measuring How Students Rely on Generative AI in Academic Writing: Development and Multi-Source Validation of the Generative AI Reliance Types Scale (GenAI-RTS). AI and Ethics."
-    },
-    {
-      "title": "A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)",
-      "context": "Journal Article",
-      "status": "Under Review",
-      "year": "Recent",
-      "raw": "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)"
-    },
-    {
-      "title": "From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training",
-      "context": "Interactive Learning Environments, 1–20",
+      "title": "Promoting elementary students' computer science conceptual knowledge and coding performance: A mixed methods case study",
+      "context": "Journal of Research on Technology in Education",
       "status": "Published",
       "year": "2026",
-      "raw": "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (2026). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training. Interactive Learning Environments, 1–20. https://doi.org/10.1080/10494820.2026.2709674"
+      "raw": "Luo, F., Amayou, J., Nasrin, F., Abedini, P., Mousavi, V., Awoyemi, I. D., Hutchison, A., Cao, C., & Crawford, C. (2026). Promoting elementary students' computer science conceptual knowledge and coding performance: A mixed methods case study. Journal of Research on Technology in Education. Advance online publication."
     },
     {
-      "title": "Embodied Arts-Integrated AI Literacy: A Nested Mixed-Methods Study with K-12 Educators (Manuscript Number: TECH-D-26-00361)",
-      "context": "Journal Article",
-      "status": "Under Review",
-      "year": "Recent",
-      "raw": "Abu, S., Moon, J., Awoyemi, I. D., Moon, J., & Ghooreian, A. (Under review). Embodied Arts-Integrated AI Literacy: A Nested Mixed-Methods Study with K-12 Educators (Manuscript Number: TECH-D-26-00361)"
+      "title": "From experience to action: Sequential dynamics of experiential learning in immersive virtual reality-supported safety training",
+      "context": "Interactive Learning Environments, 1-20",
+      "status": "Published",
+      "year": "2026",
+      "raw": "Awoyemi, I. D., Moon, J., Abu, S., & Song, S. (2026). From experience to action: Sequential dynamics of experiential learning in immersive virtual reality-supported safety training. Interactive Learning Environments, 1-20. https://doi.org/10.1080/10494820.2026.2709674"
+    },
+    {
+      "title": "Human-centered generative AI in education: Ethical challenges and equity-driven solutions",
+      "context": "Ethics & Behavior, 1-27",
+      "status": "Published",
+      "year": "2026",
+      "raw": "Abu, S., Uddin, M. M., Moon, J., Awoyemi, I. D., Baah-Mintah, R., & Ghooreian, A. (2026). Human-centered generative AI in education: Ethical challenges and equity-driven solutions. Ethics & Behavior, 1-27. https://doi.org/10.1080/10508422.2026.2685014"
+    },
+    {
+      "title": "Decoding immersive learning states: A reproducible microgenetic pipeline for behavioral data in virtual reality safety training",
+      "context": "Behaviormetrika, 53, 739-768",
+      "status": "Published",
+      "year": "2026",
+      "raw": "Moon, J., Awoyemi, I., Abu, S., Marchiori, R., & Song, S. (2026). Decoding immersive learning states: A reproducible microgenetic pipeline for behavioral data in virtual reality safety training. Behaviormetrika, 53, 739-768. https://doi.org/10.1007/s41237-025-00286-1"
     }
   ],
   "publication_sections": [
     {
       "title": "Peer-Reviewed Journal Articles",
       "items": [
-        "Hossain, S., Nawmi, T. A., Ahmadi, S., Beck, B., Awoyemi, I. D., & Li, L. (Under review). Measuring How Students Rely on Generative AI in Academic Writing: Development and Multi-Source Validation of the Generative AI Reliance Types Scale (GenAI-RTS). AI and Ethics.",
-        "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (Under review). A Systematic Review of Empirical Research on AI in K-12 STEM Education (2020-2025) through a Sociotechnical Lens (Manuscript Number: ETRD-D-26-01416)",
-        "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (2026). From experience to action: sequential dynamics of experiential learning in immersive virtual reality-supported safety training. Interactive Learning Environments, 1–20. https://doi.org/10.1080/10494820.2026.2709674",
-        "Abu, S., Moon, J., Awoyemi, I. D., Moon, J., & Ghooreian, A. (Under review). Embodied Arts-Integrated AI Literacy: A Nested Mixed-Methods Study with K-12 Educators (Manuscript Number: TECH-D-26-00361)",
-        "Hossain, S., Ahmadi S., Li L., Awoyemi ID, Huang W., Zhou C., Li J., Haniya S., Khanam S., Subaha, T. M. (Under review). Rethinking Generative AI Literacy: An Integrative, Developmental, and Dialectical Framework for K-12 Teacher Education. AI and Ethics.",
-        "Abu, S., Uddin, M. M., Moon, J., Awoyemi, I. D., Baah-Mintah, R., & Ghooreian, A. (2026). Human-centered generative AI in education: ethical challenges and equity-driven solutions. Ethics & Behavior, 1–27. https://doi.org/10.1080/10508422.2026.2685014",
-        "McNeill, L., Uddin, M. M., Abu, S., Pei, M., Awoyemi, I. D., & Regalado, L. (2025). Identifying the AI Literacy Gap: A Mixed-Methods Analysis of Industry Needs and Graduate Preparedness. Frontiers in Education. [Accepted]",
-        "Luo, F., Amayou, J., Nasrin, F., Abedini, P., Mousavi, V., Awoyemi, I. D., ... & Crawford, C. (2026). Promoting elementary students’ computer science conceptual knowledge and coding performance: a mixed methods case study. Journal of Research on Technology in Education, 1-21. https://doi.org/10.1080/15391523.2026.2661645",
-        "Moon, J., Awoyemi, I. D., Abu, S., Kim, E., & Marchiori, R. (Submitted). A Bayesian Meta-Analysis of Virtual Reality-based Safety Training in the Construction Sector (Manuscript Number: SAFETY-D-26-01418)",
-        "Awoyemi, I. D., Moon, J., Abu, S., & Siyuan, S. (Under review). Design and development research of immersive virtual reality-supported safety training for construction engineering education. Educational Technology Research and Development (Manuscript Number: ETRD-D-26-00469)",
-        "Awoyemi, I. D., Abu S., Yuvaraja H. K., Patiballa S. K., & Moon, J. (Under review). Exploring fidelity dimensions in extended reality technologies for mechanical engineering education: A Systematic Review. TechTrends (Manuscript Number: TECH-D-25-00383)",
-        "Moon J., Awoyemi I. D., & Abu S. (2026). Decoding learning states in vr safety training: a bayesian cognitive diagnostic approach to microgenetic behavioral analytics. Behaviourmetrika. 1-30. https://doi.org/10.1007/s41237-025-00286-1",
-        "Awoyemi, I. D., Feliza Marie S. M., & Moon, J. (2024). A narrative review on immersive virtual reality in enhancing high school students’ Mathematics competence: From TPACK perspective. Journal of Korean Society of Mathematical Education Series A. 63(2), 295-318. https://doi.org/10.7468/mathedu.2024.63.2.295",
-        "Hong, S., Moon, J., Eom, T., Awoyemi, I. D., & Hwang, J. (2025). Generative AI-Enhanced Virtual Reality Simulation for Pre-Service Teacher Education: A Mixed-Methods Analysis of Usability and Instructional Utility for Course Integration. Education Sciences, 15(8), 997. https://doi.org/10.3390/educsci15080997",
-        "Marchiori, R., Song, S., Moon, J., Awoyemi, D., Ghooreian, A., & Ramenzapour, E. (2025). A Systematic Review of Technology‐Enhanced Learning Approaches to Foster Construction Engineering and Management Competencies. Computer Applications in Engineering Education, 33(5), e70074. https://doi.org/10.1002/cae.70074",
-        "Luo, F., Nasrin, F., & Awoyemi, I. D. (2025). Broadening Participation in Computing Through Cultivating Teacher Professional Growth: Stories from Teachers of Color. Education Sciences, 15(7), 848. https://doi.org/10.3390/educsci15070848",
-        "Apata, O. E., Ajose, S. T., Apata, B. O., Olaitan, G. I., Oyewole, P. O., Awoyemi, I. D., .... & Feyijimi, T. (2025). Artificial intelligence in higher education: a systematic review of contributions to SDG 4 (quality education) and SDG 10 (reduced inequality). International Journal of Educational Management, 1-18. https://doi.org/10.1108/IJEM-12-2024-0856",
-        "Samaila, D., Awoyemi, I. D., Gwandu, Z. L., Isah, S., & Murtala, A. (2024). Effect of parental socio-economic background on secondary school students career choice in kebbi state, nigeria. International Journal of Research and Innovation in Social Science, 8(3), 370-385.",
-        "Falode, O.C.; Ilufoye, T. O.; Awoyemi, I. D. & Usman, Z.N. (2018). lecturers’ awareness and readiness towards the adoption of open educational resources for teaching in tertiary institutions in Niger State, Nigeria. International Journal of Education and Educational Research, 1(2), 01-15",
-        "Falode, O.C.; Awoyemi, I. D.; Ilufoye, T. O. & Usman, Z.N. (2018). Mathematics lecturers’ awareness and utilization of mathematics software applications for developing Mathematics instruction in tertiary institutions in Niger State, Nigeria. Al-Himah Journal of Education, 2(2), 125-140",
-        "Falode, O.C.; Gambari, A.I.; Shittu, T.; Gimba, R.W.; Falode, M.E. & Awoyemi, I.D. (2015). Effectiveness of virtual classroom in teaching and learning of senior secondary school mathematics concepts in minna. Indo-African Journal of Educational Research,3(4), 01-04",
-        "Falode, O.C.; Usman, Z.N.; Ilufoye, T. O. & Awoyemi, I. D. (2019). Education lecturers’ perception towards massive open online courses. American Journal of Social Research, 1:10"
+        "Luo, F., Amayou, J., Nasrin, F., Abedini, P., Mousavi, V., Awoyemi, I. D., Hutchison, A., Cao, C., & Crawford, C. (2026). Promoting elementary students' computer science conceptual knowledge and coding performance: A mixed methods case study. Journal of Research on Technology in Education. Advance online publication.",
+        "Awoyemi, I. D., Moon, J., Abu, S., & Song, S. (2026). From experience to action: Sequential dynamics of experiential learning in immersive virtual reality-supported safety training. Interactive Learning Environments, 1-20. https://doi.org/10.1080/10494820.2026.2709674",
+        "Abu, S., Uddin, M. M., Moon, J., Awoyemi, I. D., Baah-Mintah, R., & Ghooreian, A. (2026). Human-centered generative AI in education: Ethical challenges and equity-driven solutions. Ethics & Behavior, 1-27. https://doi.org/10.1080/10508422.2026.2685014",
+        "Moon, J., Awoyemi, I., Abu, S., Marchiori, R., & Song, S. (2026). Decoding immersive learning states: A reproducible microgenetic pipeline for behavioral data in virtual reality safety training. Behaviormetrika, 53, 739-768. https://doi.org/10.1007/s41237-025-00286-1",
+        "McNeill, L., Uddin, M. M., Abu, S., Pei, M., Awoyemi, I. D., & Regalado, L. (2025). Identifying the AI literacy gap: A mixed-methods analysis of industry needs and graduate preparedness. Frontiers in Education. (Accepted)",
+        "Hong, S., Moon, J., Eom, T., Awoyemi, I. D., & Hwang, J. (2025). Generative AI-enhanced virtual reality simulation for pre-service teacher education: A mixed-methods analysis of usability and instructional utility for course integration. Education Sciences, 15(8), 997. https://doi.org/10.3390/educsci15080997",
+        "Marchiori, R., Song, S., Moon, J., Awoyemi, I. D., Ghooreian, A., & Ramenzapour, E. (2025). A systematic review of technology-enhanced learning approaches to foster construction engineering and management competencies. Computer Applications in Engineering Education, 33(5), e70074. https://doi.org/10.1002/cae.70074",
+        "Luo, F., Nasrin, F., & Awoyemi, I. D. (2025). Broadening participation in computing through cultivating teacher professional growth: Stories from teachers of color. Education Sciences, 15(7), 848. https://doi.org/10.3390/educsci15070848",
+        "Apata, O. E., Ajose, S. T., Apata, B. O., Olaitan, G. I., Oyewole, P. O., Awoyemi, I. D., ... Feyijimi, T. (2025). Artificial intelligence in higher education: A systematic review of contributions to SDG 4 (quality education) and SDG 10 (reduced inequality). International Journal of Educational Management, 1-18. https://doi.org/10.1108/IJEM-12-2024-0856",
+        "Awoyemi, I. D., Feliza Marie, S. M., & Moon, J. (2024). A narrative review on immersive virtual reality in enhancing high school students' mathematics competence: From a TPACK perspective. Journal of the Korean Society of Mathematical Education Series A, 63(2), 295-318. https://doi.org/10.7468/mathedu.2024.63.2.295",
+        "Samaila, D., Awoyemi, I. D., Gwandu, Z. L., Isah, S., & Murtala, A. (2024). Effect of parental socio-economic background on secondary school students' career choice in Kebbi State, Nigeria. International Journal of Research and Innovation in Social Science, 8(3), 370-385.",
+        "Falode, O. C., Usman, Z. N., Ilufoye, T. O., & Awoyemi, I. D. (2019). Education lecturers' perception towards massive open online courses. American Journal of Social Research, 1, 10.",
+        "Falode, O. C., Ilufoye, T. O., Awoyemi, I. D., & Usman, Z. N. (2018). Lecturers' awareness and readiness towards the adoption of open educational resources for teaching in tertiary institutions in Niger State, Nigeria. International Journal of Education and Educational Research, 1(2), 1-15.",
+        "Falode, O. C., Awoyemi, I. D., Ilufoye, T. O., & Usman, Z. N. (2018). Mathematics lecturers' awareness and utilization of mathematics software applications for developing mathematics instruction in tertiary institutions in Niger State, Nigeria. Al-Hikmah Journal of Education, 2(2), 125-140.",
+        "Falode, O. C., Gambari, A. I., Shittu, T., Gimba, R. W., Falode, M. E., & Awoyemi, I. D. (2015). Effectiveness of virtual classroom in teaching and learning of senior secondary school mathematics concepts in Minna. Indo-African Journal of Educational Research, 3(4), 1-4."
+      ]
+    },
+    {
+      "title": "Manuscripts Under Review and In Revision",
+      "items": [
+        "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (under review). A systematic review of empirical research on AI in K-12 STEM education (2020-2025) through a sociotechnical lens. Educational Technology Research and Development.",
+        "Awoyemi, I. D., Moon, J., Abu, S., & Song, S. (under review). Design and development research of immersive virtual reality-supported safety training for construction engineering education. Educational Technology Research and Development.",
+        "Awoyemi, I. D., Abu, S., Yuvaraja, H. K., Patiballa, S. K., & Moon, J. (under review). Exploring fidelity dimensions in extended reality technologies for mechanical engineering education: A systematic review. TechTrends.",
+        "Abu, S., Moon, J., Awoyemi, I. D., & Ghooreian, A. (under review). Embodied arts-integrated AI literacy: A nested mixed-methods study with K-12 educators. TechTrends.",
+        "Moon, J., Awoyemi, I. D., Abu, S., Kim, E., & Marchiori, R. (submitted). A Bayesian meta-analysis of virtual reality-based safety training in the construction sector. Virtual Reality."
       ]
     },
     {
       "title": "Book Chapters",
       "items": [
-        "Abu, S., Ghooreian, A., Ogunniran, M., Awoyemi, I. D., Moon, J. (In Press, 2026). Game based Learning for Social Changes. In Trifonas, P. (Eds.), International Handbook of Theory and Research in Digital Media and Education. Springer.",
-        "Awoyemi, I. D., & Ilufoye, T. O. (2020). Maximizing virtual classroom for effective teaching. In O. C. Falode (Ed.), Novel practices in education (pp. 96 -115). Novel Education Research Group."
+        "Abu, S., Ghooreian, A., Ogunniran, M., Awoyemi, I. D., & Moon, J. (in press, 2026). Game-based learning for social change. In P. Trifonas (Ed.), International handbook of theory and research in digital media and education. Springer.",
+        "Awoyemi, I. D., & Ilufoye, T. O. (2020). Maximizing virtual classroom for effective teaching. In O. C. Falode (Ed.), Novel practices in education (pp. 96-115). Novel Education Research Group."
       ]
     },
     {
       "title": "Refereed Conference Proceedings",
       "items": [
-        "Luo, F., Liu, R., Awoyemi, I. D., Crawford, C., & Nasrin, F. (2024, March). Novel Insights into Elementary Girls' Experiences in Physiological Computing. In Proceedings of the 55th ACM Technical Symposium on Computer Science Education V. 1 (pp. 764-770).",
-        "Awoyemi, I. D., & Moon, J. (2023). Teachers’ integration of immersive virtual reality in enhancing high school students’ mathematics competence in an online learning environment: A Narrative Review. Immersive Learning Research-Practitioner, 21-25.",
-        "Abu, S., McNeill, L., Pei, M., Uddin, M., & Awoyemi, I. D., & Regalado, L. (2025). The AI-WISE project: Bridging the AI skills gap through industry-informed curriculum design. 2025 Association for Educational Communications and Technology Convention. Las Vegas, Nevada.",
-        "Moon, J., Siyuan S., Awoyemi I. D., Raissa M., & Sepehr K. (2023). Immersive technology-enhanced learning system design in civil engineering education. Immersive Learning Research-Practitioner: 109-111."
+        "Luo, F., Liu, R., Awoyemi, I. D., Crawford, C., & Nasrin, F. (2024). Novel insights into elementary girls' experiences in physiological computing. Proceedings of the 55th ACM Technical Symposium on Computer Science Education (SIGCSE), 1, 764-770.",
+        "Moon, J., Song, S., Awoyemi, I. D., Marchiori, R., & Kavianpour, S. (2023). Immersive technology-enhanced learning system design in civil engineering education. Immersive Learning Research Network - Practitioner, 109-111.",
+        "Awoyemi, I. D., & Moon, J. (2023). Teachers' integration of immersive virtual reality in enhancing high school students' mathematics competence in an online learning environment: A narrative review. Immersive Learning Research Network - Practitioner, 21-25."
       ]
     },
     {
       "title": "Conference Presentations",
       "items": [
-        "Awoyemi, I. D., Moon, J., Abu, S., Marchiori, R., & Song, S. (April 8–12, 2026). Unpacking in-VR learning dynamics for heat stress training: A microgenetic and sequential behavior analysis [Accepted roundtable session]. American Educational Research Association (AERA) Annual Meeting, Los Angeles, CA.",
-        "Awoyemi, I. D., Moon, J., Abu, S., Marchiori, R., & Song, S. (April 8–12, 2026). Feedback-driven strategic shifts in immersive virtual reality training: A multi-phase behavioral-mining study [Accepted poster session]. American Educational Research Association (AERA) Annual Meeting, Los Angeles, CA.",
-        "Moon, J., & Awoyemi, I. D. (April 8–12, 2026). Revisiting the effectiveness of virtual reality for construction safety training: A Bayesian meta-analysis [Accepted poster session]. American Educational Research Association (AERA) Annual Meeting, Los Angeles, CA.",
-        "Abu, S., Moon, J., Awoyemi, I. D., Marchiori, R., & Song, S. (April 8–12, 2026). Modeling behavioral dynamics and cognitive states in VR safety training: A learning analytics approach [Accepted poster session]. American Educational Research Association (AERA) Annual Meeting, Los Angeles, CA.",
-        "Nasrin, F., Amayou, J., Awoyemi, I. D., Abedini, P., Mousavi, V., Uddin, M. M., Luo, F., & Hutchison, A. C. (2026, April 8–12). A mixed methods case study on enhancing CS knowledge and coding skills in elementary students [Accepted, Poster presentation]. American Educational Research Association (AERA) Annual Meeting, Los Angeles, CA.",
-        "Abu, S., Ghooreian, A., Awoyemi, I. D., & Moon, J. (April 8–12, 2026). Embodied arts-integrated AI literacy: A nested mixed-methods preliminary study with K-12 educators [Accepted poster session]. American Educational Research Association (AERA) Annual Meeting, Los Angeles, CA.",
-        "Hossain, S., Huang, W., Li, J., Hadis, S., Li, L., Haniya, S., Khanam, S., Awoyemi, I. D., & Ahmadi, S. (April 8–12, 2026). Designing a responsible AI literacy framework for education: Integrating ethics, equity, and empowerment [Accepted roundtable session]. American Educational Research Association (AERA) Annual Meeting, Los Angeles, CA.",
-        "Luo, F., Nasrin, F., & Awoyemi, I. D. (AERA, April 2025). Broadening participation in computing through cultivating professional growth in teachers of color. (Round Table Presentation)",
-        "Awoyemi, I. D., Nasrin, F., Luo, F., & Chris Crawford (AERA, April 2025). Elementary students’ conceptions and engagement in physiological computing: A case study of lesson implementation. (Round Table Presentation)",
-        "Regalado, L., Uddin, M. M., & Awoyemi, I. D. (2026, May 18–20). Teaching Responsible AI Skills for Professional Success. ITLC Lilly Conference, Austin, TX.",
-        "Abu, S., Awoyemi, I. D, & Moon, J. (AECT, 2025 October). Preliminary Design and Development of AI-Enhanced VR Spring Dynamics Simulations to Foster Metacognitive Regulation in Engineering Education. Poster Presentation.",
-        "Awoyemi, I. D, Abu, S., Yuvaraja, H., Moon, J., Patiballa, S. (AECT, 2025 October). Exploring fidelity dimensions in extended reality technologies for mechanical engineering education: A systematic review, Concurrent Session, (Paper Presentation).",
-        "McNeill, L., Abu, S., Pei, M., Awoyemi, I. D., & Uddin, M. (May 2025). AI-WISE: Developing an industry-informed AI literacy course for undergraduates. Teaching and Learning with AI: A Sharing Conference Between Educational Practitioners. University of Central Florida, Orlando, FL. (Paper Presentation)",
-        "Awoyemi, I. D., & Moon, J. (June 2024). A Systematic review of extended reality technology in k–12 stem education: enhancing learning experiences and outcomes. Alabama Educational Technology Conference. (Conference Presentation).",
-        "Nasrin, F., Awoyemi, I. D., Luo, F., Liu, R., & Chris Crawford (AERA, April 2025). Pupil Diameter Reveals Elementary Students' Cognitive Load Manifestation in Physiological Computing. (Poster Presentation)",
-        "Awoyemi, I. D., Moon, J., Siyuan, S., & Raissa, M. (October 2024). Development of Immersive Virtual Reality-based Training to Develop Hazard Identification Skills in Civil Engineering Education. (Poster Presentation).",
-        "Awoyemi, I. D., Unggi Lee., & Moon, J. (October 2024). Integration of Automatic Video-Based Behavior Assessment in VR-Based Safety Training. (Poster Presentation).",
-        "Luo, F., Liu, R., Awoyemi, I. D., Crawford, C., & Nasrin, F. (2024, March). Novel Insights into Elementary Girls' Experiences in Physiological Computing. In Proceedings of the 55th ACM Technical Symposium on Computer Science Education V. 1 (pp. 764-770).",
-        "Awoyemi, I. D., Moon, J., Siyuan, S., & Raissa, M. (October 2024). Exploring immersive virtual reality for hazard identification training in civil engineering education. 16th Annual Southeastern Universities Graduate Research Symposium. (Conference Presentation).",
-        "Awoyemi, I. D., Stephen, A., & Moon, J. (October 2024). Exploring educators' perceptions of integrating game-based learning into high school mathematics instruction. 16th Annual Southeastern Universities Graduate Research Symposium (Conference Presentation).",
-        "Ijeluola, S., Awoyemi, I. D., & Adefisayo, A. (October 2024). Leveraging Generative Artificial Intelligence (gAI) in Learning Design: A Mixed-Methods Examination of Instructional Designers’ Experience. (Conference Presentation)",
-        "Ijeluola, S., Adefisayo, A., & Awoyemi, I. D (October 2024). Fostering Technology Integration and Game-Based Learning Solutions for Underserved Nigerian School. (Conference Presentation)",
-        "Awoyemi, I. D., & Baah-Mintah, R. (October, 2024). A Literature Review on Educational Leadership and Artificial Intelligence (AI). (Conference Presentation)",
-        "Barielnen, V., & Awoyemi, I. D. (April 2024). Improving leadership and functional university education delivery in public universities in Rivers State for sustainable development. 16th Annual Southeastern Universities Graduate Research Symposium (Conference Presentation).",
-        "Liu, R., Luo, F., Crawford, S., Awoyemi, I. (April, 2024). Elementary students’ problem-solving and visual attention in a physiological computing environment: A cross-case study. Paper session submitted to the 2024 American Educational Research Association. Pittsburg, PA. (Conference Presentation).",
-        "Awoyemi, I. D., & Moon, J. (2023). Teachers’ integration of immersive virtual reality in enhancing high school students’ mathematics competence in an online learning environment: A Narrative Review. Immersive Learning Research-Practitioner, 21-25."
+        "Regalado, L., Uddin, M. M., & Awoyemi, I. D. (2026, May 18-20). Teaching responsible AI skills for professional success. ITLC Lilly Conference, Austin, TX.",
+        "Awoyemi, I. D., Moon, J., Abu, S., Marchiori, R., & Song, S. (2026, April 8-12). Unpacking in-VR learning dynamics for heat stress training: A microgenetic and sequential behavior analysis [Roundtable session]. American Educational Research Association (AERA) Annual Meeting, Los Angeles, CA.",
+        "Awoyemi, I. D., Moon, J., Abu, S., Marchiori, R., & Song, S. (2026, April 8-12). Feedback-driven strategic shifts in immersive virtual reality training: A multi-phase behavioral-mining study [Poster session]. AERA Annual Meeting, Los Angeles, CA.",
+        "Moon, J., & Awoyemi, I. D. (2026, April 8-12). Revisiting the effectiveness of virtual reality for construction safety training: A Bayesian meta-analysis [Poster session]. AERA Annual Meeting, Los Angeles, CA.",
+        "Abu, S., Moon, J., Awoyemi, I. D., Marchiori, R., & Song, S. (2026, April 8-12). Modeling behavioral dynamics and cognitive states in VR safety training: A learning analytics approach [Poster session]. AERA Annual Meeting, Los Angeles, CA.",
+        "Abu, S., Ghooreian, A., Awoyemi, I. D., & Moon, J. (2026, April 8-12). Embodied arts-integrated AI literacy: A nested mixed-methods preliminary study with K-12 educators [Poster session]. AERA Annual Meeting, Los Angeles, CA.",
+        "Nasrin, F., Amayou, J., Awoyemi, I. D., Abedini, P., Mousavi, V., Uddin, M. M., Luo, F., & Hutchison, A. C. (2026, April 8-12). A mixed methods case study on enhancing CS knowledge and coding skills in elementary students [Poster session]. AERA Annual Meeting, Los Angeles, CA.",
+        "Hossain, S., Huang, W., Li, J., Hadis, S., Li, L., Haniya, S., Khanam, S., Awoyemi, I. D., & Ahmadi, S. (2026, April 8-12). Designing a responsible AI literacy framework for education: Integrating ethics, equity, and empowerment [Roundtable session]. AERA Annual Meeting, Los Angeles, CA.",
+        "Awoyemi, I. D., Abu, S., Yuvaraja, H., Moon, J., & Patiballa, S. (2025, October). Exploring fidelity dimensions in extended reality technologies for mechanical engineering education: A systematic review [Paper presentation]. Association for Educational Communications and Technology (AECT) Convention, Las Vegas, NV.",
+        "Abu, S., Awoyemi, I. D., & Moon, J. (2025, October). Preliminary design and development of AI-enhanced VR spring dynamics simulations to foster metacognitive regulation in engineering education [Poster presentation]. AECT Convention, Las Vegas, NV.",
+        "Abu, S., McNeill, L., Pei, M., Uddin, M. M., Awoyemi, I. D., & Regalado, L. (2025, October). The AI-WISE project: Bridging the AI skills gap through industry-informed curriculum design [Paper presentation]. AECT Convention, Las Vegas, NV.",
+        "McNeill, L., Abu, S., Pei, M., Awoyemi, I. D., & Uddin, M. M. (2025, May). AI-WISE: Developing an industry-informed AI literacy course for undergraduates [Paper presentation]. Teaching and Learning with AI, University of Central Florida, Orlando, FL.",
+        "Awoyemi, I. D., Nasrin, F., Luo, F., & Crawford, C. (2025, April). Elementary students' conceptions and engagement in physiological computing: A case study of lesson implementation [Roundtable presentation]. AERA Annual Meeting, Denver, CO.",
+        "Nasrin, F., Awoyemi, I. D., Luo, F., Liu, R., & Crawford, C. (2025, April). Pupil diameter reveals elementary students' cognitive load manifestation in physiological computing [Poster presentation]. AERA Annual Meeting, Denver, CO.",
+        "Luo, F., Nasrin, F., & Awoyemi, I. D. (2025, April). Broadening participation in computing through cultivating professional growth in teachers of color [Roundtable presentation]. AERA Annual Meeting, Denver, CO.",
+        "Awoyemi, I. D., Moon, J., Song, S., & Marchiori, R. (2024, October). Development of immersive virtual reality-based training to develop hazard identification skills in civil engineering education [Poster presentation].",
+        "Awoyemi, I. D., Lee, U., & Moon, J. (2024, October). Integration of automatic video-based behavior assessment in VR-based safety training [Poster presentation].",
+        "Awoyemi, I. D., Moon, J., Song, S., & Marchiori, R. (2024, October). Exploring immersive virtual reality for hazard identification training in civil engineering education [Paper presentation]. 16th Annual Southeastern Universities Graduate Research Symposium.",
+        "Awoyemi, I. D., Abu, S., & Moon, J. (2024, October). Exploring educators' perceptions of integrating game-based learning into high school mathematics instruction [Paper presentation]. 16th Annual Southeastern Universities Graduate Research Symposium.",
+        "Ijeluola, S., Awoyemi, I. D., & Adefisayo, A. (2024, October). Leveraging generative artificial intelligence in learning design: A mixed-methods examination of instructional designers' experience [Paper presentation].",
+        "Ijeluola, S., Adefisayo, A., & Awoyemi, I. D. (2024, October). Fostering technology integration and game-based learning solutions for underserved Nigerian schools [Paper presentation].",
+        "Awoyemi, I. D., & Baah-Mintah, R. (2024, October). A literature review on educational leadership and artificial intelligence [Paper presentation].",
+        "Awoyemi, I. D., & Moon, J. (2024, June). A systematic review of extended reality technology in K-12 STEM education: Enhancing learning experiences and outcomes [Paper presentation]. Alabama Educational Technology Conference.",
+        "Liu, R., Luo, F., Crawford, C., & Awoyemi, I. D. (2024, April). Elementary students' problem-solving and visual attention in a physiological computing environment: A cross-case study [Paper session]. AERA Annual Meeting, Philadelphia, PA.",
+        "Barielnen, V., & Awoyemi, I. D. (2024, April). Improving leadership and functional university education delivery in public universities in Rivers State for sustainable development [Paper presentation]. 16th Annual Southeastern Universities Graduate Research Symposium."
       ]
     }
   ],
   "grants": [
     {
-      "title": "Graduate Assistant, Enhancing Teacher Problem-Solving and Classroom Management Skills through an Open-Access AI-Powered 3D Simulation Platform",
-      "context": "Office for Research and Economic Development CREATE Program, The University of Alabama. Lead PI: Moon, J. (Total award $4,000, FUNDED)",
+      "title": "Graduate Research Assistant, Large Language Model-based Cyber Sentinel Co-Pilot: Professional Development for Alabama Secondary Teacher Training",
+      "date": "2026-2027",
+      "context": "College of Education RisingTide Grant Program, The University of Alabama. Lead PI: Dr. Jewoong Moon. PIs: Dr. Feiya Luo and Dr. James Hardin. $30,000 · 2026-2027",
       "status": "Awarded",
-      "amount": "$4,000,"
+      "amount": "$30,000"
     },
     {
-      "title": "Graduate Assistant, Examining Preservice Teachers’ Digital Literacy Development and Learning Engagement via Art Integrated Technology-Enhanced Learning",
-      "context": "The Collaborative Arts Research Initiative. Lead PI: Moon, J. (Total award $15,000, FUNDED).",
+      "title": "PhD Student Researcher, AI Workforce Readiness Summit and UA Student Showcase",
+      "date": "2026",
+      "context": "ASSIST Industry Engagement Support Program, Division for Research, The University of Alabama. PI: Dr. Laura McNeill. Co-PI: R. Sparkman. $15,000 · 2026",
       "status": "Awarded",
-      "amount": "$15,000,"
+      "amount": "$15,000"
     },
     {
       "title": "Co-Investigator, AI-WISE: AI Workforce Integration and Skill Enhancement",
-      "context": "College of Education Rising Tide Grant Program, AY 2024–2025. Teaching/Research Project. Lead PI: Laura McNeill. University of Alabama. Total award $30,000.",
+      "date": "2024-2025",
+      "context": "College of Education RisingTide Grant Program, The University of Alabama. PI: Dr. Laura McNeill. $30,000 · 2024-2025",
       "status": "Awarded",
-      "amount": ""
+      "amount": "$30,000"
     },
     {
-      "title": "Graduate Assistant, Fostering elementary students’ computing career aspirations through a physiological computing curriculum",
-      "context": "National Science Foundation. Innovative Technology Experiences for Students and Teachers (ITEST). Lead PI: Dr. Feiya Luo (Resubmission; $ 1,125,666) [Awarded].",
+      "title": "Graduate Research Assistant, Fostering Elementary Students' Computing Career Aspirations through a Physiological Computing Curriculum",
+      "date": "2023-present",
+      "context": "National Science Foundation, Innovative Technology Experiences for Students and Teachers (ITEST). PI: Dr. Feiya Luo. $1,125,666 · 2023-present",
       "status": "Awarded",
-      "amount": ""
+      "amount": "$1,125,666"
     },
     {
-      "title": "Google PhD Fellowship – University Nominee, 2025",
-      "context": "Nominated by the University of Alabama for a competitive fellowship recognizing research excellence.",
-      "status": "Nominee",
-      "amount": ""
+      "title": "Graduate Research Assistant, Examining Preservice Teachers' Digital Literacy Development and Learning Engagement via Art-Integrated Technology-Enhanced Learning",
+      "date": "2025",
+      "context": "The Collaborative Arts Research Initiative, The University of Alabama. PI: Dr. Jewoong Moon. $15,000 · 2025",
+      "status": "Awarded",
+      "amount": "$15,000"
     },
     {
-      "title": "Spencer Dissertation Fellowship, Spencer Foundation, 2025",
-      "context": "Proposal submitted for dissertation research on development",
-      "status": "Not Awarded",
-      "amount": ""
+      "title": "Graduate Research Assistant, Enhancing Teacher Problem-Solving and Classroom Management Skills through an Open-Access AI-Powered 3D Simulation Platform",
+      "date": "2024",
+      "context": "Office for Research and Economic Development CREATE Program, The University of Alabama. PI: Dr. Jewoong Moon. $4,000 · 2024",
+      "status": "Awarded",
+      "amount": "$4,000"
     }
+  ],
+  "grants_note": "Combined awards on funded projects listed below exceed $1.21 million.",
+  "manuscripts_under_review": [
+    "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (under review). A systematic review of empirical research on AI in K-12 STEM education (2020-2025) through a sociotechnical lens. Educational Technology Research and Development.",
+    "Awoyemi, I. D., Moon, J., Abu, S., & Song, S. (under review). Design and development research of immersive virtual reality-supported safety training for construction engineering education. Educational Technology Research and Development.",
+    "Awoyemi, I. D., Abu, S., Yuvaraja, H. K., Patiballa, S. K., & Moon, J. (under review). Exploring fidelity dimensions in extended reality technologies for mechanical engineering education: A systematic review. TechTrends.",
+    "Abu, S., Moon, J., Awoyemi, I. D., & Ghooreian, A. (under review). Embodied arts-integrated AI literacy: A nested mixed-methods study with K-12 educators. TechTrends.",
+    "Moon, J., Awoyemi, I. D., Abu, S., Kim, E., & Marchiori, R. (submitted). A Bayesian meta-analysis of virtual reality-based safety training in the construction sector. Virtual Reality."
   ],
   "awards": [
     {
-      "name": "Dissertation Fellowship ($20160)",
+      "name": "College of Education Dissertation Fellowship, The University of Alabama ($20,160)",
+      "date": "2026-2027"
+    },
+    {
+      "name": "College of Education Research Assistant Award, The University of Alabama ($4,500)",
       "date": "2026"
     },
     {
-      "name": "College of Education Research Assistant Award ($4500)",
-      "date": "2026"
+      "name": "Google PhD Fellowship, institutional nominee, The University of Alabama",
+      "date": "2025"
     },
     {
-      "name": "Most Outstanding Graduate Student in Research (Instructional Technology)",
+      "name": "Most Outstanding Graduate Student in Research, Instructional Technology, The University of Alabama",
+      "date": "2025"
+    },
+    {
+      "name": "Alabama Power Innovation and Technology Award ($3,000)",
       "date": "2025"
     },
     {
@@ -482,23 +502,7 @@
       "date": "2025"
     },
     {
-      "name": "Alabama Power Innovation and Technology Award ($3000)",
-      "date": "2025"
-    },
-    {
-      "name": "AECT Addie Kinsinger Leadership Development Internship Award ($1000)",
-      "date": "2024"
-    },
-    {
-      "name": "Travel Grant ($552)",
-      "date": "2024"
-    },
-    {
-      "name": "College of Education Research Assistant Award ($4500)",
-      "date": "2024"
-    },
-    {
-      "name": "Tide Together Mentorship Graduate Award ($200)",
+      "name": "AECT Addie Kinsinger Leadership Development Internship Award ($1,000)",
       "date": "2024"
     },
     {
@@ -506,23 +510,35 @@
       "date": "2024"
     },
     {
+      "name": "College of Education Research Assistant Award, The University of Alabama ($4,500)",
+      "date": "2024"
+    },
+    {
+      "name": "William W. Taube Doctoral Scholarship ($1,000)",
+      "date": "2024"
+    },
+    {
+      "name": "Tide Together Mentorship Graduate Award ($200)",
+      "date": "2024"
+    },
+    {
       "name": "Graduate Ambassador Award ($100)",
       "date": "2024"
     },
     {
-      "name": "William W Taube Doctoral Scholarship ($1000)",
+      "name": "Conference Travel Grant, The University of Alabama ($552)",
       "date": "2024"
     },
     {
-      "name": "Graduate School Research Award ($1000)",
-      "date": "2023,2024"
+      "name": "Graduate School Research Award, The University of Alabama ($1,000)",
+      "date": "2023, 2024"
     },
     {
-      "name": "College of Education Research Assistant Award ($6800)",
+      "name": "College of Education Research Assistant Award, The University of Alabama ($6,800)",
       "date": "2023"
     },
     {
-      "name": "Outstanding Practitioner Paper Award (2023). Immersive Learning Research Network (iLRN)",
+      "name": "Outstanding Practitioner Paper Award, Immersive Learning Research Network (iLRN)",
       "date": "2023"
     },
     {
@@ -530,158 +546,123 @@
       "date": "2023"
     },
     {
-      "name": "Best student in Mathematics Education",
+      "name": "Best Student in Mathematics Education, Federal University of Technology, Minna",
       "date": "2012"
     }
   ],
   "certifications": [
     {
-      "name": "AI and Me: Navigating Generative AI for Higher Education Faculty, University of Tennessee, Knoxville (Teaching & Learning Innovation, College of Education, Health & Human Sciences)",
-      "date": "Mar 2026"
+      "name": "AERA Division C Graduate Student Mentoring Program",
+      "date": "2026"
+    },
+    {
+      "name": "AI and Me: Navigating Generative AI for Higher Education Faculty, University of Tennessee, Knoxville",
+      "date": "2026"
     },
     {
       "name": "Creating Accessible Electronic Materials with AI Tools, AECT Division of Distance Learning",
-      "date": "Apr 2025"
+      "date": "2025"
     },
     {
-      "name": "How to Design and Deliver Training Programs, LinkedIn Learning",
-      "date": "Jul 2023"
+      "name": "Instructional Design series (Needs Analysis; Working with SMEs; Foundations of LMS; Articulate Storyline Essential Training; How to Design and Deliver Training Programs), LinkedIn Learning",
+      "date": "2023"
     },
     {
-      "name": "Articulate Storyline Essential Training, LinkedIn Learning",
-      "date": "Dec 2023"
-    },
-    {
-      "name": "Instructional Design: Working with SMEs, LinkedIn Learning",
-      "date": "Dec 2023"
-    },
-    {
-      "name": "Foundations of Learning Management Systems (LMS), LinkedIn Learning",
-      "date": "Dec 2023"
-    },
-    {
-      "name": "Instructional Design: Needs Analysis, LinkedIn Learning",
-      "date": "Nov 2023"
-    },
-    {
-      "name": "Proficiency Certificate in Project Management, Classic Systems Infotech Ltd (in affiliation with Computer Resource Center, Federal University of Technology, Akure, Nigeria)",
-      "date": "Nov 2016"
-    },
-    {
-      "name": "Proficiency Certificate in Data Processing, Classic Systems Infotech Ltd (in affiliation with Computer Resource Center, Federal University of Technology, Akure, Nigeria)",
-      "date": "May 2016"
+      "name": "Proficiency Certificates in Project Management and Data Processing, Classic Systems Infotech Ltd., Nigeria",
+      "date": "2016"
     }
   ],
   "skills": [
     {
-      "category": "Artificial Intelligence (AI)",
-      "details": "Applied AI in Education, Generative AI (LLMs) for Instructional Design and Content Development, AI-Assisted Assessment and Feedback Systems, Prompt Engineering, AI Integration in Learning Environments, Adaptive Learning Systems Design, Multimodal Learning Analytics, AI-Supported Research and Data Interpretation, AI-Assisted Development (Vibe Coding)",
+      "category": "Research methods",
+      "details": "Design and development research, descriptive and multiple case study, mixed methods, systematic review and meta-analysis, microgenetic behavioral coding, sequential behavior analysis, Bayesian cognitive diagnostic modeling",
       "items": [
-        "Applied AI in Education",
-        "Generative AI (LLMs) for Instructional Design and Content Development",
-        "AI-Assisted Assessment and Feedback Systems",
-        "Prompt Engineering",
-        "AI Integration in Learning Environments",
-        "Adaptive Learning Systems Design",
-        "Multimodal Learning Analytics",
-        "AI-Supported Research and Data Interpretation",
-        "AI-Assisted Development (Vibe Coding)"
+        "Design and development research",
+        "Descriptive and multiple case study",
+        "Mixed methods",
+        "Systematic review and meta-analysis",
+        "Microgenetic behavioral coding",
+        "Sequential behavior analysis",
+        "Bayesian cognitive diagnostic modeling"
       ]
     },
     {
-      "category": "Data and Analytics",
-      "details": "Learning Analytics, SPSS, R (basic to intermediate proficiency), Data Visualization for Instructional Evaluation.",
+      "category": "Learning analytics",
+      "details": "Multimodal learning analytics, eye tracking, physiological sensing, behavioral trace analysis, SPSS, R (basic to intermediate)",
       "items": [
-        "Learning Analytics",
+        "Multimodal learning analytics",
+        "Eye tracking",
+        "Physiological sensing",
+        "Behavioral trace analysis",
         "SPSS",
-        "R (basic to intermediate proficiency)",
-        "Data Visualization for Instructional Evaluation"
+        "R (basic to intermediate)"
       ]
     },
     {
-      "category": "Digital Media and Communication",
-      "details": "Digital Graphic Design, Microsoft Office Suite (Word, Excel, PowerPoint), Multimedia Content Development.",
+      "category": "Immersive and AI systems",
+      "details": "Immersive virtual reality design and development, Meta Horizon Worlds, embodied AI feedback agents, generative AI and large language models for instruction, prompt engineering, adaptive learning systems design",
       "items": [
-        "Digital Graphic Design",
-        "Microsoft Office Suite (Word, Excel, PowerPoint)",
-        "Multimedia Content Development"
+        "Immersive virtual reality design and development",
+        "Meta Horizon Worlds",
+        "Embodied AI feedback agents",
+        "Generative AI and large language models for instruction",
+        "Prompt engineering",
+        "Adaptive learning systems design"
       ]
     },
     {
-      "category": "Digital Learning and Design",
-      "details": "Articulate Storyline, Rise 360, eLearning Design, Storyboard Development, Instructional Design Models (ADDIE, SAM), Needs Analysis, Learning Package Development, Content Conversion to Digital Formats.",
+      "category": "Instructional design",
+      "details": "ADDIE and SAM, needs analysis, storyboarding, Articulate Storyline 360, Rise 360, Blackboard Learn and Canvas, UDL-aligned materials development",
       "items": [
-        "Articulate Storyline",
+        "ADDIE and SAM",
+        "Needs analysis",
+        "Storyboarding",
+        "Articulate Storyline 360",
         "Rise 360",
-        "eLearning Design",
-        "Storyboard Development",
-        "Instructional Design Models (ADDIE, SAM)",
-        "Needs Analysis",
-        "Learning Package Development",
-        "Content Conversion to Digital Formats"
+        "Blackboard Learn and Canvas",
+        "UDL-aligned materials development"
       ]
     }
   ],
   "primary_skill_tags": [
-    "Applied AI in Education",
-    "Generative AI (LLMs) for Instructional Design and Content Development",
-    "AI-Assisted Assessment and Feedback Systems",
-    "Learning Analytics",
-    "SPSS",
-    "R (basic to intermediate proficiency)",
-    "Digital Graphic Design",
-    "Microsoft Office Suite (Word, Excel, PowerPoint)",
-    "Multimedia Content Development"
+    "Design and development research",
+    "Descriptive and multiple case study",
+    "Mixed methods",
+    "Multimodal learning analytics",
+    "Eye tracking",
+    "Physiological sensing",
+    "Immersive virtual reality design and development",
+    "Meta Horizon Worlds",
+    "Embodied AI feedback agents"
   ],
   "leadership_cards": [
     {
-      "title": "Senator",
-      "organization": "The University of Alabama",
-      "date": "04/2024 – 05/2025",
-      "details": [
-        "Acted as a vocal advocate for the interests and concerns of graduate students, effectively conveying student feedback and perspectives during government meetings and discussions.",
-        "Authored and co-sponsored impactful legislation aimed at improving campus policies, enhancing student resources, and fostering a more inclusive campus environment.",
-        "Collaborated with fellow senators to organize campus-wide initiatives to address student needs and promote positive change.",
-        "Served as a liaison between the student government and campus organizations, faculty, and administration, fostering constructive dialogue and partnerships to advance student interests."
-      ],
-      "summary": "Acted as a vocal advocate for the interests and concerns of graduate students, effectively conveying student feedback and perspectives during government meetings and discussions. Authored and co-sponsored impactful..."
-    },
-    {
       "title": "Lab Manager",
-      "organization": "The University of Alabama, Tuscaloosa",
-      "date": "01/2023 – Present",
-      "details": [
-        "Orchestrated multiple research projects focused on immersive learning environments, ensuring alignment with lab objectives and fostering impactful contributions to the field.",
-        "Spearheaded planning, execution, and completion of diverse research initiatives, adeptly managing timelines, budgets, and resources for optimal outcomes.",
-        "Led a multidisciplinary team of researchers and collaborators, providing mentorship and guidance to foster productivity and collaboration within the lab.",
-        "Cultivated partnerships and networks with research groups and stakeholders, enhancing the lab's capabilities and facilitating knowledge exchange to drive innovation in immersive learning."
-      ],
-      "summary": "Orchestrated multiple research projects focused on immersive learning environments, ensuring alignment with lab objectives and fostering impactful contributions to the field. Spearheaded planning, execution, and..."
+      "organization": "Adaptive Design of Immersive e-Learning (ADIE) Lab, The University of Alabama",
+      "date": "2023-present",
+      "details": [],
+      "summary": ""
     },
     {
-      "title": "Graduate Teaching Assistant (GTA) Workshop Team Member University of Alabama,",
-      "organization": "",
-      "date": "8/13/2025-8/14/2025",
-      "details": [
-        "Organized and coordinated university-wide Graduate Teaching Assistant (GTA) workshops focused on preparing graduate students for effective instructional roles.",
-        "Assisted in planning and ensuring the successful execution of workshop logistics and program flow.",
-        "Led a breakout session on “Balancing Teaching Responsibilities with Academic and Research Commitments.”",
-        "Mentored new GTAs by providing guidance, resources, and peer support to facilitate their transition into teaching roles."
-      ],
-      "summary": "Organized and coordinated university-wide Graduate Teaching Assistant (GTA) workshops focused on preparing graduate students for effective instructional roles. Assisted in planning and ensuring the successful..."
+      "title": "Senator",
+      "organization": "Student Government Association (graduate representation), The University of Alabama",
+      "date": "2024-2025",
+      "details": [],
+      "summary": ""
     },
     {
-      "title": "Media and Digital Specialist",
-      "organization": "Deeper Life Campus Fellowship, University of Alabama",
-      "date": "2023 – Present",
-      "details": [
-        "Designed and produced graphics, videos, and digital content for events, outreach, and social media engagement.",
-        "Managed audiovisual displays, live streaming, and digital presentations to ensure smooth service delivery.",
-        "Developed interactive and game-based quiz content to foster active participation during fellowship programs.",
-        "Led digital branding and online communication efforts, maintaining a consistent and professional media presence.",
-        "Trained and mentored media team members, promoting creativity, technical excellence, and teamwork."
-      ],
-      "summary": "Designed and produced graphics, videos, and digital content for events, outreach, and social media engagement. Managed audiovisual displays, live streaming, and digital presentations to ensure smooth service..."
+      "title": "Graduate Student Ambassador",
+      "organization": "The University of Alabama",
+      "date": "2023-2025",
+      "details": [],
+      "summary": ""
+    },
+    {
+      "title": "Graduate Teaching Assistant Workshop Team Member",
+      "organization": "The University of Alabama",
+      "date": "2025",
+      "details": [],
+      "summary": ""
     }
   ],
   "affiliations": [
@@ -690,15 +671,15 @@
       "note": "Professional affiliation"
     },
     {
-      "name": "Association for Education Communications and Technology (AECT)",
+      "name": "Association for Educational Communications and Technology (AECT)",
       "note": "Professional affiliation"
     },
     {
-      "name": "Immersive Learning Research Network (ILRN)",
+      "name": "Immersive Learning Research Network (iLRN)",
       "note": "Professional affiliation"
     },
     {
-      "name": "Association of Computing Machinery (ACM)",
+      "name": "Association for Computing Machinery (ACM)",
       "note": "Professional affiliation"
     },
     {
@@ -713,75 +694,88 @@
   "service_snapshot": [
     {
       "eyebrow": "Journal Reviewing",
-      "title": "7 review appointments",
-      "body": "The Journal of Computers in Human Behavior Reports, The Journal of Computer-Assisted Learning, and more."
+      "title": "8 review appointments",
+      "body": "Computers & Education, Computers in Human Behavior Reports, and more."
     },
     {
       "eyebrow": "Conference Service",
-      "title": "5 conference roles",
-      "body": "American Educational Research Association (AERA), Association of Educational and Communication Technology (AECT), and more."
+      "title": "6 conference roles",
+      "body": "Chair, AI-Enhanced Student Learning Outcomes; Chair, AI-Mediated Learning Environments; and more."
+    },
+    {
+      "eyebrow": "Leadership",
+      "title": "7 leadership roles",
+      "body": "Lab Manager, Adaptive Design of Immersive e-Learning Lab; Senator, Student Government Association; and more."
     },
     {
       "eyebrow": "Mentoring",
       "title": "3 mentoring engagements",
-      "body": "Als Pals Mentorship Program, Reading Allies, and more."
+      "body": "Graduate Peer Mentor, Tide Together Mentoring Program; Mentor, Al's Pals Mentorship Program; and more."
     },
     {
       "eyebrow": "Community Engagement",
-      "title": "13 outreach contributions",
-      "body": "Served as a judge for the undergraduate campus-wide presentation, Chair, AI-enhanced student learning outcomes. American..."
+      "title": "6 outreach contributions",
+      "body": "Professional development for Skyland Elementary teachers; Judge, university-wide undergraduate research presentation; and more."
     }
   ],
   "journal_service": [
     {
-      "name": "The Journal of Computers in Human Behavior Reports",
-      "date": "2026 - Present"
+      "name": "Computers & Education",
+      "date": "2026-present"
     },
     {
-      "name": "The Journal of Computer-Assisted Learning",
-      "date": "2023 - Present"
+      "name": "Computers in Human Behavior Reports",
+      "date": "2026-present"
+    },
+    {
+      "name": "Journal of Computer-Assisted Learning",
+      "date": "2023-present"
     },
     {
       "name": "Behaviour & Information Technology",
-      "date": "2025 - Present"
+      "date": "2025-present"
     },
     {
-      "name": "Computer & Education: X Reality",
-      "date": "2025 - Present"
+      "name": "Computers & Education: X Reality",
+      "date": "2025-present"
     },
     {
-      "name": "The Journal of Education and Information Technologies",
-      "date": "2025 - Present"
+      "name": "Education and Information Technologies",
+      "date": "2025-present"
     },
     {
-      "name": "Teaching Repository AI-Infused Learning",
-      "date": "2025 - Present"
+      "name": "Teaching Repository: AI-Infused Learning",
+      "date": "2025-present"
     },
     {
       "name": "Asian Journal of Education and Social Studies",
-      "date": "2025 - Present"
+      "date": "2025-present"
     }
   ],
   "conference_service": [
     {
-      "name": "American Educational Research Association (AERA)",
+      "name": "Chair, AI-Enhanced Student Learning Outcomes. AERA Annual Meeting, Los Angeles, CA",
       "date": "2026"
     },
     {
-      "name": "Association of Educational and Communication Technology (AECT)",
-      "date": "2025"
+      "name": "Chair, AI-Mediated Learning Environments: Scaffolding Inquiry, Metacognition, and Engagement. AERA Annual Meeting, Los Angeles, CA",
+      "date": "2026"
+    },
+    {
+      "name": "Discussant, CLT07: Designing for and Modeling Cultural Competence. Association for Educational Communications and Technology (AECT) Convention, Kansas City, MO",
+      "date": "2024"
     },
     {
       "name": "American Educational Research Association (AERA)",
       "date": "2025"
     },
     {
-      "name": "Special Interest Group on Computer Science Education (SIGCSE)",
-      "date": "2024 - Present"
+      "name": "ACM Special Interest Group on Computer Science Education (SIGCSE)",
+      "date": "2024-present"
     },
     {
-      "name": "Association of Educational and Communication Technology (AECT)",
-      "date": "2023 - Present"
+      "name": "Association for Educational Communications and Technology (AECT)",
+      "date": "2023-present"
     }
   ],
   "research_case_studies": [

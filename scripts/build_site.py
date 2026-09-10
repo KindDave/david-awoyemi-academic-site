@@ -12,7 +12,7 @@ from zipfile import ZipFile
 
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE_DOCX = ROOT / "CV_David.docx"
+SOURCE_DOCX = ROOT / "David_CV.docx"
 OUTPUT_JSON = ROOT / "site-data.json"
 DIST_DIR = ROOT / "dist"
 NOJEKYLL = DIST_DIR / ".nojekyll"
@@ -24,23 +24,41 @@ ASSET_DIR = ROOT / "assets"
 DIST_ASSET_DIR = DIST_DIR / "assets"
 
 DOCX_NS = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
-SECTION_TITLES = {
-    "PROFILE SUMMARY",
-    "EDUCATION",
-    "RESEARCH EXPERIENCE",
-    "TEACHING EXPERIENCE",
-    "PUBLICATIONS",
-    "CONFERENCE PRESENTATIONS",
-    "GRANTS",
-    "INSTRUCTIONAL DESIGN EXPERIENCE",
-    "LEADERSHIP ROLE AND SERVICES",
-    "PROFESSIONAL AND COMMUNITY SERVICE",
-    "AWARDS & SCHOLARSHIPS",
-    "CERTIFICATIONS",
-    "TECHNICAL AND PROFESSIONAL SKILLS",
-    "PROFESSIONAL AFFLIATIONS",
-    "PROFESSIONAL REFERENCES INFORMATION",
+# Canonical section keys, plus every heading spelling that maps to them.
+# Matching is case-insensitive so the CV may use ALL CAPS or Title Case.
+SECTION_ALIASES: dict[str, str] = {
+    "profile summary": "PROFILE SUMMARY",
+    "research summary": "PROFILE SUMMARY",
+    "education": "EDUCATION",
+    "research experience": "RESEARCH EXPERIENCE",
+    "teaching experience": "TEACHING EXPERIENCE",
+    "publications": "PUBLICATIONS",
+    "conference presentations": "CONFERENCE PRESENTATIONS",
+    "grants": "GRANTS",
+    "grants and funded projects": "GRANTS",
+    "instructional design experience": "INSTRUCTIONAL DESIGN EXPERIENCE",
+    "leadership role and services": "LEADERSHIP ROLE AND SERVICES",
+    "professional and community service": "PROFESSIONAL AND COMMUNITY SERVICE",
+    "service": "PROFESSIONAL AND COMMUNITY SERVICE",
+    "awards & scholarships": "AWARDS & SCHOLARSHIPS",
+    "honors, awards, and fellowships": "AWARDS & SCHOLARSHIPS",
+    "certifications": "CERTIFICATIONS",
+    "professional development and certifications": "CERTIFICATIONS",
+    "technical and professional skills": "TECHNICAL AND PROFESSIONAL SKILLS",
+    "technical and methodological skills": "TECHNICAL AND PROFESSIONAL SKILLS",
+    "professional affliations": "PROFESSIONAL AFFLIATIONS",
+    "professional affiliations": "PROFESSIONAL AFFLIATIONS",
+    "professional references information": "PROFESSIONAL REFERENCES INFORMATION",
+    "references": "PROFESSIONAL REFERENCES INFORMATION",
 }
+SECTION_TITLES = set(SECTION_ALIASES.values())
+
+
+def normalize_heading(text: str) -> str:
+    """Lower-case a heading and drop a trailing parenthetical qualifier such as
+    "(Published and In Press)" so subsection names match their canonical form."""
+    cleaned = re.sub(r"\s*\([^)]*\)\s*$", "", text.strip())
+    return re.sub(r"\s+", " ", cleaned).strip().lower()
 
 DATE_PATTERNS = (
     r"^\d{4}\s*[-–]\s*(Present|\d{4})$",
@@ -76,18 +94,26 @@ ORG_HINTS = (
     "Pepperdine",
 )
 
-PUBLICATION_SUBHEADINGS = {
-    "Peer-reviewed Journal Articles",
-    "Referred Conference Proceedings",
-    "Book Chapters",
+PUBLICATION_SUBHEADINGS: dict[str, str] = {
+    "peer-reviewed journal articles": "Peer-reviewed Journal Articles",
+    "referred conference proceedings": "Referred Conference Proceedings",
+    "peer-reviewed conference proceedings": "Referred Conference Proceedings",
+    "book chapters": "Book Chapters",
+    "manuscripts under review and in revision": "Manuscripts Under Review",
+    "manuscripts under review": "Manuscripts Under Review",
 }
 
-SERVICE_SUBHEADINGS = {
-    "Journal Reviews",
-    "Conference Chair and Discussant",
-    "Conference Reviews",
-    "Mentoring",
-    "Community/Outreach/ Conferences Services",
+SERVICE_SUBHEADINGS: dict[str, str] = {
+    "journal reviews": "Journal Reviews",
+    "journal peer review": "Journal Reviews",
+    "conference chair and discussant": "Conference Chair and Discussant",
+    "conference session chair and discussant": "Conference Chair and Discussant",
+    "conference reviews": "Conference Reviews",
+    "conference peer review": "Conference Reviews",
+    "mentoring": "Mentoring",
+    "community/outreach/ conferences services": "Community/Outreach/ Conferences Services",
+    "community and outreach service": "Community/Outreach/ Conferences Services",
+    "university and professional leadership": "University and Professional Leadership",
 }
 
 PROFILE_LINKS = [
@@ -2180,13 +2206,29 @@ if (particleCanvas) {
 
 
 def read_docx_paragraphs(path: Path) -> list[str]:
+    """Return non-empty paragraph strings in document order.
+
+    Tab characters are preserved as a literal tab because the CV uses one to
+    separate a title from its date on the same line, e.g.
+    "Ph.D., Instructional Technology<TAB>Expected Spring 2027".
+    """
     with ZipFile(path) as docx_zip:
         xml = docx_zip.read("word/document.xml")
     root = ET.fromstring(xml)
+    text_tag = f"{{{DOCX_NS['w']}}}t"
+    tab_tag = f"{{{DOCX_NS['w']}}}tab"
     paragraphs: list[str] = []
     for paragraph in root.findall(".//w:p", DOCX_NS):
-        text_runs = [node.text or "" for node in paragraph.findall(".//w:t", DOCX_NS)]
-        text = normalize_whitespace("".join(text_runs))
+        pieces: list[str] = []
+        # Only look at run children: a <w:tab/> that lives under <w:pPr><w:tabs>
+        # is a tab-stop definition, not a character, and must be ignored.
+        for run in paragraph.findall(".//w:r", DOCX_NS):
+            for child in run:
+                if child.tag == text_tag:
+                    pieces.append(child.text or "")
+                elif child.tag == tab_tag:
+                    pieces.append("\t")
+        text = normalize_whitespace("".join(pieces))
         if text:
             paragraphs.append(text)
     return paragraphs
@@ -2194,8 +2236,13 @@ def read_docx_paragraphs(path: Path) -> list[str]:
 
 def normalize_whitespace(text: str) -> str:
     text = text.replace("\xa0", " ")
-    text = text.replace("\u200b", "")
-    return re.sub(r"\s+", " ", text).strip()
+    text = text.replace("​", "")
+    # Collapse ordinary whitespace, but keep a single tab: it is the
+    # title/date delimiter used throughout the CV.
+    text = re.sub(r"[ \r\n\f\v]+", " ", text)
+    text = re.sub(r"\s*\t\s*", "\t", text)
+    text = re.sub(r"\t+", "\t", text)
+    return text.strip()
 
 
 def split_sections(paragraphs: list[str]) -> tuple[list[str], dict[str, list[str]]]:
@@ -2204,8 +2251,9 @@ def split_sections(paragraphs: list[str]) -> tuple[list[str], dict[str, list[str
     current: str | None = None
 
     for paragraph in paragraphs:
-        if paragraph in SECTION_TITLES:
-            current = paragraph
+        key = SECTION_ALIASES.get(normalize_heading(paragraph))
+        if key:
+            current = key
             sections[current] = []
             continue
 
@@ -2254,18 +2302,18 @@ def list_items(lines: list[str]) -> list[str]:
     return items
 
 
-def group_subsections(lines: list[str], headings: set[str]) -> dict[str, list[str]]:
-    grouped: dict[str, list[str]] = {}
+def group_subsections(lines: list[str], headings: dict[str, str]) -> dict[str, list[str]]:
+    """Split a section into named subsections. `headings` maps a normalized
+    heading (see normalize_heading) to its canonical name."""
+    grouped: dict[str, list[str]] = {"default": []}
     current = "default"
-    grouped[current] = []
-
     for line in lines:
-        if line in headings:
-            current = line
-            grouped[current] = []
+        canonical = headings.get(normalize_heading(line))
+        if canonical:
+            current = canonical
+            grouped.setdefault(current, [])
             continue
         grouped.setdefault(current, []).append(line)
-
     return grouped
 
 
@@ -2292,17 +2340,28 @@ def infer_location(header_lines: list[str]) -> str:
 
 
 def parse_education(lines: list[str]) -> list[dict[str, str]]:
-    education: list[dict[str, str]] = []
-    for index in range(0, len(lines), 3):
-        chunk = lines[index:index + 3]
-        if len(chunk) == 3:
-            education.append(
-                {
-                    "degree": chunk[0],
-                    "institution": chunk[1],
-                    "date": chunk[2],
-                }
-            )
+    """Parse "Degree<TAB>Date", then an institution line, then optional note
+    lines such as a dissertation title. Falls back to the older
+    degree / institution / date triple layout when no tabs are present."""
+    if not any("\t" in line for line in lines):
+        education: list[dict[str, str]] = []
+        for index in range(0, len(lines), 3):
+            chunk = lines[index:index + 3]
+            if len(chunk) == 3:
+                education.append({"degree": chunk[0], "institution": chunk[1], "date": chunk[2], "note": ""})
+        return education
+    education = []
+    current: dict[str, str] | None = None
+    for line in lines:
+        if "\t" in line:
+            degree, date = line.split("\t", 1)
+            current = {"degree": degree.strip(), "institution": "", "date": date.strip(), "note": ""}
+            education.append(current)
+        elif current is not None:
+            if not current["institution"]:
+                current["institution"] = line
+            else:
+                current["note"] = f"{current['note']} {line}".strip()
     return education
 
 
@@ -2315,16 +2374,22 @@ def truncate_text(text: str, limit: int = 220) -> str:
 
 
 def parse_named_date_pairs(lines: list[str]) -> list[dict[str, str]]:
+    """Parse "Name<TAB>Date" lines (current CV) or Name/Date line pairs (older CV)."""
     items: list[dict[str, str]] = []
     index = 0
     while index < len(lines):
-        name = lines[index]
+        line = lines[index]
+        if "\t" in line:
+            name, date = line.split("\t", 1)
+            items.append({"name": name.strip(), "date": date.strip().rstrip(".")})
+            index += 1
+            continue
         next_line = lines[index + 1] if index + 1 < len(lines) else ""
         if is_date_line(next_line):
-            items.append({"name": name, "date": next_line.rstrip(".")})
+            items.append({"name": line, "date": next_line.rstrip(".")})
             index += 2
         else:
-            items.append({"name": name, "date": ""})
+            items.append({"name": line, "date": ""})
             index += 1
     return items
 
@@ -2390,44 +2455,86 @@ def parse_entry_block(block: dict[str, Any]) -> dict[str, Any] | None:
     }
 
 
+ENTRY_SUBHEADINGS = {
+    "courses taught and co-designed",
+    "guest lectures and workshops",
+    "prior teaching",
+}
+
+
 def parse_entries(lines: list[str]) -> list[dict[str, Any]]:
+    if any("\t" in line for line in lines):
+        return parse_tabbed_entries(lines)
     entries = [parse_entry_block(block) for block in split_entry_blocks(lines)]
     return [entry for entry in entries if entry]
 
 
+def parse_tabbed_entries(lines: list[str]) -> list[dict[str, Any]]:
+    """Parse entries laid out as "Title<TAB>Date", then an organization line,
+    then detail sentences, until the next tabbed title. Short sub-headings that
+    group entries (e.g. "Prior Teaching") are recorded on each entry as `group`.
+    The organization line is the first line after the title that does not
+    read as a sentence (no terminal period); everything after is a detail."""
+    entries: list[dict[str, Any]] = []
+    current: dict[str, Any] | None = None
+    group = ""
+    for line in lines:
+        if "\t" in line:
+            title, date = (part.strip() for part in line.split("\t", 1))
+            current = {"title": title, "organization": "", "date": date or "Selected role", "details": [], "summary": "", "group": group}
+            entries.append(current)
+            continue
+        if normalize_heading(line) in ENTRY_SUBHEADINGS:
+            group = line
+            current = None
+            continue
+        if current is None:
+            continue
+        if not current["organization"] and not current["details"] and not line.rstrip().endswith("."):
+            current["organization"] = line
+        else:
+            current["details"].append(line)
+    for entry in entries:
+        entry["summary"] = truncate_text(" ".join(entry["details"]) or entry["organization"], 220)
+    return entries
+
+
+def split_skill_items(details: str) -> list[str]:
+    """Split a comma list, ignoring commas inside parentheses so entries like
+    "Microsoft Office Suite (Word, Excel, PowerPoint)" stay whole."""
+    items: list[str] = []
+    depth = 0
+    current = ""
+    for ch in details:
+        if ch == "(":
+            depth += 1
+        elif ch == ")":
+            depth = max(0, depth - 1)
+        if ch == "," and depth == 0:
+            items.append(current)
+            current = ""
+        else:
+            current += ch
+    items.append(current)
+    cleaned = [piece.strip().rstrip(".").strip() for piece in items]
+    return [item[0].upper() + item[1:] for item in cleaned if item]
+
+
 def parse_skills(lines: list[str]) -> list[dict[str, Any]]:
+    """Parse skills written as "Category: item, item" on one line (current CV)
+    or as a category line followed by an items line (older CV)."""
     skills: list[dict[str, Any]] = []
     index = 0
     while index < len(lines):
-        category = lines[index]
-        details = lines[index + 1] if index + 1 < len(lines) else ""
-        # Split on commas, but not on commas inside parentheses — otherwise
-        # entries like "Microsoft Office Suite (Word, Excel, PowerPoint)" and
-        # "Instructional Design Models (ADDIE, SAM)" get torn into fragments.
-        items = []
-        depth = 0
-        current = ""
-        for ch in details:
-            if ch == "(":
-                depth += 1
-            elif ch == ")":
-                depth = max(0, depth - 1)
-            if ch == "," and depth == 0:
-                items.append(current)
-                current = ""
-            else:
-                current += ch
-        items.append(current)
-        items = [item.strip().rstrip(".").strip() for item in items]
-        items = [item for item in items if item]
-        skills.append(
-            {
-                "category": category,
-                "details": details,
-                "items": items,
-            }
-        )
-        index += 2
+        line = lines[index]
+        if ":" in line and len(line.split(":", 1)[0]) <= 60:
+            category, details = (part.strip() for part in line.split(":", 1))
+            index += 1
+        else:
+            category = line
+            details = lines[index + 1] if index + 1 < len(lines) else ""
+            index += 2
+        skills.append({"category": category, "details": details, "items": split_skill_items(details)})
     return skills
 
 
@@ -2475,6 +2582,45 @@ def extract_year(text: str) -> str:
     return match.group(1) if match else "Recent"
 
 
+def parse_grants(lines: list[str]) -> tuple[list[dict[str, str]], str]:
+    """Parse the grants section.
+
+    Current CV layout: an optional summary sentence, then pairs of lines,
+    "Role, Title<TAB>Dates" followed by "Funder. PI. $amount (Funded)".
+    Returns (grants, note) where note is that summary sentence, if present.
+    Falls back to the older one-line-per-grant layout when no tabs appear.
+    """
+    if not any("\t" in line for line in lines):
+        return [summarize_grant(line) for line in lines], ""
+    grants: list[dict[str, str]] = []
+    note_parts: list[str] = []
+    current: dict[str, str] | None = None
+    for line in lines:
+        if "\t" in line:
+            title, dates = (part.strip() for part in line.split("\t", 1))
+            if dates.endswith("-"):
+                dates = f"{dates}present"
+            current = {"title": title, "date": dates, "context": "", "status": "Awarded", "amount": ""}
+            grants.append(current)
+        elif current is None:
+            note_parts.append(line)
+        else:
+            current["context"] = f"{current['context']} {line}".strip()
+    for grant in grants:
+        lowered = f"{grant['title']} {grant['context']}".lower()
+        if re.search(r"not (funded|awarded)", lowered):
+            grant["status"] = "Not Awarded"
+        elif "nominee" in lowered:
+            grant["status"] = "Nominee"
+        amount = re.search(r"\$[\d,]+", grant["context"])
+        grant["amount"] = amount.group(0) if amount else ""
+        # The status pill already says Awarded; drop the redundant "(Funded)".
+        grant["context"] = re.sub(r"\s*\((?:Funded|Awarded)\)", "", grant["context"], flags=re.IGNORECASE).strip()
+        if grant["date"]:
+            grant["context"] = f"{grant['context']} · {grant['date']}".strip(" ·")
+    return grants, " ".join(note_parts).strip()
+
+
 def summarize_grant(text: str) -> dict[str, str]:
     cleaned = remove_reference_prefix(text)
     title, remainder = (cleaned.split(". ", 1) + [""])[:2]
@@ -2507,19 +2653,39 @@ def summarize_grant(text: str) -> dict[str, str]:
     }
 
 
+def short_service_name(name: str, limit: int = 60) -> str:
+    """Keep the leading clause of a service line: "Chair, Session Title: Sub
+    Title. AERA Annual Meeting, Los Angeles" becomes "Chair, Session Title".
+    Institution suffixes and parentheticals are dropped, and long clauses are
+    cut at a word boundary."""
+    clause = re.split(r"(?:\.\s|;\s|:\s)", name, maxsplit=1)[0]
+    clause = re.sub(r"\s*\([^)]*\)", "", clause)
+    clause = re.sub(r",\s*The\s+University\b.*$", "", clause)
+    clause = clause.strip().rstrip(".,;:")
+    if len(clause) > limit:
+        head = clause[:limit]
+        if ", " in head:
+            # Drop the trailing qualifier (usually a place or unit) cleanly.
+            clause = head.rsplit(", ", 1)[0]
+        else:
+            clause = head.rsplit(" ", 1)[0].rstrip(".,;:") + "..."
+    return clause
+
+
 def summarize_service_items(items: list[dict[str, str]], limit: int = 2) -> str:
     if not items:
         return ""
-    names = [item["name"] for item in items[:limit]]
-    summary = ", ".join(names)
+    names = [short_service_name(item["name"]) for item in items[:limit]]
+    separator = "; " if any("," in name for name in names) else ", "
+    summary = separator.join(names)
     if len(items) > limit:
-        summary = f"{summary}, and more."
-    return truncate_text(summary, 130)
+        summary = f"{summary}{separator.strip()} and more."
+    return truncate_text(summary, 150)
 
 
 def is_showcase_role(entry: dict[str, Any]) -> bool:
     title = entry["title"].strip()
-    if not title or title.endswith(".") or len(title) > 70:
+    if not title or title.endswith(".") or len(title) > 100:
         return False
     if title.lower().startswith(("research on ", "analysis of ", "collection, ")):
         return False
@@ -2563,32 +2729,35 @@ def build_site_data() -> dict[str, Any]:
     journal_articles = [remove_reference_prefix(item) for item in list_items(publications_grouped.get("Peer-reviewed Journal Articles", []))]
     book_chapters = [remove_reference_prefix(item) for item in list_items(publications_grouped.get("Book Chapters", []))]
     proceedings = [remove_reference_prefix(item) for item in list_items(publications_grouped.get("Referred Conference Proceedings", []))]
+    manuscripts_under_review = [remove_reference_prefix(item) for item in list_items(publications_grouped.get("Manuscripts Under Review", []))]
     conference_presentations = [remove_reference_prefix(item) for item in list_items(sections.get("CONFERENCE PRESENTATIONS", []))]
-    grants = [summarize_grant(line) for line in sections.get("GRANTS", [])]
-    # Inject the AI-WISE Rising Tide award amount inline (the source CV
-    # context doesn't include a dollar figure so the regex misses it).
-    for grant in grants:
-        if "AI-WISE" in grant["title"] and "$" not in grant["context"]:
-            grant["context"] = grant["context"].rstrip(".") + ". Total award $30,000."
-    # Strip the trailing "[Not Awarded]" status marker from the displayed
-    # title/context once summarize_grant has read it into the status field.
-    for grant in grants:
-        for field in ("title", "context"):
-            grant[field] = re.sub(r"\s*\[not awarded\]\s*", "", grant[field], flags=re.IGNORECASE).strip()
+    grants, grants_note = parse_grants(sections.get("GRANTS", []))
     research_entries = parse_entries(sections.get("RESEARCH EXPERIENCE", []))
     teaching_entries = parse_entries(sections.get("TEACHING EXPERIENCE", []))
     design_entries = parse_entries(sections.get("INSTRUCTIONAL DESIGN EXPERIENCE", []))
     leadership_entries = parse_entries(sections.get("LEADERSHIP ROLE AND SERVICES", []))
-    awards = parse_named_date_pairs(sections.get("AWARDS & SCHOLARSHIPS", []))
+    # The CV lists unsuccessful applications for completeness; they are not
+    # recognitions, so they stay off the website's award surfaces and counts.
+    awards = [
+        item
+        for item in parse_named_date_pairs(sections.get("AWARDS & SCHOLARSHIPS", []))
+        if not re.search(r"not (funded|awarded)", item["name"], flags=re.IGNORECASE)
+    ]
     certifications = parse_named_date_pairs(sections.get("CERTIFICATIONS", []))
     skills = parse_skills(sections.get("TECHNICAL AND PROFESSIONAL SKILLS", []))
-    affiliations = [{"name": item} for item in sections.get("PROFESSIONAL AFFLIATIONS", [])]
+    affiliations = [
+        {"name": name.strip()}
+        for line in sections.get("PROFESSIONAL AFFLIATIONS", [])
+        for name in line.split(";")
+        if name.strip()
+    ]
 
     service_journals = parse_named_date_pairs(service_grouped.get("Journal Reviews", []))
     service_reviews = parse_named_date_pairs(service_grouped.get("Conference Reviews", []))
     service_chairs = parse_named_date_pairs(service_grouped.get("Conference Chair and Discussant", []))
     service_mentoring = parse_named_date_pairs(service_grouped.get("Mentoring", []))
     service_outreach = parse_named_date_pairs(service_grouped.get("Community/Outreach/ Conferences Services", []))
+    service_leadership = parse_named_date_pairs(service_grouped.get("University and Professional Leadership", []))
 
     header_text = " ".join(header)
     email = extract_email(header_text)
@@ -2651,10 +2820,12 @@ def build_site_data() -> dict[str, Any]:
 
     publication_sections = [
         {"title": "Peer-Reviewed Journal Articles", "items": journal_articles},
+        {"title": "Manuscripts Under Review and In Revision", "items": manuscripts_under_review},
         {"title": "Book Chapters", "items": book_chapters},
         {"title": "Refereed Conference Proceedings", "items": proceedings},
         {"title": "Conference Presentations", "items": conference_presentations},
     ]
+    publication_sections = [section for section in publication_sections if section["items"]]
 
     service_snapshot = [
         {
@@ -2666,6 +2837,11 @@ def build_site_data() -> dict[str, Any]:
             "eyebrow": "Conference Service",
             "title": f"{len(service_chairs) + len(service_reviews)} conference roles",
             "body": summarize_service_items(service_chairs + service_reviews),
+        },
+        {
+            "eyebrow": "Leadership",
+            "title": f"{len(service_leadership)} leadership roles",
+            "body": summarize_service_items(service_leadership),
         },
         {
             "eyebrow": "Mentoring",
@@ -2701,11 +2877,22 @@ def build_site_data() -> dict[str, Any]:
         "selected_publications": selected_publications,
         "publication_sections": publication_sections,
         "grants": grants,
+        "grants_note": grants_note,
+        "manuscripts_under_review": manuscripts_under_review,
         "awards": awards,
         "certifications": certifications,
         "skills": skills,
         "primary_skill_tags": [item for skill in skills[:3] for item in skill["items"][:3]][:9],
-        "leadership_cards": leadership_entries[:4],
+        "leadership_cards": (leadership_entries or [
+            {
+                "title": item["name"].split(",", 1)[0].strip(),
+                "organization": item["name"].split(",", 1)[1].strip() if "," in item["name"] else "",
+                "date": item["date"],
+                "details": [],
+                "summary": "",
+            }
+            for item in service_leadership
+        ])[:4],
         "affiliations": build_affiliation_cards(affiliations),
         "service_snapshot": service_snapshot,
         "journal_service": service_journals,
@@ -2997,12 +3184,13 @@ def render_home(data: dict[str, Any]) -> str:
         (item["title"] for item in data["service_snapshot"] if "Review" in item["eyebrow"]),
         "Journal reviewer",
     )
+    under_review_count = len(data.get("manuscripts_under_review", []))
     highlights = [
-        ("award", "Dissertation Fellowship", "Awarded 2026"),
+        ("award", "Dissertation Fellowship", "College of Education, University of Alabama, 2026 to 2027"),
         ("award", "AECT Addie Kinsinger Leadership Development Internship Award", "2024"),
         ("award", "Most Outstanding Graduate Student in Research", "Instructional Technology, 2025"),
         ("award", "Alabama Power Innovation and Technology Award", "2025"),
-        ("file-text", f"{journal_count} peer-reviewed journal articles", "Published, accepted, and under review"),
+        ("file-text", f"{journal_count} peer-reviewed journal articles", f"Published and in press, plus {under_review_count} manuscripts under review"),
         ("presentation", f"{presentation_count} conference presentations", "AERA, AECT, iLRN, and more"),
         ("network", review_count, "Peer review across instructional technology and AI journals"),
         ("flask", f"{awarded_count} funded research projects", "Including NSF ITEST and university-funded work"),
@@ -3343,8 +3531,9 @@ def render_academic(data: dict[str, Any]) -> str:
       <div class="section-heading section-heading--with-icon">
         {icon_badge('award', classes='icon-badge icon-badge--lg')}
         <div>
-          <span class="eyebrow">Grants and Fellowships</span>
+          <span class="eyebrow">Grants and Funded Projects</span>
           <h2>Funded initiatives and competitive applications.</h2>
+          {('<p>' + escape(data['grants_note']) + '</p>') if data.get('grants_note') else ''}
         </div>
       </div>
       <div class="grant-grid">
@@ -3537,18 +3726,18 @@ def render_research(data: dict[str, Any]) -> str:
   <section class="section">
     <div class="section-inner">
       <div class="section-heading">
-        <span class="eyebrow">Current Exploration</span>
-        <h2>What I am building next.</h2>
-        <p>An early-stage line of inquiry — shared here while it is still taking shape.</p>
+        <span class="eyebrow">Current Project</span>
+        <h2>Funded work now under way.</h2>
+        <p>A newly funded project that extends the research program toward embodied AI and social robotics.</p>
       </div>
       <article class="current-project fade">
         <figure class="current-project-media">
           <img src="assets/images/research-reachy.png" alt="David Awoyemi working at a desk beside a Reachy Mini desktop robot connected to a laptop" loading="lazy" decoding="async">
-          <span class="current-project-badge">Under Exploration</span>
+          <span class="current-project-badge">Funded, 2026 to 2027</span>
         </figure>
         <div class="current-project-body">
-          <h3>Social robotics for K-12 cybersecurity instruction</h3>
-          <p>I am prototyping how the <strong>Reachy Mini</strong> desktop robot can make cybersecurity concepts tangible and engaging for both in-service and pre-service teachers. The aim is an embodied, hands-on learning experience that lowers the barrier to teaching security fundamentals — pairing a friendly physical agent with scaffolded, classroom-ready activities.</p>
+          <h3>Cyber Sentinel Co-Pilot: social robotics for cybersecurity teacher training</h3>
+          <p>Funded by the College of Education RisingTide Grant Program ($30,000, 2026 to 2027; Lead PI Dr. Jewoong Moon), this project builds a large-language-model co-pilot on the <strong>Reachy Mini</strong> social robot to deliver cybersecurity professional development for Alabama secondary teachers. I developed the browser-based middleware that gives the robot voice, text, and visual interaction across five guided cybersecurity lessons, engineered on-robot deployment with automated startup and fault recovery so it runs in classrooms without technical support, and designed the data-collection architecture for a planned mixed-methods study across a five-robot fleet.</p>
           <p>This work connects my interests in immersive and emerging technologies, teacher professional development, and broadening participation in computing, extending them toward human–robot interaction as an instructional medium.</p>
           <div class="tag-list">
             <span>Social Robotics</span><span>Cybersecurity Education</span><span>Teacher PD</span><span>Human–Robot Interaction</span><span>Emerging Technologies</span>
@@ -3581,6 +3770,7 @@ def render_about(data: dict[str, Any]) -> str:
           <div>
             <h3 class="timeline-title">{escape(item['degree'])}</h3>
             <p class="timeline-org">{escape(item['institution'])}</p>
+            {('<p class="timeline-copy">' + escape(item.get('note', '')) + '</p>') if item.get('note') else ''}
           </div>
         </article>
         """.rstrip()
@@ -3688,8 +3878,28 @@ def render_teaching(data: dict[str, Any]) -> str:
           </div>
         </article>
         """.rstrip()
-        for item in data["teaching_entries"][:6]
+        for item in data["teaching_entries"]
+        if item["organization"] or item["details"]
     )
+    guest_items = [item for item in data["teaching_entries"] if not (item["organization"] or item["details"])]
+    guest_lectures = ""
+    if guest_items:
+        guest_cards = "\n".join(
+            f"""
+          <article class="mini-block fade">
+            <h4 class="mini-heading">{escape(item['date'])}</h4>
+            <p class="mini-copy">{escape(item['title'])}</p>
+          </article>
+            """.rstrip()
+            for item in guest_items
+        )
+        guest_lectures = f"""
+        <div class="teaching-guest">
+          <h3 class="teaching-guest-title">Guest lectures and workshops</h3>
+          <div class="mini-grid">
+            {guest_cards}
+          </div>
+        </div>"""
     certifications = "\n".join(
         f"""
         <article class="cert-card cert-card--with-icon fade">
@@ -3795,6 +4005,7 @@ def render_teaching(data: dict[str, Any]) -> str:
         <div class="timeline-grid">
           {teaching_experience}
         </div>
+        {guest_lectures}
       </div>
       <div>
         <div class="section-heading">
@@ -4380,7 +4591,7 @@ def write_outputs(data: dict[str, Any]) -> None:
 def main() -> None:
     data = build_site_data()
     write_outputs(data)
-    print("Built multi-page website from CV_David.docx into root HTML files and dist/.")
+    print(f"Built multi-page website from {SOURCE_DOCX.name} into root HTML files and dist/.")
 
 
 if __name__ == "__main__":

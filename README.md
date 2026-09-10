@@ -1,6 +1,6 @@
 # CV Automation
 
-This project turns `CV_David.docx` into a static academic website.
+This project turns `David_CV.docx` into a static academic website.
 
 ## Source of truth
 
@@ -30,7 +30,7 @@ Then open `index.html` locally to review the regenerated site.
 
 ## Suggested update loop
 
-1. Edit `CV_David.docx`.
+1. Edit `David_CV.docx`.
 2. Run `python scripts/build_site.py`.
 3. Review `index.html`.
 4. Commit the changes.
