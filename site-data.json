@@ -108,7 +108,7 @@
       "href": "index.html#awards"
     },
     {
-      "value": 6,
+      "value": 7,
       "label": "Awarded Projects",
       "href": "academic.html#grants"
     }
@@ -324,13 +324,6 @@
   ],
   "selected_publications": [
     {
-      "title": "Promoting elementary students' computer science conceptual knowledge and coding performance: A mixed methods case study",
-      "context": "Journal of Research on Technology in Education",
-      "status": "Published",
-      "year": "2026",
-      "raw": "Luo, F., Amayou, J., Nasrin, F., Abedini, P., Mousavi, V., Awoyemi, I. D., Hutchison, A., Cao, C., & Crawford, C. (2026). Promoting elementary students' computer science conceptual knowledge and coding performance: A mixed methods case study. Journal of Research on Technology in Education. Advance online publication."
-    },
-    {
       "title": "From experience to action: Sequential dynamics of experiential learning in immersive virtual reality-supported safety training",
       "context": "Interactive Learning Environments, 1-20",
       "status": "Published",
@@ -350,16 +343,23 @@
       "status": "Published",
       "year": "2026",
       "raw": "Moon, J., Awoyemi, I., Abu, S., Marchiori, R., & Song, S. (2026). Decoding immersive learning states: A reproducible microgenetic pipeline for behavioral data in virtual reality safety training. Behaviormetrika, 53, 739-768. https://doi.org/10.1007/s41237-025-00286-1"
+    },
+    {
+      "title": "Promoting elementary students' computer science conceptual knowledge and coding performance: A mixed methods case study",
+      "context": "Journal of Research on Technology in Education",
+      "status": "Published",
+      "year": "2026",
+      "raw": "Luo, F., Amayou, J., Nasrin, F., Abedini, P., Mousavi, V., Awoyemi, I. D., Hutchison, A., Cao, C., & Crawford, C. (2026). Promoting elementary students' computer science conceptual knowledge and coding performance: A mixed methods case study. Journal of Research on Technology in Education. Advance online publication."
     }
   ],
   "publication_sections": [
     {
       "title": "Peer-Reviewed Journal Articles",
       "items": [
-        "Luo, F., Amayou, J., Nasrin, F., Abedini, P., Mousavi, V., Awoyemi, I. D., Hutchison, A., Cao, C., & Crawford, C. (2026). Promoting elementary students' computer science conceptual knowledge and coding performance: A mixed methods case study. Journal of Research on Technology in Education. Advance online publication.",
         "Awoyemi, I. D., Moon, J., Abu, S., & Song, S. (2026). From experience to action: Sequential dynamics of experiential learning in immersive virtual reality-supported safety training. Interactive Learning Environments, 1-20. https://doi.org/10.1080/10494820.2026.2709674",
         "Abu, S., Uddin, M. M., Moon, J., Awoyemi, I. D., Baah-Mintah, R., & Ghooreian, A. (2026). Human-centered generative AI in education: Ethical challenges and equity-driven solutions. Ethics & Behavior, 1-27. https://doi.org/10.1080/10508422.2026.2685014",
         "Moon, J., Awoyemi, I., Abu, S., Marchiori, R., & Song, S. (2026). Decoding immersive learning states: A reproducible microgenetic pipeline for behavioral data in virtual reality safety training. Behaviormetrika, 53, 739-768. https://doi.org/10.1007/s41237-025-00286-1",
+        "Luo, F., Amayou, J., Nasrin, F., Abedini, P., Mousavi, V., Awoyemi, I. D., Hutchison, A., Cao, C., & Crawford, C. (2026). Promoting elementary students' computer science conceptual knowledge and coding performance: A mixed methods case study. Journal of Research on Technology in Education. Advance online publication.",
         "McNeill, L., Uddin, M. M., Abu, S., Pei, M., Awoyemi, I. D., & Regalado, L. (2025). Identifying the AI literacy gap: A mixed-methods analysis of industry needs and graduate preparedness. Frontiers in Education. (Accepted)",
         "Hong, S., Moon, J., Eom, T., Awoyemi, I. D., & Hwang, J. (2025). Generative AI-enhanced virtual reality simulation for pre-service teacher education: A mixed-methods analysis of usability and instructional utility for course integration. Education Sciences, 15(8), 997. https://doi.org/10.3390/educsci15080997",
         "Marchiori, R., Song, S., Moon, J., Awoyemi, I. D., Ghooreian, A., & Ramenzapour, E. (2025). A systematic review of technology-enhanced learning approaches to foster construction engineering and management competencies. Computer Applications in Engineering Education, 33(5), e70074. https://doi.org/10.1002/cae.70074",
@@ -386,7 +386,7 @@
     {
       "title": "Book Chapters",
       "items": [
-        "Abu, S., Ghooreian, A., Ogunniran, M., Awoyemi, I. D., & Moon, J. (in press, 2026). Game-based learning for social change. In P. Trifonas (Ed.), International handbook of theory and research in digital media and education. Springer.",
+        "Abu, S., Ghooreian, A., Ogunniran, M., Awoyemi, I., & Moon, J. (2026). Game-based learning for social change. In P. P. Trifonas (Ed.), Handbook of theory and research in digital media and education (Springer International Handbooks of Education). Springer. https://doi.org/10.1007/978-3-032-04596-6_29-1",
         "Awoyemi, I. D., & Ilufoye, T. O. (2020). Maximizing virtual classroom for effective teaching. In O. C. Falode (Ed.), Novel practices in education (pp. 96-115). Novel Education Research Group."
       ]
     },
@@ -431,6 +431,13 @@
   ],
   "grants": [
     {
+      "title": "Doctoral Researcher, Immersive Remembrance: AI-Driven Archival Retrieval for VR Learning",
+      "date": "2026-2029",
+      "context": "Institute of Museum and Library Services (IMLS). Lead PI: Dr. Jewoong Moon. PIs: J. Kim and F. Hu. $476,424 · 2026-2029",
+      "status": "Awarded",
+      "amount": "$476,424"
+    },
+    {
       "title": "Graduate Research Assistant, Large Language Model-based Cyber Sentinel Co-Pilot: Professional Development for Alabama Secondary Teacher Training",
       "date": "2026-2027",
       "context": "College of Education RisingTide Grant Program, The University of Alabama. Lead PI: Dr. Jewoong Moon. PIs: Dr. Feiya Luo and Dr. James Hardin. $30,000 · 2026-2027",
@@ -473,7 +480,7 @@
       "amount": "$4,000"
     }
   ],
-  "grants_note": "Combined awards on funded projects listed below exceed $1.21 million.",
+  "grants_note": "Combined awards on funded projects listed below exceed $1.69 million.",
   "manuscripts_under_review": [
     "Awoyemi, I. D., Moon, J., Aldemir, T., Ghooreian, A., & Sabanwar, V. (under review). A systematic review of empirical research on AI in K-12 STEM education (2020-2025) through a sociotechnical lens. Educational Technology Research and Development.",
     "Awoyemi, I. D., Moon, J., Abu, S., & Song, S. (under review). Design and development research of immersive virtual reality-supported safety training for construction engineering education. Educational Technology Research and Development.",
