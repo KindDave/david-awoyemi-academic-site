@@ -794,6 +794,44 @@ img { max-width: 100%; display: block; }
 
 .metric-card:last-child { border-right: 0; }
 
+/* Metric tiles double as links into the matching section of the site. */
+.metric-card--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.metric-card--link:hover,
+.metric-card--link:focus-visible {
+  background: color-mix(in srgb, var(--navy) 6%, transparent);
+  transform: translateY(-2px);
+}
+
+.metric-card--link:hover .metric-value,
+.metric-card--link:focus-visible .metric-value {
+  color: var(--gold);
+}
+
+.metric-card--link:hover .metric-label,
+.metric-card--link:focus-visible .metric-label {
+  color: var(--text);
+}
+
+.metric-card--link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+
+/* Keep anchored sections clear of the sticky header. */
+#publications,
+#grants,
+#awards,
+#core-roles,
+.publication-section[id] {
+  scroll-margin-top: 6.5rem;
+}
+
 .metric-value {
   display: block;
   font: 600 clamp(2.1rem, 5vw, 2.8rem) 'Crimson Pro', 'Lora', Georgia, serif;

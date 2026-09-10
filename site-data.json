@@ -89,23 +89,28 @@
   "metrics": [
     {
       "value": 15,
-      "label": "Journal Articles"
+      "label": "Journal Articles",
+      "href": "academic.html#peer-reviewed-journal-articles"
     },
     {
       "value": 25,
-      "label": "Conference Presentations"
+      "label": "Conference Presentations",
+      "href": "academic.html#conference-presentations"
     },
     {
       "value": 16,
-      "label": "Years Experience"
+      "label": "Years Experience",
+      "href": "research.html#core-roles"
     },
     {
       "value": 18,
-      "label": "Awards and Scholarships"
+      "label": "Awards and Scholarships",
+      "href": "index.html#awards"
     },
     {
       "value": 6,
-      "label": "Awarded Projects"
+      "label": "Awarded Projects",
+      "href": "academic.html#grants"
     }
   ],
   "featured_roles": [

@@ -2864,11 +2864,11 @@ def build_site_data() -> dict[str, Any]:
         "profile_links": PROFILE_LINKS,
         "research_themes": research_themes,
         "metrics": [
-            {"value": len(journal_articles), "label": "Journal Articles"},
-            {"value": len(conference_presentations), "label": "Conference Presentations"},
-            {"value": years_of_experience(sections), "label": "Years Experience"},
-            {"value": len(awards), "label": "Awards and Scholarships"},
-            {"value": len(funded_grants), "label": "Awarded Projects"},
+            {"value": len(journal_articles), "label": "Journal Articles", "href": "academic.html#peer-reviewed-journal-articles"},
+            {"value": len(conference_presentations), "label": "Conference Presentations", "href": "academic.html#conference-presentations"},
+            {"value": years_of_experience(sections), "label": "Years Experience", "href": "research.html#core-roles"},
+            {"value": len(awards), "label": "Awards and Scholarships", "href": "index.html#awards"},
+            {"value": len(funded_grants), "label": "Awarded Projects", "href": "academic.html#grants"},
         ],
         "featured_roles": featured_roles,
         "research_entries": research_entries,
@@ -3083,12 +3083,21 @@ def render_home(data: dict[str, Any]) -> str:
     person = data["person"]
     research_practice_media = render_media_cards(HOME_RESEARCH_PRACTICE)
     metrics = "\n".join(
-        f"""
+        (
+            f"""
+        <a class="metric-card metric-card--link" href="{escape(item['href'])}" aria-label="{item['value']}+ {escape(item['label'])}: see details">
+          <span class="metric-value" data-target="{item['value']}" data-suffix="+">0+</span>
+          <span class="metric-label">{escape(item['label'])}</span>
+        </a>
+        """
+            if item.get("href")
+            else f"""
         <article class="metric-card">
           <span class="metric-value" data-target="{item['value']}" data-suffix="+">0+</span>
           <span class="metric-label">{escape(item['label'])}</span>
         </article>
-        """.rstrip()
+        """
+        ).rstrip()
         for item in data["metrics"]
     )
     profile_links = "\n".join(
@@ -3276,7 +3285,7 @@ def render_home(data: dict[str, Any]) -> str:
   </section>
 </main>
 
-<section class="strip">
+<section class="strip" id="awards">
   <div class="strip-inner">
     <div class="strip-heading">
       <span class="eyebrow" style="color: white;">Recent Recognition</span>
@@ -3326,6 +3335,11 @@ def render_home(data: dict[str, Any]) -> str:
     )
 
 
+def slugify(text: str) -> str:
+    """Turn a heading into a stable, URL-safe anchor id."""
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+
+
 def render_publication_sections(sections: list[dict[str, Any]]) -> str:
     section_html: list[str] = []
     for section in sections:
@@ -3349,7 +3363,7 @@ def render_publication_sections(sections: list[dict[str, Any]]) -> str:
             )
         section_html.append(
             f"""
-            <section class="publication-section fade">
+            <section class="publication-section fade" id="{slugify(section['title'])}">
               <h3>{escape(section['title'])}<span class="publication-count">{len(section['items'])}</span></h3>
               {''.join(entries) if entries else '<p class="publication-text">No entries available.</p>'}
             </section>
@@ -3515,7 +3529,7 @@ def render_academic(data: dict[str, Any]) -> str:
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="publications">
     <div class="section-heading">
       <span class="eyebrow">Publications and Presentations</span>
       <h2>Publications and presentations.</h2>
@@ -3526,7 +3540,7 @@ def render_academic(data: dict[str, Any]) -> str:
     </div>
   </section>
 
-  <section class="section-alt">
+  <section class="section-alt" id="grants">
     <div class="section-inner">
       <div class="section-heading section-heading--with-icon">
         {icon_badge('award', classes='icon-badge icon-badge--lg')}
@@ -3698,7 +3712,7 @@ def render_research(data: dict[str, Any]) -> str:
         </figure>
       </div>
       <div>
-        <div class="section-heading">
+        <div class="section-heading" id="core-roles">
           <span class="eyebrow">Core Roles</span>
           <h2>Appointments that shaped the project portfolio.</h2>
           <p>These roles provide context for the design and research work described below.</p>
