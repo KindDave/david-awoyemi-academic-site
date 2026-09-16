@@ -128,6 +128,11 @@ PROFILE_LINKS = [
         "description": "Research profile, project activity, and collaborations.",
     },
     {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/idowu-david-awoyemi-02b785110/",
+        "description": "Professional profile, experience, and updates.",
+    },
+    {
         "label": "ADIE Lab",
         "url": "https://sites.ua.edu/adielab/people/",
         "description": "University of Alabama lab home and research context.",
@@ -449,6 +454,7 @@ CONTACT_POSITIONS = [
 CONTACT_PROFILES = [
     {"label": "Google Scholar", "url": "https://scholar.google.com/citations?user=NIWz8s4AAAAJ&hl=en", "desc": "Publications and citations"},
     {"label": "ResearchGate", "url": "https://www.researchgate.net/profile/Idowu-Awoyemi-2", "desc": "Research network"},
+    {"label": "LinkedIn", "url": "https://www.linkedin.com/in/idowu-david-awoyemi-02b785110/", "desc": "Professional profile"},
     {"label": "ADIE Lab", "url": "https://sites.ua.edu/adielab/people/", "desc": "Lab profile"},
     {"label": "Teaching Dossier", "url": "https://sites.google.com/view/david-teaching-dossier/home", "desc": "Teaching record"},
     {"label": "Adobe Portfolio", "url": "https://idawoyemi.myportfolio.com/work", "desc": "Design work"},
@@ -3102,7 +3108,7 @@ def render_home(data: dict[str, Any]) -> str:
     )
     profile_links = "\n".join(
         f'<a class="pill-link" href="{escape(item["url"])}"{link_attrs(item["url"])}>{escape(item["label"])}</a>'
-        for item in data["profile_links"][:3]
+        for item in data["profile_links"][:4]
     )
     features = [
         ("About", "Professional biography, training background, and a clearer view of the scholarly and design profile.", "about.html", "feature-about-portrait.png", "David Awoyemi in his office with an instructional-design bookshelf and an ADDIE whiteboard"),
@@ -3384,6 +3390,7 @@ def render_academic(data: dict[str, Any]) -> str:
     profile_link_icon_map = {
         "Google Scholar": "graduation",
         "ResearchGate": "network",
+        "LinkedIn": "users",
         "ADIE Lab": "flask",
         "Full CV": "file-text",
     }
@@ -3494,7 +3501,7 @@ def render_academic(data: dict[str, Any]) -> str:
     <div class="section-heading">
       <span class="eyebrow">Find Me Online</span>
       <h2>Key profiles and documents.</h2>
-      <p>Publication records, lab affiliation, and the full CV.</p>
+      <p>Publication records, professional profile, lab affiliation, and the full CV.</p>
     </div>
     <div class="profile-links-grid">
       {profile_links}
@@ -4540,7 +4547,7 @@ def render_contact(data: dict[str, Any]) -> str:
     <div class="section-heading">
       <span class="eyebrow">Online Profiles</span>
       <h2>Scholarly and professional web presence.</h2>
-      <p>Publication records, lab affiliation, teaching materials, and design portfolios.</p>
+      <p>Publication records, professional profile, lab affiliation, teaching materials, and design portfolios.</p>
     </div>
     <div class="profile-links-grid">
       {contact_profiles}
