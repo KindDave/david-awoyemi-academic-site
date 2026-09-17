@@ -517,7 +517,11 @@ def build_course(slug: str, with_media: bool = False) -> None:
 # ----------------------------------------------------------------------------
 
 PREVIEW_CSS = PAGE_CSS + """
-body.cc-preview{max-width:none;margin:0;padding:0;display:grid;grid-template-columns:300px 1fr;min-height:100vh;background:#f5f8ff}
+body.cc-preview{max-width:none;margin:0;padding:0;display:grid;grid-template-columns:300px minmax(0,1fr);grid-template-areas:"side main";min-height:100vh;background:#f5f8ff}
+/* Explicit areas: elements injected by browser extensions (Grammarly etc.) must not shift the layout */
+body.cc-preview>nav.side{grid-area:side}
+body.cc-preview>main{grid-area:main}
+body.cc-preview>:not(nav.side):not(main){grid-column:1/-1}
 .side{background:#0f2d6b;color:#dfe7f6;padding:24px 18px;position:sticky;top:0;height:100vh;overflow:auto}
 .side h1{color:#fff;font-size:1.25rem;border:0;margin:0 0 4px}
 .side .code{color:#c3902f;font-weight:700;font-size:.8rem;letter-spacing:.08em}
@@ -537,7 +541,7 @@ main{padding:32px 48px;max-width:900px}
 .q.show .ans{display:block}
 button.reveal{background:var(--navy);color:#fff;border:0;border-radius:6px;padding:6px 12px;cursor:pointer;font-size:.85rem;margin-top:6px}
 .link a{font-weight:700}
-@media (max-width:820px){body.cc-preview{grid-template-columns:1fr}.side{position:static;height:auto}main{padding:20px 16px}}
+@media (max-width:820px){body.cc-preview{grid-template-columns:1fr;grid-template-areas:"side" "main"}.side{position:static;height:auto}main{padding:20px 16px}}
 """
 
 
