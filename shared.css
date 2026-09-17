@@ -3788,3 +3788,7 @@ img { max-width: 100%; display: block; }
 [data-theme="dark"] .learn-facts li { color: var(--text1); }
 .learn-grid .portfolio-links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.6rem; }
 @media (max-width: 900px) { .learn-grid { grid-template-columns: 1fr; } }
+/* Learning Studio buttons: .portfolio-links a recolours link text, so restore button contrast */
+.learn-grid .portfolio-links a.button { color: #ffffff; }
+[data-theme="dark"] .learn-grid .portfolio-links a.button { color: #061631; }
+.learn-grid .portfolio-links a.button-secondary { color: var(--text1); }
