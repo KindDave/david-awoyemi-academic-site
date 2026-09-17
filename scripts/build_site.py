@@ -23,6 +23,140 @@ ROOT_STYLES = ROOT / "styles.css"
 ASSET_DIR = ROOT / "assets"
 DIST_ASSET_DIR = DIST_DIR / "assets"
 
+# Learning Studio: the LMS courses in lms/ are published as static previews at /learn/.
+LMS_DIR = ROOT / "lms"
+LMS_COURSES_DIR = LMS_DIR / "courses"
+LMS_SCRIPTS_DIR = LMS_DIR / "scripts"
+LEARN_DIR = DIST_DIR / "learn"
+LEARN_URL = "learn/"
+
+
+def load_learning_studio() -> list[dict[str, Any]]:
+    """Read every course.json under lms/courses and count what each course contains."""
+    courses: list[dict[str, Any]] = []
+    if not LMS_COURSES_DIR.exists():
+        return courses
+    for cdir in sorted(LMS_COURSES_DIR.iterdir()):
+        spec_path = cdir / "course.json"
+        if not spec_path.exists():
+            continue
+        spec = json.loads(spec_path.read_text(encoding="utf-8"))
+        items = [item for module in spec["modules"] for item in module["items"]]
+        counts = {"modules": len(spec["modules"]), "items": len(items),
+                  "lessons": 0, "assignments": 0, "quizzes": 0, "forums": 0, "videos": 0, "pilot_videos": 0}
+        for item in items:
+            if item["type"] == "assignment":
+                counts["assignments"] += 1
+            elif item["type"] == "quiz":
+                counts["quizzes"] += 1
+            elif item["type"] == "discussion":
+                counts["forums"] += 1
+            elif item["type"] == "page":
+                if re.match(r"Lesson \d", item["title"]):
+                    counts["lessons"] += 1
+                text = (cdir / item["file"]).read_text(encoding="utf-8")
+                counts["videos"] += len(re.findall(r"\{\{\s*video:", text))
+                counts["pilot_videos"] += len(re.findall(r"\{\{\s*youtube:", text))
+        courses.append({
+            "slug": cdir.name,
+            "code": spec.get("code", ""),
+            "title": spec["title"],
+            "description": spec["description"],
+            "audience": spec.get("audience", ""),
+            "duration": spec.get("duration", ""),
+            "counts": counts,
+        })
+    return courses
+
+
+def render_learning_studio_cards(courses: list[dict[str, Any]], base: str) -> str:
+    cards = []
+    for course in courses:
+        c = course["counts"]
+        facts = [f"{c['modules']} modules", f"{c['items']} activities"]
+        if c["lessons"]:
+            facts.insert(1, f"{c['lessons']} hands-on lessons")
+        facts.append(f"{c['assignments']} rubric-graded assignments")
+        facts.append(f"{c['quizzes']} quizzes")
+        videos = c["videos"] + c["pilot_videos"]
+        if videos:
+            facts.append(f"{videos} videos")
+        cards.append(f"""
+        <article class="card fade">
+          <span class="eyebrow">{escape(course['code'])}</span>
+          <h3>{escape(course['title'])}</h3>
+          <p>{escape(truncate_text(course['description'], 260))}</p>
+          <p class="muted"><strong>For:</strong> {escape(course['audience'])}<br><strong>Time:</strong> {escape(course['duration'])}</p>
+          <ul class="learn-facts">{''.join(f'<li>{escape(f)}</li>' for f in facts)}</ul>
+          <div class="portfolio-links">
+            <a class="button" href="{base}{escape(course['slug'])}/index.html">Open the course</a>
+            <a class="button-secondary" href="{base}{escape(course['slug'])}.imscc" download>Download package</a>
+          </div>
+        </article>""")
+    return "".join(cards)
+
+
+def render_learn_landing(courses: list[dict[str, Any]], data: dict[str, Any]) -> str:
+    """The /learn/ catalog page, rendered with the site shell but relative to the learn/ folder."""
+    body = f"""
+  <main id="main-content" class="main-wrap">
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Learning Studio</span>
+      <h2>Online courses I design, build, and teach.</h2>
+      <p>Complete, self-paced courses built for my own learning management system (a self-hosted Moodle). Each course below is published here in full so you can read every lesson, watch the videos, and try the knowledge checks. Enrolment, discussion forums, and graded submissions run on the live platform; contact me for cohort access.</p>
+    </div>
+    <div class="grid-3 learn-grid">
+      {render_learning_studio_cards(courses, "")}
+      <article class="card fade">
+        <span class="eyebrow">How it is built</span>
+        <h3>An authoring pipeline, not a slide deck.</h3>
+        <p>Courses are written as structured source files, built into IMS Common Cartridge packages that import into Moodle, Canvas, or Blackboard, and deployed to a Moodle instance with one script. Draft lesson videos are generated from written scripts with captions and transcripts, then replaced by recorded versions.</p>
+        <ul class="learn-facts"><li>Moodle 4.5 on Docker</li><li>Common Cartridge 1.1 export</li><li>WCAG 2.2 AA content standard</li><li>Competency-based assessment</li></ul>
+        <div class="portfolio-links">
+          <a class="button-secondary" href="https://github.com/KindDave/david-awoyemi-academic-site/tree/main/lms" target="_blank" rel="noopener">See the source on GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  </main>"""
+    shell = render_page(
+        "Learning Studio | " + data["person"]["display_name"],
+        "Online instructional courses designed and built by " + data["person"]["display_name"] + ": previews, packages, and the platform behind them.",
+        "portfolio", "%%LEARN_BODY%%", data)
+    # The page lives one folder down, so site-relative links in the shell need a ../ prefix.
+    shell = re.sub(r'(href|src)="(?!https?://|//|#|mailto:|tel:|\.\./|%%)', r'\1="../', shell)
+    return shell.replace("%%LEARN_BODY%%", body)
+
+
+def write_learn_outputs(data: dict[str, Any]) -> None:
+    """Build the LMS previews (with videos) and publish them under dist/learn/."""
+    import importlib.util
+    import sys
+
+    builder_path = LMS_SCRIPTS_DIR / "build_cartridge.py"
+    courses = load_learning_studio()
+    if not courses or not builder_path.exists():
+        return
+    spec = importlib.util.spec_from_file_location("build_cartridge", builder_path)
+    builder = importlib.util.module_from_spec(spec)
+    sys.modules["build_cartridge"] = builder
+    spec.loader.exec_module(builder)
+
+    # OneDrive or an open browser tab can hold media files locked on Windows; tolerate that and overwrite.
+    shutil.rmtree(LEARN_DIR, ignore_errors=True)
+    LEARN_DIR.mkdir(parents=True, exist_ok=True)
+    for course in courses:
+        slug = course["slug"]
+        builder.build_course(slug, with_media=True)          # writes lms/dist/preview/<slug>/ and packages
+        builder.build_course(slug, with_media=False)         # small package for download
+        shutil.copytree(builder.DIST_DIR / "preview" / slug, LEARN_DIR / slug, dirs_exist_ok=True)
+        shutil.copy2(builder.DIST_DIR / f"{slug}.imscc", LEARN_DIR / f"{slug}.imscc")
+        # the preview with media must be rebuilt last so the local preview keeps its videos
+        builder.build_course(slug, with_media=True)
+    shutil.rmtree(builder.DIST_DIR / "_build", ignore_errors=True)
+    (LEARN_DIR / "index.html").write_text(_strip_em_dashes(render_learn_landing(courses, data)), encoding="utf-8")
+
 DOCX_NS = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
 # Canonical section keys, plus every heading spelling that maps to them.
 # Matching is case-insensitive so the CV may use ALL CAPS or Title Case.
@@ -4390,6 +4524,26 @@ def render_portfolio(data: dict[str, Any]) -> str:
     </div>
   </section>
 
+  <section class="section" id="learning-studio">
+    <div class="section-heading">
+      <span class="eyebrow">Learning Studio</span>
+      <h2>Complete online courses on my own learning management system.</h2>
+      <p>I design, build, and teach full online courses on a self-hosted Moodle platform. Each course is published in full so you can open every lesson, watch the videos, and try the knowledge checks. Enrolment and graded work run on the live platform.</p>
+    </div>
+    <div class="grid-3 learn-grid">
+      {render_learning_studio_cards(load_learning_studio(), LEARN_URL)}
+      <article class="card fade">
+        <span class="eyebrow">The platform</span>
+        <h3>Authoring pipeline and self-hosted LMS.</h3>
+        <p>Courses are written as structured source files, exported as IMS Common Cartridge packages that import into Moodle, Canvas, or Blackboard, and deployed to Moodle with one script. Lesson videos carry captions and transcripts, and every assignment has an analytic rubric.</p>
+        <div class="portfolio-links">
+          <a class="button" href="{LEARN_URL}">Browse all courses</a>
+          <a class="button-secondary" href="https://github.com/KindDave/david-awoyemi-academic-site/tree/main/lms" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section-heading">
       <span class="eyebrow">Doctoral Coursework Portfolio</span>
@@ -4605,6 +4759,7 @@ def write_outputs(data: dict[str, Any]) -> None:
     if ASSET_DIR.exists():
         shutil.copytree(ASSET_DIR, DIST_ASSET_DIR, dirs_exist_ok=True)
     shutil.copy2(SOURCE_DOCX, DIST_DIR / SOURCE_DOCX.name)
+    write_learn_outputs(data)
     NOJEKYLL.write_text("", encoding="utf-8")
 
 

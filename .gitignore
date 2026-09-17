@@ -6,7 +6,6 @@ scripts/sync_cv.config.json
 # LMS: keep built course packages, but never commit secrets
 !lms/dist/
 lms/docker/.env
-# LMS generated media (rebuild with: python lms/scripts/make_videos.py)
-lms/media/**/*.mp4
+# LMS generated media: the draft MP4s are committed so the GitHub Pages build can publish /learn/ with videos
 lms/dist/*-with-media.imscc
 lms/dist/preview/*/media/

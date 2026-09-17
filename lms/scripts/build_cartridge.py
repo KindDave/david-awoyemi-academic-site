@@ -551,7 +551,8 @@ def write_preview(course: dict, modules: list[dict], shipped_media: set[str] | N
     icons = {"page": "P", "assignment": "A", "discussion": "D", "quiz": "Q", "link": "L"}
     labels = {"page": "Page", "assignment": "Assignment", "discussion": "Discussion forum",
               "quiz": "Quiz", "link": "Web link"}
-    side = [f'<div class="code">{html.escape(course.get("code", ""))}</div><h1>{html.escape(course["title"])}</h1>',
+    side = ['<a href="../index.html" style="font-size:.8rem;opacity:.85;margin-bottom:10px">&larr; All courses</a>',
+            f'<div class="code">{html.escape(course.get("code", ""))}</div><h1>{html.escape(course["title"])}</h1>',
             f'<div style="font-size:.85rem;opacity:.8">{html.escape(course.get("instructor", ""))}</div>']
     body: list[str] = [f'<div class="card"><div class="kicker">Course overview</div><h1>{html.escape(course["title"])}</h1>'
                        f'{md_to_html(course["description"])}'
