@@ -29,13 +29,53 @@
       </span>
     </a>
     <ul class="nav-links" aria-label="Primary navigation">
-<li><a href="index.html" class="">Home</a></li>
-<li><a href="about.html" class="">About</a></li>
-<li><a href="academic.html" class="">Academic Profile</a></li>
-<li><a href="research.html" class="">Research Projects</a></li>
-<li><a href="teaching.html" class="is-active">Teaching Philosophy</a></li>
-<li><a href="portfolio.html" class="">ID Portfolio</a></li>
-<li><a href="contact.html" class="">Contact</a></li>
+<li class="nav-item" data-nav-item><a href="index.html" class="">Home</a></li>
+<li class="nav-item has-menu" data-nav-item><a href="about.html" class="">About</a><button class="nav-caret" type="button" data-nav-menu-toggle aria-expanded="false" aria-label="Show About sections"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+<ul class="nav-menu" aria-label="About sections">
+<li><a href="about.html#who-i-am">Who I Am</a></li>
+<li><a href="about.html#education-and-training">Education and Training</a></li>
+<li><a href="about.html#skills-and-tools">Skills and Tools</a></li>
+</ul></li>
+<li class="nav-item has-menu" data-nav-item><a href="academic.html" class="">Academic Profile</a><button class="nav-caret" type="button" data-nav-menu-toggle aria-expanded="false" aria-label="Show Academic Profile sections"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+<ul class="nav-menu" aria-label="Academic Profile sections">
+<li><a href="academic.html#research-interests">Research Interests</a></li>
+<li><a href="academic.html#doctoral-coursework">Doctoral Coursework</a></li>
+<li><a href="academic.html#publications">Publications</a></li>
+<li><a href="academic.html#manuscripts-under-review-and-in-revision">Manuscripts Under Review</a></li>
+<li><a href="academic.html#conference-presentations">Conference Presentations</a></li>
+<li><a href="academic.html#grants">Grants and Funded Projects</a></li>
+<li><a href="academic.html#service-snapshot">Service</a></li>
+<li><a href="academic.html#affiliations">Affiliations</a></li>
+</ul></li>
+<li class="nav-item has-menu" data-nav-item><a href="research.html" class="">Research Projects</a><button class="nav-caret" type="button" data-nav-menu-toggle aria-expanded="false" aria-label="Show Research Projects sections"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+<ul class="nav-menu" aria-label="Research Projects sections">
+<li><a href="research.html#research-agenda">Research Agenda</a></li>
+<li><a href="research.html#core-roles">Core Roles</a></li>
+<li><a href="research.html#selected-case-studies">Selected Case Studies</a></li>
+<li><a href="research.html#current-project">Current Project</a></li>
+</ul></li>
+<li class="nav-item has-menu" data-nav-item><a href="teaching.html" class="is-active">Teaching Philosophy</a><button class="nav-caret" type="button" data-nav-menu-toggle aria-expanded="false" aria-label="Show Teaching Philosophy sections"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+<ul class="nav-menu" aria-label="Teaching Philosophy sections">
+<li><a href="teaching.html#teaching-as-design">Teaching as Design</a></li>
+<li><a href="teaching.html#frameworks-that-guide-my-practice">Frameworks</a></li>
+<li><a href="teaching.html#teaching-philosophy-in-depth">Philosophy In Depth</a></li>
+<li><a href="teaching.html#course-evidence">Course Evidence</a></li>
+<li><a href="teaching.html#teaching-experience">Teaching Experience</a></li>
+</ul></li>
+<li class="nav-item has-menu" data-nav-item><a href="portfolio.html" class="">ID Portfolio</a><button class="nav-caret" type="button" data-nav-menu-toggle aria-expanded="false" aria-label="Show ID Portfolio sections"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+<ul class="nav-menu" aria-label="ID Portfolio sections">
+<li><a href="portfolio.html#rise-360-tutorial">Rise 360 Tutorial</a></li>
+<li><a href="portfolio.html#canvas-course-prototype">Canvas Course Prototype</a></li>
+<li><a href="portfolio.html#faculty-training-prototype">Faculty Training Prototype</a></li>
+<li><a href="portfolio.html#ai-ivr-design-and-development-project">AI-IVR Project</a></li>
+<li><a href="portfolio.html#curriculum-design-and-stem-education">Curriculum Design</a></li>
+<li><a href="portfolio.html#professional-development-and-training-documentation">PD and Training Documentation</a></li>
+<li><a href="portfolio.html#arts-integrated-genai-literacy-pd-series">Arts-Integrated GenAI Literacy</a></li>
+<li><a href="portfolio.html#learning-studio">Learning Studio</a></li>
+<li><a href="portfolio.html#doctoral-coursework-portfolio">Doctoral Coursework</a></li>
+<li><a href="portfolio.html#selected-course-deliverables">Course Deliverables</a></li>
+</ul></li>
+<li class="nav-item" data-nav-item><a href="contact.html" class="">Contact</a></li>
     </ul>
     <div class="nav-actions">
       <button class="theme-toggle" type="button" data-theme-toggle>
@@ -50,13 +90,53 @@
     </div>
   </div>
   <div class="mobile-nav" data-mobile-nav>
-    <a href="index.html" class="">Home</a>
-<a href="about.html" class="">About</a>
-<a href="academic.html" class="">Academic Profile</a>
-<a href="research.html" class="">Research Projects</a>
-<a href="teaching.html" class="is-active">Teaching Philosophy</a>
-<a href="portfolio.html" class="">ID Portfolio</a>
-<a href="contact.html" class="">Contact</a>
+    <div class="mobile-nav-item" data-nav-item><div class="mobile-nav-row"><a href="index.html" class="">Home</a></div></div>
+<div class="mobile-nav-item has-menu" data-nav-item><div class="mobile-nav-row"><a href="about.html" class="">About</a><button class="nav-caret" type="button" data-nav-menu-toggle aria-expanded="false" aria-label="Show About sections"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div>
+<ul class="nav-menu" aria-label="About sections">
+<li><a href="about.html#who-i-am">Who I Am</a></li>
+<li><a href="about.html#education-and-training">Education and Training</a></li>
+<li><a href="about.html#skills-and-tools">Skills and Tools</a></li>
+</ul></div>
+<div class="mobile-nav-item has-menu" data-nav-item><div class="mobile-nav-row"><a href="academic.html" class="">Academic Profile</a><button class="nav-caret" type="button" data-nav-menu-toggle aria-expanded="false" aria-label="Show Academic Profile sections"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div>
+<ul class="nav-menu" aria-label="Academic Profile sections">
+<li><a href="academic.html#research-interests">Research Interests</a></li>
+<li><a href="academic.html#doctoral-coursework">Doctoral Coursework</a></li>
+<li><a href="academic.html#publications">Publications</a></li>
+<li><a href="academic.html#manuscripts-under-review-and-in-revision">Manuscripts Under Review</a></li>
+<li><a href="academic.html#conference-presentations">Conference Presentations</a></li>
+<li><a href="academic.html#grants">Grants and Funded Projects</a></li>
+<li><a href="academic.html#service-snapshot">Service</a></li>
+<li><a href="academic.html#affiliations">Affiliations</a></li>
+</ul></div>
+<div class="mobile-nav-item has-menu" data-nav-item><div class="mobile-nav-row"><a href="research.html" class="">Research Projects</a><button class="nav-caret" type="button" data-nav-menu-toggle aria-expanded="false" aria-label="Show Research Projects sections"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div>
+<ul class="nav-menu" aria-label="Research Projects sections">
+<li><a href="research.html#research-agenda">Research Agenda</a></li>
+<li><a href="research.html#core-roles">Core Roles</a></li>
+<li><a href="research.html#selected-case-studies">Selected Case Studies</a></li>
+<li><a href="research.html#current-project">Current Project</a></li>
+</ul></div>
+<div class="mobile-nav-item has-menu" data-nav-item><div class="mobile-nav-row"><a href="teaching.html" class="is-active">Teaching Philosophy</a><button class="nav-caret" type="button" data-nav-menu-toggle aria-expanded="false" aria-label="Show Teaching Philosophy sections"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div>
+<ul class="nav-menu" aria-label="Teaching Philosophy sections">
+<li><a href="teaching.html#teaching-as-design">Teaching as Design</a></li>
+<li><a href="teaching.html#frameworks-that-guide-my-practice">Frameworks</a></li>
+<li><a href="teaching.html#teaching-philosophy-in-depth">Philosophy In Depth</a></li>
+<li><a href="teaching.html#course-evidence">Course Evidence</a></li>
+<li><a href="teaching.html#teaching-experience">Teaching Experience</a></li>
+</ul></div>
+<div class="mobile-nav-item has-menu" data-nav-item><div class="mobile-nav-row"><a href="portfolio.html" class="">ID Portfolio</a><button class="nav-caret" type="button" data-nav-menu-toggle aria-expanded="false" aria-label="Show ID Portfolio sections"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div>
+<ul class="nav-menu" aria-label="ID Portfolio sections">
+<li><a href="portfolio.html#rise-360-tutorial">Rise 360 Tutorial</a></li>
+<li><a href="portfolio.html#canvas-course-prototype">Canvas Course Prototype</a></li>
+<li><a href="portfolio.html#faculty-training-prototype">Faculty Training Prototype</a></li>
+<li><a href="portfolio.html#ai-ivr-design-and-development-project">AI-IVR Project</a></li>
+<li><a href="portfolio.html#curriculum-design-and-stem-education">Curriculum Design</a></li>
+<li><a href="portfolio.html#professional-development-and-training-documentation">PD and Training Documentation</a></li>
+<li><a href="portfolio.html#arts-integrated-genai-literacy-pd-series">Arts-Integrated GenAI Literacy</a></li>
+<li><a href="portfolio.html#learning-studio">Learning Studio</a></li>
+<li><a href="portfolio.html#doctoral-coursework-portfolio">Doctoral Coursework</a></li>
+<li><a href="portfolio.html#selected-course-deliverables">Course Deliverables</a></li>
+</ul></div>
+<div class="mobile-nav-item" data-nav-item><div class="mobile-nav-row"><a href="contact.html" class="">Contact</a></div></div>
     <div class="mobile-nav-actions">
       <button class="mobile-theme-toggle" type="button" data-theme-toggle>
         <span data-theme-label>Dark</span>
@@ -73,7 +153,7 @@
     <h1>Teaching grounded in instructional technology and the learning sciences.</h1>
   </section>
 
-  <section class="section">
+  <section class="section" id="teaching-as-design">
     <div class="about-hero-grid">
       <div class="about-photo-stack fade">
         <div class="profile-photo-card">
@@ -95,7 +175,7 @@
     </div>
   </section>
 
-  <section class="section-alt">
+  <section class="section-alt" id="frameworks-that-guide-my-practice">
     <div class="section-inner">
       <div class="section-heading">
         <span class="eyebrow">Frameworks That Guide My Practice</span>
@@ -164,7 +244,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="teaching-philosophy-in-depth">
     <div class="section-heading">
       <span class="eyebrow">Teaching Philosophy In Depth</span>
       <h2>A fuller narrative for committees and collaborators.</h2>
@@ -226,7 +306,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="course-evidence">
     <div class="section-heading">
       <span class="eyebrow">Course Evidence</span>
       <h2>Instructor of record, AI Fluency for the Workforce.</h2>
@@ -238,7 +318,7 @@
     </figure>
   </section>
 
-  <section class="section-alt">
+  <section class="section-alt" id="teaching-experience">
     <div class="section-inner two-column">
       <div>
         <div class="section-heading">

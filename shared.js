@@ -255,3 +255,48 @@ if (backToTopButton) {
 
   updateVisibility();
 }
+
+// Navigation dropdowns: the caret next to a page tab opens that page's
+// section list. Only one menu stays open; outside clicks and Escape close it.
+const navMenuItems = Array.from(document.querySelectorAll('[data-nav-item]'));
+const closeNavMenus = (except) => {
+  navMenuItems.forEach((item) => {
+    if (item === except) return;
+    item.classList.remove('is-open');
+    const caret = item.querySelector('[data-nav-menu-toggle]');
+    if (caret) caret.setAttribute('aria-expanded', 'false');
+  });
+};
+
+navMenuItems.forEach((item) => {
+  const caret = item.querySelector('[data-nav-menu-toggle]');
+  if (!caret) return;
+  caret.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    const open = !item.classList.contains('is-open');
+    closeNavMenus(item);
+    item.classList.toggle('is-open', open);
+    caret.setAttribute('aria-expanded', String(open));
+  });
+  // Keyboard users: once focus leaves the tab and its menu, close it.
+  item.addEventListener('focusout', (event) => {
+    if (event.relatedTarget && item.contains(event.relatedTarget)) return;
+    item.classList.remove('is-open');
+    caret.setAttribute('aria-expanded', 'false');
+  });
+});
+
+if (navMenuItems.length) {
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('[data-nav-item]')) closeNavMenus();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    const openItem = navMenuItems.find((item) => item.classList.contains('is-open'));
+    if (!openItem) return;
+    closeNavMenus();
+    const caret = openItem.querySelector('[data-nav-menu-toggle]');
+    if (caret) caret.focus();
+  });
+}

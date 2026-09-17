@@ -3088,6 +3088,96 @@ def render_media_cards(items: list[dict[str, str]], extra_class: str = "") -> st
     )
 
 
+# Section shortcuts listed in the dropdown under each long page's navigation
+# tab. Anchors are section ids: either set explicitly in a template or derived
+# by add_section_anchors from the section's eyebrow text (slugified).
+NAV_MENUS: dict[str, list[tuple[str, str]]] = {
+    "about": [
+        ("Who I Am", "who-i-am"),
+        ("Education and Training", "education-and-training"),
+        ("Skills and Tools", "skills-and-tools"),
+    ],
+    "academic": [
+        ("Research Interests", "research-interests"),
+        ("Doctoral Coursework", "doctoral-coursework"),
+        ("Publications", "publications"),
+        ("Manuscripts Under Review", "manuscripts-under-review-and-in-revision"),
+        ("Conference Presentations", "conference-presentations"),
+        ("Grants and Funded Projects", "grants"),
+        ("Service", "service-snapshot"),
+        ("Affiliations", "affiliations"),
+    ],
+    "research": [
+        ("Research Agenda", "research-agenda"),
+        ("Core Roles", "core-roles"),
+        ("Selected Case Studies", "selected-case-studies"),
+        ("Current Project", "current-project"),
+    ],
+    "teaching": [
+        ("Teaching as Design", "teaching-as-design"),
+        ("Frameworks", "frameworks-that-guide-my-practice"),
+        ("Philosophy In Depth", "teaching-philosophy-in-depth"),
+        ("Course Evidence", "course-evidence"),
+        ("Teaching Experience", "teaching-experience"),
+    ],
+    "portfolio": [
+        ("Rise 360 Tutorial", "rise-360-tutorial"),
+        ("Canvas Course Prototype", "canvas-course-prototype"),
+        ("Faculty Training Prototype", "faculty-training-prototype"),
+        ("AI-IVR Project", "ai-ivr-design-and-development-project"),
+        ("Curriculum Design", "curriculum-design-and-stem-education"),
+        ("PD and Training Documentation", "professional-development-and-training-documentation"),
+        ("Arts-Integrated GenAI Literacy", "arts-integrated-genai-literacy-pd-series"),
+        ("Learning Studio", "learning-studio"),
+        ("Doctoral Coursework", "doctoral-coursework-portfolio"),
+        ("Course Deliverables", "selected-course-deliverables"),
+    ],
+}
+
+NAV_CHEVRON = (
+    '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    'stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+    '<path d="m6 9 6 6 6-6"/></svg>'
+)
+
+
+def add_section_anchors(body: str) -> str:
+    """Give every content <section> without an id one derived from its eyebrow
+    text, so navigation menus and links can target it. Page heroes are skipped."""
+    used = set(re.findall(r'\sid="([^"]+)"', body))
+    pieces: list[str] = []
+    position = 0
+    for match in re.finditer(r"<section\b([^>]*)>", body):
+        attrs = match.group(1)
+        pieces.append(body[position:match.start()])
+        position = match.end()
+        tag = match.group(0)
+        if " id=" not in attrs and "page-hero" not in attrs:
+            following = body[match.end():]
+            stop = following.find("<section")
+            scope = following if stop < 0 else following[:stop]
+            eyebrow = re.search(r'class="eyebrow[^"]*"[^>]*>([^<]+)<', scope)
+            if eyebrow:
+                base = slugify(html.unescape(eyebrow.group(1)))
+                slug, suffix = base, 2
+                while slug in used:
+                    slug, suffix = f"{base}-{suffix}", suffix + 1
+                used.add(slug)
+                tag = f'<section{attrs} id="{slug}">'
+        pieces.append(tag)
+    pieces.append(body[position:])
+    return "".join(pieces)
+
+
+def validate_nav_anchors(active: str, body: str) -> None:
+    anchors = [anchor for _label, anchor in NAV_MENUS.get(active, [])]
+    missing = [anchor for anchor in anchors if f'id="{anchor}"' not in body]
+    # A secondary page (such as the Learning Studio showcase) reuses a tab
+    # highlight without carrying that page's sections; only flag partial gaps.
+    if missing and len(missing) != len(anchors):
+        raise ValueError(f"Navigation menu for '{active}' points at missing section ids: {', '.join(missing)}")
+
+
 def render_nav(data: dict[str, Any], active: str) -> str:
     person = data["person"]
     links = [
@@ -3099,12 +3189,29 @@ def render_nav(data: dict[str, Any], active: str) -> str:
         ("portfolio", "ID Portfolio", "portfolio.html"),
         ("contact", "Contact", "contact.html"),
     ]
+
+    def menu_html(key: str, label: str, href: str) -> str:
+        items = NAV_MENUS.get(key, [])
+        if not items:
+            return ""
+        entries = "\n".join(f'<li><a href="{href}#{anchor}">{escape(text)}</a></li>' for text, anchor in items)
+        return (
+            f'<button class="nav-caret" type="button" data-nav-menu-toggle aria-expanded="false" '
+            f'aria-label="Show {escape(label)} sections">{NAV_CHEVRON}</button>\n'
+            f'<ul class="nav-menu" aria-label="{escape(label)} sections">\n{entries}\n</ul>'
+        )
+
     links_html = "\n".join(
-        f'<li><a href="{href}" class="{"is-active" if key == active else ""}">{label}</a></li>'
+        f'<li class="nav-item{" has-menu" if NAV_MENUS.get(key) else ""}" data-nav-item>'
+        f'<a href="{href}" class="{"is-active" if key == active else ""}">{label}</a>'
+        f'{menu_html(key, label, href)}</li>'
         for key, label, href in links
     )
     mobile_html = "\n".join(
-        f'<a href="{href}" class="{"is-active" if key == active else ""}">{label}</a>'
+        f'<div class="mobile-nav-item{" has-menu" if NAV_MENUS.get(key) else ""}" data-nav-item>'
+        f'<div class="mobile-nav-row"><a href="{href}" class="{"is-active" if key == active else ""}">{label}</a>'
+        f'{menu_html(key, label, href).replace(chr(10) + "<ul", "</div>" + chr(10) + "<ul", 1) if NAV_MENUS.get(key) else "</div>"}'
+        f'</div>'
         for key, label, href in links
     )
     return f"""
@@ -3195,6 +3302,8 @@ def render_footer(data: dict[str, Any]) -> str:
 
 
 def render_page(title: str, description: str, active: str, body: str, data: dict[str, Any]) -> str:
+    body = add_section_anchors(body)
+    validate_nav_anchors(active, body)
     return f"""<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -4359,7 +4468,7 @@ def render_portfolio(data: dict[str, Any]) -> str:
     <p>A curated collection of instructional design artifacts, eLearning modules, multimedia projects, and doctoral course reflections demonstrating applied mastery across the instructional design cycle.</p>
   </section>
 
-  <section class="section-alt">
+  <section class="section-alt" id="rise-360-tutorial">
     <div class="section-inner">
       <div class="section-heading">
         <span class="eyebrow">Featured Project</span>
@@ -4388,7 +4497,7 @@ def render_portfolio(data: dict[str, Any]) -> str:
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="canvas-course-prototype">
     <div class="section-inner">
       <div class="section-heading">
         <span class="eyebrow">Featured Project</span>

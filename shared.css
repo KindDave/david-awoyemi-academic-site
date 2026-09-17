@@ -444,6 +444,13 @@ img { max-width: 100%; display: block; }
   margin-top: 0.9rem;
 }
 
+/* The panel's generic link colour must not override the filled button's
+   white label (it made "Contact Me" navy-on-navy). */
+.mobile-nav-actions .button,
+.mobile-nav-actions .button:hover {
+  color: #fff;
+}
+
 .main-wrap {
   max-width: 1200px;
   margin: 0 auto;
@@ -824,11 +831,10 @@ img { max-width: 100%; display: block; }
 }
 
 /* Keep anchored sections clear of the sticky header. */
-#publications,
-#grants,
-#awards,
-#core-roles,
-.publication-section[id] {
+main section[id],
+.section-heading[id],
+.publication-section[id],
+#awards {
   scroll-margin-top: 6.5rem;
 }
 
@@ -3792,3 +3798,183 @@ img { max-width: 100%; display: block; }
 .learn-grid .portfolio-links a.button { color: #ffffff; }
 [data-theme="dark"] .learn-grid .portfolio-links a.button { color: #061631; }
 .learn-grid .portfolio-links a.button-secondary { color: var(--text1); }
+
+/* ============================================================
+   Navigation dropdowns: each long page's tab lists its sections
+   so visitors can jump straight to what they came for. Opens on
+   hover or keyboard focus on desktop, and from the caret button
+   (touch, keyboard, and inside the mobile panel).
+   ============================================================ */
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Tighter tab spacing than the original pills so seven tabs plus five
+   carets fit the centre column at desktop widths (nav shows from 1241px). */
+.nav-links {
+  gap: 0.15rem;
+}
+
+.nav-inner {
+  gap: 0.6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nav-links > .nav-item > a {
+  font-size: 0.8rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.nav-links > .nav-item > a.is-active::after {
+  left: 0.6rem;
+  right: 0.6rem;
+}
+
+.nav-item.has-menu > a {
+  padding-right: 0.25rem;
+}
+
+.nav-item.has-menu > a.is-active::after {
+  right: 0.25rem;
+}
+
+@media (max-width: 1300px) {
+  /* Between the desktop-nav threshold (1241px) and 1300px the seven tabs
+     need the brand column's extra width; keep the name, hide the subtitle. */
+  .brand-subtitle {
+    display: none;
+  }
+}
+
+.nav-caret {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: 0.1rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text2);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-caret svg {
+  transition: transform 0.2s ease;
+}
+
+.nav-caret:hover,
+.nav-caret:focus-visible,
+[data-nav-item].is-open > .nav-caret,
+.mobile-nav-row .nav-caret:hover {
+  color: var(--navy);
+  background: var(--navy-soft);
+}
+
+.nav-caret:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+[data-nav-item].is-open .nav-caret svg {
+  transform: rotate(180deg);
+}
+
+.nav-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 60;
+  display: none;
+  min-width: 15.5rem;
+  margin: 0.45rem 0 0;
+  padding: 0.45rem;
+  list-style: none;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.95rem;
+  background: var(--card-strong);
+  box-shadow: var(--shadow-strong);
+}
+
+/* Invisible bridge so the pointer can travel from the tab to the menu. */
+.nav-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.5rem;
+  height: 0.5rem;
+}
+
+.nav-item:hover > .nav-menu,
+.nav-item.is-open > .nav-menu {
+  display: block;
+}
+
+.nav-links .nav-menu a {
+  display: block;
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.6rem;
+  font-size: 0.84rem;
+  font-weight: 500;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.nav-links .nav-menu a:hover,
+.nav-links .nav-menu a:focus-visible {
+  color: var(--navy);
+  background: var(--navy-soft);
+}
+
+/* Mobile panel: the same menus, expanded inline under each page link. */
+.mobile-nav-row {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.mobile-nav-row > a {
+  flex: 1 1 auto;
+}
+
+.mobile-nav-row .nav-caret {
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.mobile-nav .nav-menu {
+  position: static;
+  display: none;
+  min-width: 0;
+  margin: 0 0 0.5rem 0.95rem;
+  padding: 0.15rem 0;
+  border: 0;
+  border-left: 2px solid var(--border-strong);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.mobile-nav .nav-menu::before {
+  display: none;
+}
+
+.mobile-nav .mobile-nav-item.is-open .nav-menu {
+  display: block;
+}
+
+.mobile-nav .nav-menu a {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
