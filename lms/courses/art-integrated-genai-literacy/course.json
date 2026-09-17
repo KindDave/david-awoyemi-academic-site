@@ -1,0 +1,78 @@
+{
+  "code": "GENAI 101",
+  "title": "Art-Integrated GenAI Literacy for Music and Theater Educators",
+  "description": "A fully online, self-paced course that builds generative AI (GenAI) literacy through hands-on music and theater projects. Across two modules and eight lessons you will compose, produce, script, animate, and choreograph with GenAI tools while developing seven competencies: computational thinking, prompt engineering, problem solving, creativity and innovation, AI feedback evaluation, AI ethics literacy, and collaboration. Every lesson ends with a shareable digital artifact and a short written rationale.",
+  "audience": "Pre-service and in-service music and theater teachers; arts educators new to generative AI.",
+  "duration": "About 12 to 16 hours total. Each lesson takes 60 to 90 minutes. Self-paced.",
+  "instructor": "Idowu David Awoyemi, The University of Alabama",
+  "modules": [
+    {
+      "title": "Module 0: Welcome and Orientation",
+      "summary": "How the course works, the competencies you will build, tool setup, and responsible-use expectations.",
+      "items": [
+        {"type": "page", "title": "Welcome and How This Course Works", "file": "pages/00-welcome.md"},
+        {"type": "page", "title": "The Seven GenAI Competencies", "file": "pages/01-competencies.md"},
+        {"type": "page", "title": "Tools, Accounts, and Setup", "file": "pages/02-tools-setup.md"},
+        {"type": "page", "title": "Using AI Responsibly in This Course", "file": "pages/03-responsible-use.md"},
+        {"type": "discussion", "title": "Introduce Yourself: Your Art, Your Questions", "file": "discussions/intro.md"},
+        {"type": "quiz", "title": "Pre-Course Self-Assessment", "file": "quizzes/pre-assessment.json"}
+      ]
+    },
+    {
+      "title": "Module 1: Music",
+      "summary": "Four hands-on lessons: song composition, loop-based production, scoring a scene, and the ethics of AI music.",
+      "items": [
+        {"type": "page", "title": "Music Module Introduction", "file": "pages/m1-intro.md"},
+        {"type": "page", "title": "Lesson 1.1: Composing an Original Song with GenAI", "file": "pages/m1-l1-song.md"},
+        {"type": "link", "title": "Tool: Suno", "url": "https://suno.com", "note": "Text-to-song generator used in Lesson 1.1. Free tier is enough for the lesson."},
+        {"type": "discussion", "title": "Lesson 1.1 Gallery: Share Your Song", "file": "discussions/m1-l1.md"},
+        {"type": "quiz", "title": "Lesson 1.1 Knowledge Check", "file": "quizzes/m1-l1.json"},
+        {"type": "page", "title": "Lesson 1.2: Beat Making and Loop-Based Production", "file": "pages/m1-l2-beats.md"},
+        {"type": "link", "title": "Tool: Soundtrap", "url": "https://www.soundtrap.com", "note": "Browser-based digital audio workstation used in Lesson 1.2. Soundtrap for Education offers free teacher trials."},
+        {"type": "discussion", "title": "Lesson 1.2 Gallery: Share Your Beat", "file": "discussions/m1-l2.md"},
+        {"type": "quiz", "title": "Lesson 1.2 Knowledge Check", "file": "quizzes/m1-l2.json"},
+        {"type": "page", "title": "Lesson 1.3: Scoring a Scene with AI-Generated Soundtracks", "file": "pages/m1-l3-soundtrack.md"},
+        {"type": "discussion", "title": "Lesson 1.3 Gallery: Share Your Scored Scene", "file": "discussions/m1-l3.md"},
+        {"type": "quiz", "title": "Lesson 1.3 Knowledge Check", "file": "quizzes/m1-l3.json"},
+        {"type": "page", "title": "Lesson 1.4: Voice, Ownership, and Ethics in AI Music", "file": "pages/m1-l4-ethics.md"},
+        {"type": "discussion", "title": "Lesson 1.4 Forum: The Attribution Debate", "file": "discussions/m1-l4.md"},
+        {"type": "quiz", "title": "Lesson 1.4 Knowledge Check", "file": "quizzes/m1-l4.json"},
+        {"type": "assignment", "title": "Music Module Reflection", "file": "assignments/m1-reflection.md", "points": 20}
+      ]
+    },
+    {
+      "title": "Module 2: Theater",
+      "summary": "Four hands-on lessons: AI-assisted scriptwriting, avatar performance, digital choreography, and evaluating AI feedback ethically.",
+      "items": [
+        {"type": "page", "title": "Theater Module Introduction", "file": "pages/m2-intro.md"},
+        {"type": "page", "title": "Lesson 2.1: AI-Assisted Dramatic Storytelling", "file": "pages/m2-l1-storytelling.md"},
+        {"type": "discussion", "title": "Lesson 2.1 Gallery: Share Your Scene", "file": "discussions/m2-l1.md"},
+        {"type": "quiz", "title": "Lesson 2.1 Knowledge Check", "file": "quizzes/m2-l1.json"},
+        {"type": "page", "title": "Lesson 2.2: Avatar-Based Performance", "file": "pages/m2-l2-avatar.md"},
+        {"type": "link", "title": "Tool: Animaker", "url": "https://www.animaker.com", "note": "Animated character and video builder used in Lesson 2.2."},
+        {"type": "link", "title": "Tool: Synthesia", "url": "https://www.synthesia.io", "note": "AI presenter/avatar video generator. Optional alternative for Lesson 2.2."},
+        {"type": "discussion", "title": "Lesson 2.2 Gallery: Share Your Avatar Performance", "file": "discussions/m2-l2.md"},
+        {"type": "quiz", "title": "Lesson 2.2 Knowledge Check", "file": "quizzes/m2-l2.json"},
+        {"type": "page", "title": "Lesson 2.3: Digital Choreography and Drama-Dance", "file": "pages/m2-l3-choreography.md"},
+        {"type": "link", "title": "Tool: invideo AI", "url": "https://invideo.io", "note": "Text-to-video generator used in Lesson 2.3."},
+        {"type": "discussion", "title": "Lesson 2.3 Gallery: Share Your Movement Piece", "file": "discussions/m2-l3.md"},
+        {"type": "quiz", "title": "Lesson 2.3 Knowledge Check", "file": "quizzes/m2-l3.json"},
+        {"type": "page", "title": "Lesson 2.4: Evaluating AI Feedback and Ethics in Theater", "file": "pages/m2-l4-evaluation.md"},
+        {"type": "discussion", "title": "Lesson 2.4 Forum: Would You Stage It?", "file": "discussions/m2-l4.md"},
+        {"type": "quiz", "title": "Lesson 2.4 Knowledge Check", "file": "quizzes/m2-l4.json"},
+        {"type": "assignment", "title": "Theater Module Reflection", "file": "assignments/m2-reflection.md", "points": 20}
+      ]
+    },
+    {
+      "title": "Module 3: Bringing It to Your Classroom",
+      "summary": "Turn what you made into a lesson your future students can do, then close out the course.",
+      "items": [
+        {"type": "page", "title": "Designing an Arts-Integrated GenAI Lesson", "file": "pages/m3-lesson-design.md"},
+        {"type": "assignment", "title": "Final Project: Arts-Integrated GenAI Lesson Plan", "file": "assignments/m3-final-project.md", "points": 40},
+        {"type": "discussion", "title": "Final Project Peer Feedback", "file": "discussions/m3-peer-feedback.md"},
+        {"type": "quiz", "title": "Post-Course Self-Assessment", "file": "quizzes/post-assessment.json"},
+        {"type": "page", "title": "Course Completion and Next Steps", "file": "pages/m3-completion.md"}
+      ]
+    }
+  ]
+}

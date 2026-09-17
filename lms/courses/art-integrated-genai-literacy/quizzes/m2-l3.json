@@ -1,0 +1,45 @@
+{
+  "title": "Lesson 2.3 Knowledge Check",
+  "description": "Five questions on movement prompts, diagnosis, and composition. Unlimited attempts; your best score counts.",
+  "questions": [
+    {
+      "type": "multiple_response",
+      "text": "Which are the five elements of dance used as the prompt frame in this lesson? Select all that apply.",
+      "options": ["Body", "Action", "Costume", "Space", "Time", "Energy"],
+      "answers": [0, 1, 3, 4, 5],
+      "feedback": "Body, action, space, time, and energy. Costume is a design element, not a movement element."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "A generated clip shows the dancer with extra limbs and ignores your tempo. According to the three-fix method, what should you try first?",
+      "options": ["Edit the clip to hide the limbs", "Revise the prompt: one dancer, one action, one quality, single shot, stated duration", "Give up on video", "Add a soundtrack to distract from the error"],
+      "answer": 1,
+      "feedback": "Most failures come from overloaded prompts. Simplify first; change tools or edit only if that fails."
+    },
+    {
+      "type": "true_false",
+      "text": "Four generated phrases placed in order with no choreographic device already constitute a composition.",
+      "answer": false,
+      "feedback": "Composition is the intentional arrangement of phrases with a device such as repetition, canon, contrast, or accumulation. Without it you have a slideshow."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Which of these is a choreographic device?",
+      "options": ["Canon", "Aspect ratio", "Frame rate", "Export format"],
+      "answer": 0,
+      "feedback": "Canon (the same phrase performed by different bodies at staggered times) is a choreographic device. The others are video settings."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Why does the lesson require a transfer note about live rehearsal?",
+      "options": [
+        "Because video cannot be submitted",
+        "Because the goal is live performance; the video is a tool for visualizing and directing movement, not a replacement for bodies in a room",
+        "To meet a word count",
+        "Because the tool requires it"
+      ],
+      "answer": 1,
+      "feedback": "Every artifact in the theater module returns to the rehearsal room."
+    }
+  ]
+}

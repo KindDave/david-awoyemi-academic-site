@@ -1,0 +1,186 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.938
+Lesson 1.4: Voice, Ownership, and Ethics in AI Music.
+
+2
+00:00:05.938 --> 00:00:09.075
+GENAI 101 - Module 1: Music.
+
+3
+00:00:09.075 --> 00:00:15.797
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:16.397 --> 00:00:20.537
+Think about the song you made in lesson one point one.
+
+5
+00:00:20.537 --> 00:00:22.224
+Who contributed to it?
+
+6
+00:00:22.224 --> 00:00:24.907
+You wrote the lyrics and the brief.
+
+7
+00:00:24.907 --> 00:00:28.127
+The model generated the melody and vocals.
+
+8
+00:00:28.127 --> 00:00:35.104
+The people whose recordings trained the model contributed
+too, whether they knew it or not.
+
+9
+00:00:35.104 --> 00:00:38.094
+So did the company that built the tool.
+
+10
+00:00:38.094 --> 00:00:44.764
+Now ask three questions: who should be credited, who should
+be paid, and who was asked?
+
+11
+00:00:44.764 --> 00:00:47.217
+Those questions are this lesson.
+
+12
+00:00:47.817 --> 00:00:49.025
+There are four.
+
+13
+00:00:49.025 --> 00:00:51.682
+First, training data and consent.
+
+14
+00:00:51.682 --> 00:01:01.747
+Text-to-music models learned from large collections of
+recordings, and in many cases the artists were neither asked
+nor paid.
+
+15
+00:01:01.747 --> 00:01:03.921
+Second, voice and likeness.
+
+16
+00:01:03.921 --> 00:01:13.502
+Models can imitate a recognizable singer, and several
+jurisdictions now treat that as a violation of a person's
+rights.
+
+17
+00:01:13.502 --> 00:01:19.622
+The course rule is simple: prompt for a type of voice, never
+a named person.
+
+18
+00:01:19.622 --> 00:01:20.991
+Third, ownership.
+
+19
+00:01:20.991 --> 00:01:32.746
+In the United States, the Copyright Office has said that
+purely AI-generated work is not protectable, while your own
+creative contribution can be.
+
+20
+00:01:32.746 --> 00:01:34.276
+Fourth, disclosure.
+
+21
+00:01:34.276 --> 00:01:39.349
+That's why every artifact in this course carries a credit
+line.
+
+22
+00:01:39.949 --> 00:01:44.156
+You'll analyze one real case using a six-step framework.
+
+23
+00:01:44.156 --> 00:01:46.109
+Identify the stakeholders.
+
+24
+00:01:46.109 --> 00:01:48.889
+Weigh the harms and benefits to each.
+
+25
+00:01:48.889 --> 00:01:51.218
+Ask whether consent was sought.
+
+26
+00:01:51.218 --> 00:01:54.224
+Ask whether the AI's role was disclosed.
+
+27
+00:01:54.224 --> 00:01:59.483
+Consider whether the same goal could have been reached with
+less harm.
+
+28
+00:01:59.483 --> 00:02:06.921
+Then take a position: what should have happened, and what
+rule would you set in your own classroom?
+
+29
+00:02:06.921 --> 00:02:09.325
+One sentence per step is enough.
+
+30
+00:02:09.325 --> 00:02:16.538
+Reasonable people will land in different places; what
+matters is that your reasoning is visible.
+
+31
+00:02:17.138 --> 00:02:24.444
+Part of the activity is asking a text model to summarize the
+legal and ethical issues in your case.
+
+32
+00:02:24.444 --> 00:02:27.248
+You'll get a fluent, confident answer.
+
+33
+00:02:27.248 --> 00:02:38.908
+Then you'll check it against two sources you found yourself,
+one news report and one primary source, and mark every claim
+as confirmed, unconfirmed, or wrong.
+
+34
+00:02:38.908 --> 00:02:44.812
+Models blend jurisdictions, go out of date, and occasionally
+invent court cases.
+
+35
+00:02:44.812 --> 00:02:54.997
+Counting what you couldn't confirm is the AI feedback
+evaluation competency in action, and it's a habit you'll
+want your students to have.
+
+36
+00:02:55.597 --> 00:03:06.893
+Finally, you'll write an attribution statement for your own
+song, naming the human and the machine contributions and
+disclosing that AI-generated material is included.
+
+37
+00:03:06.893 --> 00:03:09.125
+A template is on the lesson page.
+
+38
+00:03:09.125 --> 00:03:19.136
+Post it in the forum with your case analysis, your count of
+confirmed and unconfirmed claims, and the rule you'd set for
+AI music in your classroom.
+
+39
+00:03:19.136 --> 00:03:26.847
+Then find two classmates who took a different position and
+engage with their reasoning, not just their conclusion.
+
+40
+00:03:26.847 --> 00:03:31.650
+This is the debate that will follow you into every school
+you teach in.

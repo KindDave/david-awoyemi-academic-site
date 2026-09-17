@@ -1,0 +1,81 @@
+# What Is Instructional Design?
+
+*ID 553 - Module 1: Introduction to Instructional Design Models*
+
+Draft narration script. Total running time about 5 min 46 s.
+
+## Title slide
+
+What Is Instructional Design?. ID 553 - Module 1: Introduction to Instructional Design Models. Presented by Idowu David Awoyemi, The University of Alabama.
+
+## Slide 2: A working definition
+
+- The systematic process of translating principles of learning and instruction into plans for materials, activities, resources, and evaluation
+- Systematic: identifiable phases whose outputs feed the next
+- Principles of learning: cognitive load, retrieval, feedback, transfer, motivation
+- Plans: something others can implement, evaluate, and revise
+
+Let's start with a definition. Instructional design is the systematic process of translating principles of learning and instruction into plans for instructional materials, activities, resources, and evaluation. Three words carry the weight. Systematic: the work proceeds through identifiable phases whose outputs feed the next phase. It's not a recipe, but it isn't improvisation either. Principles of learning: the work rests on evidence about how people learn. A designer who ignores that evidence is decorating, not designing. And plans: the product is something another person can implement, evaluate, and revise.
+
+## Slide 3: Root one: military and industrial training
+
+- Second World War: train large numbers quickly and reliably on complex equipment
+- Gagne and colleagues: task analysis, criterion-referenced tests, objectives before instruction
+- The systems approach: instruction as interacting components engineered toward a measurable outcome
+
+The field has three roots. The first is military and industrial training. During the Second World War, psychologists including Robert Gagne were asked to train enormous numbers of people quickly and reliably on complex equipment. They developed task analysis, criterion-referenced testing, and the practice of specifying objectives before building instruction. The systems approach that emerged, treating instruction as a set of interacting components engineered toward a measurable outcome, is the ancestor of every model you'll study.
+
+## Slide 4: Root two: behavioral and cognitive psychology
+
+- Skinner: small steps, active responding, immediate feedback
+- Mager (1962): a format for measurable objectives
+- Gagne (1965): different outcomes need different conditions; the nine events
+- Cognitive psychology: mental models, working memory limits, prior knowledge, transfer
+
+The second root is psychology. Skinner's programmed instruction contributed small steps, active responding, and immediate feedback. Mager gave designers a format for writing measurable objectives in 1962. Gagne's Conditions of Learning argued that different types of outcomes require different instructional conditions, and his nine events of instruction became the most widely used lesson framework in the field. Cognitive psychology later reframed learning as the construction of mental models and drew attention to the limits of working memory, the power of prior knowledge, and the problem of transfer.
+
+## Slide 5: Root three: constructivism and the learning sciences
+
+- Critique: the systems approach can produce sterile, decontextualized instruction
+- Situated learning, problem-based learning, cognitive apprenticeship
+- Design-based research and partnership with cognitive science
+- Contemporary ID draws on all three roots and argues about the balance
+
+The third root is constructivism and the learning sciences. Constructivist critics argued that the systems approach could produce sterile, decontextualized instruction, and pushed the field toward authentic tasks, collaboration, and reflection through situated learning, problem-based learning, and cognitive apprenticeship. The learning sciences added design-based research and a closer partnership with cognitive science. Contemporary instructional design draws on all three roots and argues, productively, about the balance among them.
+
+## Slide 6: The systems view
+
+- Learners, content, methods, media, environment, assessment: interacting components
+- Change one and the others shift: add a video, change the load; go online, change the social presence
+- Consequence 1: analysis comes before design
+- Consequence 2: evaluation is part of the system, not an afterthought
+
+The most durable idea in the field is that instruction is a system. Learners, content, methods, media, environment, and assessment interact, and their interactions determine the outcome. Change one component and the others shift. Add a video and you change the cognitive load. Move a course online and you change the social presence. Shorten the practice and you change retention. Two consequences follow. Analysis comes before design, because you cannot engineer a system you have not described. And evaluation is part of the system, not an afterthought; every model closes the loop with data.
+
+## Slide 7: What designers actually do
+
+- Needs assessment: is there a gap, and is instruction the right solution?
+- Front-end analysis: learners, context, task
+- Design: objectives, assessments, sequence, strategies, media
+- Development, implementation, evaluation
+- Project management: rarely taught, always present
+
+What does a designer actually do on a project? First, a needs assessment: is there a performance gap, and is instruction the right solution? Often it isn't. A job aid, a process change, or a better incentive may fix the problem faster, and designers who skip this question build training nobody needed. Then front-end analysis of learners, context, and task. Then design: objectives, assessments, sequence, strategies, and media. Then development, implementation, and evaluation. And underneath all of it, project management: scope, schedule, stakeholders, and budget.
+
+## Slide 8: A design failure caused by skipping analysis
+
+- A hospital retrains 400 nurses on a new records system with an eight-hour vendor class
+- Nobody asks what nurses already know, when they can attend, or which workflows fail
+- Result: nine hundred help desk calls in the first week
+- You will analyze exactly this case in Module 2
+
+Here's what skipping analysis looks like. A hospital replaces its patient records system and retrains four hundred nurses with the vendor's eight-hour classroom course. Nobody asks what the nurses already know, when they can actually attend, or which workflows are most likely to fail. The training happens six weeks before go-live, everyone forgets it, and the help desk takes nine hundred calls in the first week. You'll analyze exactly this situation in module two. Keep it in mind as you read about the models.
+
+## Slide 9: Instructional design and teaching
+
+- Teachers design instruction every day
+- What ID adds: explicitness and the systems view
+- Objectives written; assessments aligned before activities chosen; the design documented
+- Visibility is what makes expertise improvable
+
+One last point. Teachers design instruction every day. What distinguishes instructional design as a discipline is the explicitness and the systems view: objectives are written, assessments are aligned before activities are chosen, and the design is documented so others can implement and evaluate it. Many teachers find that learning instructional design makes their tacit expertise visible, and that visibility is what makes it improvable. Before the next page, write one paragraph on what would go wrong in a project that skipped analysis and went straight to building. Bring it to the discussion.

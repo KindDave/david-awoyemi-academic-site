@@ -1,0 +1,48 @@
+{
+  "fullname": "ID 553: Introduction to the Principles of Instructional Design",
+  "assignments": [
+    {
+      "title": "Assignment 2: Understanding Instructional Design Models",
+      "points": 50
+    },
+    {
+      "title": "Assignment 3: ID Case Analysis I",
+      "points": 100
+    },
+    {
+      "title": "Assignment 5: Learner Analysis",
+      "points": 75
+    },
+    {
+      "title": "Assignment 6: Task Analysis",
+      "points": 75
+    },
+    {
+      "title": "Assignment 4: ID Case Analysis II",
+      "points": 100
+    },
+    {
+      "title": "Assignment 7, Part 1: Instructional Plan",
+      "points": 150
+    },
+    {
+      "title": "Assignment 7, Part 2: Evaluation Plan and Peer Review",
+      "points": 75
+    },
+    {
+      "title": "Assignment 7, Part 3: Final Reflection on the Plan",
+      "points": 50
+    },
+    {
+      "title": "Assignment 8: Course Reflection",
+      "points": 50
+    }
+  ],
+  "surveys": [
+    "Pre-Course Knowledge Survey",
+    "Post-Course Survey"
+  ],
+  "category": "Instructional Design",
+  "shortname": "ID553",
+  "enrolkey": "id553-2026"
+}

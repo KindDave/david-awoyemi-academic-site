@@ -1,0 +1,24 @@
+{
+  "fullname": "Art-Integrated GenAI Literacy for Music and Theater Educators",
+  "assignments": [
+    {
+      "title": "Music Module Reflection",
+      "points": 20
+    },
+    {
+      "title": "Theater Module Reflection",
+      "points": 20
+    },
+    {
+      "title": "Final Project: Arts-Integrated GenAI Lesson Plan",
+      "points": 40
+    }
+  ],
+  "surveys": [
+    "Pre-Course Self-Assessment",
+    "Post-Course Self-Assessment"
+  ],
+  "category": "AI Literacy and Emerging Technology",
+  "shortname": "GENAI101",
+  "enrolkey": "genai-pilot-2026"
+}

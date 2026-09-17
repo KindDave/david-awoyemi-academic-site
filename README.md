@@ -51,3 +51,14 @@ deploys the site about a minute later.
 4. Commit the changes.
 5. Push to GitHub.
 6. Let GitHub Pages redeploy the site.
+
+## LMS and online courses
+
+The `lms/` folder holds a self-hosted Moodle deployment (Docker) and an
+authoring pipeline that builds importable course packages from Markdown and
+JSON sources. Two complete courses are included. Start with
+[lms/README.md](lms/README.md); design and setup guides are in `lms/docs/`.
+
+```powershell
+python lms/scripts/build_cartridge.py
+```

@@ -1,0 +1,9 @@
+# Reverse proxy in front of Moodle.
+# SITE_ADDRESS comes from .env:
+#   http://localhost        local trial, plain HTTP (no certificate)
+#   learn.example.com       production; Caddy obtains and renews an HTTPS certificate automatically
+#                           (needs public DNS for the name and ports 80/443 reachable)
+{$SITE_ADDRESS} {
+	encode gzip
+	reverse_proxy moodle:8080
+}

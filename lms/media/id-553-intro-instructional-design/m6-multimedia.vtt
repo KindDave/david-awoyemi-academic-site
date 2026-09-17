@@ -1,0 +1,316 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.144
+Designing E-Learning: Multimedia, UDL, and Accessibility.
+
+2
+00:00:06.144 --> 00:00:10.455
+ID 553 - Module 6: Creating Instruction.
+
+3
+00:00:10.455 --> 00:00:16.922
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:17.522 --> 00:00:23.946
+Richard Mayer's cognitive theory of multimedia learning
+rests on three assumptions.
+
+5
+00:00:23.946 --> 00:00:28.203
+People process words and pictures in separate channels.
+
+6
+00:00:28.203 --> 00:00:30.835
+Each channel has limited capacity.
+
+7
+00:00:30.835 --> 00:00:37.027
+And learning requires active processing: selecting,
+organizing, and integrating.
+
+8
+00:00:37.027 --> 00:00:43.761
+From decades of experiments, Mayer derived principles for
+combining words and pictures.
+
+9
+00:00:43.761 --> 00:00:51.269
+They reduce extraneous load and direct attention, and they
+apply with the most force for novices.
+
+10
+00:00:51.269 --> 00:00:56.300
+Experts can tolerate, and sometimes prefer, denser
+presentations.
+
+11
+00:00:56.900 --> 00:01:01.584
+Picture a screen from an e-learning module on barcode
+scanning.
+
+12
+00:01:01.584 --> 00:01:12.363
+There's a paragraph of text, a stock photo of a smiling
+nurse, and a small workflow diagram in the corner with its
+labels in a legend underneath.
+
+13
+00:01:12.363 --> 00:01:18.831
+The narration reads the paragraph word for word, and
+background music plays throughout.
+
+14
+00:01:18.831 --> 00:01:20.095
+Three violations.
+
+15
+00:01:20.095 --> 00:01:26.637
+Redundancy: identical words as narration and on-screen text
+overload the verbal channel.
+
+16
+00:01:26.637 --> 00:01:30.800
+Coherence: the stock photo and the music are extraneous.
+
+17
+00:01:30.800 --> 00:01:39.572
+Spatial contiguity: the labels sit in a legend instead of on
+the diagram, so the learner's eyes bounce back and forth.
+
+18
+00:01:40.172 --> 00:01:42.471
+Now the same screen redesigned.
+
+19
+00:01:42.471 --> 00:01:48.032
+The diagram fills the screen, and each label sits on the
+step it describes.
+
+20
+00:01:48.032 --> 00:02:01.008
+The narration explains the diagram rather than reading a
+paragraph, and the on-screen text is reduced to three key
+terms highlighted at the moment the narration mentions them.
+
+21
+00:02:01.008 --> 00:02:03.455
+The photo and the music are gone.
+
+22
+00:02:03.455 --> 00:02:08.794
+A caption toggle provides the narration as text for anyone
+who needs it.
+
+23
+00:02:08.794 --> 00:02:15.615
+Five principles applied: redundancy, coherence, spatial
+contiguity, signaling, and modality.
+
+24
+00:02:15.615 --> 00:02:23.030
+Nothing was added; the design got better by removing things
+and putting the rest in the right place.
+
+25
+00:02:23.630 --> 00:02:26.439
+A few more principles worth memorizing.
+
+26
+00:02:26.439 --> 00:02:35.368
+Temporal contiguity: present corresponding words and
+pictures at the same time, so narration is synchronized with
+animation.
+
+27
+00:02:35.368 --> 00:02:42.066
+Segmenting: present learner-paced chunks with a continue
+control rather than one long stream.
+
+28
+00:02:42.066 --> 00:02:48.907
+Pre-training: teach the names and characteristics of key
+components before showing the process.
+
+29
+00:02:48.907 --> 00:02:52.075
+Personalization: use a conversational style.
+
+30
+00:02:52.075 --> 00:02:58.197
+And the voice principle: people learn better from a human
+voice than a machine voice.
+
+31
+00:02:58.197 --> 00:03:03.021
+You may notice the narration you're hearing right now is
+synthetic.
+
+32
+00:03:03.021 --> 00:03:10.727
+That's deliberate for a draft, and it's exactly the kind of
+thing you'd test with learners before shipping.
+
+33
+00:03:11.327 --> 00:03:25.941
+Universal Design for Learning, from CAST, is a framework for
+designing instruction that works for the widest range of
+learners from the start, instead of retrofitting
+accommodations afterward.
+
+34
+00:03:25.941 --> 00:03:27.235
+Three principles.
+
+35
+00:03:27.235 --> 00:03:36.369
+Multiple means of engagement, the why: choice within a task,
+relevance made explicit, clear goals and progress feedback.
+
+36
+00:03:36.369 --> 00:03:46.036
+Multiple means of representation, the what: captions,
+transcripts, text alternatives for images, glossaries,
+multiple examples.
+
+37
+00:03:46.036 --> 00:03:58.366
+Multiple means of action and expression, the how:
+alternatives to mouse-only interaction, choice of product
+format where the objective allows, planning templates.
+
+38
+00:03:58.366 --> 00:04:01.944
+UDL is not 'make three versions of everything'.
+
+39
+00:04:01.944 --> 00:04:10.697
+It's a set of checkpoints to consult during design so the
+most common barriers are removed before anyone hits them.
+
+40
+00:04:11.297 --> 00:04:20.003
+The Web Content Accessibility Guidelines define what makes
+digital content usable by people with disabilities.
+
+41
+00:04:20.003 --> 00:04:31.638
+Version 2.2 is current, and level double-A conformance is
+the standard in most institutional policies and in United
+States law for public entities.
+
+42
+00:04:31.638 --> 00:04:32.904
+Four principles.
+
+43
+00:04:32.904 --> 00:04:43.589
+Perceivable: text alternatives for images, captions and
+transcripts, sufficient color contrast, no information
+conveyed by color alone.
+
+44
+00:04:43.589 --> 00:04:52.770
+Operable: everything works with a keyboard, focus is
+visible, nothing flashes dangerously, navigation is
+consistent.
+
+45
+00:04:52.770 --> 00:04:59.893
+Understandable: the language is identified, behavior is
+predictable, errors are explained.
+
+46
+00:04:59.893 --> 00:05:10.182
+Robust: use real headings, lists, and form labels rather
+than visual imitations, so assistive technologies can read
+the structure.
+
+47
+00:05:10.782 --> 00:05:13.465
+Here's the checklist for every asset.
+
+48
+00:05:13.465 --> 00:05:18.831
+Meaningful images have alt text and decorative ones are
+marked decorative.
+
+49
+00:05:18.831 --> 00:05:22.892
+Videos have accurate captions and audio has transcripts.
+
+50
+00:05:22.892 --> 00:05:26.083
+Headings are real headings in logical order.
+
+51
+00:05:26.083 --> 00:05:30.434
+Contrast passes and links are distinguishable without color.
+
+52
+00:05:30.434 --> 00:05:38.193
+Every interaction works with the keyboard alone, and drag-
+and-drop or timed interactions have alternatives.
+
+53
+00:05:38.193 --> 00:05:41.964
+Documents pass their built-in accessibility checker.
+
+54
+00:05:41.964 --> 00:05:51.028
+If you run a screen reader over our before screen, it reads
+a paragraph, then the word 'image', then a jumble of legend
+text.
+
+55
+00:05:51.028 --> 00:05:59.223
+Over the after screen, it reads the heading, the diagram's
+alt text describing the workflow, and three key terms.
+
+56
+00:05:59.223 --> 00:06:12.131
+Accessibility and Mayer's principles reinforce each other
+far more often than they conflict, and where they seem to,
+provide both: narration with captions the learner can
+toggle.
+
+57
+00:06:12.731 --> 00:06:16.710
+Tool choice follows strategy and media decisions.
+
+58
+00:06:16.710 --> 00:06:26.212
+Storyline is powerful and expensive; Rise is fast and
+constrained; H5P is free and good enough for most
+interactions.
+
+59
+00:06:26.212 --> 00:06:29.217
+Camtasia, OBS, and Loom handle video.
+
+60
+00:06:29.217 --> 00:06:31.409
+Twine prototypes branching.
+
+61
+00:06:31.409 --> 00:06:42.292
+Generative AI can draft scripts, alt text, scenario
+variants, and, as you've heard, narration; verify everything
+and disclose its use.
+
+62
+00:06:42.292 --> 00:06:52.037
+Modules reach an LMS as SCORM packages or xAPI statements,
+and whole courses travel between systems as Common
+Cartridge.
+
+63
+00:06:52.037 --> 00:07:06.250
+For your instructional plan, list every media asset in the
+lesson you storyboard, name the Mayer principles that govern
+it, and note the accessibility requirements that apply.
+
+64
+00:07:06.250 --> 00:07:09.742
+That list becomes part of assignment seven.

@@ -1,0 +1,61 @@
+{
+  "title": "Module 3 Knowledge Check",
+  "description": "Eight questions on learner, context, and task analysis. Unlimited attempts; best score counts.",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "text": "Interviews say learners are confident with a procedure; error logs show they fail it frequently. What should the designer do?",
+      "options": ["Trust the interviews; learners know themselves best", "Trust the error logs and investigate why the confidence exists", "Average the two sources", "Skip the analysis and start designing"],
+      "answer": 1,
+      "feedback": "Triangulate, and when self-report conflicts with performance data, believe the performance data and ask why."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "The performance context is:",
+      "options": ["The room where training happens", "The setting where learners will use what they learned", "The LMS", "The designer's office"],
+      "answer": 1,
+      "feedback": "The performance context is where transfer must occur. If it does not support the new behavior, training will not produce it."
+    },
+    {
+      "type": "true_false",
+      "text": "Matching instruction to learners' self-reported learning styles (visual, auditory, kinesthetic) is well supported by research as a way to improve learning.",
+      "answer": false,
+      "feedback": "Reviews such as Pashler et al. (2008) found no credible evidence for the matching hypothesis. Preferences may inform engagement but not the design of instruction."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "According to Gagne's taxonomy, deciding whether a scanned wristband matches the medication order is primarily which type of outcome?",
+      "options": ["Verbal information", "Intellectual skill", "Motor skill", "Attitude"],
+      "answer": 1,
+      "feedback": "Making a rule-governed decision is an intellectual skill. Operating the scanner is the motor skill; choosing to scan every time is the attitude."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Which question drives hierarchical analysis?",
+      "options": ["What comes next?", "What must the learner already be able to do in order to learn this?", "What does the expert think is interesting?", "How long should the module be?"],
+      "answer": 1,
+      "feedback": "Asking that question repeatedly produces the hierarchy of subordinate skills down to the entry-skill line."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Procedural analysis is most likely to reveal:",
+      "options": ["Learner demographics", "Branch points and decisions where errors occur", "The budget", "The reading level of materials"],
+      "answer": 1,
+      "feedback": "Branch points are where practice should concentrate and where assessment distractors come from."
+    },
+    {
+      "type": "multiple_response",
+      "text": "Which are appropriate ways to check a task analysis? Select all that apply.",
+      "options": ["Have an expert and a novice review it", "Observe the task being performed", "Ask whether a novice could perform the goal using only what is in the analysis", "Confirm it fits on one page"],
+      "answers": [0, 1, 2],
+      "feedback": "Completeness, accuracy through observation, and expert and novice review. Page length is not a validity check."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Where does the entry-skill line in a hierarchy come from?",
+      "options": ["The vendor's course outline", "The learner analysis", "The number of modules planned", "The subject-matter expert's preference"],
+      "answer": 1,
+      "feedback": "Entry skills are what learners already have; that is a finding of the learner analysis."
+    }
+  ]
+}

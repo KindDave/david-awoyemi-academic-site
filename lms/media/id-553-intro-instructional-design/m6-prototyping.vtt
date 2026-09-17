@@ -1,0 +1,247 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.908
+Storyboarding and Rapid Prototyping.
+
+2
+00:00:03.908 --> 00:00:08.249
+ID 553 - Module 6: Creating Instruction.
+
+3
+00:00:08.249 --> 00:00:14.762
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:15.362 --> 00:00:18.220
+A design document describes instruction.
+
+5
+00:00:18.220 --> 00:00:20.936
+A prototype lets people experience it.
+
+6
+00:00:20.936 --> 00:00:31.796
+Stakeholders who approve a document often reject the module
+built from it, because the document never made them imagine
+what learners would actually do.
+
+7
+00:00:31.796 --> 00:00:36.441
+Prototypes surface those reactions early, when changes are
+cheap.
+
+8
+00:00:36.441 --> 00:00:49.088
+They also expose problems the designer can't see from the
+inside: an interaction that's confusing, a scenario that
+feels fake, a page that takes three times longer than
+planned.
+
+9
+00:00:49.088 --> 00:00:57.520
+Prototyping is the core of SAM, and it fits inside ADDIE and
+Dick and Carey as the front half of formative evaluation.
+
+10
+00:00:58.120 --> 00:01:02.638
+Let's follow one interaction through four levels of
+fidelity.
+
+11
+00:01:02.638 --> 00:01:12.564
+The interaction: a mismatch alert appears during medication
+administration, and the learner must choose to stop,
+override, or proceed.
+
+12
+00:01:12.564 --> 00:01:20.119
+At paper fidelity, that's three index cards, one per choice,
+with the consequence written on the back.
+
+13
+00:01:20.119 --> 00:01:25.008
+You read the scenario aloud, the tester picks a card and
+flips it.
+
+14
+00:01:25.008 --> 00:01:26.711
+Twenty minutes to make.
+
+15
+00:01:26.711 --> 00:01:35.452
+It tests whether the sequence makes sense, whether the
+scenario is plausible, and whether the consequences feel
+right.
+
+16
+00:01:35.452 --> 00:01:41.748
+In my first test, a nurse said the override option would
+never be offered that early.
+
+17
+00:01:41.748 --> 00:01:45.007
+The cards changed before anything was built.
+
+18
+00:01:45.607 --> 00:01:54.301
+Low fidelity is clickable slides: placeholder graphics, the
+three choices as buttons linking to consequence slides.
+
+19
+00:01:54.301 --> 00:01:55.208
+A few hours.
+
+20
+00:01:55.208 --> 00:01:59.896
+It tests the interaction logic and the wording of the
+choices.
+
+21
+00:01:59.896 --> 00:02:12.143
+Medium fidelity is an authoring-tool build with real text,
+draft graphics, and synthetic narration; a few days, and it
+tests look and feel, timing, and usability.
+
+22
+00:02:12.143 --> 00:02:20.988
+High fidelity is near-final with produced media, and tests
+polish, technical function, and accessibility conformance.
+
+23
+00:02:20.988 --> 00:02:32.329
+The rule: start at the lowest fidelity that can answer your
+current question, and move up only when the lower version
+stops producing useful findings.
+
+24
+00:02:32.329 --> 00:02:37.999
+Test the flow on paper before you write a single line in an
+authoring tool.
+
+25
+00:02:38.599 --> 00:02:45.704
+A storyboard describes each screen: what the learner sees,
+hears, and does, and what happens next.
+
+26
+00:02:45.704 --> 00:02:52.447
+It's the handoff between designer and developer and the main
+artifact for stakeholder review.
+
+27
+00:02:52.447 --> 00:03:19.997
+Each row carries a screen ID tied to the lesson and
+objective, the Gagne event the screen serves, the visual,
+the exact on-screen text, the narration script with a note
+on whether it replaces or supplements text, the interaction
+and branching rules, the feedback for each response,
+navigation, accessibility notes such as alt text and
+keyboard alternatives, and development notes.
+
+28
+00:03:19.997 --> 00:03:23.623
+A twenty-minute module runs fifteen to forty rows.
+
+29
+00:03:23.623 --> 00:03:27.030
+A table in a document or spreadsheet is enough.
+
+30
+00:03:27.630 --> 00:03:32.768
+Decision practice is where most e-learning fails to go
+beyond click-next.
+
+31
+00:03:32.768 --> 00:03:40.369
+A branching scenario presents a situation, asks the learner
+to decide, shows the consequence, and continues.
+
+32
+00:03:40.369 --> 00:03:52.194
+Design it from your task analysis: every branch point in the
+procedural analysis becomes a decision screen, and the
+common errors you recorded become the wrong options.
+
+33
+00:03:52.194 --> 00:03:59.373
+Keep it manageable: three or four decisions with two or
+three options each and a few converging paths.
+
+34
+00:03:59.373 --> 00:04:03.174
+Prototype it in Twine or on cards before you build it.
+
+35
+00:04:03.774 --> 00:04:09.584
+Even a paper prototype should be tested with someone who
+resembles the learners.
+
+36
+00:04:09.584 --> 00:04:13.433
+A one-to-one test takes thirty to forty-five minutes.
+
+37
+00:04:13.433 --> 00:04:17.427
+Explain that you're testing the design, not the person.
+
+38
+00:04:17.427 --> 00:04:21.421
+Ask them to work through the prototype, thinking aloud.
+
+39
+00:04:21.421 --> 00:04:27.159
+Don't help unless they're stuck for more than a minute, and
+note where and why.
+
+40
+00:04:27.159 --> 00:04:36.818
+Afterward, ask what was confusing, what was too easy or too
+hard, what they'd change, and whether they can perform the
+objective now.
+
+41
+00:04:36.818 --> 00:04:41.902
+Record the findings and decide what changes before the next
+iteration.
+
+42
+00:04:41.902 --> 00:04:46.041
+Three one-to-one tests find most of the serious problems.
+
+43
+00:04:46.641 --> 00:04:50.688
+Most designers build content with a subject-matter expert.
+
+44
+00:04:50.688 --> 00:04:58.991
+Give them a specific task with a deadline: review this
+storyboard for accuracy, or provide three realistic error
+cases.
+
+45
+00:04:58.991 --> 00:05:06.805
+Explain your design decisions in terms of learner
+performance so they understand why the module isn't a
+lecture.
+
+46
+00:05:06.805 --> 00:05:12.526
+Separate accuracy review, which is their call, from design
+review, which is yours.
+
+47
+00:05:12.526 --> 00:05:17.968
+And prototype early so they react to something concrete
+instead of a document.
+
+48
+00:05:17.968 --> 00:05:27.108
+For assignment seven, you'll produce a complete storyboard
+for one lesson and a low-fidelity prototype of at least one
+interaction.
+
+49
+00:05:27.108 --> 00:05:34.992
+Choose the lesson that best represents your strategy and the
+interaction that carries the most decision practice.

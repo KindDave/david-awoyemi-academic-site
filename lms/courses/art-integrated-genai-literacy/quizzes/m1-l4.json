@@ -1,0 +1,55 @@
+{
+  "title": "Lesson 1.4 Knowledge Check",
+  "description": "Five questions on ethics and attribution in AI music. Unlimited attempts; your best score counts.",
+  "questions": [
+    {
+      "type": "multiple_response",
+      "text": "Which four questions does this lesson say every AI music project raises? Select all that apply.",
+      "options": ["Training data and consent", "Voice and likeness", "File size and format", "Ownership and copyright", "Disclosure"],
+      "answers": [0, 1, 3, 4],
+      "feedback": "Consent, likeness, ownership, and disclosure are the four. File format is a technical matter, not an ethical one."
+    },
+    {
+      "type": "true_false",
+      "text": "According to the United States Copyright Office, a work generated entirely by AI with no human creative contribution is eligible for copyright protection.",
+      "answer": false,
+      "feedback": "The Copyright Office has said such works are not protectable, while human contributions (lyrics, arrangement choices, edits) can be protected to the extent of that contribution."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Which prompt follows the course rule on voice and likeness?",
+      "options": [
+        "Sing this in the voice of [a named famous singer]",
+        "Husky tenor, intimate, close-mic",
+        "Make it sound exactly like [a named band]'s 2015 album",
+        "Clone my favorite artist's vocal tone"
+      ],
+      "answer": 1,
+      "feedback": "Prompt for a type of voice, never a specific real person."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "A text model summarizes a court case with confident detail. What should you do before repeating any of it?",
+      "options": [
+        "Repeat it; models are trained on legal texts",
+        "Verify each claim against a primary source and mark what you cannot confirm",
+        "Ask the same model again to be sure",
+        "Only repeat the parts that sound plausible"
+      ],
+      "answer": 1,
+      "feedback": "Models blend jurisdictions, go out of date, and sometimes invent cases. Verification against primary sources is the AI feedback evaluation competency."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "What must an attribution statement for an AI-assisted song include?",
+      "options": [
+        "Only the human author's name",
+        "Only the tool's name",
+        "The human contributions, the tool and version, and the fact that AI-generated material is included",
+        "The number of generations used"
+      ],
+      "answer": 2,
+      "feedback": "Attribution names both human and machine contributions and discloses AI involvement."
+    }
+  ]
+}

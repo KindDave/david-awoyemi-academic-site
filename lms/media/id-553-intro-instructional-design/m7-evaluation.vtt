@@ -1,0 +1,284 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.988
+Formative and Summative Evaluation.
+
+2
+00:00:03.988 --> 00:00:07.406
+ID 553 - Module 7: Evaluation.
+
+3
+00:00:07.406 --> 00:00:14.242
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:14.842 --> 00:00:17.717
+Evaluation answers two different questions.
+
+5
+00:00:17.717 --> 00:00:28.550
+Formative evaluation asks how the instruction can be
+improved before it's finished; it happens during design and
+development, and its audience is the design team.
+
+6
+00:00:28.550 --> 00:00:42.057
+Summative evaluation asks whether the finished instruction
+worked and whether it's worth continuing; it happens after
+implementation, and its audience is the people who fund and
+mandate the instruction.
+
+7
+00:00:42.057 --> 00:00:43.929
+Both are part of the design.
+
+8
+00:00:43.929 --> 00:00:50.615
+Dick and Carey give each its own component and make revision
+a loop that formative evaluation feeds.
+
+9
+00:00:51.215 --> 00:01:02.462
+Let me walk you through a formative evaluation of a real
+module: a twenty-five-minute e-learning module on barcode
+medication administration with four objectives.
+
+10
+00:01:02.462 --> 00:01:06.211
+Objective three is the decision about mismatch alerts.
+
+11
+00:01:06.211 --> 00:01:10.793
+It was built from a storyboard and had never been seen by a
+nurse.
+
+12
+00:01:10.793 --> 00:01:20.235
+The plan was Dick and Carey's three stages: one-to-one
+evaluation with three nurses, then a small group, then a
+field trial on one unit.
+
+13
+00:01:20.835 --> 00:01:27.286
+One-to-one: three nurses, one at a time, chosen to span the
+range of the population.
+
+14
+00:01:27.286 --> 00:01:35.580
+One had used the vendor's system elsewhere, one was typical,
+one described herself as not a computer person.
+
+15
+00:01:35.580 --> 00:01:45.333
+I sat beside each of them, asked them to think aloud, noted
+errors and confusions and pacing, and gave the posttest at
+the end.
+
+16
+00:01:45.333 --> 00:01:50.402
+Findings: the alert screenshot was from an older software
+version.
+
+17
+00:01:50.402 --> 00:01:57.698
+The override step used the abbreviation MRN with no
+expansion, and two of three didn't know it.
+
+18
+00:01:57.698 --> 00:02:03.918
+And the anxious nurse took forty-one minutes for a module
+planned at twenty-five.
+
+19
+00:02:03.918 --> 00:02:10.677
+This stage catches the gross errors: wrong content, unclear
+instructions, missing steps.
+
+20
+00:02:11.277 --> 00:02:20.726
+After revising, I ran a small group: twelve nurses under
+conditions close to real use, with me observing but not
+intervening.
+
+21
+00:02:20.726 --> 00:02:28.058
+I collected a pretest, a posttest, item-level results, time
+on task, and a short attitude survey.
+
+22
+00:02:28.058 --> 00:02:35.542
+Objectives one, two, and four came in between eighty-five
+and one hundred percent posttest success.
+
+23
+00:02:35.542 --> 00:02:39.095
+Objective three came in at fifty-eight percent.
+
+24
+00:02:39.095 --> 00:02:50.585
+The item-by-objective table made the cause obvious: learners
+had seen a single alert example and had no practice making
+the decision under any pressure.
+
+25
+00:02:50.585 --> 00:02:57.388
+The revision was two practice scenarios with feedback,
+inserted before the posttest items.
+
+26
+00:02:57.388 --> 00:02:59.959
+The overall score had looked fine.
+
+27
+00:02:59.959 --> 00:03:03.663
+Analyzing by objective is what found the problem.
+
+28
+00:03:04.263 --> 00:03:13.405
+Then the field trial: the revised module deployed to one
+full unit, thirty-four nurses, through the LMS, with me
+absent.
+
+29
+00:03:13.405 --> 00:03:19.957
+Same data as the small group, plus feedback from the unit
+educator who facilitated it.
+
+30
+00:03:19.957 --> 00:03:23.385
+Objective three rose to eighty-eight percent.
+
+31
+00:03:23.385 --> 00:03:37.327
+And a new problem appeared that no earlier stage could have
+found: the LMS launched the module in a window too small for
+the simulation, so learners scrolled inside a scrolling
+frame.
+
+32
+00:03:37.327 --> 00:03:41.061
+A technical fix, invisible until real conditions.
+
+33
+00:03:41.061 --> 00:03:52.565
+That's what the field trial is for: it tests implementation,
+the facilitator guides, the logistics, the technology, and
+the effect of the real context.
+
+34
+00:03:53.165 --> 00:04:06.679
+Alongside the learner-based stages, run expert reviews: a
+subject-matter expert for accuracy, a second designer for
+alignment and strategy, an accessibility reviewer for
+conformance.
+
+35
+00:04:06.679 --> 00:04:11.060
+Expert review is fast and finds things learners can't name.
+
+36
+00:04:11.060 --> 00:04:13.065
+Then use the data properly.
+
+37
+00:04:13.065 --> 00:04:15.515
+Build an item-by-objective table.
+
+38
+00:04:15.515 --> 00:04:24.945
+Compare pretest and posttest by objective, not only overall,
+because a high overall gain can hide one objective nobody
+learned.
+
+39
+00:04:24.945 --> 00:04:34.672
+Low success with adequate instruction time points to a
+strategy problem; low success with little time points to a
+coverage problem.
+
+40
+00:04:34.672 --> 00:04:42.321
+Pair every problem with a location in the instruction and a
+proposed revision, and keep a revision log.
+
+41
+00:04:42.921 --> 00:04:52.148
+Summative evaluation judges the instruction against its
+purpose, and the classic framework is Kirkpatrick's four
+levels.
+
+42
+00:04:52.148 --> 00:04:57.376
+Reaction: did learners find it engaging, relevant, and
+satisfactory?
+
+43
+00:04:57.376 --> 00:05:03.912
+Learning: did they acquire the intended knowledge, skills,
+attitudes, and confidence?
+
+44
+00:05:03.912 --> 00:05:13.446
+Behavior: do they apply it on the job, measured by
+observation, supervisor reports, or system data at thirty to
+ninety days?
+
+45
+00:05:13.446 --> 00:05:19.752
+Results: did the targeted outcomes change, such as error
+rates or help desk calls?
+
+46
+00:05:19.752 --> 00:05:20.751
+Two cautions.
+
+47
+00:05:20.751 --> 00:05:29.978
+Level one alone tells you almost nothing about
+effectiveness, because satisfaction and learning are only
+weakly related.
+
+48
+00:05:29.978 --> 00:05:42.281
+And level four outcomes are affected by many things besides
+instruction, so claim contribution rather than sole cause,
+and design in a baseline or a comparison.
+
+49
+00:05:42.881 --> 00:05:47.745
+For your project, the evaluation plan should specify four
+things.
+
+50
+00:05:47.745 --> 00:05:57.699
+Formative: which stages you'll run, with participants,
+instruments, data, and the decision rules you'll use to
+decide what to revise.
+
+51
+00:05:57.699 --> 00:06:10.272
+Summative: the levels you'll measure and why, the
+instruments and timing, the baseline or comparison strategy,
+and who receives the report and what decision it informs.
+
+52
+00:06:10.272 --> 00:06:16.708
+Logistics and ethics: who does what, when, at what cost, and
+what happens to the data.
+
+53
+00:06:16.708 --> 00:06:17.756
+And reporting.
+
+54
+00:06:17.756 --> 00:06:28.757
+One rule above all: an evaluation plan that can actually be
+carried out with the resources available beats an ambitious
+one that will never happen.
+
+55
+00:06:28.757 --> 00:06:38.711
+Bring your draft to the peer review exchange, and remember
+that peer review is itself an expert-review stage of
+formative evaluation.

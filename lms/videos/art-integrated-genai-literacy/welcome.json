@@ -1,0 +1,73 @@
+{
+  "title": "Welcome to Art-Integrated GenAI Literacy",
+  "subtitle": "GENAI 101 - Module 0: Welcome and Orientation",
+  "summary": "Three-minute welcome: why the course exists, how it is organized, what every lesson looks like, and how you are assessed.",
+  "slides": [
+    {
+      "heading": "Why this course exists",
+      "bullets": [
+        "Your future students will grow up in an AI-driven world",
+        "Arts teachers shape how students create with these tools",
+        "Build literacy by making: songs, beats, scores, scripts, performances"
+      ],
+      "narration": "Welcome. I'm David Awoyemi, and I'm glad you're here. This course exists because the students you will teach are growing up in a world where generative AI is part of how music and theater get made. Your ability to navigate these tools, and to guide your students in using them well, will shape what they create. We're going to build that ability the way artists learn best: by making things. Over the next few weeks you'll compose, produce, score, write, direct, and choreograph with AI tools as your collaborators."
+    },
+    {
+      "heading": "How the course is organized",
+      "bullets": [
+        "Module 0: orientation, accounts, self-assessment (45 minutes)",
+        "Module 1: Music, four lessons (4 to 6 hours)",
+        "Module 2: Theater, four lessons (4 to 6 hours)",
+        "Module 3: bring one project to your classroom (2 to 3 hours)",
+        "Modules 1 and 2 can be taken in either order"
+      ],
+      "narration": "Here is the shape of the course. Module zero is orientation: you'll set up free accounts, meet your peers, and take a short self-assessment. Module one is music, with four hands-on lessons. Module two is theater, also with four lessons. You can take those two modules in either order, so start with the one closest to your own teaching. Module three asks you to turn one of your projects into a lesson plan for your future students. Plan on twelve to sixteen hours in total, at your own pace."
+    },
+    {
+      "heading": "What every lesson looks like",
+      "bullets": [
+        "Watch a short video and read the objectives",
+        "Learn the key ideas behind the tool and the competency",
+        "Do a step-by-step activity",
+        "Create a shareable artifact",
+        "Share it in the gallery with a 75-word rationale",
+        "Check your understanding, then reflect"
+      ],
+      "narration": "Every lesson follows the same rhythm, so you always know what comes next. You watch a short video like this one and read the objectives. You learn the key ideas behind the tool and the competency the lesson targets. You do a step-by-step activity. You create a shareable artifact: a song, a beat, a scored scene, a script, a performance. You share it in the lesson gallery with a rationale of no more than seventy-five words. Then you check your understanding with a short quiz and answer two or three reflection prompts."
+    },
+    {
+      "heading": "The seven competencies",
+      "bullets": [
+        "Computational thinking",
+        "Prompt engineering",
+        "Problem solving",
+        "Creativity and innovation",
+        "AI feedback evaluation",
+        "AI ethics literacy",
+        "Collaboration"
+      ],
+      "narration": "Underneath the projects are seven competencies: computational thinking, prompt engineering, problem solving, creativity and innovation, AI feedback evaluation, AI ethics literacy, and collaboration. Each lesson targets two or three of them, and every artifact you make is evidence of growth in at least one. You'll rate yourself on all seven at the start and again at the end, so you can see how far you've come."
+    },
+    {
+      "heading": "How you are assessed",
+      "bullets": [
+        "Lesson galleries: 40 percent, complete or incomplete with feedback",
+        "Knowledge checks: 10 percent, unlimited attempts",
+        "Module reflections: 20 percent, rubric-graded",
+        "Final project lesson plan: 30 percent, rubric-graded with peer feedback",
+        "80 percent or higher earns a certificate of completion"
+      ],
+      "narration": "Assessment is competency-based, and there are no timed exams. The eight gallery posts count for forty percent and are marked complete or incomplete, with feedback from me. The knowledge checks count for ten percent, and you can retake them as often as you like. The two module reflections count for twenty percent. The final project, your lesson plan, counts for thirty percent and includes peer feedback. Eighty percent or higher earns a certificate of completion."
+    },
+    {
+      "heading": "Before you start",
+      "bullets": [
+        "Set up the free accounts listed on the Tools page",
+        "Read Using AI Responsibly: disclose, credit, protect people",
+        "Introduce yourself in the forum",
+        "Questions go in the pinned Questions thread"
+      ],
+      "narration": "Three things before you begin. First, set up the free accounts listed on the tools page so the lessons flow without interruption. Second, read the page on using AI responsibly. The short version: disclose when you use AI, credit the tool, and never clone a real person's voice or likeness. Third, introduce yourself in the forum, and post any course questions in the pinned Questions thread so everyone benefits from the answer. Let's create. Let's innovate. Let's lead. I'll see you in Module one."
+    }
+  ]
+}

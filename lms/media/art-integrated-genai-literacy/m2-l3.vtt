@@ -1,0 +1,156 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.348
+Lesson 2.3: Digital Choreography and Drama-Dance.
+
+2
+00:00:05.348 --> 00:00:08.623
+GENAI 101 - Module 2: Theater.
+
+3
+00:00:08.623 --> 00:00:15.172
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:15.772 --> 00:00:21.113
+In this lesson you'll choreograph a short movement piece
+from generated video.
+
+5
+00:00:21.113 --> 00:00:37.959
+You'll write a movement score of four phrases, generate each
+phrase, keep a log of what failed and how you fixed it,
+assemble the phrases with a choreographic device, and write
+a note about how the piece would be taught to live dancers
+or actors.
+
+6
+00:00:37.959 --> 00:00:39.602
+Expect the tool to fail.
+
+7
+00:00:39.602 --> 00:00:42.752
+That's why this lesson builds problem solving.
+
+8
+00:00:43.352 --> 00:00:55.113
+Text-to-video models respond to the same specificity that
+music and text models do, and dance educators already have
+the vocabulary.
+
+9
+00:00:55.113 --> 00:00:58.231
+Body: which parts lead, what shape?
+
+10
+00:00:58.231 --> 00:01:00.637
+Action: the movement verbs.
+
+11
+00:01:00.637 --> 00:01:04.111
+Space: level, direction, pathway, size.
+
+12
+00:01:04.111 --> 00:01:06.784
+Time: tempo, rhythm, duration.
+
+13
+00:01:06.784 --> 00:01:09.992
+Energy: the quality of the movement.
+
+14
+00:01:09.992 --> 00:01:28.791
+A prompt that names all five, like 'one dancer, arms leading
+a slow backward spiral at low level, heavy and bound, then a
+sudden light reach upward and freeze, five seconds', gives
+the model something to render.
+
+15
+00:01:28.791 --> 00:01:30.840
+'A sad dance' does not.
+
+16
+00:01:31.440 --> 00:01:36.067
+Text-to-video is the least reliable tool in this course.
+
+17
+00:01:36.067 --> 00:01:41.519
+Bodies drift, hands multiply, and the model may ignore your
+tempo.
+
+18
+00:01:41.519 --> 00:01:46.228
+For every unusable clip, name the failure and pick a fix.
+
+19
+00:01:46.228 --> 00:01:55.233
+First, simplify the prompt: one dancer, one action, one
+quality, a single continuous shot, a stated duration.
+
+20
+00:01:55.233 --> 00:02:06.139
+Second, change the tool or the mode; try image-to-video from
+a still you make, or switch to character animation for
+precise control.
+
+21
+00:02:06.139 --> 00:02:14.152
+Third, edit the output: trim to the two usable seconds, slow
+it down, mirror it, cut on the beat.
+
+22
+00:02:14.152 --> 00:02:21.588
+Your failure-and-fix log is part of the submission, because
+the diagnosis is the learning.
+
+23
+00:02:22.188 --> 00:02:24.016
+The model makes phrases.
+
+24
+00:02:24.016 --> 00:02:25.464
+You make the piece.
+
+25
+00:02:25.464 --> 00:02:36.360
+Choreographic devices like repetition, canon, contrast, and
+accumulation are decisions about sequence and relationship,
+and they belong to you.
+
+26
+00:02:36.360 --> 00:02:41.237
+Four generated phrases arranged with intention is a
+composition.
+
+27
+00:02:41.237 --> 00:02:45.276
+The same four phrases dumped in order is a slideshow.
+
+28
+00:02:45.276 --> 00:02:50.533
+Choose your device before you generate, and let it shape the
+prompts.
+
+29
+00:02:51.133 --> 00:02:53.063
+Finish with a transfer note.
+
+30
+00:02:53.063 --> 00:03:05.055
+In three sentences, describe how you'd teach these four
+phrases to live dancers or actors in a rehearsal room, and
+what the video showed you that improvisation wouldn't have.
+
+31
+00:03:05.055 --> 00:03:14.359
+When you reflect, think about the conversations this
+activity would require in a classroom: safety, consent, and
+body image among them.
+
+32
+00:03:14.359 --> 00:03:26.902
+Then export with title cards naming each phrase, post it
+with your score and your log, and tell two classmates which
+device you see in their piece and how it could be performed
+live.

@@ -1,0 +1,140 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.912
+Music Module Introduction.
+
+2
+00:00:02.912 --> 00:00:06.048
+GENAI 101 - Module 1: Music.
+
+3
+00:00:06.048 --> 00:00:12.767
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:13.367 --> 00:00:15.406
+Welcome to the music module.
+
+5
+00:00:15.406 --> 00:00:18.609
+Over four lessons you will make four things.
+
+6
+00:00:18.609 --> 00:00:24.725
+In lesson one point one, you'll write lyrics and generate a
+complete song from them.
+
+7
+00:00:24.725 --> 00:00:31.860
+In lesson one point two, you'll build a sixteen-bar beat
+from drum patterns you sequence yourself.
+
+8
+00:00:31.860 --> 00:00:37.685
+In lesson one point three, you'll score a short scene with
+two contrasting cues.
+
+9
+00:00:37.685 --> 00:00:47.077
+And in lesson one point four, you'll analyze a real case
+about AI and music and write an attribution statement for
+your own song.
+
+10
+00:00:47.677 --> 00:00:50.236
+Each lesson targets two competencies.
+
+11
+00:00:50.236 --> 00:01:00.957
+Song composition is about prompt engineering and creativity:
+turning a musical idea into a brief the model can act on,
+and then making the result your own.
+
+12
+00:01:00.957 --> 00:01:07.458
+Beat making is computational thinking: decomposing a groove
+into patterns and sequencing them.
+
+13
+00:01:07.458 --> 00:01:16.173
+Scoring a scene is problem solving and evaluation: judging
+what the model produced against a cue sheet and fixing what
+missed.
+
+14
+00:01:16.173 --> 00:01:25.995
+And the ethics lesson builds your ability to reason about
+consent, ownership, and disclosure, and to check what an AI
+tells you about the law.
+
+15
+00:01:26.595 --> 00:01:32.426
+One method runs through all four lessons, and through the
+theater module too.
+
+16
+00:01:32.426 --> 00:01:36.212
+First, write a brief before you generate anything.
+
+17
+00:01:36.212 --> 00:01:44.238
+Second, change only one variable each time you regenerate,
+so you learn what the prompt actually controls.
+
+18
+00:01:44.238 --> 00:01:52.568
+Third, evaluate the output against criteria you named in
+advance, not against how you happen to feel about it.
+
+19
+00:01:52.568 --> 00:01:59.004
+And fourth, credit the tool and your own contribution under
+every artifact you share.
+
+20
+00:01:59.604 --> 00:02:01.131
+Two practical notes.
+
+21
+00:02:01.131 --> 00:02:02.505
+Put on headphones.
+
+22
+00:02:02.505 --> 00:02:12.735
+Many of the flaws you'll be asked to hear, like tempo drift,
+robotic vocal phrasing, or a muddy low end, disappear on
+laptop speakers.
+
+23
+00:02:12.735 --> 00:02:16.858
+And keep a running document called Music Module Notes.
+
+24
+00:02:16.858 --> 00:02:22.126
+Paste every prompt you use and write one line about what it
+produced.
+
+25
+00:02:22.126 --> 00:02:25.256
+You'll need it for the module reflection.
+
+26
+00:02:25.256 --> 00:02:32.814
+Finally, remember that nothing here replaces what you know
+about melody, harmony, rhythm, and form.
+
+27
+00:02:32.814 --> 00:02:42.663
+The tools are fast and often impressive, and they are
+frequently wrong about exactly the things a trained musician
+notices first.
+
+28
+00:02:42.663 --> 00:02:47.320
+Your expertise is what turns a generation into a
+composition.
+
+29
+00:02:47.320 --> 00:02:50.221
+Let's begin with lesson one point one.

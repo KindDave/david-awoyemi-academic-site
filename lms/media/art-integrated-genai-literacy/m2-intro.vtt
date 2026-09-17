@@ -1,0 +1,127 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.018
+Theater Module Introduction.
+
+2
+00:00:03.018 --> 00:00:06.251
+GENAI 101 - Module 2: Theater.
+
+3
+00:00:06.251 --> 00:00:12.718
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:13.318 --> 00:00:15.506
+Welcome to the theater module.
+
+5
+00:00:15.506 --> 00:00:17.622
+Four lessons, four artifacts.
+
+6
+00:00:17.622 --> 00:00:28.713
+In lesson two point one, you'll draft a two-character scene
+with a text model, direct two rounds of revision, and
+rewrite a third of the lines yourself.
+
+7
+00:00:28.713 --> 00:00:35.425
+In two point two, you'll score a monologue into beats and
+build an avatar performance of it.
+
+8
+00:00:35.425 --> 00:00:42.065
+In two point three, you'll choreograph a short movement
+piece from generated video phrases.
+
+9
+00:00:42.065 --> 00:00:52.791
+And in two point four, you'll evaluate AI feedback on your
+own scene and take a position on whether you would stage AI-
+assisted work with students.
+
+10
+00:00:53.391 --> 00:00:57.319
+The competencies map the same way they did in music.
+
+11
+00:00:57.319 --> 00:01:05.174
+Storytelling is prompt engineering and creativity: a scene
+brief, director's notes, and a human rewrite.
+
+12
+00:01:05.174 --> 00:01:14.011
+Avatar performance is computational thinking: decomposing a
+speech into beats and sequencing four variables per beat.
+
+13
+00:01:14.011 --> 00:01:23.830
+Choreography is problem solving: text-to-video is the least
+reliable tool in the course, so you'll diagnose failures and
+fix them.
+
+14
+00:01:23.830 --> 00:01:27.305
+And the final lesson is evaluation and ethics.
+
+15
+00:01:27.905 --> 00:01:33.075
+If you completed the music module, you'll recognize the
+moves.
+
+16
+00:01:33.075 --> 00:01:35.910
+Write a brief before you generate.
+
+17
+00:01:35.910 --> 00:01:38.161
+Change one thing at a time.
+
+18
+00:01:38.161 --> 00:01:42.080
+Evaluate against criteria you named in advance.
+
+19
+00:01:42.080 --> 00:01:43.414
+Credit the tool.
+
+20
+00:01:43.414 --> 00:01:47.333
+Theater changes the vocabulary, not the method.
+
+21
+00:01:47.333 --> 00:01:57.340
+Objective and obstacle replace tempo and instrumentation;
+director's notes replace prompt revisions; beats replace
+bars.
+
+22
+00:01:57.940 --> 00:01:59.924
+One thing before you start.
+
+23
+00:01:59.924 --> 00:02:06.023
+Theater happens between people in a room, and nothing in
+this module replaces that.
+
+24
+00:02:06.023 --> 00:02:17.119
+The tools help you draft faster, visualize staging before
+you have a cast, rehearse without a partner, and give
+students a way to see their ideas move.
+
+25
+00:02:17.119 --> 00:02:21.895
+Every lesson asks how the artifact returns to the rehearsal
+room.
+
+26
+00:02:21.895 --> 00:02:28.729
+Keep a Theater Module Notes document with every prompt you
+use and one line about the result.
+
+27
+00:02:28.729 --> 00:02:31.154
+Let's go to lesson two point one.

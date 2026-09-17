@@ -1,0 +1,65 @@
+{
+  "title": "Writing Learning Objectives",
+  "subtitle": "ID 553 - Module 4: Objectives and Aligned Assessment",
+  "summary": "Lecture: what objectives are for, Mager's three components and ABCD, observable verbs, and five bad objectives rewritten live.",
+  "slides": [
+    {
+      "heading": "What an objective is for",
+      "bullets": [
+        "What the learner will be able to do, under what conditions, to what standard",
+        "Three audiences: the designer (what to teach and assess), the learner (what success looks like), the evaluator (what to measure)",
+        "Derived directly from the task analysis: each element above the entry line becomes an objective"
+      ],
+      "narration": "A learning objective states what the learner will be able to do after instruction, under what conditions, and to what standard. It's written for three audiences at once. It tells the designer what to teach and assess. It tells the learner what success looks like. And it tells the evaluator what to measure. An objective that can't serve all three isn't finished. Objectives come straight from the task analysis: each numbered element above the entry-skill line becomes one or more objectives. That derivation is what keeps instruction tied to performance."
+    },
+    {
+      "heading": "Two formats: Mager and ABCD",
+      "bullets": [
+        "Mager: performance (observable verb), conditions (tools, information, constraints), criterion (how well)",
+        "ABCD: audience, behavior, condition, degree; the same information with the audience named",
+        "Example: Given a wristband, an order in the EHR, and a scanner, the nurse will verify patient and medication match with 100 percent accuracy across ten simulated administrations, including two with mismatch alerts"
+      ],
+      "narration": "Two formats carry the same information. Mager's three components are performance, stated with an observable verb; conditions, the circumstances under which the performance happens; and criterion, how well it must be done. The ABCD format adds the audience explicitly: audience, behavior, condition, degree. Here's a complete one. Given a patient wristband, a medication order in the records system, and a handheld scanner, the nurse will verify patient identity and medication match with one hundred percent accuracy across ten simulated administrations, including two with mismatch alerts. Conditions, performance, criterion, all present."
+    },
+    {
+      "heading": "The verb is the objective",
+      "bullets": [
+        "Unobservable: understand, know, appreciate, be familiar with",
+        "Observable: list, describe, classify, calculate, demonstrate, diagnose, design, justify",
+        "Bloom's revised taxonomy: remember, understand, apply, analyze, evaluate, create",
+        "Match the level to the task analysis; do not climb the ladder for show"
+      ],
+      "narration": "The verb is the objective. Understand, know, appreciate, and be familiar with describe internal states nobody can observe. Replace them with what the learner would do to show the state: list, describe, classify, calculate, demonstrate, diagnose, design, justify. Bloom's revised taxonomy organizes cognitive verbs from remember through create. Use it as a vocabulary, not as a ladder to climb in every lesson. If the job requires applying a procedure, an apply-level objective is correct. Adding create-level objectives to look rigorous misaligns the instruction with the performance."
+    },
+    {
+      "heading": "Rewrite 1 and 2",
+      "bullets": [
+        "Before: Students will understand the ADDIE model",
+        "Flaw: unobservable verb; no condition; no criterion",
+        "After: Given a description of an ID project, students will identify which ADDIE phase each activity belongs to, with at least 9 of 10 correct",
+        "Before: Learners will be familiar with the EHR. After: Using the practice environment, learners will locate a named patient and open the medication record within 60 seconds"
+      ],
+      "narration": "Let's rewrite five bad objectives. Number one: students will understand the ADDIE model. The verb is unobservable and there's no condition or criterion. Rewritten: given a description of an instructional design project, students will identify which ADDIE phase each described activity belongs to, with at least nine of ten correct. Number two: learners will be familiar with the records system. That's a topic, not a performance. Rewritten: using the practice environment, learners will locate a named patient and open the medication administration record within sixty seconds."
+    },
+    {
+      "heading": "Rewrite 3, 4, and 5",
+      "bullets": [
+        "Before: Participants will learn about accessibility. Flaw: the verb describes the instruction, not the learner",
+        "After: Given a short e-learning module, participants will identify all WCAG violations from a list of eight common types",
+        "Before: Nurses will administer medications. Flaw: too broad; split into terminal and enabling objectives",
+        "Before: Students will write a good essay. Flaw: 'good' is not a criterion. After: ...that meets all four rubric criteria at proficient or above"
+      ],
+      "narration": "Number three: participants will learn about accessibility. The verb describes what the instruction does, not what the learner does afterward. Rewritten: given a short e-learning module, participants will identify all accessibility violations from a list of eight common types. Number four: nurses will administer medications. It's missing conditions and a criterion, and it's far too broad; it needs to be split into a terminal objective and the enabling objectives from the task analysis. Number five: students will write a good essay. 'Good' is not a criterion. Rewritten: students will write a five-hundred-word persuasive essay that meets all four criteria on the attached rubric at the proficient level or above."
+    },
+    {
+      "heading": "Terminal and enabling objectives; sharing them",
+      "bullets": [
+        "Terminal objective: the goal performance, usually one per unit",
+        "Enabling objectives: the subordinate skills from the hierarchy",
+        "Number each objective with its task analysis element, for example 2.1.3",
+        "Share the terminal objective and criteria with learners at the start; hiding the standard helps nobody"
+      ],
+      "narration": "The terminal objective describes the goal performance; there's usually one per unit. Enabling objectives describe the subordinate skills that build to it, and your task analysis hierarchy gives you that structure for free. Number every objective with the task analysis element it came from. And share the terminal objective and the assessment criteria with learners at the start of instruction. Well-written objectives make relevance visible and give learners a standard to aim at. Hiding the standard helps nobody. For the objective clinic, write your terminal objective and two enabling objectives and post them for critique. Expect to rewrite them; that's what the clinic is for."
+    }
+  ]
+}

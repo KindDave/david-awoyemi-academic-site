@@ -1,0 +1,89 @@
+# Moodle LMS: self-hosted stack for David Awoyemi's courses.
+#
+# Services
+#   mariadb  - database
+#   moodle   - Moodle 4.5 LTS (PHP + Apache) with persistent code and data volumes
+#   caddy    - reverse proxy that obtains and renews HTTPS certificates automatically
+#
+# First run:
+#   cp .env.example .env      (then edit every value)
+#   docker compose up -d
+#   docker compose logs -f moodle     (first boot installs Moodle; wait for "Moodle setup finished")
+#
+# Local test without a domain: set MOODLE_HOST=localhost and open http://localhost:8080
+# (Caddy is only needed once you have a public domain; you can comment it out for local use.)
+
+services:
+  mariadb:
+    image: docker.io/bitnamilegacy/mariadb:11.4
+    restart: unless-stopped
+    environment:
+      - ALLOW_EMPTY_PASSWORD=no
+      - MARIADB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - MARIADB_USER=bn_moodle
+      - MARIADB_PASSWORD=${DB_PASSWORD}
+      - MARIADB_DATABASE=bitnami_moodle
+      - MARIADB_CHARACTER_SET=utf8mb4
+      - MARIADB_COLLATE=utf8mb4_unicode_ci
+    volumes:
+      - mariadb_data:/bitnami/mariadb
+    healthcheck:
+      test: ["CMD", "/opt/bitnami/scripts/mariadb/healthcheck.sh"]
+      interval: 15s
+      timeout: 5s
+      retries: 6
+
+  moodle:
+    # Bitnami moved its free images to the bitnamilegacy namespace in 2025; docker.io/bitnami/moodle
+    # no longer resolves. bitnamilegacy/moodle:4.5 is the same image and configuration.
+    # If it disappears too, see docs/02-moodle-setup.md for the official moodlehq image.
+    image: docker.io/bitnamilegacy/moodle:4.5
+    restart: unless-stopped
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      - MOODLE_DATABASE_HOST=mariadb
+      - MOODLE_DATABASE_PORT_NUMBER=3306
+      - MOODLE_DATABASE_USER=bn_moodle
+      - MOODLE_DATABASE_PASSWORD=${DB_PASSWORD}
+      - MOODLE_DATABASE_NAME=bitnami_moodle
+      - MOODLE_USERNAME=${MOODLE_ADMIN_USER}
+      - MOODLE_PASSWORD=${MOODLE_ADMIN_PASSWORD}
+      - MOODLE_EMAIL=${MOODLE_ADMIN_EMAIL}
+      - MOODLE_SITE_NAME=${MOODLE_SITE_NAME}
+      - MOODLE_HOST=${MOODLE_HOST}
+      - MOODLE_REVERSEPROXY=${MOODLE_REVERSEPROXY}
+      - MOODLE_SSLPROXY=${MOODLE_SSLPROXY}
+      - MOODLE_LANG=en
+      - PHP_MEMORY_LIMIT=512M
+      - PHP_UPLOAD_MAX_FILESIZE=256M
+      - PHP_POST_MAX_SIZE=256M
+      - PHP_MAX_EXECUTION_TIME=300
+    volumes:
+      - moodle_code:/bitnami/moodle
+      - moodle_data:/bitnami/moodledata
+
+  caddy:
+    image: docker.io/library/caddy:2
+    restart: unless-stopped
+    depends_on:
+      - moodle
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - SITE_ADDRESS=${SITE_ADDRESS:-http://localhost}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  mariadb_data:
+  moodle_code:
+  moodle_data:
+  caddy_data:
+  caddy_config:

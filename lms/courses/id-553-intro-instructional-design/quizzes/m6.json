@@ -1,0 +1,75 @@
+{
+  "title": "Module 6 Knowledge Check",
+  "description": "Ten questions on strategies, multimedia, accessibility, and prototyping. Unlimited attempts; best score counts.",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "text": "A lesson presents content clearly and ends with a summary, but learners never practice or receive feedback. In Gagne's terms this lesson is missing:",
+      "options": ["Events 1 and 2", "Events 6 and 7", "Event 4", "Event 9 only"],
+      "answer": 1,
+      "feedback": "Eliciting performance (6) and providing feedback (7) are what make it instruction rather than presentation."
+    },
+    {
+      "type": "multiple_response",
+      "text": "Which practices are supported by the cognitive research summarized in this module? Select all that apply.",
+      "options": ["Retrieval practice", "Spacing practice over time", "Rereading as the main study method", "Interleaving problem types", "Studying worked examples before solving problems as a novice"],
+      "answers": [0, 1, 3, 4],
+      "feedback": "Retrieval, spacing, interleaving, and worked examples with fading are well supported. Rereading is weak."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Clark's argument that 'media will never influence learning' implies that designers should:",
+      "options": ["Never use video", "Choose media after deciding the method, based on what the method requires", "Always choose the cheapest medium", "Let the vendor choose"],
+      "answer": 1,
+      "feedback": "Methods cause learning; media constrain which methods are feasible. Choose media to serve the events and practice the strategy requires."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "A narrated video shows a diagram while the same sentences appear as on-screen text. Which of Mayer's principles does this violate?",
+      "options": ["Coherence", "Redundancy", "Segmenting", "Pre-training"],
+      "answer": 1,
+      "feedback": "Presenting identical words as narration and on-screen text overloads the verbal channel. Narrate the diagram; keep captions as an accessibility option."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Which is an example of the UDL principle of multiple means of action and expression?",
+      "options": ["Providing captions on a video", "Offering a choice of product format where the objective allows", "Making the relevance of the topic explicit", "Adding a glossary"],
+      "answer": 1,
+      "feedback": "Choice of how to demonstrate learning is action and expression. Captions and glossaries are representation; relevance is engagement."
+    },
+    {
+      "type": "multiple_response",
+      "text": "Which items belong on the accessibility checklist for an e-learning asset? Select all that apply.",
+      "options": ["Alt text for meaningful images", "Accurate captions for video", "Keyboard operation for all interactions", "Background music on every screen", "Real headings in logical order"],
+      "answers": [0, 1, 2, 4],
+      "feedback": "Alt text, captions, keyboard operability, and real headings. Background music violates Mayer's coherence principle and can interfere with screen readers."
+    },
+    {
+      "type": "true_false",
+      "text": "The minimum WCAG color contrast ratio for normal text at level AA is 4.5:1.",
+      "answer": true,
+      "feedback": "Correct. Large text may use 3:1."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "You want to test whether the sequence and decision points of a branching scenario make sense before spending days in an authoring tool. What fidelity of prototype should you use?",
+      "options": ["High fidelity with produced media", "Medium fidelity in the authoring tool", "Paper or low fidelity (index cards, text-only, or clickable slides)", "No prototype; write a longer design document"],
+      "answer": 2,
+      "feedback": "Start at the lowest fidelity that answers the question. Sequence and logic can be tested on paper."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Where should the wrong options in a branching scenario's decision screens come from?",
+      "options": ["The designer's imagination", "The common errors recorded at branch points in the task analysis", "The vendor's template", "Random alternatives"],
+      "answer": 1,
+      "feedback": "Real errors make realistic, diagnostic distractors and connect the practice to the performance."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Which standard packages an authoring-tool module so an LMS can track completion and score?",
+      "options": ["WCAG", "SCORM", "APA", "ADDIE"],
+      "answer": 1,
+      "feedback": "SCORM (or xAPI with a learning record store). Common Cartridge exchanges whole courses between LMSs."
+    }
+  ]
+}

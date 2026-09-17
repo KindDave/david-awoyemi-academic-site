@@ -1,0 +1,250 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.214
+Learner and Context Analysis.
+
+2
+00:00:03.214 --> 00:00:07.979
+ID 553 - Module 3: Examining the Situation.
+
+3
+00:00:07.979 --> 00:00:14.627
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:15.227 --> 00:00:28.047
+Every design decision assumes something about the learners:
+what they already know, what they can attend to, what
+motivates them, what tools they have, and how much time
+they'll give you.
+
+5
+00:00:28.047 --> 00:00:33.806
+If those assumptions are wrong, the instruction fails no
+matter how well it's built.
+
+6
+00:00:33.806 --> 00:00:37.371
+Learner analysis replaces assumptions with evidence.
+
+7
+00:00:37.371 --> 00:00:43.266
+Context analysis does the same for the settings where
+learning and performance happen.
+
+8
+00:00:43.266 --> 00:00:50.876
+Skipping this step is the most common cause of instruction
+that is accurate, beautifully produced, and useless.
+
+9
+00:00:51.476 --> 00:00:53.088
+Here's why it matters.
+
+10
+00:00:53.088 --> 00:00:56.825
+Two designers analyze the same four hundred nurses.
+
+11
+00:00:56.825 --> 00:01:05.399
+The first works from assumption: nurses are busy adults who
+dislike computers, so keep the training short and simple.
+
+12
+00:01:05.399 --> 00:01:27.676
+The second collects data: a quarter of the nurses have used
+the vendor's system at a previous employer; the night shift
+will not attend daytime classes; sixty-one percent of last
+time's help desk calls concerned five workflows; veteran
+nurses report anxiety and younger nurses report boredom with
+basics.
+
+13
+00:01:27.676 --> 00:01:31.340
+The first designer builds one course for everyone.
+
+14
+00:01:31.340 --> 00:01:38.521
+The second builds a test-out path, shift-specific support,
+and practice focused on five workflows.
+
+15
+00:01:38.521 --> 00:01:41.892
+Same population, completely different designs.
+
+16
+00:01:42.492 --> 00:01:44.429
+What should you find out?
+
+17
+00:01:44.429 --> 00:01:54.265
+Entry skills and prior knowledge, including misconceptions,
+because prior knowledge is the strongest predictor of new
+learning.
+
+18
+00:01:54.265 --> 00:02:03.715
+Attitudes toward the content, toward the delivery mode, and
+toward the organization, because attitudes explain
+resistance.
+
+19
+00:02:03.715 --> 00:02:09.214
+Motivation: why are they here, and what happens if they
+learn or don't?
+
+20
+00:02:09.214 --> 00:02:15.411
+Educational and ability levels, including reading, language,
+and digital skills.
+
+21
+00:02:15.411 --> 00:02:17.115
+Group characteristics.
+
+22
+00:02:17.115 --> 00:02:24.938
+And for adults, competing demands on time, experience you
+can leverage, and the autonomy they expect.
+
+23
+00:02:24.938 --> 00:02:35.626
+One caution: learning preferences can inform engagement, but
+the idea of matching instruction to learning styles has no
+empirical support.
+
+24
+00:02:35.626 --> 00:02:37.098
+Don't design on it.
+
+25
+00:02:37.698 --> 00:02:39.221
+How do you find out?
+
+26
+00:02:39.221 --> 00:02:43.409
+Use more than one method, because each has blind spots.
+
+27
+00:02:43.409 --> 00:02:54.678
+Interview a sample of learners and their supervisors, and
+ask about the task rather than about training: walk me
+through the last time you did this.
+
+28
+00:02:54.678 --> 00:03:03.739
+Observe learners performing the task, and watch for
+workarounds; they reveal what the current process fails to
+support.
+
+29
+00:03:03.739 --> 00:03:07.546
+Survey for breadth, keeping it short and specific.
+
+30
+00:03:07.546 --> 00:03:13.638
+And mine existing data: performance records, help desk logs,
+assessment results.
+
+31
+00:03:13.638 --> 00:03:19.120
+Existing data is usually the most objective evidence and the
+least used.
+
+32
+00:03:19.120 --> 00:03:20.034
+Triangulate.
+
+33
+00:03:20.034 --> 00:03:30.084
+If interviews say learners are confident and the error logs
+say they fail, believe the logs and ask where the confidence
+comes from.
+
+34
+00:03:30.684 --> 00:03:33.600
+Dick and Carey distinguish two contexts.
+
+35
+00:03:33.600 --> 00:03:47.525
+The performance context is where learners will use what they
+learn: the physical setting, the social setting, the
+managerial support, and whether the new performance is
+expected and rewarded.
+
+36
+00:03:47.525 --> 00:03:53.867
+If the performance context doesn't support the new behavior,
+training won't produce it.
+
+37
+00:03:53.867 --> 00:04:01.813
+The learning context is where instruction happens:
+facilities, equipment, bandwidth, the LMS, and scheduling.
+
+38
+00:04:01.813 --> 00:04:05.677
+The closer the two contexts, the better the transfer.
+
+39
+00:04:05.677 --> 00:04:12.092
+That's why simulations, practice environments, and on-the-
+job components matter so much.
+
+40
+00:04:12.692 --> 00:04:16.367
+Analysis is only useful if it changes the design.
+
+41
+00:04:16.367 --> 00:04:19.367
+For every finding, write an implication.
+
+42
+00:04:19.367 --> 00:04:26.043
+A quarter of nurses have used the system before, so offer a
+test-out or accelerated path.
+
+43
+00:04:26.043 --> 00:04:34.518
+Night shift won't attend daytime classes, so provide
+asynchronous options and on-unit support during night hours.
+
+44
+00:04:34.518 --> 00:04:42.694
+Help desk calls concentrated in five workflows, so
+prioritize those for practice and build job aids for them.
+
+45
+00:04:42.694 --> 00:04:50.494
+Two devices per three nurses on the unit, so design practice
+that fits short sessions at shared devices.
+
+46
+00:04:50.494 --> 00:04:58.219
+Your implications table is the deliverable of assignment
+five, and the rest of the course builds on it.
+
+47
+00:04:58.819 --> 00:05:13.951
+Avoid the common mistakes: describing learners in
+demographics only, assuming everyone is the same, relying on
+self-report, and analyzing where the training happens while
+ignoring where the performance happens.
+
+48
+00:05:13.951 --> 00:05:27.785
+For assignment five, use at least two methods, reach real
+learners even if the sample is small, address every
+category, analyze both contexts, and produce at least eight
+specific implications.
+
+49
+00:05:27.785 --> 00:05:32.468
+If you cannot reach your learners at all, reconsider the
+project.
+
+50
+00:05:32.468 --> 00:05:37.873
+A design built on imagined learners will not survive the
+later assignments.

@@ -1,0 +1,136 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.383
+Lesson 1.2: Beat Making and Loop-Based Production.
+
+2
+00:00:05.383 --> 00:00:08.398
+GENAI 101 - Module 1: Music.
+
+3
+00:00:08.398 --> 00:00:14.857
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:15.457 --> 00:00:20.621
+In this lesson you'll build a sixteen-bar beat in a browser-
+based workstation.
+
+5
+00:00:20.621 --> 00:00:31.742
+You'll break the beat into layers, write each layer as a
+repeating pattern, extend it to sixteen bars with deliberate
+variations, and use one of the tool's AI features.
+
+6
+00:00:31.742 --> 00:00:37.633
+Then you'll share the beat and give a classmate structured
+feedback on their arrangement.
+
+7
+00:00:38.233 --> 00:00:44.387
+Computational thinking has four moves, and a drum loop uses
+all four at once.
+
+8
+00:00:44.387 --> 00:00:50.700
+Decomposition: you break the groove into kick, snare, hi-
+hat, bass, and chords.
+
+9
+00:00:50.700 --> 00:00:59.090
+Pattern recognition: you notice the hi-hat repeats every
+eighth note and the snare lands on two and four.
+
+10
+00:00:59.090 --> 00:01:03.406
+Abstraction: you reduce the groove to a grid of cells.
+
+11
+00:01:03.406 --> 00:01:10.438
+And algorithm design: you sequence the bars into a form with
+an ordered list of changes.
+
+12
+00:01:11.038 --> 00:01:17.478
+Loop-based tools show time as a grid: bars across the top,
+instruments down the side.
+
+13
+00:01:17.478 --> 00:01:20.433
+One bar of four-four has sixteen cells.
+
+14
+00:01:20.433 --> 00:01:32.101
+Put the kick on cells one and nine, the snare on five and
+thirteen, and a hi-hat on every odd cell, and you have the
+most common pattern in popular music.
+
+15
+00:01:32.101 --> 00:01:37.632
+Almost everything else you've ever danced to is a variation
+on that grid.
+
+16
+00:01:37.632 --> 00:01:42.253
+Write your pattern on paper first; that's your
+decomposition.
+
+17
+00:01:42.853 --> 00:01:46.331
+A sixteen-bar beat is not sixteen different bars.
+
+18
+00:01:46.331 --> 00:02:01.590
+It's usually one four-bar phrase repeated four times with
+small changes: a fill at the end of bar four, the bass
+dropping out in bar eight, a new element arriving at bar
+nine, a one-beat silence before bar thirteen.
+
+19
+00:02:01.590 --> 00:02:06.771
+Listeners hear the repetition as stability and the variation
+as interest.
+
+20
+00:02:06.771 --> 00:02:10.604
+Your numbered list of those changes is your algorithm.
+
+21
+00:02:11.204 --> 00:02:14.596
+Modern workstations hide AI in several places.
+
+22
+00:02:14.596 --> 00:02:19.242
+Loop recommendation suggests loops that fit your key and
+tempo.
+
+23
+00:02:19.242 --> 00:02:23.740
+Pattern generation proposes a drum pattern in a chosen
+style.
+
+24
+00:02:23.740 --> 00:02:27.354
+Automatic mastering balances levels and loudness.
+
+25
+00:02:27.354 --> 00:02:30.378
+Each of these is a decision made for you.
+
+26
+00:02:30.378 --> 00:02:40.112
+Your job in this lesson is to use at least one, listen with
+it and without it, notice what it decided, and decide
+whether you agree.
+
+27
+00:02:40.112 --> 00:02:43.799
+Write that down; it's the heart of your rationale.
+
+28
+00:02:43.799 --> 00:02:55.746
+When you're done, export the beat, post it with your pattern
+grid and your list of variations, and reply to two peers
+using the feedback frame in the lesson page.

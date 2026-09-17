@@ -1,0 +1,106 @@
+{
+  "code": "ID 553",
+  "title": "ID 553: Introduction to the Principles of Instructional Design",
+  "description": "A fully online, eight-module graduate-level introduction to instructional design. You will study the major ID models, analyze two realistic design cases, conduct learner and task analyses, write aligned objectives and assessments, plan and prototype an instructional intervention, and design its evaluation. The course follows the ADDIE arc (analysis, design, development, implementation, evaluation) while treating it critically, and every module produces a component of a final instructional plan you can carry into practice.",
+  "audience": "Graduate students and practitioners new to instructional design: teachers, trainers, faculty developers, and technologists.",
+  "duration": "Eight modules over 8 to 15 weeks. Plan on 6 to 8 hours per module.",
+  "instructor": "Idowu David Awoyemi, The University of Alabama",
+  "modules": [
+    {
+      "title": "Introduction Module",
+      "summary": "Course orientation, expectations, and your first discussion.",
+      "items": [
+        {"type": "page", "title": "Welcome to ID 553", "file": "pages/00-welcome.md"},
+        {"type": "page", "title": "How to Succeed in This Course", "file": "pages/01-success.md"},
+        {"type": "discussion", "title": "Assignment 1: Introduction Discussion", "file": "discussions/intro.md"},
+        {"type": "quiz", "title": "Pre-Course Knowledge Survey", "file": "quizzes/pre-survey.json"}
+      ]
+    },
+    {
+      "title": "Module 1: Introduction to Instructional Design Models",
+      "summary": "What instructional design is, where it came from, and the models that organize the work.",
+      "items": [
+        {"type": "page", "title": "What Is Instructional Design?", "file": "pages/m1-foundations.md"},
+        {"type": "page", "title": "A Survey of Instructional Design Models", "file": "pages/m1-models.md"},
+        {"type": "link", "title": "Reading: ADDIE model overview (InstructionalDesign.org)", "url": "https://www.instructionaldesign.org/models/addie/", "note": "Short overview of the five ADDIE phases. Read before the models page."},
+        {"type": "link", "title": "Reading: Merrill's First Principles of Instruction", "url": "https://mdavidmerrill.wordpress.com/publications/", "note": "Merrill's 2002 paper is available from his publications page. Focus on the five principles and Figure 1."},
+        {"type": "discussion", "title": "Discussion: Which Model, and Why?", "file": "discussions/m1-models.md"},
+        {"type": "quiz", "title": "Module 1 Knowledge Check", "file": "quizzes/m1.json"},
+        {"type": "assignment", "title": "Assignment 2: Understanding Instructional Design Models", "file": "assignments/a2-models.md", "points": 50}
+      ]
+    },
+    {
+      "title": "Module 2: ID Case Analysis I",
+      "summary": "Learn the case method and analyze your first instructional design case.",
+      "items": [
+        {"type": "page", "title": "How to Analyze an Instructional Design Case", "file": "pages/m2-case-method.md"},
+        {"type": "page", "title": "Case 1: Onboarding at Crestview Regional Hospital", "file": "pages/m2-case1.md"},
+        {"type": "discussion", "title": "Case 1 Discussion: Framing the Problem", "file": "discussions/m2-case1.md"},
+        {"type": "assignment", "title": "Assignment 3: ID Case Analysis I", "file": "assignments/a3-case1.md", "points": 100}
+      ]
+    },
+    {
+      "title": "Module 3: Examining the Situation: Learner and Task Analysis",
+      "summary": "Front-end analysis: who the learners are, where they will learn, and what exactly they must be able to do.",
+      "items": [
+        {"type": "page", "title": "Learner and Context Analysis", "file": "pages/m3-learner-analysis.md"},
+        {"type": "page", "title": "Task Analysis", "file": "pages/m3-task-analysis.md"},
+        {"type": "quiz", "title": "Module 3 Knowledge Check", "file": "quizzes/m3.json"},
+        {"type": "assignment", "title": "Assignment 5: Learner Analysis", "file": "assignments/a5-learner.md", "points": 75},
+        {"type": "assignment", "title": "Assignment 6: Task Analysis", "file": "assignments/a6-task.md", "points": 75}
+      ]
+    },
+    {
+      "title": "Module 4: Objectives and Aligned Assessment",
+      "summary": "Write objectives that can be taught and measured, and design assessments that match them.",
+      "items": [
+        {"type": "page", "title": "Writing Learning Objectives", "file": "pages/m4-objectives.md"},
+        {"type": "page", "title": "Assessment Alignment and Rubrics", "file": "pages/m4-assessment.md"},
+        {"type": "quiz", "title": "Module 4 Knowledge Check", "file": "quizzes/m4.json"},
+        {"type": "discussion", "title": "Objective Clinic", "file": "discussions/m4-objectives.md"}
+      ]
+    },
+    {
+      "title": "Module 5: ID Case Analysis II",
+      "summary": "A second, more complex case that adds organizational politics, technology, and evaluation pressure.",
+      "items": [
+        {"type": "page", "title": "Case 2: Scaling AI Literacy at Pinewood Community College", "file": "pages/m5-case2.md"},
+        {"type": "discussion", "title": "Case 2 Discussion: Stakeholders and Trade-offs", "file": "discussions/m5-case2.md"},
+        {"type": "assignment", "title": "Assignment 4: ID Case Analysis II", "file": "assignments/a4-case2.md", "points": 100}
+      ]
+    },
+    {
+      "title": "Module 6: Creating Instruction: Planning and Designing the Intervention",
+      "summary": "Instructional strategies, multimedia and accessibility principles, and rapid prototyping.",
+      "items": [
+        {"type": "page", "title": "Instructional Strategies: Gagne, Merrill, and Scaffolding", "file": "pages/m6-strategies.md"},
+        {"type": "page", "title": "Designing E-Learning: Multimedia, UDL, and Accessibility", "file": "pages/m6-multimedia.md"},
+        {"type": "page", "title": "Storyboarding and Rapid Prototyping", "file": "pages/m6-prototyping.md"},
+        {"type": "link", "title": "Reading: UDL Guidelines (CAST)", "url": "https://udlguidelines.cast.org/", "note": "Browse the three principles and pick two checkpoints to apply in your instructional plan."},
+        {"type": "link", "title": "Reading: WCAG 2.2 at a glance (W3C)", "url": "https://www.w3.org/WAI/standards-guidelines/wcag/glance/", "note": "The four accessibility principles: perceivable, operable, understandable, robust."},
+        {"type": "quiz", "title": "Module 6 Knowledge Check", "file": "quizzes/m6.json"},
+        {"type": "assignment", "title": "Assignment 7, Part 1: Instructional Plan", "file": "assignments/a7-plan.md", "points": 150}
+      ]
+    },
+    {
+      "title": "Module 7: Evaluation: Determining the Effect of the Intervention",
+      "summary": "Formative and summative evaluation, peer review, and the final reflection on your plan.",
+      "items": [
+        {"type": "page", "title": "Formative and Summative Evaluation", "file": "pages/m7-evaluation.md"},
+        {"type": "discussion", "title": "Peer Review Exchange", "file": "discussions/m7-peer-review.md"},
+        {"type": "assignment", "title": "Assignment 7, Part 2: Evaluation Plan and Peer Review", "file": "assignments/a7-evaluation.md", "points": 75},
+        {"type": "assignment", "title": "Assignment 7, Part 3: Final Reflection on the Plan", "file": "assignments/a7-reflection.md", "points": 50},
+        {"type": "quiz", "title": "Module 7 Knowledge Check", "file": "quizzes/m7.json"}
+      ]
+    },
+    {
+      "title": "Closure Module",
+      "summary": "Reflect on the course, complete the post-survey, and plan what comes next.",
+      "items": [
+        {"type": "assignment", "title": "Assignment 8: Course Reflection", "file": "assignments/a8-reflection.md", "points": 50},
+        {"type": "quiz", "title": "Post-Course Survey", "file": "quizzes/post-survey.json"},
+        {"type": "page", "title": "Course Completion and Next Steps", "file": "pages/m8-completion.md"}
+      ]
+    }
+  ]
+}

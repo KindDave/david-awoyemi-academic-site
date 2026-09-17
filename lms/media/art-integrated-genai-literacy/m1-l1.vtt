@@ -1,0 +1,142 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.461
+Lesson 1.1: Composing an Original Song with GenAI.
+
+2
+00:00:05.461 --> 00:00:08.519
+GENAI 101 - Module 1: Music.
+
+3
+00:00:08.519 --> 00:00:15.072
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:15.672 --> 00:00:18.872
+In this lesson you'll compose an original song.
+
+5
+00:00:18.872 --> 00:00:30.784
+You'll write the lyrics yourself, two verses and a chorus,
+then write a style prompt, generate three versions of the
+song, and choose the strongest one using musical criteria.
+
+6
+00:00:30.784 --> 00:00:38.748
+At the end you'll share it in the gallery with a short
+rationale explaining which prompt choices made the
+difference.
+
+7
+00:00:39.348 --> 00:00:40.915
+Here's the core idea.
+
+8
+00:00:40.915 --> 00:00:45.167
+A text-to-song tool takes a style prompt and your lyrics.
+
+9
+00:00:45.167 --> 00:00:54.194
+If the prompt is vague, like 'a nice pop song', the model
+makes every musical decision for you and the result is
+generic.
+
+10
+00:00:54.194 --> 00:01:11.800
+If the prompt is specific, like 'upbeat indie pop at one
+hundred eighteen beats per minute, bright acoustic guitar
+and handclaps, warm female alto, sparse first verse building
+to a full chorus', the model has constraints to work within.
+
+11
+00:01:11.800 --> 00:01:14.337
+Constraints are where style lives.
+
+12
+00:01:14.937 --> 00:01:20.609
+Use the same five-part frame for every music prompt in this
+course.
+
+13
+00:01:20.609 --> 00:01:24.843
+Genre and era: what tradition does this belong to?
+
+14
+00:01:24.843 --> 00:01:29.330
+Tempo and feel: how fast is it, and how does it move?
+
+15
+00:01:29.330 --> 00:01:32.885
+Instrumentation: what do we actually hear?
+
+16
+00:01:32.885 --> 00:01:35.087
+Vocal: who sings, and how?
+
+17
+00:01:35.087 --> 00:01:41.606
+And arc and mood: how does the song change over time, and
+how should it feel?
+
+18
+00:01:41.606 --> 00:01:50.157
+Think of these as the six decisions a producer makes, minus
+the key, which most tools choose for you.
+
+19
+00:01:50.757 --> 00:01:59.120
+Your lyrics need structure tags: verse one, chorus, verse
+two, bridge, and so on, in square brackets.
+
+20
+00:01:59.120 --> 00:02:02.847
+The tags tell the model where sections begin.
+
+21
+00:02:02.847 --> 00:02:08.395
+Without them, choruses land in odd places and the form falls
+apart.
+
+22
+00:02:08.395 --> 00:02:13.778
+This is your first taste of computational thinking in the
+course.
+
+23
+00:02:13.778 --> 00:02:18.332
+You are sequencing the form so a machine can follow it.
+
+24
+00:02:18.932 --> 00:02:20.450
+Generation is cheap.
+
+25
+00:02:20.450 --> 00:02:21.664
+Judgment is not.
+
+26
+00:02:21.664 --> 00:02:27.660
+When you regenerate, change one variable at a time so you
+can hear what it did.
+
+27
+00:02:27.660 --> 00:02:36.463
+A good order is: get the form right first, then the tempo
+and feel, then the instrumentation, and finally the vocal.
+
+28
+00:02:36.463 --> 00:02:53.613
+Score every version on the evaluation grid in the lesson
+page: does the form follow your tags, does the tempo match
+the brief, are the lyrics sung as written, is the vocal
+phrasing natural, and would you play this for a class?
+
+29
+00:02:53.613 --> 00:03:01.885
+When you've chosen, post it in the gallery with your lyrics,
+your prompt, your rationale, and your AI credit.
+
+30
+00:03:01.885 --> 00:03:03.175
+Have fun with it.

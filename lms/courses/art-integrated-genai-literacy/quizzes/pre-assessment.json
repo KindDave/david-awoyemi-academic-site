@@ -1,0 +1,15 @@
+{
+  "title": "Pre-Course Self-Assessment",
+  "description": "This is not a test. Rate your current confidence honestly so you can see your growth at the end of the course. Ungraded; one attempt.",
+  "max_attempts": 1,
+  "questions": [
+    {"type": "multiple_choice", "text": "**Computational thinking.** I can break a creative task (a song, a scene) into ordered steps a tool could act on.", "options": ["1 - New to this", "2 - Beginning", "3 - Developing", "4 - Confident", "5 - Could teach it"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "**Prompt engineering.** I can write a prompt that specifies genre, mood, structure, and constraints and get close to what I imagined.", "options": ["1 - New to this", "2 - Beginning", "3 - Developing", "4 - Confident", "5 - Could teach it"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "**Problem solving.** When an AI output misses the mark, I know at least two ways to fix it.", "options": ["1 - New to this", "2 - Beginning", "3 - Developing", "4 - Confident", "5 - Could teach it"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "**Creativity and innovation.** I can combine AI output with my own artistry to make something original.", "options": ["1 - New to this", "2 - Beginning", "3 - Developing", "4 - Confident", "5 - Could teach it"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "**AI feedback evaluation.** I can judge whether an AI-generated piece or suggestion is accurate, high quality, and appropriate.", "options": ["1 - New to this", "2 - Beginning", "3 - Developing", "4 - Confident", "5 - Could teach it"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "**AI ethics literacy.** I can explain the ownership, consent, bias, and disclosure issues raised by GenAI in the arts.", "options": ["1 - New to this", "2 - Beginning", "3 - Developing", "4 - Confident", "5 - Could teach it"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "**Collaboration.** I am comfortable sharing drafts in a digital space and giving peers constructive feedback.", "options": ["1 - New to this", "2 - Beginning", "3 - Developing", "4 - Confident", "5 - Could teach it"], "answer": 4, "points": 0},
+    {"type": "essay", "text": "In two or three sentences, what do you most want to be able to do with GenAI in your future classroom by the end of this course?", "points": 0}
+  ]
+}

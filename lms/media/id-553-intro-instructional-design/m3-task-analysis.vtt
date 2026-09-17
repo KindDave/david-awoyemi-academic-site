@@ -1,0 +1,255 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.658
+Task Analysis.
+
+2
+00:00:01.658 --> 00:00:06.751
+ID 553 - Module 3: Examining the Situation.
+
+3
+00:00:06.751 --> 00:00:13.857
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:14.457 --> 00:00:23.273
+Task analysis answers one question: what, exactly, must the
+learner be able to do, and what does that performance
+consist of?
+
+5
+00:00:23.273 --> 00:00:33.994
+It turns a goal like 'nurses will administer medications
+safely in the new system' into a map of the knowledge,
+skills, and decisions the goal requires.
+
+6
+00:00:33.994 --> 00:00:40.341
+That map determines your objectives, your sequence, your
+strategies, and your assessments.
+
+7
+00:00:40.341 --> 00:00:47.676
+Without it, designers teach what they happen to know rather
+than what the performance actually requires.
+
+8
+00:00:48.276 --> 00:00:59.752
+Start by classifying the goal using Gagne's outcome types,
+because the type determines the analysis method and, later,
+the instructional conditions.
+
+9
+00:00:59.752 --> 00:01:05.489
+Verbal information is stating and recalling; you analyze it
+by clustering.
+
+10
+00:01:05.489 --> 00:01:15.026
+Intellectual skills are discriminating, classifying,
+applying rules, and solving problems; you analyze them
+hierarchically.
+
+11
+00:01:15.026 --> 00:01:19.989
+Cognitive strategies are how learners manage their own
+thinking.
+
+12
+00:01:19.989 --> 00:01:25.261
+Motor skills are physical procedures; you analyze them
+procedurally.
+
+13
+00:01:25.261 --> 00:01:26.967
+Attitudes are choices.
+
+14
+00:01:26.967 --> 00:01:35.883
+Most real goals combine types: a procedure with decisions at
+branch points and information needed at several steps.
+
+15
+00:01:36.483 --> 00:01:39.485
+Let's do a procedural analysis live.
+
+16
+00:01:39.485 --> 00:01:44.822
+The goal: administer a medication with bedside barcode
+scanning.
+
+17
+00:01:44.822 --> 00:01:48.074
+Step one, scan the patient's wristband.
+
+18
+00:01:48.074 --> 00:01:50.825
+If it reads and matches, proceed.
+
+19
+00:01:50.825 --> 00:01:56.829
+If it doesn't read, rescan; after two failures, use the
+manual override.
+
+20
+00:01:56.829 --> 00:02:06.668
+The override is its own sub-procedure: enter the record
+number, confirm two identifiers verbally, document the
+reason.
+
+21
+00:02:06.668 --> 00:02:09.836
+Step two, scan the medication barcode.
+
+22
+00:02:09.836 --> 00:02:16.507
+If a mismatch alert appears, stop, do not administer, follow
+the alert workflow.
+
+23
+00:02:16.507 --> 00:02:20.843
+Notice what the analysis exposed: the branch points.
+
+24
+00:02:20.843 --> 00:02:32.350
+That's where errors happen, where practice should
+concentrate, and where the expert performs automatically and
+would never think to teach.
+
+25
+00:02:32.950 --> 00:02:37.067
+Now a hierarchical analysis for an intellectual skill.
+
+26
+00:02:37.067 --> 00:02:41.488
+Take the decision: does a mismatch alert require stopping?
+
+27
+00:02:41.488 --> 00:02:46.977
+Ask: what must the learner already be able to do in order to
+learn this?
+
+28
+00:02:46.977 --> 00:02:49.645
+They must interpret the alert type.
+
+29
+00:02:49.645 --> 00:02:57.650
+Ask again: to interpret the type, they must distinguish
+wrong-patient, wrong-drug, and wrong-time alerts.
+
+30
+00:02:57.650 --> 00:03:04.511
+Ask again: to distinguish them, they must read the alert
+display, which is an entry skill.
+
+31
+00:03:04.511 --> 00:03:12.135
+Each answer becomes a subordinate skill below the one above,
+and lower skills must be learned first.
+
+32
+00:03:12.135 --> 00:03:16.023
+You stop when you reach what learners already have.
+
+33
+00:03:16.623 --> 00:03:17.897
+Two more methods.
+
+34
+00:03:17.897 --> 00:03:28.242
+For verbal information, cluster the items into meaningful
+sets by function, location, or time; clusters often turn
+directly into job aids.
+
+35
+00:03:28.242 --> 00:03:31.766
+And for complex tasks, cognitive task analysis.
+
+36
+00:03:31.766 --> 00:03:35.664
+Experts make decisions they can't easily articulate.
+
+37
+00:03:35.664 --> 00:03:49.383
+Structured interviews, think-aloud protocols, and critical-
+incident recall surface the cues experts attend to, the
+decisions they make, and the errors novices make at the same
+points.
+
+38
+00:03:49.383 --> 00:04:02.352
+Full cognitive task analysis is expensive, but even a light
+version, asking an expert to narrate a recent difficult case
+and probing at each decision, improves any analysis.
+
+39
+00:04:02.352 --> 00:04:10.073
+The research is clear that instruction built on it
+outperforms instruction built on expert self-report.
+
+40
+00:04:10.673 --> 00:04:14.190
+Draw a line across the bottom of your analysis.
+
+41
+00:04:14.190 --> 00:04:18.829
+Everything below it is assumed; everything above it is
+taught.
+
+42
+00:04:18.829 --> 00:04:28.033
+Where you draw the line comes from the learner analysis, and
+if learners vary widely, you may need two lines and two
+paths.
+
+43
+00:04:28.033 --> 00:04:29.829
+Then check the analysis.
+
+44
+00:04:29.829 --> 00:04:34.992
+Completeness: could a novice perform the goal using only
+what's here?
+
+45
+00:04:34.992 --> 00:04:37.836
+Have an expert and a novice review it.
+
+46
+00:04:37.836 --> 00:04:46.291
+Accuracy: observe the task performed, because analyses built
+from documentation miss workarounds and tacit steps.
+
+47
+00:04:46.291 --> 00:04:55.495
+And make every branch point explicit with its common errors;
+those errors become practice items and assessment
+distractors.
+
+48
+00:04:56.095 --> 00:05:13.014
+The common mistakes: listing topics instead of performances;
+stopping too early so the first objective is unteachable in
+one lesson; teaching the happy path with no decisions or
+error handling; and analyzing from documentation without
+observing anyone.
+
+49
+00:05:13.014 --> 00:05:30.939
+For assignment six, choose one goal from your project,
+classify it, decompose it with the right method to at least
+three levels, number every element, mark the entry-skill
+line using your learner analysis, and have at least one
+person who performs the task review it.
+
+50
+00:05:30.939 --> 00:05:38.325
+Then write one paragraph on what the analysis revealed that
+you would not have taught from your own knowledge.
+
+51
+00:05:38.325 --> 00:05:43.091
+That paragraph is usually the most interesting thing in the
+assignment.

@@ -1,0 +1,76 @@
+{
+  "title": "Module 4 Knowledge Check",
+  "description": "Eight questions on objectives and aligned assessment. Unlimited attempts; best score counts.",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "text": "Which objective contains all three of Mager's components?",
+      "options": [
+        "Students will understand accessibility",
+        "Given an e-learning module, participants will identify all WCAG violations from a list of eight common types",
+        "Participants will learn about WCAG",
+        "The instructor will present the four WCAG principles"
+      ],
+      "answer": 1,
+      "feedback": "Condition (given a module), performance (identify violations), criterion (all, from a list of eight)."
+    },
+    {
+      "type": "multiple_response",
+      "text": "Which verbs describe observable performance? Select all that apply.",
+      "options": ["Understand", "Classify", "Appreciate", "Demonstrate", "Be familiar with", "Diagnose"],
+      "answers": [1, 3, 5],
+      "feedback": "Classify, demonstrate, and diagnose are observable. Understand, appreciate, and be familiar with describe internal states."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "A task analysis shows the job requires applying a procedure. The designer writes objectives at the 'create' level of Bloom's taxonomy to make the course more rigorous. This is:",
+      "options": ["Good practice; higher is always better", "Misalignment; the objective level should match the task analysis", "Required by the taxonomy", "Acceptable if the assessment is multiple choice"],
+      "answer": 1,
+      "feedback": "The taxonomy is a vocabulary for matching, not a ladder to climb. Objectives derive from the task analysis."
+    },
+    {
+      "type": "true_false",
+      "text": "In the Dick and Carey model, assessment instruments are developed after the instructional strategy is chosen.",
+      "answer": false,
+      "feedback": "Assessments come right after objectives and before strategies, to guarantee alignment."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "An objective asks learners to decide whether a mismatch alert requires stopping. Which assessment is aligned?",
+      "options": [
+        "Define 'mismatch alert'",
+        "List the three types of alerts",
+        "Given six new scenarios with alerts, decide in each whether to stop, with a rationale",
+        "Describe the alert workflow in your own words"
+      ],
+      "answer": 2,
+      "feedback": "A decision objective needs an assessment that presents decisions, with new scenarios rather than the ones used in instruction."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Criterion-referenced assessment means:",
+      "options": [
+        "Learners are ranked against each other",
+        "Each learner is measured against the standard stated in the objective",
+        "Scores are curved to a normal distribution",
+        "The instructor sets the passing score after seeing results"
+      ],
+      "answer": 1,
+      "feedback": "The criterion in the objective is the standard. If many learners fail, examine the instruction."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Where should the distractors for a multiple-choice item ideally come from?",
+      "options": ["Random plausible-sounding phrases", "Common errors identified in the task analysis", "The longest available options", "Other courses"],
+      "answer": 1,
+      "feedback": "Distractors built from real errors are diagnostic. A distractor nobody chooses is wasted."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Which scoring guide describes each criterion at each level of performance?",
+      "options": ["Checklist", "Rating scale", "Analytic rubric", "Holistic rubric"],
+      "answer": 2,
+      "feedback": "Analytic rubrics are the most reliable and give the most useful feedback."
+    }
+  ]
+}

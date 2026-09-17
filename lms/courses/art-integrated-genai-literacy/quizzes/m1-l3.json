@@ -1,0 +1,50 @@
+{
+  "title": "Lesson 1.3 Knowledge Check",
+  "description": "Five questions on evaluating and fixing AI-generated cues. Unlimited attempts; your best score counts.",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "text": "What is the purpose of writing a cue sheet before generating any music?",
+      "options": [
+        "To satisfy the tool's terms of service",
+        "To turn a vague request into a brief you can generate from and evaluate against",
+        "To reduce the number of credits used",
+        "To choose the file format"
+      ],
+      "answer": 1,
+      "feedback": "The cue sheet is both the prompt source and the evaluation standard."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "A generated cue has the right mood and instrumentation but keeps adding a sung vocal line. Which fix should you try first?",
+      "options": ["Edit the audio to remove the vocal", "Switch to instrumental mode or a mood-based tool", "Abandon the scene", "Lower the tempo"],
+      "answer": 1,
+      "feedback": "Persistent vocals are a mode or tool limitation, so change the mode or tool. Editing a vocal out of a mixed track is far harder."
+    },
+    {
+      "type": "true_false",
+      "text": "\"I like it\" is a sufficient evaluation of an AI-generated cue.",
+      "answer": false,
+      "feedback": "Evaluation compares the output with the brief on named criteria such as mood match, tempo, instrumentation, structure, technical quality, and fit under dialogue."
+    },
+    {
+      "type": "multiple_response",
+      "text": "Which are among the six cue evaluation criteria used in this lesson? Select all that apply.",
+      "options": ["Mood match", "Fit under dialogue", "Number of generations used", "Technical quality", "Popularity of the genre"],
+      "answers": [0, 1, 3],
+      "feedback": "The six criteria are mood match, tempo and energy, instrumentation, structure, technical quality, and fit under dialogue."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "\"Playing against the scene\" means:",
+      "options": [
+        "Using music that deliberately contrasts with the apparent emotion of the action",
+        "Muting the music during dialogue",
+        "Using the same cue for every scene",
+        "Choosing a cue faster than the action"
+      ],
+      "answer": 0,
+      "feedback": "Playing against the scene is a deliberate contrast that adds a layer of meaning."
+    }
+  ]
+}

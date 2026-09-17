@@ -1,0 +1,45 @@
+{
+  "title": "Lesson 2.4 Knowledge Check",
+  "description": "Five questions on evaluating AI feedback and the ethics of staging AI-assisted theater. Unlimited attempts; your best score counts.",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "text": "An AI note says \"raise the stakes and develop the characters more\" without pointing to any line. How should you classify it?",
+      "options": ["Useful", "Generic", "Wrong", "Cannot be classified"],
+      "answer": 1,
+      "feedback": "Feedback that could apply to any scene and points nowhere is generic. Ask the model to locate it; if it cannot, discard it."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Which prompt is most likely to produce useful feedback?",
+      "options": [
+        "Is this good?",
+        "Give me feedback",
+        "Read as a dramaturg preparing first-rehearsal notes. Comment only on objective, obstacle, and subtext. Give five notes, each quoting the line it refers to.",
+        "Rewrite this scene to be better"
+      ],
+      "answer": 2,
+      "feedback": "Specify the lens, the criteria, and the form. Then ask the model which notes it is least confident about."
+    },
+    {
+      "type": "multiple_response",
+      "text": "Which are among the five ethical questions this lesson raises about staging AI-assisted theater? Select all that apply.",
+      "options": ["Authorship", "Consent", "Ticket pricing", "Representation", "Labor", "Disclosure"],
+      "answers": [0, 1, 3, 4, 5],
+      "feedback": "Authorship, consent, representation, labor, and disclosure."
+    },
+    {
+      "type": "true_false",
+      "text": "Because a text model produces feedback instantly and confidently, its notes should be treated as more reliable than a peer's.",
+      "answer": false,
+      "feedback": "Fluency is not accountability. The model has no stake in your work and no knowledge of your room; classify every note before acting on it."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "According to this lesson, what is the one clearly wrong approach to the ethics of staging AI-assisted work?",
+      "options": ["Crediting the model in the program", "Not asking the questions at all", "Staging it with disclosure", "Declining to stage it"],
+      "answer": 1,
+      "feedback": "Reasonable people reach different positions. The only wrong approach is to skip the questions."
+    }
+  ]
+}

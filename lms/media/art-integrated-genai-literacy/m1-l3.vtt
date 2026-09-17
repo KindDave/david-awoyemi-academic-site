@@ -1,0 +1,152 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.242
+Lesson 1.3: Scoring a Scene with AI-Generated Soundtracks.
+
+2
+00:00:06.242 --> 00:00:09.255
+GENAI 101 - Module 1: Music.
+
+3
+00:00:09.255 --> 00:00:15.712
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:16.312 --> 00:00:20.197
+In this lesson you become a film composer for an hour.
+
+5
+00:00:20.197 --> 00:00:33.506
+You'll pick a short scene, write a cue sheet with two
+contrasting cues, generate candidates for each cue, score
+them on six criteria, fix the weakest one, and assemble the
+scored scene.
+
+6
+00:00:33.506 --> 00:00:43.362
+This is the lesson where the AI will fail you most often,
+and that's the point: the competencies here are problem
+solving and evaluation.
+
+7
+00:00:43.962 --> 00:00:47.231
+Before you touch a tool, write a cue sheet.
+
+8
+00:00:47.231 --> 00:00:55.819
+For each cue, note when it starts and ends, what it needs to
+do, and its mood, tempo, instrumentation, and shape.
+
+9
+00:00:55.819 --> 00:01:01.899
+Does this cue establish a place, reveal a feeling, build
+tension, or release it?
+
+10
+00:01:01.899 --> 00:01:11.399
+A cue sheet turns 'make it sad' into a brief the model can
+act on, and it gives you a standard to evaluate against
+afterward.
+
+11
+00:01:11.399 --> 00:01:15.123
+That double role is why we always write it first.
+
+12
+00:01:15.723 --> 00:01:18.060
+'I like it' is not evaluation.
+
+13
+00:01:18.060 --> 00:01:23.047
+Evaluation compares the output with the brief on named
+criteria.
+
+14
+00:01:23.047 --> 00:01:32.865
+For a cue, there are six: mood match, tempo and energy,
+instrumentation, structure, technical quality, and fit under
+dialogue.
+
+15
+00:01:32.865 --> 00:01:34.969
+Rate each from one to four.
+
+16
+00:01:34.969 --> 00:01:41.124
+Anything scoring a one or a two is a problem to solve, not a
+reason to give up.
+
+17
+00:01:41.124 --> 00:01:49.072
+You'll score four candidate cues this way, and the grid you
+fill in becomes part of your gallery post.
+
+18
+00:01:49.672 --> 00:01:54.134
+When a cue misses, work through three fixes in order.
+
+19
+00:01:54.134 --> 00:01:56.239
+First, revise the prompt.
+
+20
+00:01:56.239 --> 00:02:08.361
+Most misses come from an underspecified mood or tempo, so
+add a reference, a tempo, and a shape, like 'starts sparse,
+swells at twenty seconds'.
+
+21
+00:02:08.361 --> 00:02:11.392
+Second, change the tool or the mode.
+
+22
+00:02:11.392 --> 00:02:20.736
+If the model keeps adding vocals, switch to instrumental
+mode; if it can't do the genre, try a mood-based tool.
+
+23
+00:02:20.736 --> 00:02:23.346
+Third, edit the audio yourself.
+
+24
+00:02:23.346 --> 00:02:29.155
+Sometimes the best fix is a twelve-second crossfade you make
+by hand.
+
+25
+00:02:29.155 --> 00:02:32.691
+Diagnosing which fix applies is the skill.
+
+26
+00:02:33.291 --> 00:02:34.317
+One more idea.
+
+27
+00:02:34.317 --> 00:02:42.749
+In the warm-up you'll watch a scene with the sound off and
+guess what's happening, then watch it with the sound on.
+
+28
+00:02:42.749 --> 00:02:48.028
+A score can confirm what you see, add something to it, or
+contradict it.
+
+29
+00:02:48.028 --> 00:02:52.794
+Film composers call that last option 'playing against the
+scene'.
+
+30
+00:02:52.794 --> 00:02:57.193
+When you write your second cue, make that choice on purpose.
+
+31
+00:02:57.193 --> 00:03:06.139
+Then assemble your scene, export it, and post it with the
+cue sheet, your scores, and a rationale about the fix you
+chose.
+
+32
+00:03:06.139 --> 00:03:10.465
+I'll be listening for the transition between your two cues.

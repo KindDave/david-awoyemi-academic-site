@@ -1,0 +1,44 @@
+# Music Module Introduction
+
+*GENAI 101 - Module 1: Music*
+
+Draft narration script. Total running time about 2 min 50 s.
+
+## Title slide
+
+Music Module Introduction. GENAI 101 - Module 1: Music. Presented by Idowu David Awoyemi, The University of Alabama.
+
+## Slide 2: What you will make in this module
+
+- Lesson 1.1: a 60 to 120 second song from your own lyrics
+- Lesson 1.2: a 16-bar beat built from patterns you sequenced
+- Lesson 1.3: a scored scene with two contrasting cues
+- Lesson 1.4: an attribution statement and a position on a real case
+
+Welcome to the music module. Over four lessons you will make four things. In lesson one point one, you'll write lyrics and generate a complete song from them. In lesson one point two, you'll build a sixteen-bar beat from drum patterns you sequence yourself. In lesson one point three, you'll score a short scene with two contrasting cues. And in lesson one point four, you'll analyze a real case about AI and music and write an attribution statement for your own song.
+
+## Slide 3: The competencies behind the projects
+
+- 1.1 Prompt engineering, creativity and innovation
+- 1.2 Computational thinking, collaboration
+- 1.3 Problem solving, AI feedback evaluation
+- 1.4 AI ethics literacy, AI feedback evaluation
+
+Each lesson targets two competencies. Song composition is about prompt engineering and creativity: turning a musical idea into a brief the model can act on, and then making the result your own. Beat making is computational thinking: decomposing a groove into patterns and sequencing them. Scoring a scene is problem solving and evaluation: judging what the model produced against a cue sheet and fixing what missed. And the ethics lesson builds your ability to reason about consent, ownership, and disclosure, and to check what an AI tells you about the law.
+
+## Slide 4: The method you will reuse
+
+- Write a brief before you generate: genre, tempo, instrumentation, vocal, arc
+- Change one variable per generation
+- Evaluate against named criteria, not against your mood
+- Credit the tool and your own contribution on every artifact
+
+One method runs through all four lessons, and through the theater module too. First, write a brief before you generate anything. Second, change only one variable each time you regenerate, so you learn what the prompt actually controls. Third, evaluate the output against criteria you named in advance, not against how you happen to feel about it. And fourth, credit the tool and your own contribution under every artifact you share.
+
+## Slide 5: Listen like a musician
+
+- Use headphones; tempo drift and muddy low end hide on laptop speakers
+- Keep a Music Module Notes document: every prompt, one line on the result
+- Your musicianship is what turns a generation into a composition
+
+Two practical notes. Put on headphones. Many of the flaws you'll be asked to hear, like tempo drift, robotic vocal phrasing, or a muddy low end, disappear on laptop speakers. And keep a running document called Music Module Notes. Paste every prompt you use and write one line about what it produced. You'll need it for the module reflection. Finally, remember that nothing here replaces what you know about melody, harmony, rhythm, and form. The tools are fast and often impressive, and they are frequently wrong about exactly the things a trained musician notices first. Your expertise is what turns a generation into a composition. Let's begin with lesson one point one.

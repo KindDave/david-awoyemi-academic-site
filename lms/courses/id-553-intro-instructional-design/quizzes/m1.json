@@ -1,0 +1,81 @@
+{
+  "title": "Module 1 Knowledge Check",
+  "description": "Eight questions on the foundations and models of instructional design. Unlimited attempts; best score counts.",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "text": "Which statement best captures the systems view of instruction?",
+      "options": [
+        "Instruction is a sequence of lectures followed by a test",
+        "Instruction is a set of interacting components whose interactions determine the outcome, so changing one component affects the others",
+        "Instruction is whatever the subject-matter expert decides to present",
+        "Instruction is a product that can be built without analysis if the designer is experienced"
+      ],
+      "answer": 1,
+      "feedback": "The systems view is why analysis precedes design and evaluation closes the loop."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "A manager asks you to build a course because sales are down. Which instructional design step should come first?",
+      "options": ["Write the objectives", "Choose the delivery platform", "Conduct a needs assessment to determine whether a performance gap exists and whether instruction can close it", "Storyboard the modules"],
+      "answer": 2,
+      "feedback": "Many performance problems are not training problems. Needs assessment decides whether instruction is the right solution."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "In the Dick and Carey model, which order guarantees alignment?",
+      "options": [
+        "Strategies, then assessments, then objectives",
+        "Objectives, then assessments, then strategies",
+        "Materials, then objectives, then evaluation",
+        "Assessments, then objectives, then materials"
+      ],
+      "answer": 1,
+      "feedback": "Objectives first, assessments second, strategies third. The same logic underlies Backward Design."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Which model cycles through prototype, review, and revision with stakeholders reviewing working versions early and often?",
+      "options": ["ADDIE as a waterfall", "Successive Approximation Model (SAM)", "Mager's objectives model", "Kirkpatrick's four levels"],
+      "answer": 1,
+      "feedback": "SAM is the agile alternative to a linear ADDIE."
+    },
+    {
+      "type": "multiple_response",
+      "text": "Which of the following are among Merrill's First Principles of Instruction? Select all that apply.",
+      "options": ["Learners engage in solving real-world problems", "Existing knowledge is activated", "Instruction is delivered online", "New knowledge is demonstrated", "New knowledge is applied by the learner", "New knowledge is integrated into the learner's world"],
+      "answers": [0, 1, 3, 4, 5],
+      "feedback": "Problem-centered, activation, demonstration, application, integration. Delivery mode is not a principle."
+    },
+    {
+      "type": "true_false",
+      "text": "Backward Design asks the designer to plan learning activities before deciding what evidence of learning will be acceptable.",
+      "answer": false,
+      "feedback": "Backward Design plans desired results first, acceptable evidence second, and learning experiences third."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "The Kemp model is drawn as a circle rather than a line to signal that:",
+      "options": [
+        "The process never ends",
+        "The designer can begin with any element and the elements are interdependent",
+        "Evaluation is optional",
+        "It is only for online courses"
+      ],
+      "answer": 1,
+      "feedback": "The circular layout expresses flexibility and interdependence, with ongoing processes surrounding the elements."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Which pairing of problem type and model is most defensible?",
+      "options": [
+        "High-stakes safety procedure with clear performance outcomes: Dick and Carey",
+        "High-stakes safety procedure with clear performance outcomes: unguided rapid prototyping with no formative evaluation",
+        "Ill-defined problem with available stakeholders: a strict waterfall ADDIE with sign-off before any building",
+        "Curriculum unit planning: no model at all"
+      ],
+      "answer": 0,
+      "feedback": "High-stakes, well-defined performance favors the rigor and formative evaluation of Dick and Carey."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Module 7 Knowledge Check",
+  "description": "Eight questions on formative and summative evaluation. Unlimited attempts; best score counts.",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "text": "The primary audience for formative evaluation findings is:",
+      "options": ["The accreditor", "The design team, to improve the instruction", "Learners' supervisors", "The vendor"],
+      "answer": 1,
+      "feedback": "Formative evaluation exists to improve instruction before it is finished."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "In Dick and Carey's sequence, which formative stage is designed to catch gross errors such as wrong content, unclear instructions, and examples that do not work?",
+      "options": ["Field trial", "Small group", "One-to-one", "Summative expert judgment"],
+      "answer": 2,
+      "feedback": "One-to-one evaluation with three learners representing the range of the population finds the gross errors first."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "A small-group evaluation shows a large overall pre-post gain. What should the designer check before concluding the instruction works?",
+      "options": ["Nothing; the gain is sufficient", "Results by objective, since an overall gain can hide an objective nobody learned", "Only the reaction survey", "The facilitator's opinion"],
+      "answer": 1,
+      "feedback": "Analyze item-by-objective. Overall averages hide specific failures."
+    },
+    {
+      "type": "multiple_response",
+      "text": "Which are among Kirkpatrick's four levels? Select all that apply.",
+      "options": ["Reaction", "Learning", "Cost", "Behavior", "Results"],
+      "answers": [0, 1, 3, 4],
+      "feedback": "Reaction, learning, behavior, and results. Cost is analyzed in return-on-investment extensions, not as a Kirkpatrick level."
+    },
+    {
+      "type": "true_false",
+      "text": "High learner satisfaction (level 1) is a reliable indicator that learning (level 2) occurred.",
+      "answer": false,
+      "feedback": "Satisfaction and learning are only weakly related. Measure learning directly."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "A help desk saw fewer calls after training was delivered, but a new job aid was released the same week. In a summative evaluation this is an example of:",
+      "options": ["Proof that training caused the reduction", "An alternative explanation that the evaluation design must address", "A level 1 outcome", "Formative data"],
+      "answer": 1,
+      "feedback": "Level 4 outcomes are affected by many factors. Claim contribution, and design for comparisons or baselines that address alternatives."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Which formative activity is fastest and finds problems learners cannot name, such as inaccurate content or misaligned assessments?",
+      "options": ["Field trial", "Expert review", "Attitude survey", "Pretest"],
+      "answer": 1,
+      "feedback": "Subject-matter, design, and accessibility expert reviews run alongside learner-based stages."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "What distinguishes a field trial from a small-group evaluation?",
+      "options": [
+        "Field trials use fewer learners",
+        "Field trials occur in the actual setting with the intended facilitators or system and the designer absent, testing implementation",
+        "Field trials skip the posttest",
+        "There is no difference"
+      ],
+      "answer": 1,
+      "feedback": "The field trial tests whether the instruction works under real conditions without the designer present."
+    }
+  ]
+}

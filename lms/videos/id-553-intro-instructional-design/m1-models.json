@@ -1,0 +1,86 @@
+{
+  "title": "A Survey of Instructional Design Models",
+  "subtitle": "ID 553 - Module 1: Introduction to Instructional Design Models",
+  "summary": "Lecture: ADDIE, Dick and Carey, Kemp, SAM, Backward Design, and Merrill's First Principles, applied to one example project.",
+  "slides": [
+    {
+      "heading": "Why models?",
+      "bullets": [
+        "A model represents the design process: what to do, in what order, what each step produces",
+        "Models communicate, structure, and embed assumptions",
+        "Choosing a model is itself a design decision",
+        "Running example: retraining 400 nurses on a new records system in eleven weeks"
+      ],
+      "narration": "An instructional design model is a representation of the design process: what to do, in what order, and what each step produces. Models do three things. They communicate the process to clients and teammates. They structure the work so nothing essential gets skipped. And they embed assumptions about learning and about how design should proceed, which is why choosing a model is a design decision in its own right. To keep this concrete, I'll run one example through every model: retraining four hundred nurses on a new records system with eleven weeks to go-live."
+    },
+    {
+      "heading": "ADDIE",
+      "bullets": [
+        "Analysis, Design, Development, Implementation, Evaluation",
+        "A family name for the generic systems approach, labeled in the 1990s",
+        "Strengths: universally understood, complete, adaptable",
+        "Weaknesses: often run as a rigid waterfall; evaluation stuck at the end; documentation bloat"
+      ],
+      "narration": "ADDIE is less a specific model than a family name for the generic systems approach: analysis, design, development, implementation, evaluation. For the nurses, analysis means finding out what they know, when they can train, and which workflows fail; design means objectives and assessments; development means building modules and job aids; implementation means delivering them across three shifts; evaluation means help desk data after go-live. ADDIE's strength is that everyone understands it. Its weakness is that it's often practiced as a rigid waterfall with evaluation stuck at the end. Most later models are responses to that."
+    },
+    {
+      "heading": "Dick and Carey",
+      "bullets": [
+        "Ten components from identifying goals through summative evaluation",
+        "Objectives before assessments, assessments before strategies: alignment guaranteed",
+        "Revision is a loop fed by formative evaluation",
+        "The model behind Modules 3, 4, 6, and 7 of this course"
+      ],
+      "narration": "Dick and Carey's Systems Approach Model is the most detailed articulation of the systems view: ten components from identifying instructional goals through summative evaluation. Two features matter most. Objectives are written before assessments, and assessments before strategies, which guarantees alignment. And revision is a loop fed by formative evaluation that touches every earlier component. For the nurses, Dick and Carey would insist on a task analysis of medication administration and a performance test before anyone chooses between classroom and online. This is the model behind most of this course."
+    },
+    {
+      "heading": "Morrison, Ross, and Kemp",
+      "bullets": [
+        "Nine elements in a circle: start anywhere; elements are interdependent",
+        "Surrounded by ongoing processes: planning, project management, support, evaluation",
+        "Suited to classroom teachers and constraint-driven projects"
+      ],
+      "narration": "The Kemp model presents nine elements in a circle rather than a line: instructional problems, learner characteristics, task analysis, objectives, sequencing, strategies, message design, delivery, and evaluation instruments. The circle signals that you can start anywhere and that everything depends on everything else. Around the circle sit ongoing processes: planning, project management, support services, and evaluation. Kemp fits classroom teachers well, and it fits projects like the nurses' training where constraints, not objectives, drive the design."
+    },
+    {
+      "heading": "Successive Approximation Model (SAM)",
+      "bullets": [
+        "Allen (2012): an agile alternative to ADDIE",
+        "Preparation, then iterative design, then iterative development",
+        "A rough prototype reviewed in week two beats a design document approved in week six",
+        "Fits e-learning with uncertain requirements and available stakeholders"
+      ],
+      "narration": "Michael Allen's Successive Approximation Model is the agile alternative. After a short preparation phase, the project cycles through iterative design and iterative development, with stakeholders reviewing working prototypes early and often. The core belief is that a rough prototype reviewed in week two teaches the team more than a design document approved in week six. For the nurses, SAM would have a playable practice module in front of a few nurses within a fortnight. It fits poorly where sign-off must precede any building."
+    },
+    {
+      "heading": "Backward Design",
+      "bullets": [
+        "Wiggins and McTighe: identify desired results, determine acceptable evidence, plan learning experiences",
+        "The insight is the order: evidence before activities",
+        "Shares its core commitment with Dick and Carey in classroom language"
+      ],
+      "narration": "Understanding by Design, from Wiggins and McTighe, is a curriculum framework rather than a full process model, but its three stages reorganize how designers think. Identify desired results. Determine acceptable evidence. Then, and only then, plan learning experiences. The insight is the order. Teachers frequently plan activities first and assessments last, which produces engaging lessons that don't teach what was intended. Backward Design shares this commitment with Dick and Carey but says it in classroom language."
+    },
+    {
+      "heading": "Merrill's First Principles of Instruction",
+      "bullets": [
+        "Learning is promoted when learners solve real-world problems",
+        "...when existing knowledge is activated",
+        "...when new knowledge is demonstrated, applied, and integrated",
+        "Not a process model: a quality check on any design"
+      ],
+      "narration": "David Merrill reviewed the major instructional theories and extracted five principles they share. Learning is promoted when learners are engaged in solving real-world problems; when existing knowledge is activated as a foundation; when new knowledge is demonstrated; when the learner applies it; and when it's integrated into the learner's world. First Principles isn't a process model. It's a checklist to hold any design against. A lecture that only demonstrates fails it. An unguided project that only applies fails it too. For the nurses: does the training start with a real patient scenario, activate what they already do, demonstrate the new workflow, have them practice it, and connect it to their shift?"
+    },
+    {
+      "heading": "Choosing a model: four questions",
+      "bullets": [
+        "How well defined is the problem?",
+        "How available are stakeholders and learners?",
+        "What does the client expect: documents first, or something working?",
+        "What is the risk of getting it wrong?",
+        "Most designers: an ADDIE skeleton, iterative development inside, Merrill as a quality check"
+      ],
+      "narration": "How do you choose? Ask four questions. How well defined is the problem? Well defined favors Dick and Carey or ADDIE; ill defined favors SAM or rapid prototyping. How available are stakeholders and learners? Iterative models need them often. What does the client expect, a design document or something working? And what's the risk of getting it wrong? High-stakes performance favors rigor. In practice, most designers use an ADDIE skeleton with iterative development inside it and Merrill's principles as a quality check. That hybrid is a legitimate answer in this course, as long as you can justify it. Bring your project problem and your choice to the discussion."
+    }
+  ]
+}

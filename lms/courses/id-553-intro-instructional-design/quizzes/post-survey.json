@@ -1,0 +1,15 @@
+{
+  "title": "Post-Course Survey",
+  "description": "Ungraded. The same confidence questions you answered at the start, plus feedback on the course. One attempt.",
+  "max_attempts": 1,
+  "questions": [
+    {"type": "multiple_choice", "text": "How familiar are you with the ADDIE model?", "options": ["Never heard of it", "Heard of it", "Can describe the phases", "Have used it", "Have taught it"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "How confident are you writing a measurable learning objective?", "options": ["1 - Not at all", "2 - Slightly", "3 - Somewhat", "4 - Confident", "5 - Very confident"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "How confident are you conducting a task analysis?", "options": ["1 - Not at all", "2 - Slightly", "3 - Somewhat", "4 - Confident", "5 - Very confident"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "How confident are you designing an evaluation to determine whether instruction worked?", "options": ["1 - Not at all", "2 - Slightly", "3 - Somewhat", "4 - Confident", "5 - Very confident"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "How confident are you applying multimedia and accessibility principles to online instruction?", "options": ["1 - Not at all", "2 - Slightly", "3 - Somewhat", "4 - Confident", "5 - Very confident"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "Which component of the course contributed most to your learning?", "options": ["Module readings and lectures", "Case analyses", "Learner and task analysis assignments", "The instructional plan and prototype", "Discussions and peer review"], "answer": 3, "points": 0},
+    {"type": "essay", "text": "In your own words, what is instructional design? Two or three sentences.", "points": 0},
+    {"type": "essay", "text": "What should be changed in the next offering of this course, and what should be kept?", "points": 0}
+  ]
+}

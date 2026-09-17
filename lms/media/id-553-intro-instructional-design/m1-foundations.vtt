@@ -1,0 +1,268 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.989
+What Is Instructional Design?.
+
+2
+00:00:02.989 --> 00:00:09.265
+ID 553 - Module 1: Introduction to Instructional Design
+Models.
+
+3
+00:00:09.265 --> 00:00:15.242
+Presented by Idowu David Awoyemi, The University of Alabama.
+
+4
+00:00:15.842 --> 00:00:18.083
+Let's start with a definition.
+
+5
+00:00:18.083 --> 00:00:31.457
+Instructional design is the systematic process of
+translating principles of learning and instruction into
+plans for instructional materials, activities, resources,
+and evaluation.
+
+6
+00:00:31.457 --> 00:00:33.624
+Three words carry the weight.
+
+7
+00:00:33.624 --> 00:00:40.498
+Systematic: the work proceeds through identifiable phases
+whose outputs feed the next phase.
+
+8
+00:00:40.498 --> 00:00:44.458
+It's not a recipe, but it isn't improvisation either.
+
+9
+00:00:44.458 --> 00:00:49.987
+Principles of learning: the work rests on evidence about how
+people learn.
+
+10
+00:00:49.987 --> 00:00:54.918
+A designer who ignores that evidence is decorating, not
+designing.
+
+11
+00:00:54.918 --> 00:01:01.418
+And plans: the product is something another person can
+implement, evaluate, and revise.
+
+12
+00:01:02.018 --> 00:01:03.806
+The field has three roots.
+
+13
+00:01:03.806 --> 00:01:06.970
+The first is military and industrial training.
+
+14
+00:01:06.970 --> 00:01:17.628
+During the Second World War, psychologists including Robert
+Gagne were asked to train enormous numbers of people quickly
+and reliably on complex equipment.
+
+15
+00:01:17.628 --> 00:01:26.567
+They developed task analysis, criterion-referenced testing,
+and the practice of specifying objectives before building
+instruction.
+
+16
+00:01:26.567 --> 00:01:38.601
+The systems approach that emerged, treating instruction as a
+set of interacting components engineered toward a measurable
+outcome, is the ancestor of every model you'll study.
+
+17
+00:01:39.201 --> 00:01:41.260
+The second root is psychology.
+
+18
+00:01:41.260 --> 00:01:48.120
+Skinner's programmed instruction contributed small steps,
+active responding, and immediate feedback.
+
+19
+00:01:48.120 --> 00:01:53.060
+Mager gave designers a format for writing measurable
+objectives in 1962.
+
+20
+00:01:53.060 --> 00:02:07.331
+Gagne's Conditions of Learning argued that different types
+of outcomes require different instructional conditions, and
+his nine events of instruction became the most widely used
+lesson framework in the field.
+
+21
+00:02:07.331 --> 00:02:20.503
+Cognitive psychology later reframed learning as the
+construction of mental models and drew attention to the
+limits of working memory, the power of prior knowledge, and
+the problem of transfer.
+
+22
+00:02:21.103 --> 00:02:25.066
+The third root is constructivism and the learning sciences.
+
+23
+00:02:25.066 --> 00:02:42.798
+Constructivist critics argued that the systems approach
+could produce sterile, decontextualized instruction, and
+pushed the field toward authentic tasks, collaboration, and
+reflection through situated learning, problem-based
+learning, and cognitive apprenticeship.
+
+24
+00:02:42.798 --> 00:02:49.380
+The learning sciences added design-based research and a
+closer partnership with cognitive science.
+
+25
+00:02:49.380 --> 00:02:57.036
+Contemporary instructional design draws on all three roots
+and argues, productively, about the balance among them.
+
+26
+00:02:57.636 --> 00:03:02.741
+The most durable idea in the field is that instruction is a
+system.
+
+27
+00:03:02.741 --> 00:03:11.731
+Learners, content, methods, media, environment, and
+assessment interact, and their interactions determine the
+outcome.
+
+28
+00:03:11.731 --> 00:03:14.931
+Change one component and the others shift.
+
+29
+00:03:14.931 --> 00:03:18.436
+Add a video and you change the cognitive load.
+
+30
+00:03:18.436 --> 00:03:22.703
+Move a course online and you change the social presence.
+
+31
+00:03:22.703 --> 00:03:26.208
+Shorten the practice and you change retention.
+
+32
+00:03:26.208 --> 00:03:28.036
+Two consequences follow.
+
+33
+00:03:28.036 --> 00:03:34.893
+Analysis comes before design, because you cannot engineer a
+system you have not described.
+
+34
+00:03:34.893 --> 00:03:42.284
+And evaluation is part of the system, not an afterthought;
+every model closes the loop with data.
+
+35
+00:03:42.884 --> 00:03:46.651
+What does a designer actually do on a project?
+
+36
+00:03:46.651 --> 00:03:54.268
+First, a needs assessment: is there a performance gap, and
+is instruction the right solution?
+
+37
+00:03:54.268 --> 00:03:55.497
+Often it isn't.
+
+38
+00:03:55.497 --> 00:04:07.372
+A job aid, a process change, or a better incentive may fix
+the problem faster, and designers who skip this question
+build training nobody needed.
+
+39
+00:04:07.372 --> 00:04:11.877
+Then front-end analysis of learners, context, and task.
+
+40
+00:04:11.877 --> 00:04:17.610
+Then design: objectives, assessments, sequence, strategies,
+and media.
+
+41
+00:04:17.610 --> 00:04:21.624
+Then development, implementation, and evaluation.
+
+42
+00:04:21.624 --> 00:04:28.831
+And underneath all of it, project management: scope,
+schedule, stakeholders, and budget.
+
+43
+00:04:29.431 --> 00:04:32.329
+Here's what skipping analysis looks like.
+
+44
+00:04:32.329 --> 00:04:41.235
+A hospital replaces its patient records system and retrains
+four hundred nurses with the vendor's eight-hour classroom
+course.
+
+45
+00:04:41.235 --> 00:04:49.435
+Nobody asks what the nurses already know, when they can
+actually attend, or which workflows are most likely to fail.
+
+46
+00:04:49.435 --> 00:04:58.553
+The training happens six weeks before go-live, everyone
+forgets it, and the help desk takes nine hundred calls in
+the first week.
+
+47
+00:04:58.553 --> 00:05:02.229
+You'll analyze exactly this situation in module two.
+
+48
+00:05:02.229 --> 00:05:05.410
+Keep it in mind as you read about the models.
+
+49
+00:05:06.010 --> 00:05:07.027
+One last point.
+
+50
+00:05:07.027 --> 00:05:09.606
+Teachers design instruction every day.
+
+51
+00:05:09.606 --> 00:05:26.228
+What distinguishes instructional design as a discipline is
+the explicitness and the systems view: objectives are
+written, assessments are aligned before activities are
+chosen, and the design is documented so others can implement
+and evaluate it.
+
+52
+00:05:26.228 --> 00:05:35.659
+Many teachers find that learning instructional design makes
+their tacit expertise visible, and that visibility is what
+makes it improvable.
+
+53
+00:05:35.659 --> 00:05:44.480
+Before the next page, write one paragraph on what would go
+wrong in a project that skipped analysis and went straight
+to building.
+
+54
+00:05:44.480 --> 00:05:46.311
+Bring it to the discussion.

@@ -1,0 +1,40 @@
+{
+  "title": "Lesson 2.1 Knowledge Check",
+  "description": "Five questions on prompting and directing a text model for dramatic writing. Unlimited attempts; your best score counts.",
+  "questions": [
+    {
+      "type": "multiple_response",
+      "text": "Which elements belong in a scene brief? Select all that apply.",
+      "options": ["Objective", "Obstacle", "The model's version number", "Tone", "Word count of the rationale"],
+      "answers": [0, 1, 3],
+      "feedback": "The six elements are characters, objective, obstacle, setting, tone, and form."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Which is the most effective director's note for a revision round?",
+      "options": ["Make it better", "More emotional, please", "Cut the first six lines and start with her already holding the trumpet case", "Try again"],
+      "answer": 2,
+      "feedback": "Specific, actionable notes produce specific rewrites. Vague notes produce vague ones."
+    },
+    {
+      "type": "true_false",
+      "text": "A text model's first-draft scene is usually finished and ready for a table read.",
+      "answer": false,
+      "feedback": "First drafts are competent and forgettable. Directed revision and a human rewrite make the scene yours."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Models tend to write characters who say exactly what they feel. The human rewrite fixes this mainly by adding:",
+      "options": ["Longer speeches", "Subtext, deflection, and things left unsaid", "More stage directions", "A narrator"],
+      "answer": 1,
+      "feedback": "Real dialogue works through subtext. Cutting explanation and adding what is unsaid is the core of the rewrite."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "What minimum share of the dialogue does this lesson ask you to rewrite yourself?",
+      "options": ["None; the model's revision is enough", "About one tenth", "At least one third", "All of it"],
+      "answer": 2,
+      "feedback": "At least a third, marked so a reader can see what you changed."
+    }
+  ]
+}

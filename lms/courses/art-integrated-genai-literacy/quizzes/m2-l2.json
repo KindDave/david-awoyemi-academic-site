@@ -1,0 +1,50 @@
+{
+  "title": "Lesson 2.2 Knowledge Check",
+  "description": "Five questions on beats, variables, and AI voice in avatar performance. Unlimited attempts; your best score counts.",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "text": "In script scoring, a new beat begins when:",
+      "options": ["A new page starts", "The speaker's tactic changes", "The camera moves", "A stage direction appears"],
+      "answer": 1,
+      "feedback": "Beats mark shifts in tactic: from pleading to threatening, from remembering to deciding."
+    },
+    {
+      "type": "multiple_response",
+      "text": "Which are the four variables you control per beat in most animation tools? Select all that apply.",
+      "options": ["Gesture and posture", "Facial expression", "The tool's subscription tier", "Position and camera", "Voice"],
+      "answers": [0, 1, 3, 4],
+      "feedback": "Gesture, expression, camera, and voice. Together they are the abstraction of a performance into controllable variables."
+    },
+    {
+      "type": "true_false",
+      "text": "A completed beat sheet that lists the gesture, expression, camera, and voice for each beat in order is an example of algorithm design.",
+      "answer": true,
+      "feedback": "It is an ordered set of instructions the tool carries out; that is algorithm design."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "Why does this lesson require you to record your own voice for at least one beat?",
+      "options": [
+        "AI voices are not allowed in the course",
+        "To compare synthetic delivery with a human tactic-driven delivery and evaluate the difference",
+        "To reduce file size",
+        "Because Animaker does not offer text-to-speech"
+      ],
+      "answer": 1,
+      "feedback": "Default AI delivery is even and dramatically empty. Comparing it with your own delivery is AI feedback evaluation applied to performance."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "What is the best way to give peer feedback on an avatar performance in this lesson?",
+      "options": [
+        "Say whether you liked it",
+        "Watch with the creator's beat sheet beside you and note where the performance matched or drifted from the plan",
+        "Count the number of scenes",
+        "Suggest a different monologue"
+      ],
+      "answer": 1,
+      "feedback": "Co-review against the shared plan is the collaboration competency in practice."
+    }
+  ]
+}

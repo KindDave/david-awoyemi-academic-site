@@ -1,0 +1,14 @@
+{
+  "title": "Pre-Course Knowledge Survey",
+  "description": "Ungraded. Answer from what you know now; you will see the same questions at the end of the course. One attempt.",
+  "max_attempts": 1,
+  "questions": [
+    {"type": "multiple_choice", "text": "How familiar are you with the ADDIE model?", "options": ["Never heard of it", "Heard of it", "Can describe the phases", "Have used it", "Have taught it"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "How confident are you writing a measurable learning objective?", "options": ["1 - Not at all", "2 - Slightly", "3 - Somewhat", "4 - Confident", "5 - Very confident"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "How confident are you conducting a task analysis?", "options": ["1 - Not at all", "2 - Slightly", "3 - Somewhat", "4 - Confident", "5 - Very confident"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "How confident are you designing an evaluation to determine whether instruction worked?", "options": ["1 - Not at all", "2 - Slightly", "3 - Somewhat", "4 - Confident", "5 - Very confident"], "answer": 4, "points": 0},
+    {"type": "multiple_choice", "text": "How confident are you applying multimedia and accessibility principles to online instruction?", "options": ["1 - Not at all", "2 - Slightly", "3 - Somewhat", "4 - Confident", "5 - Very confident"], "answer": 4, "points": 0},
+    {"type": "essay", "text": "In your own words, what is instructional design? Two or three sentences.", "points": 0},
+    {"type": "essay", "text": "What do you most want to be able to do by the end of this course?", "points": 0}
+  ]
+}

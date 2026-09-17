@@ -1,0 +1,61 @@
+{
+  "title": "Lesson 1.1 Knowledge Check",
+  "description": "Five questions on prompt engineering for text-to-song tools. Unlimited attempts; your best score counts.",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "text": "Which style prompt gives a text-to-song model the most usable constraints?",
+      "options": [
+        "A really good song about hope",
+        "Pop song, happy",
+        "Upbeat indie pop, 118 BPM, acoustic guitar and handclaps, warm alto vocal, sparse verse building to a full chorus",
+        "Make it sound professional and radio-ready"
+      ],
+      "answer": 2,
+      "feedback": "The five-part frame (genre, tempo and feel, instrumentation, vocal, arc and mood) gives the model concrete constraints. The other prompts leave every musical decision to the model."
+    },
+    {
+      "type": "true_false",
+      "text": "Structure tags such as [Verse 1] and [Chorus] in the lyrics tell the model where sections begin and are an example of sequencing, a computational thinking skill.",
+      "answer": true,
+      "feedback": "Correct. Tagging the form is sequencing: you order the parts so the tool can follow them."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "You generated three versions of your song and changed the tempo, the instrumentation, and the vocal style all at once between each version. What is the main problem with this approach?",
+      "options": [
+        "The tool will refuse to generate more than one change at a time",
+        "You cannot tell which change caused the difference you hear",
+        "It uses more credits than changing one variable",
+        "There is no problem; more changes mean faster progress"
+      ],
+      "answer": 1,
+      "feedback": "Change one variable per generation so you can attribute the result to the change. That is how you learn what the prompt actually controls."
+    },
+    {
+      "type": "multiple_response",
+      "text": "Which of the following belong in the evaluation grid for a generated song? Select all that apply.",
+      "options": [
+        "Form follows my structure tags",
+        "Lyrics are sung as written",
+        "The tool's logo appears in the file name",
+        "Vocal phrasing is natural and intelligible",
+        "The song was generated in under ten seconds"
+      ],
+      "answers": [0, 1, 3],
+      "feedback": "Evaluate musical outcomes against your brief: form, lyric fidelity, and vocal phrasing. Generation speed and file naming say nothing about quality."
+    },
+    {
+      "type": "multiple_choice",
+      "text": "What is the required content of the one-line AI credit under a shared artifact?",
+      "options": [
+        "The tool name, the version if shown, and what you did yourself",
+        "A statement that no AI was used",
+        "The number of credits the generation cost",
+        "The tool's terms of service"
+      ],
+      "answer": 0,
+      "feedback": "Disclosure names the tool and version and states the human contribution. It keeps the artist visibly in the loop."
+    }
+  ]
+}
