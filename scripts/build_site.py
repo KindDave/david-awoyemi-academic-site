@@ -69,7 +69,26 @@ def load_learning_studio() -> list[dict[str, Any]]:
     return courses
 
 
-def render_learning_studio_cards(courses: list[dict[str, Any]], base: str) -> str:
+# Cover image for each course card: the title slide from that course's own
+# lesson videos, so the card shows the real course branding.
+LEARN_COURSE_COVERS = {
+    "art-integrated-genai-literacy": ("learn-genai-101.jpg", "Title slide from the GENAI 101 lesson videos: Music Module Introduction"),
+    "id-553-intro-instructional-design": ("learn-id-553.jpg", "Title slide from the ID 553 lesson videos: What Is Instructional Design?"),
+}
+LEARN_PLATFORM_COVER = ("learn-platform.jpg", "A published course page on Edukenda, showing the module structure and lesson list")
+
+
+def learn_cover_html(cover: tuple[str, str] | None, asset_base: str) -> str:
+    if not cover:
+        return ""
+    file_name, alt = cover
+    return (
+        f'<figure class="learn-card-media"><img src="{asset_base}assets/images/{file_name}" '
+        f'alt="{escape(alt)}" loading="lazy" decoding="async"></figure>'
+    )
+
+
+def render_learning_studio_cards(courses: list[dict[str, Any]], base: str, asset_base: str = "") -> str:
     cards = []
     for course in courses:
         c = course["counts"]
@@ -82,7 +101,8 @@ def render_learning_studio_cards(courses: list[dict[str, Any]], base: str) -> st
         if videos:
             facts.append(f"{videos} videos")
         cards.append(f"""
-        <article class="card fade">
+        <article class="card learn-card fade">
+          {learn_cover_html(LEARN_COURSE_COVERS.get(course['slug']), asset_base)}
           <span class="eyebrow">{escape(course['code'])}</span>
           <h3>{escape(course['title'])}</h3>
           <p>{escape(truncate_text(course['description'], 260))}</p>
@@ -102,13 +122,14 @@ def render_learn_landing(courses: list[dict[str, Any]], data: dict[str, Any]) ->
   <main id="main-content" class="main-wrap">
   <section class="section">
     <div class="section-heading">
-      <span class="eyebrow">Learning Studio</span>
+      <span class="eyebrow">Edukenda Learning Studio</span>
       <h2>Online courses I design, build, and teach.</h2>
       <p>Complete, self-paced courses built for my own learning management system (a self-hosted Moodle). Each course below is published here in full so you can read every lesson, watch the videos, and try the knowledge checks. Enrolment, discussion forums, and graded submissions run on the live platform; contact me for cohort access.</p>
     </div>
     <div class="grid-3 learn-grid">
-      {render_learning_studio_cards(courses, "")}
-      <article class="card fade">
+      {render_learning_studio_cards(courses, "", "../")}
+      <article class="card learn-card fade">
+        {learn_cover_html(LEARN_PLATFORM_COVER, "../")}
         <span class="eyebrow">How it is built</span>
         <h3>An authoring pipeline, not a slide deck.</h3>
         <p>Courses are written as structured source files, built into IMS Common Cartridge packages that import into Moodle, Canvas, or Blackboard, and deployed to a Moodle instance with one script. Draft lesson videos are generated from written scripts with captions and transcripts, then replaced by recorded versions.</p>
@@ -121,7 +142,7 @@ def render_learn_landing(courses: list[dict[str, Any]], data: dict[str, Any]) ->
   </section>
   </main>"""
     shell = render_page(
-        "Learning Studio | " + data["person"]["display_name"],
+        "Edukenda Learning Studio | " + data["person"]["display_name"],
         "Online instructional courses designed and built by " + data["person"]["display_name"] + ": previews, packages, and the platform behind them.",
         "portfolio", "%%LEARN_BODY%%", data, canonical="/learn/")
     # The page lives one folder down, so site-relative links in the shell need a ../ prefix.
@@ -3128,7 +3149,7 @@ NAV_MENUS: dict[str, list[tuple[str, str]]] = {
         ("Curriculum Design", "curriculum-design-and-stem-education"),
         ("PD and Training Documentation", "professional-development-and-training-documentation"),
         ("Arts-Integrated GenAI Literacy", "arts-integrated-genai-literacy-pd-series"),
-        ("Learning Studio", "learning-studio"),
+        ("Edukenda Learning Studio", "learning-studio"),
         ("Doctoral Coursework", "doctoral-coursework-portfolio"),
         ("Course Deliverables", "selected-course-deliverables"),
     ],
@@ -4664,15 +4685,16 @@ def render_portfolio(data: dict[str, Any]) -> str:
 
   <section class="section" id="learning-studio">
     <div class="section-heading">
-      <span class="eyebrow">Learning Studio</span>
-      <h2>Complete online courses on my own learning management system.</h2>
+      <span class="eyebrow">Edukenda Learning Studio</span>
+      <h2>Complete online courses on Edukenda, my own learning management system.</h2>
       <p>I design, build, and teach full online courses on a self-hosted Moodle platform. Each course is published in full so you can open every lesson, watch the videos, and try the knowledge checks. Enrolment and graded work run on the live platform.</p>
     </div>
     <div class="grid-3 learn-grid">
       {render_learning_studio_cards(load_learning_studio(), LEARN_URL)}
-      <article class="card fade">
+      <article class="card learn-card fade">
+        {learn_cover_html(LEARN_PLATFORM_COVER, "")}
         <span class="eyebrow">The platform</span>
-        <h3>Authoring pipeline and self-hosted LMS.</h3>
+        <h3>Edukenda: authoring pipeline and self-hosted LMS.</h3>
         <p>Courses are written as structured source files, exported as IMS Common Cartridge packages that import into Moodle, Canvas, or Blackboard, and deployed to Moodle with one script. Lesson videos carry captions and transcripts, and every assignment has an analytic rubric.</p>
         <div class="portfolio-links">
           <a class="button" href="{LEARN_URL}">Browse all courses</a>
