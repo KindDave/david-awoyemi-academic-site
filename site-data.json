@@ -1,5 +1,5 @@
 {
-  "generated_on": "2026-09-17",
+  "generated_on": "2026-09-26",
   "source_file": "David_CV.docx",
   "person": {
     "name": "Idowu David Awoyemi",
@@ -95,27 +95,27 @@
     {
       "value": 15,
       "label": "Journal Articles",
-      "href": "academic.html#peer-reviewed-journal-articles"
+      "href": "academic#peer-reviewed-journal-articles"
     },
     {
       "value": 25,
       "label": "Conference Presentations",
-      "href": "academic.html#conference-presentations"
+      "href": "academic#conference-presentations"
     },
     {
       "value": 16,
       "label": "Years Experience",
-      "href": "research.html#core-roles"
+      "href": "research#core-roles"
     },
     {
       "value": 18,
       "label": "Awards and Scholarships",
-      "href": "index.html#awards"
+      "href": "./#awards"
     },
     {
       "value": 7,
       "label": "Awarded Projects",
-      "href": "academic.html#grants"
+      "href": "academic#grants"
     }
   ],
   "featured_roles": [

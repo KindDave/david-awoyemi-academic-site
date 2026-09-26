@@ -1,3 +1,10 @@
+// Clean addresses: the host serves about.html for /about, so when a page is
+// opened through an older link that still ends in .html, tidy the address bar.
+if (location.protocol !== 'file:' && /\.html$/i.test(location.pathname)) {
+  const cleanPath = location.pathname.replace(/index\.html$/i, '').replace(/\.html$/i, '');
+  history.replaceState(history.state, '', cleanPath + location.search + location.hash);
+}
+
 const root = document.documentElement;
 const storageKey = 'da-portfolio-theme';
 const particleCanvas = document.getElementById('particles');

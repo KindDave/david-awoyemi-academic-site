@@ -123,10 +123,10 @@ def render_learn_landing(courses: list[dict[str, Any]], data: dict[str, Any]) ->
     shell = render_page(
         "Learning Studio | " + data["person"]["display_name"],
         "Online instructional courses designed and built by " + data["person"]["display_name"] + ": previews, packages, and the platform behind them.",
-        "portfolio", "%%LEARN_BODY%%", data)
+        "portfolio", "%%LEARN_BODY%%", data, canonical="/learn/")
     # The page lives one folder down, so site-relative links in the shell need a ../ prefix.
     shell = re.sub(r'(href|src)="(?!https?://|//|#|mailto:|tel:|\.\./|%%)', r'\1="../', shell)
-    return shell.replace("%%LEARN_BODY%%", body)
+    return clean_page_links(shell.replace("%%LEARN_BODY%%", body))
 
 
 def write_learn_outputs(data: dict[str, Any]) -> None:
@@ -3004,11 +3004,11 @@ def build_site_data() -> dict[str, Any]:
         "profile_links": PROFILE_LINKS,
         "research_themes": research_themes,
         "metrics": [
-            {"value": len(journal_articles), "label": "Journal Articles", "href": "academic.html#peer-reviewed-journal-articles"},
-            {"value": len(conference_presentations), "label": "Conference Presentations", "href": "academic.html#conference-presentations"},
-            {"value": years_of_experience(sections), "label": "Years Experience", "href": "research.html#core-roles"},
-            {"value": len(awards), "label": "Awards and Scholarships", "href": "index.html#awards"},
-            {"value": len(funded_grants), "label": "Awarded Projects", "href": "academic.html#grants"},
+            {"value": len(journal_articles), "label": "Journal Articles", "href": "academic#peer-reviewed-journal-articles"},
+            {"value": len(conference_presentations), "label": "Conference Presentations", "href": "academic#conference-presentations"},
+            {"value": years_of_experience(sections), "label": "Years Experience", "href": "research#core-roles"},
+            {"value": len(awards), "label": "Awards and Scholarships", "href": "./#awards"},
+            {"value": len(funded_grants), "label": "Awarded Projects", "href": "academic#grants"},
         ],
         "featured_roles": featured_roles,
         "research_entries": research_entries,
@@ -3301,16 +3301,44 @@ def render_footer(data: dict[str, Any]) -> str:
 """.strip()
 
 
-def render_page(title: str, description: str, active: str, body: str, data: dict[str, Any]) -> str:
+SITE_URL = "https://www.davidawoyemi.net"
+
+# Clean address for each page. The host serves about.html for /about, so
+# internal links drop the extension and every page declares its canonical URL.
+CANONICAL_PATHS = {
+    "home": "/",
+    "about": "/about",
+    "academic": "/academic",
+    "research": "/research",
+    "teaching": "/teaching",
+    "portfolio": "/portfolio",
+    "contact": "/contact",
+}
+PAGE_LINK_RE = re.compile(r'href="(about|academic|research|teaching|portfolio|contact)\.html(#[^"]*)?"')
+HOME_LINK_RE = re.compile(r'href="index\.html(#[^"]*)?"')
+FOLDER_INDEX_RE = re.compile(r'href="((?!https?://)[^":]*/)index\.html(#[^"]*)?"')
+
+
+def clean_page_links(page: str) -> str:
+    """Rewrite internal links from page.html to the extensionless address, and
+    folder/index.html links to the folder address."""
+    page = PAGE_LINK_RE.sub(lambda m: f'href="{m.group(1)}{m.group(2) or ""}"', page)
+    page = HOME_LINK_RE.sub(lambda m: f'href="./{m.group(1) or ""}"', page)
+    return FOLDER_INDEX_RE.sub(lambda m: f'href="{m.group(1)}{m.group(2) or ""}"', page)
+
+
+def render_page(title: str, description: str, active: str, body: str, data: dict[str, Any], canonical: str | None = None) -> str:
     body = add_section_anchors(body)
     validate_nav_anchors(active, body)
-    return f"""<!DOCTYPE html>
+    canonical_path = canonical or CANONICAL_PATHS.get(active, "/")
+    page = f"""<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{escape(title)}</title>
   <meta name="description" content="{escape(description)}">
+  <link rel="canonical" href="{SITE_URL}{canonical_path}">
   <link rel="icon" type="image/png" sizes="any" href="assets/images/brand-logo.png">
   <link rel="apple-touch-icon" href="assets/images/brand-logo.png">
   <link rel="stylesheet" href="shared.css">
@@ -3326,6 +3354,7 @@ def render_page(title: str, description: str, active: str, body: str, data: dict
 </body>
 </html>
 """
+    return clean_page_links(page)
 
 
 def render_home(data: dict[str, Any]) -> str:

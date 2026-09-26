@@ -20,6 +20,19 @@ python scripts/build_site.py
 
 Then open `index.html` locally to review the regenerated site.
 
+### Previewing locally
+
+Page links use clean addresses (`/about`, `/portfolio`) that GitHub Pages
+resolves to the `.html` files. Python's built-in server does not, so preview
+with the bundled server instead:
+
+```bash
+python scripts/serve.py
+```
+
+It serves the project at http://127.0.0.1:8766/ and resolves `/portfolio` to
+`portfolio.html` the same way the live site does.
+
 ## GitHub workflow
 
 1. Create a new GitHub repository.
