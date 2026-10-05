@@ -3404,7 +3404,7 @@ def render_home(data: dict[str, Any]) -> str:
         for item in data["profile_links"][:4]
     )
     features = [
-        ("About", "Professional biography, training background, and a clearer view of the scholarly and design profile.", "about.html", "feature-about-portrait.png", "David Awoyemi in his office with an instructional-design bookshelf and an ADDIE whiteboard"),
+        ("About", "Professional biography, training background, and the scholarly and design profile.", "about.html", "feature-about-portrait.png", "David Awoyemi in his office with an instructional-design bookshelf and an ADDIE whiteboard"),
         ("Academic Profile", "Publications, presentations, grants, service, and affiliations.", "academic.html", "feature-academic-david.png", "David Awoyemi working at a dual-monitor workstation"),
         ("Research Projects", "Selected case studies showing how David designs, studies, and evaluates learning innovation.", "research.html", "feature-research.jpg", "Humanoid robot reading on a bench"),
         ("Teaching Philosophy", "Research-informed teaching commitments, frameworks, and experience across instructional contexts.", "teaching.html", "feature-teaching.jpg", "Wooden blocks showing learning-design concepts"),
@@ -4027,8 +4027,8 @@ def render_research(data: dict[str, Any]) -> str:
     <div class="section-inner">
       <div class="section-heading">
         <span class="eyebrow">Selected Case Studies</span>
-        <h2>Three projects that best represent the research story.</h2>
-        <p>The content below preserves the narrative richness of the previous site while using the new shared design system and deploy workflow.</p>
+        <h2>Projects that best represent the research story.</h2>
+        <p>Each case study sets out the problem context, the design contribution, the methods and tools, and the outcomes.</p>
       </div>
       <div class="case-list">
         {render_case_studies(data["research_case_studies"])}
@@ -4287,8 +4287,8 @@ def render_teaching(data: dict[str, Any]) -> str:
   <section class="section">
     <div class="section-heading">
       <span class="eyebrow">Teaching Philosophy In Depth</span>
-      <h2>A fuller narrative for committees and collaborators.</h2>
-      <p>The sections below preserve the intent of the original long-form teaching statement while making it easier to navigate.</p>
+      <h2>The full teaching statement.</h2>
+      <p>Open any section to read that part of the statement.</p>
     </div>
     <div class="accordion-stack">
       {accordion}
@@ -4776,7 +4776,7 @@ def render_contact(data: dict[str, Any]) -> str:
     <div class="section-heading">
       <span class="eyebrow">Open to These Positions</span>
       <h2>Current opportunities and collaboration interests.</h2>
-      <p>This keeps the practical contact framing from the original site while aligning the layout with the rest of the automated portfolio.</p>
+      <p>The roles I am currently pursuing.</p>
     </div>
     <div class="position-pills">
       {positions}
@@ -4810,7 +4810,7 @@ def render_contact(data: dict[str, Any]) -> str:
         <div class="contact-form-card fade">
           <span class="eyebrow">Contact Form</span>
           <h2>Draft an email in one step.</h2>
-          <p>This static form builds a ready-to-send email message so the site works cleanly on GitHub Pages without requiring a separate backend.</p>
+          <p>Fill in the form and your email app opens with the message ready to send.</p>
           <form class="contact-form" data-mailto-form data-mailto-target="{escape(person['email'])}">
             <div class="form-row">
               <label>
